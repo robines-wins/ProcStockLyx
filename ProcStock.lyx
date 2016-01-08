@@ -89,5 +89,138 @@ MJ Lagarde
 intro
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula $E(Y)=E_{X}\left[E_{Y|X}\left(Y|X\right)\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Note:
+\end_layout
+
+\begin_layout Standard
+How do we think of 
+\begin_inset Formula $E\left(Y|X\right)$
+\end_inset
+
+ ? 
+\end_layout
+
+\begin_layout Standard
+We have not define this since the conditioning 
+\begin_inset Quotes eld
+\end_inset
+
+things
+\begin_inset Quotes erd
+\end_inset
+
+ is itself a 
+\emph on
+random variable
+\emph default
+ (we only define 
+\begin_inset Formula $E\left(Y|X=x\right)$
+\end_inset
+
+).
+ 
+\begin_inset Newline newline
+\end_inset
+
+In fact 
+\begin_inset Formula $E\left(Y|X\right)$
+\end_inset
+
+ is itself a random variable.
+ For each value of 
+\begin_inset Formula $X$
+\end_inset
+
+ we'll get a different value of 
+\begin_inset Formula $E\left(Y|X\right)$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Although in more advanced probabilities 
+\begin_inset Formula $E\left(Y|X\right)$
+\end_inset
+
+ can be define under very general conditions.
+ We can give a working way of thinking of 
+\begin_inset Formula $E\left(Y|X\right)$
+\end_inset
+
+ under slightly stranger conditions:
+\end_layout
+
+\begin_layout Enumerate
+Define 
+\begin_inset Formula $E\left(Y|X=x\right)$
+\end_inset
+
+ as some 
+\begin_inset Formula $g(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Define 
+\begin_inset Formula $E\left(Y|X\right)$
+\end_inset
+
+to be 
+\begin_inset Formula $g(X)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g(X)$
+\end_inset
+
+ is of course a random variable as 
+\begin_inset Formula $X$
+\end_inset
+
+ is one.
+\end_layout
+
+\begin_layout Standard
+we extend the Law of total expectation to a 
+\emph on
+law of total variance
+\emph default
+: 
+\begin_inset Newline newline
+\end_inset
+
+if 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ have some distribution then we can write 
+\begin_inset Formula 
+\[
+\mbox{Var}(Y)=E_{X}\left[\mbox{Var}\left(Y|X\right)\right]+\mbox{Var}_{Y}\left[E\left(Y|X\right)\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
