@@ -2,7 +2,7 @@
 \lyxformat 474
 \begin_document
 \begin_header
-\textclass article
+\textclass book
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -52,13 +52,13 @@
 \shortcut idx
 \color #008000
 \end_index
-\secnumdepth -2
+\secnumdepth 2
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
 \quotes_language english
 \papercolumns 1
-\papersides 1
+\papersides 2
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
@@ -70,15 +70,23 @@
 \begin_body
 
 \begin_layout Title
-Bla Bla
+Introduction to Stochastic Processes
+\begin_inset Newline newline
+\end_inset
+
+MATH-447 McGiil
 \end_layout
 
 \begin_layout Author
-Solignac Robin
-\end_layout
+Robin Solignac
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Author
 MJ Lagarde
+\end_layout
+
+\begin_layout Chapter
+intro
 \end_layout
 
 \end_body
