@@ -90,6 +90,492 @@ intro
 \end_layout
 
 \begin_layout Standard
+notion : conditional probabilities/expectation
+\end_layout
+
+\begin_layout Standard
+Definition: let's two random variables X and Y have a join discrete probability
+ function P(x,y) = P(X=x, Y=y) for (x,y)
+\begin_inset Formula $\subset$
+\end_inset
+
+A (called the support of the distribution) and P(X=x, Y=y)=0 for (x,y) 
+\begin_inset Formula $\notin$
+\end_inset
+
+A.
+\end_layout
+
+\begin_layout Standard
+Then the conditional probability of Y given X = x, P
+\begin_inset Formula $_{y/X=x}$
+\end_inset
+
+(y|x) is defined to be 
+\begin_inset Formula $\frac{P_{X,Y}(x,y)}{P_{X}(x)}$
+\end_inset
+
+ for P
+\begin_inset Formula $_{X}(x)$
+\end_inset
+
+ /neg 0.
+ Here P
+\begin_inset Formula $_{X}(x)$
+\end_inset
+
+is called the marginal.
+ P
+\begin_inset Formula $_{X}(x)$
+\end_inset
+
+= 
+\begin_inset Formula $\sum$
+\end_inset
+
+
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+all y
+\end_layout
+
+\end_inset
+
+P
+\begin_inset Formula $_{X,X}(x,y)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Notes : I) if you fix x, tehn P
+\begin_inset Formula $_{Y/X}(y|x)$
+\end_inset
+
+consider as function of Y, defines a conditional probability distribution
+ of Y given x.
+\end_layout
+
+\begin_layout Standard
+II) there is no such thing as the random variable Y|X=x.
+ It is simply defined as P(Y=y | X=x) is definied as above.
+ When you see the statement Y|X=x don't interpret this to mean that that
+ the r.v had the p function P
+\begin_inset Formula $_{y/X=x}$
+\end_inset
+
+(y|X = x).
+ It means P
+\begin_inset Formula $_{y/X=x}$
+\end_inset
+
+(y|x) = P(Y=y | X=x) .
+ 
+\end_layout
+
+\begin_layout Standard
+Definition 2: If the random variables (X,Y) are joinluy discrete, the conditiona
+l expectation of Y given X=x, written E(Y|X=x) is defined as follows : E(Y|X=x)
+ = 
+\begin_inset Formula $\sum$
+\end_inset
+
+
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+all y
+\end_layout
+
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ y*
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ P
+\begin_inset Formula $_{y/X=x}$
+\end_inset
+
+(y|x).
+ 
+\end_layout
+
+\begin_layout Standard
+Definition 3: If the random variables (X,Y) are joinly continuous with probabili
+ty density function (pdf) f
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+X,Y
+\end_layout
+
+\end_inset
+
+(x,y) then we define conditional pdf of Y given X=x as follows : f
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+Y/X=x
+\end_layout
+
+\end_inset
+
+(y|x) = 
+\begin_inset Formula $\frac{fX,Y(x,y)}{fX(x)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here 
+\begin_inset Formula $\intop_{-\infty}^{\infty}$
+\end_inset
+
+f
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+X,Y
+\end_layout
+
+\end_inset
+
+(x,y) dy is called marginal pdf of x.
+\end_layout
+
+\begin_layout Standard
+Definition: If the r.v.
+ X and Y are continuous, with joint pdf f
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+X,Y
+\end_layout
+
+\end_inset
+
+(x,y) then we define the conditional expectation of Y given X=x as follows
+ E(Y|X=x) = 
+\begin_inset Formula $\intop_{-\infty}^{\infty}$
+\end_inset
+
+y * f
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+Y|X=x
+\end_layout
+
+\end_inset
+
+(y|x) dx
+\end_layout
+
+\begin_layout Standard
+The laws of total proability and total expectation : 
+\end_layout
+
+\begin_layout Standard
+Law of total probability : 
+\end_layout
+
+\begin_layout Standard
+Let X,Y be random variables with some join discrete distribution or continuous
+ distribution.
+\end_layout
+
+\begin_layout Standard
+(I) if discrete P
+\begin_inset Formula $_{y}(y)$
+\end_inset
+
+= 
+\begin_inset Formula $\sum$
+\end_inset
+
+ P
+\begin_inset Formula $_{y/X=x}$
+\end_inset
+
+(y|x) * P
+\begin_inset Formula $_{X}(x)$
+\end_inset
+
+ = 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\backslash
+sum 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+P(X=x, Y=y) * P(X=x)
+\end_layout
+
+\begin_layout Standard
+(II) If continuous : F
+\begin_inset Formula $_{y}(y)$
+\end_inset
+
+= 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\backslash
+intop 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+f
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+Y/X=x
+\end_layout
+
+\end_inset
+
+(y|x) * 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+f
+\begin_inset Formula $_{X}$
+\end_inset
+
+(x) dx
+\end_layout
+
+\begin_layout Standard
+(I'): F
+\begin_inset Formula $_{Y}(y)$
+\end_inset
+
+= P ( Y 
+\begin_inset Formula $\leq$
+\end_inset
+
+ y) = 
+\begin_inset Formula $\sum$
+\end_inset
+
+ P
+\begin_inset Formula $_{y/X=x}$
+\end_inset
+
+(y
+\begin_inset Formula $\leq$
+\end_inset
+
+ y|x) * P
+\begin_inset Formula $_{X}(x)$
+\end_inset
+
+ = 
+\begin_inset Formula $\sum$
+\end_inset
+
+ F
+\begin_inset Formula $_{y/X=x}$
+\end_inset
+
+(y|x)* 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+f
+\begin_inset Formula $_{X}$
+\end_inset
+
+(x) dx where 
+\backslash
+sum
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ F
+\begin_inset Formula $_{y/X=x}$
+\end_inset
+
+(y|x) =
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ p
+\begin_inset Formula $_{Y/X=x}$
+\end_inset
+
+(z\SpecialChar \textcompwordmark{}
+x) z : z 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $\leq$
+\end_inset
+
+ y
+\end_layout
+
+\begin_layout Standard
+(II')F
+\begin_inset Formula $_{Y}(y)$
+\end_inset
+
+ = 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\backslash
+intop 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+p(y
+\begin_inset Formula $\leq$
+\end_inset
+
+ y|X=x) * 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+f
+\begin_inset Formula $_{X}$
+\end_inset
+
+(x) dx
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula $E(Y)=E_{X}\left[E_{Y|X}\left(Y|X\right)\right]$
 \end_inset
 
