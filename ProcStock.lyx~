@@ -86,20 +86,31 @@ MJ Lagarde
 \end_layout
 
 \begin_layout Chapter
-intro
+conditional probabilities, expectation
 \end_layout
 
 \begin_layout Section
-conditional probabilities/expectation
+conditional probabilities and expectation, definitions
 \end_layout
 
 \begin_layout Standard
-Definition: let's two random variables X and Y have a join discrete probability
- function P(x,y) = P(X=x, Y=y) for (x,y)
-\begin_inset Formula $\subset$
+Definition: let's two random variables 
+\begin_inset Formula $X$
 \end_inset
 
-A (called the support of the distribution) and 
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ have a join discrete probability function 
+\begin_inset Formula $P(x,y)=P(X=x,Y=y)$
+\end_inset
+
+ for 
+\begin_inset Formula $(x,y)\subset A$
+\end_inset
+
+ (called the support of the distribution) and 
 \begin_inset Formula $P(X=x,Y=y)=0\mbox{ for }(x,y)\notin A$
 \end_inset
 
@@ -107,11 +118,19 @@ A (called the support of the distribution) and
 \end_layout
 
 \begin_layout Standard
-Then the conditional probability of Y given X = x, P
-\begin_inset Formula $_{y/X=x}$
+Then the conditional probability of 
+\begin_inset Formula $Y$
 \end_inset
 
-(y|x) is defined to be 
+ given 
+\begin_inset Formula $X=x$
+\end_inset
+
+, 
+\begin_inset Formula $P_{y/X=x}(y|x)$
+\end_inset
+
+ is defined to be 
 \begin_inset Formula $\frac{P_{X,Y}(x,y)}{P_{X}(x)}$
 \end_inset
 
@@ -138,7 +157,7 @@ Notes :
 \end_layout
 
 \begin_layout Enumerate
-If you fix x, tehn 
+If you fix x, then 
 \begin_inset Formula $P{}_{Y/X}(y|x)$
 \end_inset
 
@@ -147,92 +166,89 @@ consider as function of Y, defines a conditional probability distribution
 \end_layout
 
 \begin_layout Enumerate
-There is no such thing as the random variable Y|X=x.
- It is simply defined as P(Y=y | X=x) is definied as above.
- When you see the statement Y|X=x don't interpret this to mean that that
- the r.v had the p function P
-\begin_inset Formula $_{y/X=x}$
+There is no such thing as the random variable 
+\begin_inset Formula $Y|X=x$
 \end_inset
 
-(y|X = x).
- It means P
-\begin_inset Formula $_{y/X=x}$
+.
+ It is simply defined as 
+\begin_inset Formula $P(Y=y|X=x)$
 \end_inset
 
-(y|x) = P(Y=y | X=x) .
+ is definied as above.
+ When you see the statement 
+\begin_inset Formula $Y|X=x$
+\end_inset
+
+ don't interpret this to mean that that the r.v had the 
+\begin_inset Formula $p$
+\end_inset
+
+ function 
+\begin_inset Formula $P_{y/X=x}(y|X=x)$
+\end_inset
+
+.
+ It means 
+\begin_inset Formula $P_{y/X=x}(y|x)=P(Y=y|X=x)$
+\end_inset
+
+.
  
 \end_layout
 
-\begin_layout Standard
-Definition 2: If the random variables (X,Y) are joinluy discrete, the conditiona
-l expectation of Y given X=x, written E(Y|X=x) is defined as follows : E(Y|X=x)
- = 
-\begin_inset Formula $\sum$
-\end_inset
-
-
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-all y
+\begin_layout Paragraph
+Definition 2: 
 \end_layout
 
+\begin_layout Standard
+If the random variables 
+\begin_inset Formula $(X,Y)$
 \end_inset
 
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
- y*
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
- P
-\begin_inset Formula $_{y/X=x}$
+ are joinluy discrete, the conditional expectation of 
+\begin_inset Formula $Y$
 \end_inset
 
-(y|x).
+ given 
+\begin_inset Formula $X=x$
+\end_inset
+
+, written 
+\begin_inset Formula $E(Y|X=x)$
+\end_inset
+
+ is defined as follows : 
+\begin_inset Formula $E(Y|X=x)=\sum_{\forall y}y*P_{y/X=x}(y|x)$
+\end_inset
+
+.
  
 \end_layout
 
+\begin_layout Paragraph
+Definition 3: 
+\end_layout
+
 \begin_layout Standard
-Definition 3: If the random variables (X,Y) are joinly continuous with probabili
-ty density function (pdf) f
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-X,Y
-\end_layout
-
+If the random variables 
+\begin_inset Formula $(X,Y)$
 \end_inset
 
-(x,y) then we define conditional pdf of Y given X=x as follows : f
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-Y/X=x
-\end_layout
-
+ are joinly continuous with probability density function (pdf) 
+\begin_inset Formula $f_{X,Y}(x,y)$
 \end_inset
 
-(y|x) = 
-\begin_inset Formula $\frac{fX,Y(x,y)}{fX(x)}$
+ then we define conditional pdf of 
+\begin_inset Formula $Y$
+\end_inset
+
+ given 
+\begin_inset Formula $X=x$
+\end_inset
+
+ as follows : 
+\begin_inset Formula $f_{Y|X}=x(y|x)=\frac{fX,Y(x,y)}{fX(x)}$
 \end_inset
 
 
@@ -240,45 +256,54 @@ Y/X=x
 
 \begin_layout Standard
 Here 
-\begin_inset Formula $\intop_{-\infty}^{\infty}f_{X,Y}(x,y)dy$
+\begin_inset Formula $\intop_{-\infty}^{\infty}f_{X,Y}(x,y)\,dy$
 \end_inset
 
- is called marginal pdf of x.
+ is called marginal pdf of 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Definition: 
 \end_layout
 
 \begin_layout Standard
-Definition: If the r.v.
- X and Y are continuous, with joint pdf f
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-X,Y
-\end_layout
-
+If the r.v.
+ 
+\begin_inset Formula $X$
 \end_inset
 
-(x,y) then we define the conditional expectation of Y given X=x as follows
- E(Y|X=x) = 
-\begin_inset Formula $\intop_{-\infty}^{\infty}$
+ and 
+\begin_inset Formula $Y$
 \end_inset
 
-y * f
-\begin_inset script subscript
-
-\begin_layout Plain Layout
-Y|X=x
-\end_layout
-
+ are continuous, with joint pdf 
+\begin_inset Formula $f_{X,Y}(x,y)$
 \end_inset
 
-(y|x) dx
+ then we define the conditional expectation of 
+\begin_inset Formula $Y$
+\end_inset
+
+ given 
+\begin_inset Formula $X=x$
+\end_inset
+
+ as follows 
+\begin_inset Formula $E(Y|X=x)=\intop_{-\infty}^{\infty}y*f_{Y|X=x}(y|x)\,dx$
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-The laws of total proability and total expectation : 
+\begin_layout Section
+The laws of total probability and total expectation
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
 Law of total probability : 
 \end_layout
 
@@ -371,8 +396,8 @@ Let X,Y be random variables with some join discrete distribution or continuous
 
 \end_layout
 
-\begin_layout Standard
-
+\begin_layout Subsection
+Law of total expectation
 \end_layout
 
 \begin_layout Standard
@@ -739,7 +764,7 @@ Ex1
 \end_layout
 
 \begin_layout Standard
-rule: Stop summing at 
+Stop summing at 
 \begin_inset Formula $N=n$
 \end_inset
 
@@ -749,6 +774,15 @@ rule: Stop summing at
 
  and 
 \begin_inset Formula $\sum_{i=1}^{n}X_{i}\geq10$
+\end_inset
+
+.
+ Stop summing at 
+\begin_inset Formula $n$
+\end_inset
+
+ depend only of 
+\begin_inset Formula $X_{1,}X_{2},\ldots,X_{n}$
 \end_inset
 
 
