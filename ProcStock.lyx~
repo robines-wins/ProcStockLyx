@@ -89,8 +89,298 @@ MJ Lagarde
 intro
 \end_layout
 
+\begin_layout Section
+conditional probabilities/expectation
+\end_layout
+
 \begin_layout Standard
-\begin_inset Formula $E(Y)=E_{X}\left[E_{Y|X}\left(Y|X\right)\right]$
+Definition: let's two random variables X and Y have a join discrete probability
+ function P(x,y) = P(X=x, Y=y) for (x,y)
+\begin_inset Formula $\subset$
+\end_inset
+
+A (called the support of the distribution) and 
+\begin_inset Formula $P(X=x,Y=y)=0\mbox{ for }(x,y)\notin A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Then the conditional probability of Y given X = x, P
+\begin_inset Formula $_{y/X=x}$
+\end_inset
+
+(y|x) is defined to be 
+\begin_inset Formula $\frac{P_{X,Y}(x,y)}{P_{X}(x)}$
+\end_inset
+
+ for
+\begin_inset Formula $P_{X}(x)\neq0$
+\end_inset
+
+.
+ Here 
+\begin_inset Formula $P_{X}(x)$
+\end_inset
+
+ is called the marginal.
+ 
+\begin_inset Formula $P_{X}(x)=\sum_{\forall y}P_{X,Y}(x,y)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Notes : 
+\end_layout
+
+\begin_layout Enumerate
+If you fix x, tehn 
+\begin_inset Formula $P{}_{Y/X}(y|x)$
+\end_inset
+
+consider as function of Y, defines a conditional probability distribution
+ of Y given x.
+\end_layout
+
+\begin_layout Enumerate
+There is no such thing as the random variable Y|X=x.
+ It is simply defined as P(Y=y | X=x) is definied as above.
+ When you see the statement Y|X=x don't interpret this to mean that that
+ the r.v had the p function P
+\begin_inset Formula $_{y/X=x}$
+\end_inset
+
+(y|X = x).
+ It means P
+\begin_inset Formula $_{y/X=x}$
+\end_inset
+
+(y|x) = P(Y=y | X=x) .
+ 
+\end_layout
+
+\begin_layout Standard
+Definition 2: If the random variables (X,Y) are joinluy discrete, the conditiona
+l expectation of Y given X=x, written E(Y|X=x) is defined as follows : E(Y|X=x)
+ = 
+\begin_inset Formula $\sum$
+\end_inset
+
+
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+all y
+\end_layout
+
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ y*
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ P
+\begin_inset Formula $_{y/X=x}$
+\end_inset
+
+(y|x).
+ 
+\end_layout
+
+\begin_layout Standard
+Definition 3: If the random variables (X,Y) are joinly continuous with probabili
+ty density function (pdf) f
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+X,Y
+\end_layout
+
+\end_inset
+
+(x,y) then we define conditional pdf of Y given X=x as follows : f
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+Y/X=x
+\end_layout
+
+\end_inset
+
+(y|x) = 
+\begin_inset Formula $\frac{fX,Y(x,y)}{fX(x)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here 
+\begin_inset Formula $\intop_{-\infty}^{\infty}f_{X,Y}(x,y)dy$
+\end_inset
+
+ is called marginal pdf of x.
+\end_layout
+
+\begin_layout Standard
+Definition: If the r.v.
+ X and Y are continuous, with joint pdf f
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+X,Y
+\end_layout
+
+\end_inset
+
+(x,y) then we define the conditional expectation of Y given X=x as follows
+ E(Y|X=x) = 
+\begin_inset Formula $\intop_{-\infty}^{\infty}$
+\end_inset
+
+y * f
+\begin_inset script subscript
+
+\begin_layout Plain Layout
+Y|X=x
+\end_layout
+
+\end_inset
+
+(y|x) dx
+\end_layout
+
+\begin_layout Standard
+The laws of total proability and total expectation : 
+\end_layout
+
+\begin_layout Standard
+Law of total probability : 
+\end_layout
+
+\begin_layout Standard
+Let X,Y be random variables with some join discrete distribution or continuous
+ distribution.
+\end_layout
+
+\begin_layout Itemize
+(I) if discrete P
+\begin_inset Formula $_{y}(y)$
+\end_inset
+
+= 
+\begin_inset Formula $\sum$
+\end_inset
+
+ P
+\begin_inset Formula $_{y/X=x}$
+\end_inset
+
+(y|x) * P
+\begin_inset Formula $_{X}(x)=\sum P(X=x,Y=y)*P(X=x)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+(II) If continuous :
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $F_{y}(y)=\intop fY/X=x(y|x)*f_{X}(x)dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+(I'): 
+\begin_inset Formula $F_{Y}(y)=P(Y\leq y)=\sum P_{y/X=x}(y\leq y|x)*P_{X}(x)=\sum F_{y/X=x}(y|x)*f_{X}(x)\,dx$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ where 
+\begin_inset Formula $\sum F_{y/X=x}(y|x)=p_{Y/X=x}(zx)z\,:\,z\leq y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+(II')
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $F_{Y}(y)=\intop p(y\leq y|X=x)*f_{X}(x)\,dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E(Y)=E_{X}\left[E_{Y|X}\left(Y|X\right)\right]
+\]
+
 \end_inset
 
 
@@ -213,9 +503,252 @@ if
  have some distribution then we can write 
 \begin_inset Formula 
 \[
-\mbox{Var}(Y)=E_{X}\left[\mbox{Var}\left(Y|X\right)\right]+\mbox{Var}_{Y}\left[E\left(Y|X\right)\right]
+\mbox{Var}(Y)=E_{X}\left[\mbox{Var}\left(Y|X\right)\right]+\mbox{Var}_{X}\left[E\left(Y|X\right)\right]
 \]
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Application:
+\end_layout
+
+\begin_layout Paragraph
+Ex: 
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $X_{1},X_{1}$
+\end_inset
+
+be identically distributed random variable with common mean 
+\begin_inset Formula $E(X)=\mu$
+\end_inset
+
+ let 
+\begin_inset Formula $N$
+\end_inset
+
+ be a non-negative integer valued r.v, independent of 
+\begin_inset Formula $X_{1,}X_{2},\ldots$
+\end_inset
+
+ .
+ Then 
+\begin_inset Formula $E\left[\sum_{i=1}^{N}X_{i}\right]=E(X)E(N)=E(N)\mu$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Note:
+\end_layout
+
+\begin_layout Standard
+We cannot simply write 
+\begin_inset Formula $E\left[\sum_{i=1}^{N}X_{i}\right]=\sum_{i=1}^{N}E\left[X_{i}\right]$
+\end_inset
+
+.
+ Since the upper limit of summation is random and nothing in probs allow
+ us to take the expected value inside when the sum is random 
+\end_layout
+
+\begin_layout Paragraph
+Proof:
+\end_layout
+
+\begin_layout Standard
+The presence of 
+\begin_inset Formula $\geq2$
+\end_inset
+
+ r.v: 
+\begin_inset Formula $N$
+\end_inset
+
+ and the 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ suggest that conditioning one one or more of them may make thing simpler.
+ idea: if we condition on 
+\begin_inset Formula $N=n$
+\end_inset
+
+ then we have a fixed upper limit sum condition and then 
+\begin_inset Formula $E\left[\sum_{i=1}^{n}X_{i}\right]=\sum_{i=1}^{n}E\left[X_{i}\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We use law of total expectation.
+ Let 
+\begin_inset Formula $S_{n}=\sum_{i=1}^{n}X_{i}$
+\end_inset
+
+ we have 
+\begin_inset Formula $E\left[S_{n}\right]=E_{n}\left[E\left[S_{n}|N\right]\right]$
+\end_inset
+
+ and we need 
+\begin_inset Formula $E\left[S_{n}|N\right]=\left.E\left[S_{n}|N=n\right]\right|_{n=N}$
+\end_inset
+
+.
+ now 
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left[S_{n}|N=n\right] & = & E\left[\sum_{i=1}^{n}X_{i}|N=n\right]\\
+ & = & E\left[\sum_{i=1}^{n}X_{i}\right]\\
+ & = & \sum_{i=1}^{n}E\left[X_{i}\right]\\
+ & = & n\mu
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+since 
+\begin_inset Formula $N$
+\end_inset
+
+ is independent with all 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+So 
+\begin_inset Formula $E\left[S_{n}|N\right]=\left.n\mu\right|_{n=N}=n\mu$
+\end_inset
+
+.
+ Finally 
+\begin_inset Formula $E\left[S_{N}\right]=E\left[N\mu\right]=\mu E\left[N\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Warning:
+\end_layout
+
+\begin_layout Standard
+when you condition, retain the conditioning 
+\begin_inset Quotes eld
+\end_inset
+
+event
+\begin_inset Quotes erd
+\end_inset
+
+ until you've decide that it can be removed.
+ In the above 
+\begin_inset Formula $g(n)=E\left[S_{N}|N=n\right]$
+\end_inset
+
+ so 
+\begin_inset Formula $g(N)=E\left[S_{N}|N\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Extension of the above result
+\end_layout
+
+\begin_layout Standard
+the following extension is important since it allows us to remove the assumption
+ that 
+\begin_inset Formula $N$
+\end_inset
+
+ is independent of 
+\begin_inset Formula $X_{1,}X_{2},\ldots$
+\end_inset
+
+ its called 
+\emph on
+Wald's identity.
+
+\emph default
+ It has various form, the simplest one:
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $X_{1,}X_{2},\ldots$
+\end_inset
+
+ be identically distributed with 
+\begin_inset Formula $E(X)=\mu$
+\end_inset
+
+ let be 
+\begin_inset Formula $N$
+\end_inset
+
+ a 
+\emph on
+stopping rule, 
+\emph default
+that is the decision to stop summing at 
+\begin_inset Formula $N=n$
+\end_inset
+
+.
+ It depend only on 
+\begin_inset Formula $X_{1,}X_{2},\ldots,X_{n}$
+\end_inset
+
+and not on any 
+\begin_inset Formula $X_{i},\,i>n$
+\end_inset
+
+.
+ Remarquably we still has 
+\begin_inset Formula $E\left[\sum_{i=1}^{N}X_{i}\right]=E(N)E(X)=E(N)\mu$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To clarify what is a stopping rule, 2 example, one where 
+\begin_inset Formula $N$
+\end_inset
+
+ is one, one where not
+\end_layout
+
+\begin_layout Subparagraph
+Ex1
+\end_layout
+
+\begin_layout Standard
+rule: Stop summing at 
+\begin_inset Formula $N=n$
+\end_inset
+
+ if and only if 
+\begin_inset Formula $\sum_{i=1}^{n-1}X_{i}<10$
+\end_inset
+
+ and 
+\begin_inset Formula $\sum_{i=1}^{n}X_{i}\geq10$
 \end_inset
 
 
