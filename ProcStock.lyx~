@@ -845,7 +845,7 @@ ldots denote the of cracks fond in a successive weeks in an aircraft component.
  
 \end_layout
 
-\begin_layout Subparagraph
+\begin_layout Section
 Probability Generating Function : 
 \end_layout
 
@@ -884,7 +884,7 @@ Let X be a discrete r.v.
 Notes: 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
 
 \family roman
 \series medium
@@ -897,9 +897,10 @@ Notes:
 \uwave off
 \noun off
 \color none
-1) 
-\backslash
-Phi_{X}(z) is a power serie in z which converges for 
+\begin_inset Formula $\Phi_{X}(z)$
+\end_inset
+
+ is a power serie in z which converges for 
 \family default
 \series default
 \shape default
@@ -918,8 +919,27 @@ Phi_{X}(z) is a power serie in z which converges for
 
 \end_layout
 
-\begin_layout Standard
-2) 
+\begin_layout Enumerate
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\Phi_{X}(1)=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Reason for the name : Given 
 \family roman
 \series medium
 \shape up
@@ -932,8 +952,166 @@ Phi_{X}(z) is a power serie in z which converges for
 \noun off
 \color none
 
+\begin_inset Formula $\Phi_{X}(z)$
+\end_inset
+
+ one can generate or recover 
+\begin_inset Formula $p_{x}(x)$
+\end_inset
+
+ for all 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ That is there is a one to one correspondence between a pgf and its distribution.
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+Proof: Since 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\Phi_{X}(z)$
+\end_inset
+
+ is a power series in z it is uniformly convergent for 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $|z|<1$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $\Phi'_{x}(z)$
+\end_inset
+
+ exists for such z and 
+\begin_inset Formula $\Phi'_{x}(z)=\frac{d}{dz}\sum_{0}^{\infty}p_{x}(x)=\sum_{0}^{\infty}xz^{x-1}p_{x}(x)=\sum_{1}^{\infty}xz^{x-1}$
+\end_inset
+
+ 
+\begin_inset Formula $\Phi_{x}'(0)=p_{x}(1)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+In a similar fashion, by differentiating successively, setting z=0, we get
+ 
+\begin_inset Formula $\Phi_{x/2!}^{"}(0)=\frac{p_{x}(z)}{z!}$
+\end_inset
+
+ to give 
+\begin_inset Formula $p_{x}(x)$
+\end_inset
+
+=
+\begin_inset Formula $\Phi_{X}^{x}(0)/x!$
+\end_inset
+
+ or in a more familar notation : 
+\begin_inset Formula $P_{X}(k)$
+\end_inset
+
+= 
+\begin_inset Formula $\Phi_{X}^{k}(0)/k!,$
+\end_inset
+
+ for k=1..
+ with 
+\begin_inset Formula $\Phi_{X}^{0}(0)=p_{X}(0)=\Phi_{X}(0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+By setting 
+\begin_inset Formula $z=e^{t}$
+\end_inset
+
+ we obtain the mgf 
+\begin_inset Formula $\sum_{x}e^{tx}p_{x}(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\Phi_{X}(z)=E[z^{X}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+It then follows from 5 that if 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $X_{1,}X_{2},\ldots,X_{n}$
+\end_inset
+
+ are independents r.v.s, then 
+\begin_inset Formula $\Phi_{\sum_{i=1}^{n}}(z)=E[z^{\sum_{1}^{n}Xi}]=E[\prod_{1}^{n}z^{Xi}]=\prod_{i=1}^{n}E[z^{Xi}]$
+\end_inset
+
+=
+\begin_inset Formula $\prod_{i=1}^{n}\Phi_{xi}[z]$
+\end_inset
+
+ further if the Xiw are identically distributed then 
 \backslash
-Phi_{X}(1) = 1
+Phi_{
+\backslash
+sum_{i=1}^{n}}(z) : [
+\begin_inset Formula $\Phi_{x}(z)]^{n}$
+\end_inset
+
+
 \end_layout
 
 \end_body

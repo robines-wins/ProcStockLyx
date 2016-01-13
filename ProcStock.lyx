@@ -845,7 +845,7 @@ ldots denote the of cracks fond in a successive weeks in an aircraft component.
  
 \end_layout
 
-\begin_layout Subparagraph
+\begin_layout Section
 Probability Generating Function : 
 \end_layout
 
@@ -862,7 +862,7 @@ generating function
  is restricted to non-negative integer valued r.v.s, whose supoort is on {0,1,2..}.
 \end_layout
 
-\begin_layout Subparagraph
+\begin_layout Paragraph
 Definition 
 \end_layout
 
@@ -884,7 +884,7 @@ Let X be a discrete r.v.
 Notes: 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
 
 \family roman
 \series medium
@@ -897,9 +897,10 @@ Notes:
 \uwave off
 \noun off
 \color none
-1) 
-\backslash
-Phi_{X}(z) is a power serie in z which converges for 
+\begin_inset Formula $\Phi_{X}(z)$
+\end_inset
+
+ is a power serie in z which converges for 
 \family default
 \series default
 \shape default
@@ -918,8 +919,8 @@ Phi_{X}(z) is a power serie in z which converges for
 
 \end_layout
 
-\begin_layout Standard
-2) 
+\begin_layout Enumerate
+
 \family roman
 \series medium
 \shape up
@@ -931,13 +932,14 @@ Phi_{X}(z) is a power serie in z which converges for
 \uwave off
 \noun off
 \color none
+\begin_inset Formula $\Phi_{X}(1)=1$
+\end_inset
 
-\backslash
-Phi_{X}(1) = 1
+
 \end_layout
 
-\begin_layout Standard
-3) Reason for the name : Given 
+\begin_layout Enumerate
+Reason for the name : Given 
 \family roman
 \series medium
 \shape up
@@ -950,13 +952,35 @@ Phi_{X}(1) = 1
 \noun off
 \color none
 
-\backslash
-Phi_{X}(z) one can generate or recover p_{x}(x) for all x.
+\begin_inset Formula $\Phi_{X}(z)$
+\end_inset
+
+ one can generate or recover 
+\begin_inset Formula $p_{x}(x)$
+\end_inset
+
+ for all 
+\begin_inset Formula $x$
+\end_inset
+
+.
  That is there is a one to one correspondence between a pgf and its distribution.
  
-\end_layout
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
 
-\begin_layout Standard
+\begin_inset Newline newline
+\end_inset
+
 Proof: Since 
 \family roman
 \series medium
@@ -970,8 +994,10 @@ Proof: Since
 \noun off
 \color none
 
-\backslash
-Phi_{X}(z) is a power series in z it is uniformly convergent for 
+\begin_inset Formula $\Phi_{X}(z)$
+\end_inset
+
+ is a power series in z it is uniformly convergent for 
 \family default
 \series default
 \shape default
@@ -983,8 +1009,8 @@ Phi_{X}(z) is a power series in z it is uniformly convergent for
 \uwave default
 \noun default
 \color inherit
-|z|
-\begin_inset Formula $<1$
+
+\begin_inset Formula $|z|<1$
 \end_inset
 
 .
@@ -1001,9 +1027,9 @@ Phi_{X}(z) is a power series in z it is uniformly convergent for
 \end_inset
 
 
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
 In a similar fashion, by differentiating successively, setting z=0, we get
  
 \begin_inset Formula $\Phi_{x/2!}^{"}(0)=\frac{p_{x}(z)}{z!}$
@@ -1033,8 +1059,8 @@ In a similar fashion, by differentiating successively, setting z=0, we get
 
 \end_layout
 
-\begin_layout Standard
-4) By setting 
+\begin_layout Enumerate
+By setting 
 \begin_inset Formula $z=e^{t}$
 \end_inset
 
@@ -1045,16 +1071,15 @@ In a similar fashion, by differentiating successively, setting z=0, we get
 
 \end_layout
 
-\begin_layout Standard
-5)
+\begin_layout Enumerate
 \begin_inset Formula $\Phi_{X}(z)=E[z^{X}]$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-6) It then follows fro 5 that if 
+\begin_layout Enumerate
+It then follows from 5 that if 
 \family roman
 \series medium
 \shape up
@@ -1066,9 +1091,11 @@ In a similar fashion, by differentiating successively, setting z=0, we get
 \uwave off
 \noun off
 \color none
-X_{1,}X_{2},
-\backslash
-ldots,X_{n} are independents r.v.s, then 
+
+\begin_inset Formula $X_{1,}X_{2},\ldots,X_{n}$
+\end_inset
+
+ are independents r.v.s, then 
 \begin_inset Formula $\Phi_{\sum_{i=1}^{n}}(z)=E[z^{\sum_{1}^{n}Xi}]=E[\prod_{1}^{n}z^{Xi}]=\prod_{i=1}^{n}E[z^{Xi}]$
 \end_inset
 
