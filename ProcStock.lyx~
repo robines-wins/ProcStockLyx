@@ -537,7 +537,7 @@ if
 \end_layout
 
 \begin_layout Subsection
-Application:
+Application
 \end_layout
 
 \begin_layout Paragraph
@@ -786,6 +786,154 @@ Stop summing at
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Exemple where n won't be the stopping rule:
+\end_layout
+
+\begin_layout Standard
+Let 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+X_{1,}X_{2},
+\backslash
+ldots denote the of cracks fond in a successive weeks in an aircraft component.
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $S_{n}=\sum_{i=1}^{n}X_{i}$
+\end_inset
+
+ = cumulatiev number of cracks up to the random week, N.
+ Now suppose N is defined as follows: N=n, if 0 new cracks occures in week
+ n+1.
+ With this stopping rule, the decision to stop adding the number of cracks
+ at month n depends o,n what happens after week n.
+ Thus n is not a stopping rule.
+ 
+\end_layout
+
+\begin_layout Subparagraph
+Probability Generating Function : 
+\end_layout
+
+\begin_layout Standard
+The following 
+\begin_inset Quotes eld
+\end_inset
+
+generating function
+\begin_inset Quotes erd
+\end_inset
+
+ plays a role similar to moment generating function, but it's definitin
+ is restricted to non-negative integer valued r.v.s, whose supoort is on {0,1,2..}.
+\end_layout
+
+\begin_layout Subparagraph
+Definition 
+\end_layout
+
+\begin_layout Standard
+Let X be a discrete r.v.
+ with support on {0,1,2..}.
+ The probability generatiing function (pgf) is defined as follows: 
+\begin_inset Formula $\Phi_{X}(z)=\sum_{x=0}^{\infty}z^{x}p_{x}(x)=\sum_{x=0}^{\infty}z^{x}P[X=x]$
+\end_inset
+
+ for |z|
+\begin_inset Formula $\leq1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notes: 
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+1) 
+\backslash
+Phi_{X}(z) is a power serie in z which converges for 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+|z|
+\begin_inset Formula $\leq1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+2) 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\backslash
+Phi_{X}(1) = 1
 \end_layout
 
 \end_body
