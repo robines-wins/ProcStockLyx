@@ -312,27 +312,17 @@ Let X,Y be random variables with some join discrete distribution or continuous
  distribution.
 \end_layout
 
-\begin_layout Itemize
-(I) if discrete P
-\begin_inset Formula $_{y}(y)$
-\end_inset
-
-= 
-\begin_inset Formula $\sum$
-\end_inset
-
- P
-\begin_inset Formula $_{y/X=x}$
-\end_inset
-
-(y|x) * P
-\begin_inset Formula $_{X}(x)=\sum P(X=x,Y=y)*P(X=x)$
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+(I) If discrete
+\begin_inset Formula $P_{y}(y)=\sum P_{y/X=x}(y|x)*P_{X}(x)=\sum P(X=x,Y=y)*P(X=x)$
 \end_inset
 
  
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
 (II) If continuous :
 \family roman
 \series medium
@@ -352,8 +342,9 @@ Let X,Y be random variables with some join discrete distribution or continuous
 
 \end_layout
 
-\begin_layout Itemize
-(I'): 
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+(I') 
 \begin_inset Formula $F_{Y}(y)=P(Y\leq y)=\sum P_{y/X=x}(y\leq y|x)*P_{X}(x)=\sum F_{y/X=x}(y|x)*f_{X}(x)\,dx$
 \end_inset
 
@@ -376,7 +367,8 @@ Let X,Y be random variables with some join discrete distribution or continuous
 
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
 (II')
 \family roman
 \series medium
@@ -389,7 +381,7 @@ Let X,Y be random variables with some join discrete distribution or continuous
 \uwave off
 \noun off
 \color none
-
+ 
 \begin_inset Formula $F_{Y}(y)=\intop p(y\leq y|X=x)*f_{X}(x)\,dx$
 \end_inset
 
