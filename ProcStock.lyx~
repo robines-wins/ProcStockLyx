@@ -1106,5 +1106,156 @@ sum_{i=1}^{n}}(z) : [
 
 \end_layout
 
+\begin_layout Standard
+3) Reason for the name : Given 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\backslash
+Phi_{X}(z) one can generate or recover p_{x}(x) for all x.
+ That is there is a one to one correspondence between a pgf and its distribution.
+ 
+\end_layout
+
+\begin_layout Standard
+Proof: Since 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\backslash
+Phi_{X}(z) is a power series in z it is uniformly convergent for 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+|z|
+\begin_inset Formula $<1$
+\end_inset
+
+.
+ Hence 
+\begin_inset Formula $\Phi'_{x}(z)$
+\end_inset
+
+ exists for such z and 
+\begin_inset Formula $\Phi'_{x}(z)=\frac{d}{dz}\sum_{0}^{\infty}p_{x}(x)=\sum_{0}^{\infty}xz^{x-1}p_{x}(x)=\sum_{1}^{\infty}xz^{x-1}$
+\end_inset
+
+ 
+\begin_inset Formula $\Phi_{x}'(0)=p_{x}(1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In a similar fashion, by differentiating successively, setting z=0, we get
+ 
+\begin_inset Formula $\Phi_{x/2!}^{"}(0)=\frac{p_{x}(z)}{z!}$
+\end_inset
+
+ to give 
+\begin_inset Formula $p_{x}(x)$
+\end_inset
+
+=
+\begin_inset Formula $\Phi_{X}^{x}(0)/x!$
+\end_inset
+
+ or in a more familar notation : 
+\begin_inset Formula $P_{X}(k)$
+\end_inset
+
+= 
+\begin_inset Formula $\Phi_{X}^{k}(0)/k!,$
+\end_inset
+
+ for k=1..
+ with 
+\begin_inset Formula $\Phi_{X}^{0}(0)=p_{X}(0)=\Phi_{X}(0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+4) By setting 
+\begin_inset Formula $z=e^{t}$
+\end_inset
+
+ we obtain the mgf 
+\begin_inset Formula $\sum_{x}e^{tx}p_{x}(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+5)
+\begin_inset Formula $\Phi_{X}(z)=E[z^{X}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+6) It then follows fro 5 that if 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+X_{1,}X_{2},
+\backslash
+ldots,X_{n} are independents r.v.s, then 
+\begin_inset Formula $\Phi_{\sum_{i=1}^{n}}(z)=E[z^{\sum_{1}^{n}Xi}]=E[\prod_{1}^{n}z^{Xi}]=\prod_{i=1}^{n}E[z^{Xi}]$
+\end_inset
+
+=
+\begin_inset Formula $\prod_{i=1}^{n}\Phi_{xi}[z]$
+\end_inset
+
+ further if the Xiw are identically distributed then 
+\backslash
+Phi_{
+\backslash
+sum_{i=1}^{n}}(z) : [
+\begin_inset Formula $\Phi_{x}(z)]^{n}$
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document

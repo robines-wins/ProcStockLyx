@@ -1106,5 +1106,175 @@ sum_{i=1}^{n}}(z) : [
 
 \end_layout
 
+\begin_layout Standard
+CHECK MY COURSES FOR ASSIGNEMENT:
+\end_layout
+
+\begin_layout Subparagraph
+Stochastic processes themselves
+\end_layout
+
+\begin_layout Standard
+Definition : a stochastic process indexed by an index set T is a familly
+ of random variables, denoted by {
+\begin_inset Formula $X{}_{t}$
+\end_inset
+
+ t 
+\begin_inset Formula $\epsilon T$
+\end_inset
+
+} such for each t
+\begin_inset Formula $\epsilon$
+\end_inset
+
+T, 
+\begin_inset Formula $X{}_{t}$
+\end_inset
+
+ is a random variable.
+\end_layout
+
+\begin_layout Standard
+Notes
+\end_layout
+
+\begin_layout Standard
+1) For each t
+\begin_inset Formula $\epsilon$
+\end_inset
+
+T, 
+\begin_inset Formula $X{}_{t}$
+\end_inset
+
+ is a r.v.
+ means 
+\begin_inset Formula $X{}_{t}$
+\end_inset
+
+ =
+\begin_inset Formula $X{}_{t}$
+\end_inset
+
+ (
+\begin_inset Formula $\omega)$
+\end_inset
+
+) is a function of 
+\begin_inset Formula $\omega\epsilon S,$
+\end_inset
+
+ the sample smape of the possible outcomes of 
+\begin_inset Formula $X{}_{t}$
+\end_inset
+
+ .
+ That is for each t, 
+\begin_inset Formula $X{}_{t}$
+\end_inset
+
+ had a probability distribution that is specified by 
+\begin_inset Formula $F_{X{}_{t}}(.)$
+\end_inset
+
+its cdf.
+ 
+\end_layout
+
+\begin_layout Standard
+2) For each fixed 
+\begin_inset Formula $\omega,$
+\end_inset
+
+ 
+\begin_inset Formula $X{}_{t}$
+\end_inset
+
+ is a function of 
+\begin_inset Formula $t\varepsilon T.$
+\end_inset
+
+(the idkr set).
+ We call this function of t (for fixed 
+\begin_inset Formula $\omega\epsilon S$
+\end_inset
+
+) a trajectory or sample path of stochastic process.
+ We may depic the situation as follows.
+ 
+\end_layout
+
+\begin_layout Standard
+3) How is a stochastic process specified? Recall that if X is a r.v.
+ it is complety determined or specified once you have specified c.d.f 
+\begin_inset Formula $F_{X}$
+\end_inset
+
+.
+ In the case of stochastic orocess it turns out tht it is uniquely specified
+ once you have specified 
+\begin_inset Formula $F_{Xt1},$
+\end_inset
+
+
+\begin_inset Formula $F_{Xt2},$
+\end_inset
+
+..., 
+\begin_inset Formula $F_{Xtn}$
+\end_inset
+
+ for all the collections of the r.v.s 
+\begin_inset Formula $X_{t1},$
+\end_inset
+
+
+\begin_inset Formula $X_{t2},..,X_{tn}$
+\end_inset
+
+for all t1, t2,..,tn
+\begin_inset Formula $\epsilon T$
+\end_inset
+
+, and all n.
+ 
+\end_layout
+
+\begin_layout Standard
+Notes: we can view stochastic process as follow, since 
+\begin_inset Formula $\omega\epsilon S$
+\end_inset
+
+ is unknow in advance, each projectory in unknow in advance of our experiment.
+ Therefore, we can regard a stochastic process as a random function.
+ We are sitting in a function space.
+ Each point in this space is a function.
+ Question that we may ask one 
+\begin_inset Quotes eld
+\end_inset
+
+What is the probability that this function will fall in some set in this
+ function space?
+\end_layout
+
+\begin_layout Standard
+Extensen theorem is that the probabilities of all the event in this function
+ space is uniquely determined by the probabilities speciafied by the finite
+ themselves c.d.f.S.
+\end_layout
+
+\begin_layout Standard
+Examples stochastic process
+\end_layout
+
+\begin_layout Standard
+1)Trivially any single r.v., X is a stochastic process - the family r.v.
+\end_layout
+
+\begin_layout Standard
+2) the sequence of random varibale X1,X2,X3...
+\end_layout
+
 \end_body
 \end_document
