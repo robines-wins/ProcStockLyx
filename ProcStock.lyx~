@@ -314,7 +314,7 @@ Let X,Y be random variables with some join discrete distribution or continuous
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-(I) if discrete
+(I) If discrete
 \begin_inset Formula $P_{y}(y)=\sum P_{y/X=x}(y|x)*P_{X}(x)=\sum P(X=x,Y=y)*P(X=x)$
 \end_inset
 
@@ -1096,165 +1096,172 @@ It then follows from 5 that if
 \end_inset
 
  further if the Xiw are identically distributed then 
-\backslash
-Phi_{
-\backslash
-sum_{i=1}^{n}}(z) : [
-\begin_inset Formula $\Phi_{x}(z)]^{n}$
+\begin_inset Formula $\Phi_{\sum_{i=1}^{n}}(z):[\Phi_{x}(z)]^{n}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-3) Reason for the name : Given 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
+CHECK MY COURSES FOR ASSIGNEMENT:
+\end_layout
 
-\backslash
-Phi_{X}(z) one can generate or recover p_{x}(x) for all x.
- That is there is a one to one correspondence between a pgf and its distribution.
- 
+\begin_layout Subparagraph
+Stochastic processes themselves
 \end_layout
 
 \begin_layout Standard
-Proof: Since 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
+Definition : a stochastic process indexed by an index set T is a family
+ of random variables, denoted by 
+\begin_inset Formula $\left\{ X{}_{t},\,t\in T\right\} $
+\end_inset
 
-\backslash
-Phi_{X}(z) is a power series in z it is uniformly convergent for 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-|z|
-\begin_inset Formula $<1$
+ such for each 
+\begin_inset Formula $t\in T$
+\end_inset
+
+, 
+\begin_inset Formula $X{}_{t}$
+\end_inset
+
+ is a random variable.
+\end_layout
+
+\begin_layout Standard
+Notes
+\end_layout
+
+\begin_layout Enumerate
+For each 
+\begin_inset Formula $t\in T$
+\end_inset
+
+, 
+\begin_inset Formula $X{}_{t}$
+\end_inset
+
+ is a r.v.
+ means 
+\begin_inset Formula $X{}_{t}=X{}_{t}(\omega)$
+\end_inset
+
+ is a function of 
+\begin_inset Formula $\omega\in S,$
+\end_inset
+
+ the sample smape of the possible outcomes of 
+\begin_inset Formula $X{}_{t}$
+\end_inset
+
+ .
+ That is for each t, 
+\begin_inset Formula $X{}_{t}$
+\end_inset
+
+ had a probability distribution that is specified by 
+\begin_inset Formula $F_{X{}_{t}}(.)$
+\end_inset
+
+its cdf.
+ 
+\end_layout
+
+\begin_layout Enumerate
+For each fixed 
+\begin_inset Formula $\omega,$
+\end_inset
+
+ 
+\begin_inset Formula $X{}_{t}$
+\end_inset
+
+ is a function of 
+\begin_inset Formula $t\in T.$
+\end_inset
+
+(the idkr set).
+ We call this function of t (for fixed 
+\begin_inset Formula $\omega\epsilon S$
+\end_inset
+
+) a trajectory or sample path of stochastic process.
+ We may depic the situation as follows.
+ 
+\end_layout
+
+\begin_layout Enumerate
+How is a stochastic process specified? Recall that if X is a r.v.
+ it is complety determined or specified once you have specified c.d.f 
+\begin_inset Formula $F_{X}$
 \end_inset
 
 .
- Hence 
-\begin_inset Formula $\Phi'_{x}(z)$
+ In the case of stochastic orocess it turns out tht it is uniquely specified
+ once you have specified 
+\begin_inset Formula $F_{Xt1},$
 \end_inset
 
- exists for such z and 
-\begin_inset Formula $\Phi'_{x}(z)=\frac{d}{dz}\sum_{0}^{\infty}p_{x}(x)=\sum_{0}^{\infty}xz^{x-1}p_{x}(x)=\sum_{1}^{\infty}xz^{x-1}$
+
+\begin_inset Formula $F_{Xt2},$
 \end_inset
 
+..., 
+\begin_inset Formula $F_{Xtn}$
+\end_inset
+
+ for all the collections of the r.v.s 
+\begin_inset Formula $X_{t1},$
+\end_inset
+
+
+\begin_inset Formula $X_{t2},..,X_{tn}$
+\end_inset
+
+for all t1, t2,..,tn
+\begin_inset Formula $\in T$
+\end_inset
+
+, and all n.
  
-\begin_inset Formula $\Phi_{x}'(0)=p_{x}(1)$
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
-In a similar fashion, by differentiating successively, setting z=0, we get
- 
-\begin_inset Formula $\Phi_{x/2!}^{"}(0)=\frac{p_{x}(z)}{z!}$
+Notes: we can view stochastic process as follow, since 
+\begin_inset Formula $\omega\in S$
 \end_inset
 
- to give 
-\begin_inset Formula $p_{x}(x)$
+ is unknow in advance, each projectory in unknow in advance of our experiment.
+ Therefore, we can regard a stochastic process as a random function.
+ We are sitting in a function space.
+ Each point in this space is a function.
+ Question that we may ask one 
+\begin_inset Quotes eld
 \end_inset
 
-=
-\begin_inset Formula $\Phi_{X}^{x}(0)/x!$
-\end_inset
-
- or in a more familar notation : 
-\begin_inset Formula $P_{X}(k)$
-\end_inset
-
-= 
-\begin_inset Formula $\Phi_{X}^{k}(0)/k!,$
-\end_inset
-
- for k=1..
- with 
-\begin_inset Formula $\Phi_{X}^{0}(0)=p_{X}(0)=\Phi_{X}(0)$
-\end_inset
-
-
+What is the probability that this function will fall in some set in this
+ function space?
 \end_layout
 
 \begin_layout Standard
-4) By setting 
-\begin_inset Formula $z=e^{t}$
-\end_inset
-
- we obtain the mgf 
-\begin_inset Formula $\sum_{x}e^{tx}p_{x}(x)$
-\end_inset
-
-
+Extensen theorem is that the probabilities of all the event in this function
+ space is uniquely determined by the probabilities speciafied by the finite
+ themselves c.d.f.S.
 \end_layout
 
 \begin_layout Standard
-5)
-\begin_inset Formula $\Phi_{X}(z)=E[z^{X}]$
-\end_inset
-
-
+Examples stochastic process
 \end_layout
 
-\begin_layout Standard
-6) It then follows fro 5 that if 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-X_{1,}X_{2},
-\backslash
-ldots,X_{n} are independents r.v.s, then 
-\begin_inset Formula $\Phi_{\sum_{i=1}^{n}}(z)=E[z^{\sum_{1}^{n}Xi}]=E[\prod_{1}^{n}z^{Xi}]=\prod_{i=1}^{n}E[z^{Xi}]$
+\begin_layout Enumerate
+Trivially any single r.v., X is a stochastic process - the family r.v.
+\end_layout
+
+\begin_layout Enumerate
+the sequence of random variable 
+\begin_inset Formula $X_{1},X_{2},X_{3}$
 \end_inset
 
-=
-\begin_inset Formula $\prod_{i=1}^{n}\Phi_{xi}[z]$
-\end_inset
-
- further if the Xiw are identically distributed then 
-\backslash
-Phi_{
-\backslash
-sum_{i=1}^{n}}(z) : [
-\begin_inset Formula $\Phi_{x}(z)]^{n}$
-\end_inset
-
-
+...
 \end_layout
 
 \end_body

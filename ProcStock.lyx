@@ -1096,11 +1096,7 @@ It then follows from 5 that if
 \end_inset
 
  further if the Xiw are identically distributed then 
-\backslash
-Phi_{
-\backslash
-sum_{i=1}^{n}}(z) : [
-\begin_inset Formula $\Phi_{x}(z)]^{n}$
+\begin_inset Formula $\Phi_{\sum_{i=1}^{n}}(z):[\Phi_{x}(z)]^{n}$
 \end_inset
 
 
@@ -1110,59 +1106,51 @@ sum_{i=1}^{n}}(z) : [
 CHECK MY COURSES FOR ASSIGNEMENT:
 \end_layout
 
-\begin_layout Subparagraph
+\begin_layout Chapter
 Stochastic processes themselves
 \end_layout
 
+\begin_layout Section
+Definition 
+\end_layout
+
 \begin_layout Standard
-Definition : a stochastic process indexed by an index set T is a familly
- of random variables, denoted by {
-\begin_inset Formula $X{}_{t}$
+a stochastic process indexed by an index set T is a family of random variables,
+ denoted by 
+\begin_inset Formula $\left\{ X{}_{t},\,t\in T\right\} $
 \end_inset
 
- t 
-\begin_inset Formula $\epsilon T$
+ such for each 
+\begin_inset Formula $t\in T$
 \end_inset
 
-} such for each t
-\begin_inset Formula $\epsilon$
-\end_inset
-
-T, 
+, 
 \begin_inset Formula $X{}_{t}$
 \end_inset
 
  is a random variable.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Paragraph
 Notes
 \end_layout
 
-\begin_layout Standard
-1) For each t
-\begin_inset Formula $\epsilon$
+\begin_layout Enumerate
+For each 
+\begin_inset Formula $t\in T$
 \end_inset
 
-T, 
+, 
 \begin_inset Formula $X{}_{t}$
 \end_inset
 
  is a r.v.
  means 
-\begin_inset Formula $X{}_{t}$
+\begin_inset Formula $X{}_{t}=X{}_{t}(\omega)$
 \end_inset
 
- =
-\begin_inset Formula $X{}_{t}$
-\end_inset
-
- (
-\begin_inset Formula $\omega)$
-\end_inset
-
-) is a function of 
-\begin_inset Formula $\omega\epsilon S,$
+ is a function of 
+\begin_inset Formula $\omega\in S,$
 \end_inset
 
  the sample smape of the possible outcomes of 
@@ -1182,8 +1170,8 @@ its cdf.
  
 \end_layout
 
-\begin_layout Standard
-2) For each fixed 
+\begin_layout Enumerate
+For each fixed 
 \begin_inset Formula $\omega,$
 \end_inset
 
@@ -1192,7 +1180,7 @@ its cdf.
 \end_inset
 
  is a function of 
-\begin_inset Formula $t\varepsilon T.$
+\begin_inset Formula $t\in T.$
 \end_inset
 
 (the idkr set).
@@ -1205,14 +1193,14 @@ its cdf.
  
 \end_layout
 
-\begin_layout Standard
-3) How is a stochastic process specified? Recall that if X is a r.v.
+\begin_layout Enumerate
+How is a stochastic process specified? Recall that if X is a r.v.
  it is complety determined or specified once you have specified c.d.f 
 \begin_inset Formula $F_{X}$
 \end_inset
 
 .
- In the case of stochastic orocess it turns out tht it is uniquely specified
+ In the case of stochastic process it turns out that it is uniquely specified
  once you have specified 
 \begin_inset Formula $F_{Xt1},$
 \end_inset
@@ -1233,20 +1221,28 @@ its cdf.
 \begin_inset Formula $X_{t2},..,X_{tn}$
 \end_inset
 
-for all t1, t2,..,tn
-\begin_inset Formula $\epsilon T$
+for all 
+\begin_inset Formula $t1,t2,..,tn\in T$
 \end_inset
 
-, and all n.
+, and all 
+\begin_inset Formula $n$
+\end_inset
+
+.
  
 \end_layout
 
+\begin_layout Paragraph
+Notes:
+\end_layout
+
 \begin_layout Standard
-Notes: we can view stochastic process as follow, since 
-\begin_inset Formula $\omega\epsilon S$
+we can view stochastic process as follow, since 
+\begin_inset Formula $\omega\in S$
 \end_inset
 
- is unknow in advance, each projectory in unknow in advance of our experiment.
+ is unknown in advance, each projectors in unknown in advance of our experiment.
  Therefore, we can regard a stochastic process as a random function.
  We are sitting in a function space.
  Each point in this space is a function.
@@ -1268,12 +1264,20 @@ Extensen theorem is that the probabilities of all the event in this function
 Examples stochastic process
 \end_layout
 
-\begin_layout Standard
-1)Trivially any single r.v., X is a stochastic process - the family r.v.
+\begin_layout Enumerate
+Trivially any single r.v., 
+\begin_inset Formula $X$
+\end_inset
+
+ is a stochastic process - the family r.v.
 \end_layout
 
-\begin_layout Standard
-2) the sequence of random varibale X1,X2,X3...
+\begin_layout Enumerate
+the sequence of random variable 
+\begin_inset Formula $X_{1},X_{2},X_{3}$
+\end_inset
+
+...
 \end_layout
 
 \end_body
