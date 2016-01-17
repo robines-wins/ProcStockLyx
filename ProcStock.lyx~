@@ -158,10 +158,10 @@ Notes :
 
 \begin_layout Enumerate
 If you fix x, then 
-\begin_inset Formula $P{}_{Y/X}(y|x)$
+\begin_inset Formula $P{}_{Y|X}(y|x)$
 \end_inset
 
-consider as function of Y, defines a conditional probability distribution
+ consider as function of Y, defines a conditional probability distribution
  of Y given x.
 \end_layout
 
@@ -175,7 +175,7 @@ There is no such thing as the random variable
 \begin_inset Formula $P(Y=y|X=x)$
 \end_inset
 
- is definied as above.
+ is defined as above.
  When you see the statement 
 \begin_inset Formula $Y|X=x$
 \end_inset
@@ -190,7 +190,7 @@ There is no such thing as the random variable
 
 .
  It means 
-\begin_inset Formula $P_{y/X=x}(y|x)=P(Y=y|X=x)$
+\begin_inset Formula $P_{y|X=x}(y|x)=P(Y=y|X=x)$
 \end_inset
 
 .
@@ -206,7 +206,7 @@ If the random variables
 \begin_inset Formula $(X,Y)$
 \end_inset
 
- are joinluy discrete, the conditional expectation of 
+ are jointly discrete, the conditional expectation of 
 \begin_inset Formula $Y$
 \end_inset
 
@@ -315,7 +315,7 @@ Let X,Y be random variables with some join discrete distribution or continuous
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
 (I) If discrete
-\begin_inset Formula $P_{y}(y)=\sum P_{y/X=x}(y|x)*P_{X}(x)=\sum P(X=x,Y=y)*P(X=x)$
+\begin_inset Formula $P_{Y}(y)=\sum P_{Y|X=x}(y|x)*P_{X}(x)=\sum P(X=x,Y=y)$
 \end_inset
 
  
@@ -336,7 +336,7 @@ Let X,Y be random variables with some join discrete distribution or continuous
 \noun off
 \color none
 
-\begin_inset Formula $F_{y}(y)=\intop fY/X=x(y|x)*f_{X}(x)dx$
+\begin_inset Formula $F_{y}(y)=\int f_{Y|X}(y|x)*f_{X}(x)\,dx$
 \end_inset
 
 
@@ -683,8 +683,8 @@ event
 
 \end_layout
 
-\begin_layout Paragraph
-Extension of the above result
+\begin_layout Subsection
+Wald's identity
 \end_layout
 
 \begin_layout Standard
@@ -780,6 +780,10 @@ Stop summing at
 
 \end_layout
 
+\begin_layout Subparagraph
+Ex2
+\end_layout
+
 \begin_layout Standard
 
 \family roman
@@ -793,7 +797,11 @@ Stop summing at
 \uwave off
 \noun off
 \color none
-Exemple where n won't be the stopping rule:
+Example where 
+\begin_inset Formula $N$
+\end_inset
+
+ won't be the stopping rule:
 \end_layout
 
 \begin_layout Standard
@@ -809,9 +817,11 @@ Let
 \uwave off
 \noun off
 \color none
-X_{1,}X_{2},
-\backslash
-ldots denote the of cracks fond in a successive weeks in an aircraft component.
+
+\begin_inset Formula $X_{1,}X_{2},\ldots$
+\end_inset
+
+ denote the of cracks fond in a successive weeks in an aircraft component.
  
 \family default
 \series default
@@ -828,9 +838,20 @@ ldots denote the of cracks fond in a successive weeks in an aircraft component.
 \begin_inset Formula $S_{n}=\sum_{i=1}^{n}X_{i}$
 \end_inset
 
- = cumulatiev number of cracks up to the random week, N.
- Now suppose N is defined as follows: N=n, if 0 new cracks occures in week
- n+1.
+ = cumulative number of cracks up to the random week, N.
+ Now suppose N is defined as follows: 
+\begin_inset Formula $N=n$
+\end_inset
+
+, if 
+\begin_inset Formula $0$
+\end_inset
+
+ new cracks occurs in week 
+\begin_inset Formula $n+1$
+\end_inset
+
+.
  With this stopping rule, the decision to stop adding the number of cracks
  at month n depends o,n what happens after week n.
  Thus n is not a stopping rule.
@@ -1106,13 +1127,17 @@ It then follows from 5 that if
 CHECK MY COURSES FOR ASSIGNEMENT:
 \end_layout
 
-\begin_layout Subparagraph
+\begin_layout Chapter
 Stochastic processes themselves
 \end_layout
 
+\begin_layout Section
+Definition 
+\end_layout
+
 \begin_layout Standard
-Definition : a stochastic process indexed by an index set T is a family
- of random variables, denoted by 
+a stochastic process indexed by an index set T is a family of random variables,
+ denoted by 
 \begin_inset Formula $\left\{ X{}_{t},\,t\in T\right\} $
 \end_inset
 
@@ -1127,7 +1152,7 @@ Definition : a stochastic process indexed by an index set T is a family
  is a random variable.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Paragraph
 Notes
 \end_layout
 
@@ -1196,7 +1221,7 @@ How is a stochastic process specified? Recall that if X is a r.v.
 \end_inset
 
 .
- In the case of stochastic orocess it turns out tht it is uniquely specified
+ In the case of stochastic process it turns out that it is uniquely specified
  once you have specified 
 \begin_inset Formula $F_{Xt1},$
 \end_inset
@@ -1217,20 +1242,28 @@ How is a stochastic process specified? Recall that if X is a r.v.
 \begin_inset Formula $X_{t2},..,X_{tn}$
 \end_inset
 
-for all t1, t2,..,tn
-\begin_inset Formula $\in T$
+for all 
+\begin_inset Formula $t1,t2,..,tn\in T$
 \end_inset
 
-, and all n.
+, and all 
+\begin_inset Formula $n$
+\end_inset
+
+.
  
 \end_layout
 
+\begin_layout Paragraph
+Notes:
+\end_layout
+
 \begin_layout Standard
-Notes: we can view stochastic process as follow, since 
+we can view stochastic process as follow, since 
 \begin_inset Formula $\omega\in S$
 \end_inset
 
- is unknow in advance, each projectory in unknow in advance of our experiment.
+ is unknown in advance, each projectors in unknown in advance of our experiment.
  Therefore, we can regard a stochastic process as a random function.
  We are sitting in a function space.
  Each point in this space is a function.
@@ -1253,7 +1286,11 @@ Examples stochastic process
 \end_layout
 
 \begin_layout Enumerate
-Trivially any single r.v., X is a stochastic process - the family r.v.
+Trivially any single r.v., 
+\begin_inset Formula $X$
+\end_inset
+
+ is a stochastic process - the family r.v.
 \end_layout
 
 \begin_layout Enumerate
