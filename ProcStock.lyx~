@@ -85,6 +85,15 @@ Robin Solignac
 MJ Lagarde
 \end_layout
 
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 conditional probabilities, expectation
 \end_layout
@@ -235,7 +244,7 @@ If the random variables
 \begin_inset Formula $(X,Y)$
 \end_inset
 
- are joinly continuous with probability density function (pdf) 
+ are jointly continuous with probability density function (pdf) 
 \begin_inset Formula $f_{X,Y}(x,y)$
 \end_inset
 
@@ -389,7 +398,7 @@ Let X,Y be random variables with some join discrete distribution or continuous
 \end_layout
 
 \begin_layout Subsection
-Law of total expectation
+Law of total expectation and total variance
 \end_layout
 
 \begin_layout Standard
@@ -736,8 +745,12 @@ and not on any
 \end_inset
 
 .
- Remarquably we still has 
-\begin_inset Formula $E\left[\sum_{i=1}^{N}X_{i}\right]=E(N)E(X)=E(N)\mu$
+ Remarkably we still has 
+\begin_inset Formula 
+\[
+E\left[\sum_{i=1}^{N}X_{i}\right]=E(N)E(X)=E(N)\mu
+\]
+
 \end_inset
 
 
@@ -871,8 +884,8 @@ generating function
 \begin_inset Quotes erd
 \end_inset
 
- plays a role similar to moment generating function, but it's definitin
- is restricted to non-negative integer valued r.v.s, whose supoort is on {0,1,2..}.
+ plays a role similar to moment generating function, but it's definition
+ is restricted to non-negative integer valued r.v.s, whose support is on {0,1,2..}.
 \end_layout
 
 \begin_layout Paragraph
@@ -882,7 +895,7 @@ Definition
 \begin_layout Standard
 Let X be a discrete r.v.
  with support on {0,1,2..}.
- The probability generatiing function (pgf) is defined as follows: 
+ The probability generating function (pgf) is defined as follows: 
 \begin_inset Formula $\Phi_{X}(z)=\sum_{x=0}^{\infty}z^{x}p_{x}(x)=\sum_{x=0}^{\infty}z^{x}P[X=x]$
 \end_inset
 
@@ -913,7 +926,7 @@ Notes:
 \begin_inset Formula $\Phi_{X}(z)$
 \end_inset
 
- is a power serie in z which converges for 
+ is a power series in z which converges for 
 \family default
 \series default
 \shape default
@@ -1056,7 +1069,7 @@ In a similar fashion, by differentiating successively, setting z=0, we get
 \begin_inset Formula $\Phi_{X}^{x}(0)/x!$
 \end_inset
 
- or in a more familar notation : 
+ or in a more familiar notation : 
 \begin_inset Formula $P_{X}(k)$
 \end_inset
 
@@ -1136,8 +1149,11 @@ Definition
 \end_layout
 
 \begin_layout Standard
-a stochastic process indexed by an index set T is a family of random variables,
- denoted by 
+A stochastic process indexed by an index set 
+\begin_inset Formula $T$
+\end_inset
+
+ is a family of random variables, denoted by 
 \begin_inset Formula $\left\{ X{}_{t},\,t\in T\right\} $
 \end_inset
 
@@ -1174,7 +1190,7 @@ For each
 \begin_inset Formula $\omega\in S,$
 \end_inset
 
- the sample smape of the possible outcomes of 
+ the sample maps of the possible outcomes of 
 \begin_inset Formula $X{}_{t}$
 \end_inset
 
@@ -1282,7 +1298,7 @@ Extensen theorem is that the probabilities of all the event in this function
 \end_layout
 
 \begin_layout Standard
-Examples stochastic process
+Examples stochastic process:
 \end_layout
 
 \begin_layout Enumerate
@@ -1299,6 +1315,296 @@ the sequence of random variable
 \end_inset
 
 ...
+\end_layout
+
+\begin_layout Standard
+recall knowing 
+\begin_inset Formula $P\left[X_{t1}\leq x_{1},\ldots,X_{tn}\leq X_{n}\right]=F_{X_{t1},\ldots,X_{tn}}^{(x_{1},\ldots x_{n})}\,\forall ti\forall n\forall-\infty<x_{i}<\infty$
+\end_inset
+
+ gives the unique probabilities 
+\begin_inset Formula $P\left[\left\{ X_{t}\in B,t\in T'\right\} \right]$
+\end_inset
+
+ (notes: this is useless)
+\end_layout
+
+\begin_layout Paragraph
+Note:
+\end_layout
+
+\begin_layout Standard
+The join finite dimensional distribution are uniquely determined in the
+ case of a sequence of i.i.d r.v.s by the marginal distribution 
+\begin_inset Formula $F_{X}(x)$
+\end_inset
+
+ of any member of the sequence.
+ : 
+\begin_inset Formula $F_{X_{t1},\ldots,X_{tn}}^{(x_{1},\ldots x_{n})}=\prod_{i=1}^{n}F_{X}(x_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Such sequences are not really the subject of study in stochastic processes
+ because of the assumption of independence
+\end_layout
+
+\begin_layout Section
+Some non trivial example of stochastic processes
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ x_{t},\,t\in D\right\} $
+\end_inset
+
+where 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+ si the price of e certain stock during day 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ before the stock market opens.
+ the price over the day are uncertain.
+ the trajectory of 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+ will typically fluctuate and the 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+'s will be dependant.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ X_{t},\,i\in\left\{ 1,2,\ldots\right\} \right\} $
+\end_inset
+
+ where 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+ denote the number of bacteria on e petri dish at minute 
+\begin_inset Formula $t$
+\end_inset
+
+ from the time they start divinding
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\{ X_{t},\,i\in\left\{ 1,2,\ldots\right\} \right\} $
+\end_inset
+
+ where 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+ is the height of a dam above level 
+\begin_inset Formula $L$
+\end_inset
+
+ at time 
+\begin_inset Formula $t$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+if 
+\begin_inset Formula $\left\{ X_{1},X_{2},\ldots\right\} $
+\end_inset
+
+is a sequence of i.i.d r.v.s, let 
+\begin_inset Formula $S_{n}=\sum_{i=1}^{n}X_{i}$
+\end_inset
+
+ then 
+\begin_inset Formula $\left\{ S_{n},\,n=1,2,\ldots\right\} $
+\end_inset
+
+ is a stochastic process and is called a 
+\emph on
+random walk.
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+Note: while 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+s are independent, the 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ are highly dependent
+\end_layout
+
+\begin_layout Section
+Jargon
+\end_layout
+
+\begin_layout Enumerate
+if index set is discrete we refer to a 
+\emph on
+discrete parameter
+\emph default
+ stochastic process
+\begin_inset Newline newline
+\end_inset
+
+If continuous (
+\begin_inset Formula $T$
+\end_inset
+
+ uncountable) we refer to a 
+\emph on
+continuous parameter
+\emph default
+ stochastic process
+\end_layout
+
+\begin_layout Enumerate
+If the set of possible value of 
+\begin_inset Formula $X_{t}$
+\end_inset
+
+ contable (discrete) we refer to a 
+\emph on
+discrete state space
+\begin_inset Newline newline
+\end_inset
+
+
+\emph default
+If uncountable we refer to a 
+\emph on
+continuous state space
+\end_layout
+
+\begin_layout Chapter
+Branching Processes
+\end_layout
+
+\begin_layout Standard
+We will begin by formally defining it, and then mention some application
+\end_layout
+
+\begin_layout Section
+Definition
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\left\{ X_{n},n=0,1,2,\ldots\right\} $
+\end_inset
+
+ be a stochastic process of the following properties
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $X_{0}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+the probability that this individual (
+\begin_inset Formula $X_{0})$
+\end_inset
+
+ gives rise to 
+\begin_inset Formula $j$
+\end_inset
+
+ individuals at the next generation is 
+\begin_inset Formula $p_{j}$
+\end_inset
+
+, for 
+\begin_inset Formula $j=0,1,2,\ldots$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+i.e 
+\begin_inset Formula $P\left[X_{1}=j\,|\,X_{0}=1\right]=p_{j}\,\forall j$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Each individual in the 1
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+st 
+\end_layout
+
+\end_inset
+
+generation gives rises to 
+\begin_inset Formula $j$
+\end_inset
+
+ new individuals in the 2
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+nd
+\end_layout
+
+\end_inset
+
+generation with probability 
+\begin_inset Formula $p_{j}$
+\end_inset
+
+, for 
+\begin_inset Formula $j=0,1,2,\ldots$
+\end_inset
+
+.
+ Independently of all other individuals in this generation, and so on for
+ subsequence generations
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ be the total size in the n
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+th
+\end_layout
+
+\end_inset
+
+generation.
+ Then 
+\begin_inset Formula $\left\{ X_{n},n=0,1,2,\ldots\right\} $
+\end_inset
+
+in called a 
+\emph on
+branching process
+\emph default
+ (or Galton-Watson branchin process)
 \end_layout
 
 \end_body
