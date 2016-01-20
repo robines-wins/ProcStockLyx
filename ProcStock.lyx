@@ -1546,7 +1546,11 @@ i.e
 \end_layout
 
 \begin_layout Enumerate
-Each individual in the 1
+
+\emph on
+Each
+\emph default
+ individual in the 1
 \begin_inset script superscript
 
 \begin_layout Plain Layout
@@ -1577,8 +1581,12 @@ generation with probability
 \end_inset
 
 .
- Independently of all other individuals in this generation, and so on for
- subsequence generations
+ Independently of all other individuals in this generation and of the generation
+ number (
+\begin_inset Formula $n$
+\end_inset
+
+), and so on for subsequence generations
 \end_layout
 
 \begin_layout Standard
@@ -1586,7 +1594,7 @@ Let
 \begin_inset Formula $X_{n}$
 \end_inset
 
- be the total size in the n
+ be the total size of the n
 \begin_inset script superscript
 
 \begin_layout Plain Layout
@@ -1595,16 +1603,179 @@ th
 
 \end_inset
 
-generation.
+generation (not the cumulative sum over generation).
  Then 
 \begin_inset Formula $\left\{ X_{n},n=0,1,2,\ldots\right\} $
 \end_inset
 
-in called a 
+is called a 
 \emph on
 branching process
 \emph default
  (or Galton-Watson branching process)
+\end_layout
+
+\begin_layout Paragraph
+Example:
+\end_layout
+
+\begin_layout Itemize
+Physics: nuclear reaction
+\end_layout
+
+\begin_layout Itemize
+Biology: occurrence of mutant gene over generation, survival of family name
+\end_layout
+
+\begin_layout Section
+Question we shall address
+\end_layout
+
+\begin_layout Enumerate
+what are the probability of eventual extinction of the population ?
+\end_layout
+
+\begin_layout Enumerate
+What are then expected population size of the n
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+th
+\end_layout
+
+\end_inset
+
+generation ? The variance ?
+\end_layout
+
+\begin_layout Standard
+To answers 1.
+ we shall need to work quite hard and we end up with an interesting, perhaps
+ unexpected, result.
+ 
+\end_layout
+
+\begin_layout Standard
+Even though we can view 
+\begin_inset Formula $\left\{ X_{n},n=0,1,2,\ldots\right\} $
+\end_inset
+
+ as a Markov chain, we shall answers these questions without reference to
+ them by using conditionnal expectation and probability generating function.
+ 
+\end_layout
+
+\begin_layout Standard
+The details are important !!
+\end_layout
+
+\begin_layout Subsection
+Answers:
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $p_{0}(n)$
+\end_inset
+
+ denode the probability that there are no individuals in the k
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+th
+\end_layout
+
+\end_inset
+
+.
+ We want to find 
+\begin_inset Formula 
+\begin{eqnarray}
+P\left[\bigcup_{k=1}^{\infty}\left\{ X_{k}=0\right\} \right] & = & P\left[\lim_{n\rightarrow\infty}\bigcup_{k=1}^{n}\left\{ X_{k}=0\right\} \right]\nonumber \\
+ & = & \lim_{n\rightarrow\infty}P\left[\bigcup_{k=1}^{n}\left\{ X_{k}=0\right\} \right]\label{eq:lim}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now notes that 
+\begin_inset Formula $X_{n}=0\Rightarrow X_{n+1}=0$
+\end_inset
+
+ .
+ i.e becomes 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:lim"
+
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\lim_{n\rightarrow\infty}P\left[X_{n}=0\right]=\lim_{n\rightarrow\infty}p_{0}(n)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\Phi_{X_{n}}(z)$
+\end_inset
+
+ be the p.g.f of 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+, for any p.g.f we have 
+\begin_inset Formula $\Phi(0)=p_{0}\Rightarrow p_{0}(n)=\Phi_{X_{n}}(0)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Thus it seems that the discussion reduce to one of p.g.f.s.
+ this is, indeed, the case.
+ Let 
+\begin_inset Formula $\Phi(z)$
+\end_inset
+
+ be the p.g.f of 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+, which of course is the p.g.f of the r.v that gives the number that arise
+ from any single of individuals in
+\emph on
+ any
+\emph default
+ generation
+\end_layout
+
+\begin_layout Paragraph
+Lemma:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Phi_{X_{n}}(z)=\Phi_{X_{n-1}}\left(\Phi(z)\right)=\Phi\left(\Phi_{X_{n-1}}(z)\right)\;\forall n\geq1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+First let 
+\begin_inset Formula $n>1$
+\end_inset
+
+, proof:
 \end_layout
 
 \end_body
