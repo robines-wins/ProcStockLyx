@@ -896,11 +896,15 @@ Definition
 Let X be a discrete r.v.
  with support on {0,1,2..}.
  The probability generating function (pgf) is defined as follows: 
-\begin_inset Formula $\Phi_{X}(z)=\sum_{x=0}^{\infty}z^{x}p_{x}(x)=\sum_{x=0}^{\infty}z^{x}P[X=x]$
+\begin_inset Formula 
+\[
+\Phi_{X}(z)=\sum_{x=0}^{\infty}z^{x}p_{x}(x)=\sum_{x=0}^{\infty}z^{x}P\left[X=x\right]
+\]
+
 \end_inset
 
- for |z|
-\begin_inset Formula $\leq1$
+ for 
+\begin_inset Formula $|z|\leq1$
 \end_inset
 
 
@@ -1633,6 +1637,13 @@ Question we shall address
 
 \begin_layout Enumerate
 what are the probability of eventual extinction of the population ?
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:yolo"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -1646,6 +1657,13 @@ th
 \end_inset
 
 generation ? The variance ?
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:2"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1671,6 +1689,17 @@ The details are important !!
 
 \begin_layout Subsection
 Answers:
+\end_layout
+
+\begin_layout Subsubsection
+Proof of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "enu:yolo"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1770,12 +1799,309 @@ Lemma:
 
 \end_layout
 
-\begin_layout Paragraph
-First let 
-\begin_inset Formula $n>1$
+\begin_layout Standard
+The ideae in proving both 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "enu:yolo"
+
 \end_inset
 
-, proof:
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "enu:2"
+
+\end_inset
+
+ is that in each case we can write 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ as a random sum of random variable.
+ with this observation we shall condition the upper limit of summation.
+\end_layout
+
+\begin_layout Enumerate
+Observe that if we let 
+\begin_inset Formula $Y_{i}$
+\end_inset
+
+ be the number of 
+\begin_inset Quotes eld
+\end_inset
+
+offspring
+\begin_inset Quotes erd
+\end_inset
+
+ from parent 
+\begin_inset Formula $i$
+\end_inset
+
+ in the (n-1)
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+th
+\end_layout
+
+\end_inset
+
+generation, then 
+\begin_inset Formula $X_{n}=\sum_{i=1}^{X_{n-1}}Y_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+Note:
+\end_layout
+
+\begin_layout Standard
+that we haven't not attached a subscript 
+\begin_inset Formula $n-1$
+\end_inset
+
+ to 
+\begin_inset Formula $Y_{i}$
+\end_inset
+
+ (i.e 
+\begin_inset Formula $Y_{i,n-1}$
+\end_inset
+
+) since the distribution of 
+\begin_inset Formula $Y_{i,n-1}$
+\end_inset
+
+ is the same for all 
+\begin_inset Formula $n$
+\end_inset
+
+ by the assumption of branching processes.
+ 
+\end_layout
+
+\begin_layout Standard
+We now need 
+\begin_inset Formula $\Phi_{X_{n}}(z)=\Phi_{\sum_{i=1}^{X_{n-1}}Y_{i}}(z)$
+\end_inset
+
+.
+ Looks bad, but observe that if we condition on 
+\begin_inset Formula $X_{n-1}=k$
+\end_inset
+
+, than we would be dealing with 
+\begin_inset Formula $\Phi_{\sum_{i=1}^{X_{n-1}}Y_{i}}(z)$
+\end_inset
+
+ the p.g.f of a fixed sum of i.i.d r.v.s.
+ The 
+\begin_inset Formula $Y_{i}$
+\end_inset
+
+'s re independent and identically distributed by assumption.
+\end_layout
+
+\begin_layout Standard
+Thus use 
+\begin_inset Formula $\Phi_{X_{n}}(z)=E\left[z^{X_{n}}\right]=E_{X_{n-1}}\left[E\left[z^{\sum_{i=1}^{X_{n-1}}Y_{i}}|X_{n-1}\right]\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+now: 
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left[z^{\sum_{i=1}^{X_{n-1}}Y_{i}}|X_{n-1}=k\right] & = & E\left[z^{\sum_{i=1}^{k}Y_{i}}|X_{n-1}=k\right]\\
+ & = & E\left[z^{\sum_{i=1}^{k}Y_{i}}\right]\mbox{indep of \ensuremath{\left\{ X_{n-1}=k\right\} }and \ensuremath{\left\{ Y_{1},\ldots,Y_{k}\right\} }}\\
+ & = & \Phi_{\sum_{i=1}^{k}Y_{i}}(z)\\
+ & = & \left[\Phi_{X_{1}}(z)\right]^{k}=\left[\Phi(z)\right]^{k}
+\end{eqnarray*}
+
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Note that's because
+\begin_inset Formula $Y_{i}$
+\end_inset
+
+ as the same distribution as 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Finally 
+\begin_inset Formula $E_{X_{n-1}}\left[\left(\Phi(z)\right)^{X_{n-1}}\right]=\Phi_{X_{n-1}}\left(\Phi(z)\right)$
+\end_inset
+
+ (by the definition of 
+\begin_inset Formula $\Phi_{X_{n-1}}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+this proves 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "enu:yolo"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Proof of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "enu:2"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+to get 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "enu:2"
+
+\end_inset
+
+ we we argue slightly differently.
+ The no in the n
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+th
+\end_layout
+
+\end_inset
+
+generation is the sum The sum of the number that come from the sub generation
+ of each 
+\begin_inset Quotes eld
+\end_inset
+
+parent
+\begin_inset Quotes erd
+\end_inset
+
+ in the first generation.
+\end_layout
+
+\begin_layout Standard
+The number that end up 
+\begin_inset Formula $(n-1)$
+\end_inset
+
+ generation after each parent in the 1
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+st
+\end_layout
+
+\end_inset
+
+are i.i.d r.v.s, Call them 
+\begin_inset Formula $X_{n-1,i}\,i=1,\ldots,X_{1}$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $X_{n}=\sum_{i=1}^{X_{1}}X_{n-1,i}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Using the same type of argument, as for 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "enu:yolo"
+
+\end_inset
+
+ (Conditioning on 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ this time), we get 
+\begin_inset Formula 
+\begin{eqnarray*}
+E\left[z^{X_{n}}\right] & = & E_{X_{1}}\left[E\left[z^{\sum_{i=1}^{X_{1}}X_{n-1,i}}|X_{i}\right]\right]\\
+ & = & \Phi_{X_{1}}\left[\Phi_{X_{n-1}}(z)\right]=\Phi\left[\Phi_{X_{n-1}}(z)\right]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+These equality have been established for all 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+ and are easily seen (do this) to be true for 
+\begin_inset Formula $n=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "enu:yolo"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "enu:2"
+
+\end_inset
+
+ form the basis for the completion of the analysis :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{n\rightarrow\infty}\Phi_{X_{n}}(0)=\lim_{n\rightarrow\infty}\Phi_{X_{n-1}}\left(\Phi(0)\right)=\lim_{n\rightarrow\infty}\Phi\left(\Phi_{X_{n-1}}(0)\right)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \end_body
