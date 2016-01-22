@@ -2064,5 +2064,45 @@ E\left[z^{X_{n}}\right] & = & E_{X_{1}}\left[E\left[z^{\sum_{i=1}^{X_{1}}X_{n-1,
 
 \end_layout
 
+\begin_layout Standard
+These equality have been established for all 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+ and are easily seen (do this) to be true for 
+\begin_inset Formula $n=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "enu:yolo"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "enu:2"
+
+\end_inset
+
+ form the basis for the completion of the analysis :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\lim_{n\rightarrow\infty}\Phi_{X_{n}}(0)=\lim_{n\rightarrow\infty}\Phi_{X_{n-1}}\left(\Phi(0)\right)=\lim_{n\rightarrow\infty}\Phi\left(\Phi_{X_{n-1}}(0)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document

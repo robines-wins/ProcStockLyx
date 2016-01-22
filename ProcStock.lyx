@@ -3,6 +3,9 @@
 \begin_document
 \begin_header
 \textclass book
+\begin_preamble
+\usepackage[pdftex,bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=2]{hyperref}
+\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
 \language english
