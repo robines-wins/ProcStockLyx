@@ -1640,13 +1640,6 @@ Question we shall address
 
 \begin_layout Enumerate
 what are the probability of eventual extinction of the population ?
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:yolo"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Enumerate
@@ -1660,13 +1653,6 @@ th
 \end_inset
 
 generation ? The variance ?
-\begin_inset CommandInset label
-LatexCommand label
-name "enu:2"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1692,17 +1678,6 @@ The details are important !!
 
 \begin_layout Subsection
 Answers:
-\end_layout
-
-\begin_layout Subsubsection
-Proof of 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "enu:yolo"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1796,7 +1771,13 @@ Lemma:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\Phi_{X_{n}}(z)=\Phi_{X_{n-1}}\left(\Phi(z)\right)=\Phi\left(\Phi_{X_{n-1}}(z)\right)\;\forall n\geq1$
+\begin_inset Formula 
+\begin{eqnarray}
+\Phi_{X_{n}}(z) & = & \Phi_{X_{n-1}}\left(\Phi(z)\right)\label{eq:11}\\
+ & = & \Phi\left(\Phi_{X_{n-1}}(z)\right)\;\forall n\geq1\label{eq:12}\\
+\nonumber 
+\end{eqnarray}
+
 \end_inset
 
 
@@ -1806,14 +1787,14 @@ Lemma:
 The ideae in proving both 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "enu:yolo"
+reference "eq:11"
 
 \end_inset
 
  and 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "enu:2"
+reference "eq:12"
 
 \end_inset
 
@@ -1825,7 +1806,18 @@ reference "enu:2"
  with this observation we shall condition the upper limit of summation.
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Subsubsection
+Proof of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:11"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Observe that if we let 
 \begin_inset Formula $Y_{i}$
 \end_inset
@@ -1968,7 +1960,7 @@ Finally
 this proves 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "enu:yolo"
+reference "eq:11"
 
 \end_inset
 
@@ -1979,7 +1971,7 @@ reference "enu:yolo"
 Proof of 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "enu:2"
+reference "eq:12"
 
 \end_inset
 
@@ -1990,7 +1982,7 @@ reference "enu:2"
 to get 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "enu:2"
+reference "eq:12"
 
 \end_inset
 
@@ -2047,7 +2039,7 @@ are i.i.d r.v.s, Call them
 Using the same type of argument, as for 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "enu:yolo"
+reference "eq:11"
 
 \end_inset
 
@@ -2079,17 +2071,21 @@ These equality have been established for all
 
 \end_layout
 
+\begin_layout Subsubsection
+Answers:
+\end_layout
+
 \begin_layout Standard
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "enu:yolo"
+reference "eq:11"
 
 \end_inset
 
  and 
 \begin_inset CommandInset ref
 LatexCommand eqref
-reference "enu:2"
+reference "eq:12"
 
 \end_inset
 
@@ -2105,6 +2101,276 @@ reference "enu:2"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+We still examine 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\Phi_{X_{n}}(0)$
+\end_inset
+
+, but first we need to justify the existence of this limit.
+\end_layout
+
+\begin_layout Paragraph
+Note:
+\end_layout
+
+\begin_layout Standard
+that 
+\begin_inset Formula $\Phi_{X_{n}}(z)$
+\end_inset
+
+ is bounded for all 
+\begin_inset Formula $|z|\leq1$
+\end_inset
+
+ and for all 
+\begin_inset Formula $n$
+\end_inset
+
+ 
+\begin_inset Formula $\Phi_{n}(z)\leq\sum_{k=0}^{\infty}|z|^{k}P\left[X_{n}=k\right]\leq\sum_{k}P\left[X_{n}=k\right]=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\Phi_{X_{n}}(0)=P\left[X_{n}=0\right]$
+\end_inset
+
+ and since 
+\begin_inset Formula $\left\{ X_{n}=0\right\} \subset\left\{ X_{n+1}=0\right\} $
+\end_inset
+
+ then
+\begin_inset Formula $P\left[X_{n}=0\right]\leq P\left[X_{n+1}=0\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And so
+\begin_inset Formula $\left\{ \Phi_{X_{n}}(0)\right\} $
+\end_inset
+
+is a bounded non decreasing sequence and thus 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\Phi_{X_{n}}(0)$
+\end_inset
+
+ exist 
+\begin_inset Formula $\eta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Recall:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Phi_{X_{n}}(z)=\Phi_{X_{n-1}}\left(\Phi(z)\right)=\Phi\left(\Phi_{X_{n-1}}(z)\right)\;\forall n\geq1$
+\end_inset
+
+.
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:11"
+
+\end_inset
+
+ then 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:12"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And so using using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:12"
+
+\end_inset
+
+ 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\Phi_{X_{n}}(0)=\lim_{n\rightarrow\infty}\Phi\left(\Phi_{X_{n-1}}(0)\right)=\Phi\left(\lim_{n\rightarrow\infty}\Phi_{X_{n-1}}(0)\right)$
+\end_inset
+
+ (
+\begin_inset Formula $\Phi$
+\end_inset
+
+ is continuous).
+ this implies 
+\begin_inset Formula $\eta=\Phi(\eta)$
+\end_inset
+
+ so the limit must satisfy this properties.
+\end_layout
+
+\begin_layout Standard
+We need to examine the root of 
+\begin_inset Formula $z_{0}=\Phi(z_{0})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+It's easy to see that 
+\begin_inset Formula $\Phi(z)$
+\end_inset
+
+ is convex in 
+\begin_inset Formula $z$
+\end_inset
+
+.
+ so differentiate twice.
+\end_layout
+
+\begin_layout Standard
+For now on, assume that 
+\begin_inset Formula $P\left[X_{1}=0\right]>0$
+\end_inset
+
+, if not the probability of extinction will be 
+\begin_inset Formula $0$
+\end_inset
+
+.
+ We have the following pictures (non)
+\end_layout
+
+\begin_layout Standard
+We see that 
+\begin_inset Formula $z=1$
+\end_inset
+
+ is a root since 
+\begin_inset Formula $\Phi_{X_{n}}(1)=1$
+\end_inset
+
+.
+ We see that there's 2 possible roots.
+\end_layout
+
+\begin_layout Standard
+We shall see that 
+\begin_inset Formula $\eta$
+\end_inset
+
+ is the smallest possible root.
+ 
+\end_layout
+
+\begin_layout Standard
+We have 
+\begin_inset Formula $p_{0}(1)=\Phi(0)\leq\Phi(z_{0})=z_{0}$
+\end_inset
+
+ for any possible root 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+ of 
+\begin_inset Formula $\Phi(z)=z$
+\end_inset
+
+.
+ Using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:11"
+
+\end_inset
+
+
+\begin_inset Formula $p_{0}(z)=\Phi_{X_{2-1=1}}\left(\Phi(0)\right)=\Phi(z_{0})=z_{0}$
+\end_inset
+
+.
+ and so on for all 
+\begin_inset Formula $p_{0}(n)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+So: 
+\begin_inset Formula $\lim_{n\rightarrow\infty}p_{0}(n)=\eta\leq z_{0}$
+\end_inset
+
+.
+ And so 
+\begin_inset Formula $\eta$
+\end_inset
+
+ is the smallest positive root of 
+\begin_inset Formula $\Phi(z)=z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Question:
+\end_layout
+
+\begin_layout Standard
+Under what circumstance is there only one positive root ? that is, when
+ will the only root be 
+\begin_inset Formula $\eta=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+From the pictures we see that there's exactly one root (at 
+\begin_inset Formula $z=1$
+\end_inset
+
+) if and only if 
+\begin_inset Formula $\Phi'(1)\leq1$
+\end_inset
+
+.
+ But 
+\begin_inset Formula $\Phi'(1)=\mu=E\left(X_{1}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+So:
+\end_layout
+
+\begin_layout Standard
+the branching process will end in extinction if 
+\begin_inset Formula $\mu\leq1$
+\end_inset
+
+ we will have a probability of extinction 
+\begin_inset Formula $\eta>0$
+\end_inset
+
+ if 
+\begin_inset Formula $\mu>1$
+\end_inset
+
+ (i.e there's is pos probability of non-extinction)
 \end_layout
 
 \end_body
