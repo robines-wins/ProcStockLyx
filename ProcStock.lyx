@@ -1676,7 +1676,7 @@ Even though we can view
 The details are important !!
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Answers:
 \end_layout
 
@@ -1804,6 +1804,10 @@ reference "eq:12"
 
  as a random sum of random variable.
  with this observation we shall condition the upper limit of summation.
+\end_layout
+
+\begin_layout Subsection
+Proof of the lemma 
 \end_layout
 
 \begin_layout Subsubsection
@@ -2071,8 +2075,8 @@ These equality have been established for all
 
 \end_layout
 
-\begin_layout Subsubsection
-Answers:
+\begin_layout Subsection
+Answer of 1.
 \end_layout
 
 \begin_layout Standard
@@ -2370,7 +2374,266 @@ the branching process will end in extinction if
 \begin_inset Formula $\mu>1$
 \end_inset
 
- (i.e there's is pos probability of non-extinction)
+ (i.e there's is pos probability of non-extinction).
+ note that is never the case that 
+\begin_inset Formula $\eta=0$
+\end_inset
+
+ : 
+\begin_inset Formula $\mu>1\Rightarrow\eta>0\wedge\eta<1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Notes:
+\end_layout
+
+\begin_layout Enumerate
+In practice if a population is to become extinct, this happens quickly
+\end_layout
+
+\begin_layout Enumerate
+if we start with 
+\begin_inset Formula $a$
+\end_inset
+
+ individuals (instead of 
+\begin_inset Formula $1$
+\end_inset
+
+) then the probability of extinction of 
+\emph on
+all
+\emph default
+ descendant is 
+\begin_inset Formula $\eta^{a}$
+\end_inset
+
+ (since the lines develops independently)
+\begin_inset Newline newline
+\end_inset
+
+thus, with 
+\begin_inset Formula $a$
+\end_inset
+
+ to star with, the probability of non extinction is 
+\begin_inset Formula $1-\eta^{a}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+This has interesting application in nuclear fission (in nuclear chain reaction)
+ because obviously we want the reaction (branching process) to die out
+\end_layout
+
+\begin_layout Standard
+Even if 
+\begin_inset Formula $\eta$
+\end_inset
+
+ is large, 
+\begin_inset Formula $\eta^{a}$
+\end_inset
+
+ will be small if 
+\begin_inset Formula $a$
+\end_inset
+
+ (the 
+\begin_inset Quotes eld
+\end_inset
+
+critical mass
+\begin_inset Quotes erd
+\end_inset
+
+) is taken to be 
+\emph on
+very
+\emph default
+ large, in this case 
+\begin_inset Formula $\eta^{a}$
+\end_inset
+
+ will be small and the probability that the nuclear reaction will be maintained
+ 
+\begin_inset Formula $1-\eta^{a}$
+\end_inset
+
+ will be large
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+one extension to the Glaton branching-process is the so called Branching
+ process with Random Environment.
+ the 
+\begin_inset Quotes eld
+\end_inset
+
+divison probability
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $p_{j}$
+\end_inset
+
+ change over time.
+ For example, the environment might changing (is it !) leading to different
+ reproduction rates
+\end_layout
+
+\begin_layout Enumerate
+Another generalization is to Multitype Branching Process.
+ Whereby a population is composed of different subtype each with a different
+ 
+\begin_inset Formula $\left\{ p_{j}\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+What is 
+\begin_inset Formula $E\left(X_{n}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\mbox{Var}\left(X_{n}\right)$
+\end_inset
+
+ ? (Answer of 2.)
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\mu_{n}=E\left(X_{n}\right)$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $\mu_{n}=\Phi'_{X_{n}}(1)$
+\end_inset
+
+.
+ But we know that 
+\begin_inset Formula $\Phi_{X_{n}}(z)=\Phi_{X_{n-1}}\left(\Phi(z)\right)$
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:12"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then we have 
+\begin_inset Formula $\mu_{n}=\Phi'_{X_{n}}(z)=\Phi'(z)\Phi_{X_{n-1}}'(z)$
+\end_inset
+
+ (chain rule)
+\end_layout
+
+\begin_layout Standard
+Which mean that 
+\begin_inset Formula $\Phi'_{X_{n}}(z)=\mu_{n}=\mu\Phi'_{X_{n-1}}(1)=\mu\mu_{n-1}$
+\end_inset
+
+ which gives immediately 
+\begin_inset Formula $\mu_{n}=\mu^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus is 
+\begin_inset Formula $\mu>1$
+\end_inset
+
+ the mean population grows geometrically , and if 
+\begin_inset Formula $\mu<1$
+\end_inset
+
+ it decline very quickly (geometrically)), If 
+\begin_inset Formula $\mu=1$
+\end_inset
+
+ then the population size is constant (
+\begin_inset Formula $=1$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+To obtain 
+\begin_inset Formula $\mbox{Var}\left(X_{n}\right)$
+\end_inset
+
+ we use 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:12"
+
+\end_inset
+
+ once more (see 2) bur argument is more difficult.
+ We find: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\mbox{Var}\left(X_{n}\right)=\sigma_{n}^{2} & = & \sigma^{2}\mu^{n-1}\frac{\left[\mu^{n}-1\right]}{\mu-1},\mbox{ if \ensuremath{\mu\neq1}}\\
+ & = & n\sigma^{2}\mbox{, if \ensuremath{\mu=1}}
+\end{eqnarray*}
+
+\end_inset
+
+Thus 
+\begin_inset Formula $\sigma_{n}^{2}$
+\end_inset
+
+increase (decrease) geometrically if 
+\begin_inset Formula $\mu\neq1$
+\end_inset
+
+, possibly explaining why 
+\begin_inset Formula $\eta>0$
+\end_inset
+
+ even if 
+\begin_inset Formula $\mu>1$
+\end_inset
+
+: large fluctuation gice a chance of falling into the breach of extinction.
+\end_layout
+
+\begin_layout Chapter
+Markov Chains
+\end_layout
+
+\begin_layout Standard
+Almost always there is an underlying dependence structure to the stochastic
+ processes that we discuss.
+ A special type of dependence structure is assumed when we discuss markov
+ chain, this structures assumes the so calls 
+\emph on
+Markov property
+\emph default
+ 
 \end_layout
 
 \end_body
