@@ -2509,7 +2509,7 @@ What is
 \begin_inset Formula $\mbox{Var}\left(X_{n}\right)$
 \end_inset
 
- ?
+ ? (Answer of 2.)
 \end_layout
 
 \begin_layout Standard
@@ -2634,6 +2634,122 @@ Almost always there is an underlying dependence structure to the stochastic
 Markov property
 \emph default
  
+\end_layout
+
+\begin_layout Standard
+To begin, we shall assume that our process {
+\begin_inset Formula $X_{n},$
+\end_inset
+
+n=0,1...} is a discrete parameter countable state space process.
+ The state of space of {
+\begin_inset Formula $X_{n},$
+\end_inset
+
+n=0,1...} could be denoted 
+\begin_inset Formula $E_{1,}$
+\end_inset
+
+
+\begin_inset Formula $E_{2}..$
+\end_inset
+
+ but for notation simplicity, by, 1,2,...
+\end_layout
+
+\begin_layout Subparagraph
+Definition of a Markov chain
+\end_layout
+
+\begin_layout Standard
+{
+\begin_inset Formula $X_{n},$
+\end_inset
+
+n=0,1...} is called a (discrete state space) Markov chain if
+\end_layout
+
+\begin_layout Standard
+P[
+\begin_inset Formula $X_{n+1}=j|X_{0}=i_{0},X_{1}=i_{1},...,X_{n}=i]=$
+\end_inset
+
+P[
+\begin_inset Formula $X_{n+1}=j|X_{n}=i]=$
+\end_inset
+
+P
+\begin_inset Formula $_{ij}$
+\end_inset
+
+ for all n
+\begin_inset Formula $\geq$
+\end_inset
+
+0, and all states i
+\begin_inset Formula $_{0},$
+\end_inset
+
+i
+\begin_inset Formula $_{1}..$
+\end_inset
+
+,i
+\begin_inset Formula $_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notes:
+\end_layout
+
+\begin_layout Standard
+1) P
+\begin_inset Formula $_{ij}$
+\end_inset
+
+is called the one step transition probability of the chain.
+ It describes the probability of moving from at state i to a state j in
+ one state.
+ 
+\end_layout
+
+\begin_layout Standard
+Notice that P
+\begin_inset Formula $_{ij}$
+\end_inset
+
+is assumed not to depend on n.
+ 
+\end_layout
+
+\begin_layout Standard
+i.e.
+ we should really write P
+\begin_inset Formula $^{n}{}_{ij}$
+\end_inset
+
+.
+ Chain for which P
+\begin_inset Formula $_{ij}$
+\end_inset
+
+does not depend on n are called homogeneous.
+ [If depend on n, non-homogeneous].
+ We restric ourselves to homogenous chains.
+ 
+\end_layout
+
+\begin_layout Standard
+2) Importently, the Markov property says that the history is summarized
+ in the immediate past.
+ 
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \end_body
