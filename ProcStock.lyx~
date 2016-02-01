@@ -2749,7 +2749,143 @@ does not depend on n are called homogeneous.
 \end_layout
 
 \begin_layout Standard
+It does not assert that 
+\begin_inset Formula $X_{n+1}$
+\end_inset
 
+is independent of X
+\begin_inset Formula $_{0},X_{1},..,X_{n-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Exemple: Our branching process is easily seen to be a Markov chain, since
+ given the generation size, XX
+\begin_inset Formula $_{0},X_{1},..,X_{n-1}$
+\end_inset
+
+,
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ the distribution of 
+\begin_inset Formula $X_{n+1}$
+\end_inset
+
+depends only on 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+4)The term homogeneous is sometimes called stationary i.e.
+ we talk of a stationary Markov Chain.
+ 
+\end_layout
+
+\begin_layout Standard
+Reason(to be further clarified later) is that with the assumption of homogeneity
+ (stationarity) the join finite dimensional distributions, are invariate
+ under shifts in time.
+\end_layout
+
+\begin_layout Subparagraph
+Exemple of non-stationary Markov chain
+\end_layout
+
+\begin_layout Standard
+A branching process with the number of childen from each from each parent
+ in a generation, having a distribution that deoends on the generation number
+ in fertility changes with n.
+ 
+\end_layout
+
+\begin_layout Standard
+4) a process that satisfies the Markov property above is called 1st order
+ Markov.
+ If the conditional probability reduced to what the previous 2 states were,
+ we called such a process 2nd order Markov..
+ etc.
+ 
+\end_layout
+
+\begin_layout Standard
+5) How does all of this work? 
+\end_layout
+
+\begin_layout Standard
+We wish to model a sequence of dependent r.v.s.
+ To do this requires specifying the joint finite dimensional distribution
+ - a hard problem.
+ However, if we can assume the special dependence structure induced by the
+ Markov property then we'l see that the specification of the finite dimensional
+ distribution is make much simpler.
+ Of course, one has to be satisfied that the Markov property holds.
+ There are statistical tests that can be used to test the markov asssumption.
+ 
+\end_layout
+
+\begin_layout Standard
+Terminology:
+\end_layout
+
+\begin_layout Standard
+The one step transmission probabilities are denoted by
+\begin_inset Formula $P_{ij}$
+\end_inset
+
+.
+ The complete set of 
+\begin_inset Formula $P_{ij}$
+\end_inset
+
+ is displayed in the transition matrix:
+\end_layout
+
+\begin_layout Standard
+P: 
+\begin_inset Formula $p_{11}$
+\end_inset
+
+
+\begin_inset Formula $p_{12}$
+\end_inset
+
+.......
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $p_{21}$
+\end_inset
+
+
+\begin_inset Formula $p_{22}$
+\end_inset
+
+.....
+\end_layout
+
+\begin_layout Standard
+.....................
+\end_layout
+
+\begin_layout Standard
+Some 
+\begin_inset Formula $P_{ij}$
+\end_inset
+
+ may be 0.
+ We have immeditely that 
+\begin_inset Formula $\sum_{j}P_{ij}$
+\end_inset
+
+=1 for all i.
+ You hve to go some-where from state i.
+ 
 \end_layout
 
 \end_body

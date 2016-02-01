@@ -2887,7 +2887,145 @@ Some
  You hve to go some-where from state i.
  P is called a stochastic matrix - non negative entries sum to one.
  Of course the matrix could be finite corresponding to m states.
+ The following theorem says that the knowing P[
+\begin_inset Formula $X_{0}=i]$
+\end_inset
+
+ for 
+\begin_inset Formula $i=1,2,...$
+\end_inset
+
+[the so called initial distribution] and the transition matrix P is sufficient
+ to completely specify the markov chain.
  
+\end_layout
+
+\begin_layout Standard
+Theorem: Let {
+\begin_inset Formula $X_{n},$
+\end_inset
+
+n=0,1..} be a Markov chain.
+ Then, its finite dimensional distributions are uniquely determined by {P[
+\begin_inset Formula $X_{0}=i],$
+\end_inset
+
+i=1,2,.., P}
+\end_layout
+
+\begin_layout Standard
+Proof: We must know that we can wite the joint distribution of any set 
+\begin_inset Formula $X_{n1},$
+\end_inset
+
+
+\begin_inset Formula $X_{n2}....$
+\end_inset
+
+in term of P[
+\begin_inset Formula $X_{0}=i]$
+\end_inset
+
+and a 
+\begin_inset Quotes eld
+\end_inset
+
+bunch
+\begin_inset Quotes erd
+\end_inset
+
+ of i-step transition probabilities 
+\begin_inset Formula $P_{ij}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We convey the idea through a special case: Thus consider P[
+\begin_inset Formula $X_{2}=k,$
+\end_inset
+
+
+\begin_inset Formula $X_{3}=l$
+\end_inset
+
+]
+\end_layout
+
+\begin_layout Standard
+Thus P[
+\begin_inset Formula $X_{3}=l$
+\end_inset
+
+|
+\begin_inset Formula $X_{2}=k]*P[X_{2}=k\text{]=P\ensuremath{_{kl}*\sum_{i,j}P[X_{2}=k|X_{0}=i,}\ensuremath{X_{1}=j]}= }$
+\end_inset
+
+
+\begin_inset Formula $P_{kl}*\sum P[X_{2=k}|X_{1}=j]*P[X_{i}=j|X_{0}=i]*P[X_{0}=i]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+=
+\begin_inset Formula $P_{kl}\sum_{i,j}P_{ij}P_{jk}P[X_{0}=i]$
+\end_inset
+
+ which is a function only of the i-step transition probs and P[X
+\begin_inset Formula $_{0}=i]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The idea is simply that to find the probabilities of going from state i
+ to state j in n steps you sum the probabilities of all paths that take
+ you from i to j in n steps.
+ Next the prob of each path is the prob of an intersection of the form P[
+\begin_inset Formula $A_{1}\cap A_{2}...A_{n}]=P[A_{n}|$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+A_{1}
+\backslash
+cap A_{2}...A_{n-1}]*P[A_{1}
+\backslash
+cap A_{2}...A_{n-1}] = P[A
+\begin_inset Formula $_{n}|A_{n-1}]*P[A_{n-1}|A_{n-2}]...*P[A_{1}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let P
+\begin_inset Formula $_{ij}^{n+m}$
+\end_inset
+
+be P[
+\begin_inset Formula $X_{m+n}=j$
+\end_inset
+
+|
+\begin_inset Formula $X_{0}=i]$
+\end_inset
+
+
 \end_layout
 
 \end_body
