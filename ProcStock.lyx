@@ -2637,16 +2637,16 @@ Markov property
 \end_layout
 
 \begin_layout Standard
-To begin, we shall assume that our process {
-\begin_inset Formula $X_{n},$
+To begin, we shall assume that our process
+\begin_inset Formula $\left\{ X_{n},\,n=0,1,\ldots\right\} $
 \end_inset
 
-n=0,1...} is a discrete parameter countable state space process.
- The state of space of {
-\begin_inset Formula $X_{n},$
+ is a discrete parameter countable state space process.
+ The state of space of 
+\begin_inset Formula $\left\{ X_{n},\,n=0,1,\ldots\right\} $
 \end_inset
 
-n=0,1...} could be denoted 
+ could be denoted 
 \begin_inset Formula $E_{1,}$
 \end_inset
 
@@ -2654,96 +2654,101 @@ n=0,1...} could be denoted
 \begin_inset Formula $E_{2}..$
 \end_inset
 
- but for notation simplicity, by, 1,2,...
+ but for notation simplicity, by, 
+\begin_inset Formula $1,2,\ldots$
+\end_inset
+
+
 \end_layout
 
-\begin_layout Subparagraph
+\begin_layout Section
 Definition of a Markov chain
 \end_layout
 
-\begin_layout Standard
-{
-\begin_inset Formula $X_{n},$
-\end_inset
-
-n=0,1...} is called a (discrete state space) Markov chain if
+\begin_layout Paragraph
+Definition:
 \end_layout
 
 \begin_layout Standard
-P[
-\begin_inset Formula $X_{n+1}=j|X_{0}=i_{0},X_{1}=i_{1},...,X_{n}=i]=$
+\begin_inset Formula $\left\{ X_{n},\,n=0,1,\ldots\right\} $
 \end_inset
 
-P[
-\begin_inset Formula $X_{n+1}=j|X_{n}=i]=$
+ is called a (discrete state space) Markov chain if
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P\left[X_{n+1}=j|X_{0}=i_{0},X_{1}=i_{1},...,X_{n}=i\right]=P\left[X_{n+1}=j|X_{n}=i\right]=P_{ij}$
 \end_inset
 
-P
-\begin_inset Formula $_{ij}$
+for all 
+\begin_inset Formula $n\geq0$
 \end_inset
 
- for all n
-\begin_inset Formula $\geq$
-\end_inset
-
-0, and all states i
-\begin_inset Formula $_{0},$
-\end_inset
-
-i
-\begin_inset Formula $_{1}..$
-\end_inset
-
-,i
-\begin_inset Formula $_{n}$
+, and all states 
+\begin_inset Formula $i_{0},i_{1},\ldots,i_{n}$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Paragraph
 Notes:
 \end_layout
 
 \begin_layout Standard
-1) P
-\begin_inset Formula $_{ij}$
+1) 
+\begin_inset Formula $P_{ij}$
 \end_inset
 
 is called the one step transition probability of the chain.
- It describes the probability of moving from at state i to a state j in
- one state.
+ It describes the probability of moving from at state 
+\begin_inset Formula $i$
+\end_inset
+
+ to a state 
+\begin_inset Formula $j$
+\end_inset
+
+ in one state.
  
 \end_layout
 
 \begin_layout Standard
-Notice that P
-\begin_inset Formula $_{ij}$
+Notice that 
+\begin_inset Formula $P_{ij}$
 \end_inset
 
-is assumed not to depend on n.
+ is assumed not to depend on n.
  
 \end_layout
 
 \begin_layout Standard
 i.e.
- we should really write P
-\begin_inset Formula $^{n}{}_{ij}$
+ we should really write 
+\begin_inset Formula $P^{n}{}_{ij}$
 \end_inset
 
 .
- Chain for which P
-\begin_inset Formula $_{ij}$
+ Chain for which 
+\begin_inset Formula $P_{ij}$
 \end_inset
 
-does not depend on n are called homogeneous.
+ does not depend on 
+\begin_inset Formula $n$
+\end_inset
+
+ are called 
+\emph on
+homogeneous
+\emph default
+.
  [If depend on n, non-homogeneous].
- We restric ourselves to homogenous chains.
+ We restrict ourselves to homogenous chains.
  
 \end_layout
 
 \begin_layout Standard
-2) Importently, the Markov property says that the history is summarized
+2) Importantly, the Markov property says that the history is summarized
  in the immediate past.
  
 \end_layout
@@ -2753,21 +2758,17 @@ It does not assert that
 \begin_inset Formula $X_{n+1}$
 \end_inset
 
-is independent of X
-\begin_inset Formula $_{0},X_{1},..,X_{n-1}$
+is independent of 
+\begin_inset Formula $X_{0},X_{1},\ldots,X_{n-1}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-Exemple: Our branching process is easily seen to be a Markov chain, since
- given the generation size, XX
-\begin_inset Formula $_{0},X_{1},..,X_{n-1}$
-\end_inset
-
-,
-\begin_inset Formula $X_{n}$
+Example: Our branching process is easily seen to be a Markov chain, since
+ given the generation size, 
+\begin_inset Formula $X_{0},X_{1},..,X_{n-1},X_{n}$
 \end_inset
 
  the distribution of 
@@ -2794,7 +2795,7 @@ Reason(to be further clarified later) is that with the assumption of homogeneity
 \end_layout
 
 \begin_layout Subparagraph
-Exemple of non-stationary Markov chain
+Exemple of non-stationary Markov chain:
 \end_layout
 
 \begin_layout Standard
@@ -2805,7 +2806,7 @@ A branching process with the number of childen from each from each parent
 \end_layout
 
 \begin_layout Standard
-4) a process that satisfies the Markov property above is called 1st order
+5) a process that satisfies the Markov property above is called 1st order
  Markov.
  If the conditional probability reduced to what the previous 2 states were,
  we called such a process 2nd order Markov..
@@ -2813,8 +2814,8 @@ A branching process with the number of childen from each from each parent
  
 \end_layout
 
-\begin_layout Standard
-5) How does all of this work? 
+\begin_layout Section
+How does all of this work? 
 \end_layout
 
 \begin_layout Standard
@@ -2825,7 +2826,7 @@ We wish to model a sequence of dependent r.v.s.
  Markov property then we'l see that the specification of the finite dimensional
  distribution is make much simpler.
  Of course, one has to be satisfied that the Markov property holds.
- There are statistical tests that can be used to test the markov asssumption.
+ There are statistical tests that can be used to test the Markov asssumption.
  
 \end_layout
 
@@ -2847,30 +2848,13 @@ The one step transmission probabilities are denoted by
 \end_layout
 
 \begin_layout Standard
-P: 
-\begin_inset Formula $p_{11}$
+\begin_inset Formula $P=\begin{bmatrix}p_{11} & p_{12} & \cdots\\
+p_{21} & p_{22} & \cdots\\
+\cdots & \cdots & \ddots
+\end{bmatrix}$
 \end_inset
 
 
-\begin_inset Formula $p_{12}$
-\end_inset
-
-.......
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $p_{21}$
-\end_inset
-
-
-\begin_inset Formula $p_{22}$
-\end_inset
-
-.....
-\end_layout
-
-\begin_layout Standard
-.....................
 \end_layout
 
 \begin_layout Standard
@@ -2879,13 +2863,21 @@ Some
 \end_inset
 
  may be 0.
- We have immeditely that 
-\begin_inset Formula $\sum_{j}P_{ij}$
+ We have immediately that 
+\begin_inset Formula $\sum_{j}P_{ij}=1$
 \end_inset
 
-=1 for all i.
- You hve to go some-where from state i.
- P is called a stochastic matrix - non negative entries sum to one.
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ You have to go some-where from state i.
+ 
+\begin_inset Formula $P$
+\end_inset
+
+ is called a stochastic matrix - non negative entries sum to one.
  Of course the matrix could be finite corresponding to m states.
  
 \end_layout
