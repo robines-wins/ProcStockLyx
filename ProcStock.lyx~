@@ -2814,8 +2814,8 @@ A branching process with the number of childen from each from each parent
  
 \end_layout
 
-\begin_layout Standard
-6) How does all of this work? 
+\begin_layout Section
+How does all of this work? 
 \end_layout
 
 \begin_layout Standard
@@ -2863,15 +2863,275 @@ Some
 \end_inset
 
  may be 0.
- We have immeditely that 
-\begin_inset Formula $\sum_{j}P_{ij}$
+ We have immediately that 
+\begin_inset Formula $\sum_{j}P_{ij}=1$
 \end_inset
 
-=1 for all i.
- You hve to go some-where from state i.
- P is called a stochastic matrix - non negative entries sum to one.
- Of course the matrix could be finite corresponding to m states.
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ You have to go some-where from state i.
  
+\begin_inset Formula $P$
+\end_inset
+
+ is called a stochastic matrix - non negative entries sum to one.
+ Of course the matrix could be finite corresponding to 
+\begin_inset Formula $m$
+\end_inset
+
+ states.
+ 
+\end_layout
+
+\begin_layout Standard
+Precision: 
+\begin_inset Formula $P_{ij}^{(n)}=P\left[X_{n}=j|X_{0}=i\right]$
+\end_inset
+
+ = Probs of going from 
+\begin_inset Formula $i$
+\end_inset
+
+ to 
+\begin_inset Formula $j$
+\end_inset
+
+ in 
+\begin_inset Formula $n$
+\end_inset
+
+ steps
+\end_layout
+
+\begin_layout Standard
+The aim here is to find an expresion for 
+\begin_inset Formula $p_{ij}^{(n)}$
+\end_inset
+
+, or at least a mean of obtaining 
+\begin_inset Formula $p_{ij}^{(n)}$
+\end_inset
+
+.
+ In principle, the way is through what we call the 
+\noun on
+Chapman-Kolmogorov
+\noun default
+ equations
+\end_layout
+
+\begin_layout Subsection
+Theorem:
+\end_layout
+
+\begin_layout Standard
+let 
+\begin_inset Formula $P^{(n)}=\left\{ p_{ij}^{(n)}\right\} $
+\end_inset
+
+ be the matrix whose entries are the n-step transition probabilities 
+\begin_inset Formula $p_{ij}^{(n)}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula 
+\[
+P^{(m+n)}=P^{(m)}P^{(n)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+a corollary will be 
+\begin_inset Formula 
+\[
+P^{(n)}=P^{n}=\left[\left\{ p_{ij}\right\} \right]^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Proof
+\end_layout
+
+\begin_layout Paragraph
+Theorem proof:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+P\left[X_{m+n}=j|X_{0}=i\right] & = & \sum_{k}P\left[X_{m+n},X_{m}=k|X_{0}=I\right]\\
+ & = & \sum_{k}\frac{P\left[X_{m+n}=j,\,X_{m}=k,\,X_{0}=i\right]}{P\left[X_{0}=i\right]}\\
+ & = & \sum_{k}\frac{P\left[X_{m+n}=j|X_{m}=k,\,X_{0}=i\right]P\left[X_{m}=k|X_{0}=i\right]P\left[X_{0}=i\right]}{P\left[X_{0}=i\right]}\\
+ & = & \sum_{k}\underbrace{P\left[X_{m+n}=j|X_{m}=k\right]}_{\mbox{Markov prop}}P\left[X_{m}=k|X_{0}=i\right]\\
+ & = & \sum_{k}\underbrace{p_{ik}^{(m)}p_{kj}^{(n)}}_{\mbox{Homogenity }}=p_{ij}^{(m+n)}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Which shows that 
+\begin_inset Formula $p_{ij}^{(m+n)}$
+\end_inset
+
+ is just the i-j
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+th
+\end_layout
+
+\end_inset
+
+elements of the product of the matrices 
+\begin_inset Formula $P^{(m)}$
+\end_inset
+
+ and 
+\begin_inset Formula $p^{(n)}$
+\end_inset
+
+, i.e: 
+\begin_inset Formula $P^{(m+n)}=P^{(m)}P^{(n)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Corollary proof:
+\end_layout
+
+\begin_layout Standard
+In particular take 
+\begin_inset Formula $m=1,\,n=1,\,\left[n+m=2\right]$
+\end_inset
+
+ then 
+\begin_inset Formula $P^{(2)}=P.P=P^{2}$
+\end_inset
+
+ and then 
+\begin_inset Formula $P^{(3)}=P.P^{(2)}=P.P^{2}$
+\end_inset
+
+ , ect\SpecialChar \ldots{}
+ This can be generalize by induction to 
+\begin_inset Formula $P^{(n)}=P^{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In principle if the chain finite (it has finite many step) we can find 
+\begin_inset Formula $P_{ij}^{(n)}$
+\end_inset
+
+ by doing succesive matrix multiplication.
+\end_layout
+
+\begin_layout Standard
+If the number of step is infinite then this does not work and we will se
+ that w often end up having to approximate 
+\begin_inset Formula $P_{ij}^{(n)}$
+\end_inset
+
+ for large 
+\begin_inset Formula $n$
+\end_inset
+
+ by 
+\begin_inset Formula $\lim_{n\rightarrow\infty}P_{ij}^{(n)}$
+\end_inset
+
+ (Still to come)
+\end_layout
+
+\begin_layout Subsection
+Some example.
+\end_layout
+
+\begin_layout Standard
+Consider a communication system wich transmit the digits 0 or 1.
+ Each digit transmitted must pass through serval stagr at each of which
+ there's a prob 
+\begin_inset Formula $p$
+\end_inset
+
+ that the digit will be unchanged when it leaves the stage, let 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ the digits the 
+\begin_inset Formula $n^{th}$
+\end_inset
+
+ stage then 
+\begin_inset Formula $\left\{ X_{n},n=0,1,\ldots\right\} $
+\end_inset
+
+ is a 2-state markov chain with 
+\begin_inset Formula $P=\left[\begin{array}{cc}
+p & 1-p\\
+1-p & p
+\end{array}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+The simple random Walk
+\end_layout
+
+\begin_layout Standard
+This is a basic well-studied non-trivial example of a markov chain that
+ is constructed from basic properties easy to imagine.
+\end_layout
+
+\begin_layout Standard
+Suppose that a particle can jump between the integers (
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+) on the x-axis acording to the following rules
+\end_layout
+
+\begin_layout Enumerate
+It can move either form it current position (integer) by moving either 1
+ step to the left, or 1 step to the right
+\end_layout
+
+\begin_layout Enumerate
+it moves independently of how many chain it has taken
+\end_layout
+
+\begin_layout Enumerate
+it move 1 step to right with probability 
+\begin_inset Formula $p$
+\end_inset
+
+ no matter what is its current position, and 1 step to the left with prob
+ 
+\begin_inset Formula $1-p$
+\end_inset
+
+
 \end_layout
 
 \end_body
