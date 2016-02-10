@@ -3334,7 +3334,452 @@ Let
 \begin_inset Formula $1$
 \end_inset
 
+<<<<<<< Updated upstream========1 for all i.
+ You hve to go some-where from state i.
+ P is called a stochastic matrix - non negative entries sum to one.
+ Of course the matrix could be finite corresponding to m states.
+ The following theorem says that the knowing P[
+\begin_inset Formula $X_{0}=i]$
+\end_inset
+
+ for 
+\begin_inset Formula $i=1,2,...$
+\end_inset
+
+[the so called initial distribution] and the transition matrix P is sufficient
+ to completely specify the markov chain.>>>>>>> Stashed changes 
+\end_layout
+
+\begin_layout Standard
+Theorem: Let {
+\begin_inset Formula $X_{n},$
+\end_inset
+
+n=0,1..} be a Markov chain.
+ Then, its finite dimensional distributions are uniquely determined by {P[
+\begin_inset Formula $X_{0}=i],$
+\end_inset
+
+i=1,2,.., P}
+\end_layout
+
+\begin_layout Standard
+Proof: We must know that we can wite the joint distribution of any set 
+\begin_inset Formula $X_{n1},$
+\end_inset
+
+
+\begin_inset Formula $X_{n2}....$
+\end_inset
+
+in term of P[
+\begin_inset Formula $X_{0}=i]$
+\end_inset
+
+and a 
+\begin_inset Quotes eld
+\end_inset
+
+bunch
+\begin_inset Quotes erd
+\end_inset
+
+ of i-step transition probabilities 
+\begin_inset Formula $P_{ij}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We convey the idea through a special case: Thus consider P[
+\begin_inset Formula $X_{2}=k,$
+\end_inset
+
+
+\begin_inset Formula $X_{3}=l$
+\end_inset
+
+]
+\end_layout
+
+\begin_layout Standard
+Thus P[
+\begin_inset Formula $X_{3}=l$
+\end_inset
+
+|
+\begin_inset Formula $X_{2}=k]*P[X_{2}=k\text{]=P\ensuremath{_{kl}*\sum_{i,j}P[X_{2}=k|X_{0}=i,}\ensuremath{X_{1}=j]}= }$
+\end_inset
+
+
+\begin_inset Formula $P_{kl}*\sum P[X_{2=k}|X_{1}=j]*P[X_{i}=j|X_{0}=i]*P[X_{0}=i]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+=
+\begin_inset Formula $P_{kl}\sum_{i,j}P_{ij}P_{jk}P[X_{0}=i]$
+\end_inset
+
+ which is a function only of the i-step transition probs and P[X
+\begin_inset Formula $_{0}=i]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The idea is simply that to find the probabilities of going from state i
+ to state j in n steps you sum the probabilities of all paths that take
+ you from i to j in n steps.
+ Next the prob of each path is the prob of an intersection of the form P[
+\begin_inset Formula $A_{1}\cap A_{2}...A_{n}]=P[A_{n}|$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+A_{1}
+\backslash
+cap A_{2}...A_{n-1}]*P[A_{1}
+\backslash
+cap A_{2}...A_{n-1}] = P[A
+\begin_inset Formula $_{n}|A_{n-1}]*P[A_{n-1}|A_{n-2}]...*P[A_{1}]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let P
+\begin_inset Formula $_{ij}^{n+m}$
+\end_inset
+
+be P[
+\begin_inset Formula $X_{m+n}=j$
+\end_inset
+
+|
+\begin_inset Formula $X_{0}=i]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is easy to see that the markov propety is satisfied (check this formality).
+\end_layout
+
+\begin_layout Standard
+In this case we have : 
+\end_layout
+
+\begin_layout Standard
+-- 0- 1- 2- ....
+ N 
+\end_layout
+
+\begin_layout Standard
+0 1 - 0- 0- 0- 0 
+\end_layout
+
+\begin_layout Standard
+1 1-p - 0 - p ...
+\end_layout
+
+\begin_layout Standard
+2 0- 1-p - 0- p 
+\end_layout
+
+\begin_layout Standard
+The classification of states
+\end_layout
+
+\begin_layout Standard
+Eventually we'll be studing the limiting behavior of 
+\begin_inset Formula $p_{ij}^{(n)}$
+\end_inset
+
+as n->
+\begin_inset Formula $\infty$
+\end_inset
+
+.
+ In order to do so require the classificatinon of the states of a Markov
+ chain and the classification of the chain themselves
+\end_layout
+
+\begin_layout Standard
+Definition: Let {
+\begin_inset Formula $X_{n},$
+\end_inset
+
+n=0,1,2,..} be a Markov chain with transmission matrix P{
+\begin_inset Formula $P_{ij}\}.$
+\end_inset
+
+Then we say that the state j is accessible from the state i, if and only
+ if there exist an n>0 s.t.
  
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+p_{ij}^{(n)} > 0.
+ [i.e.
+ there is a positive prob of reaching state j from state i in a finite number
+ of steps]
+\end_layout
+
+\begin_layout Standard
+Note that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+p_{ij}^{(n)} is not the probability of reaching j from i for the first time
+ in n steps.
+ 
+\end_layout
+
+\begin_layout Standard
+We write i->j to mean 
+\begin_inset Quotes eld
+\end_inset
+
+j is accessible from i
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Definition: 
+\end_layout
+
+\begin_layout Standard
+If i->j and j->i then we say that i and j communication, and write i<->j
+\end_layout
+
+\begin_layout Standard
+Theorem:
+\end_layout
+
+\begin_layout Standard
+If i<->j and j<->k, then i->k and conversly
+\end_layout
+
+\begin_layout Standard
+Corrolary i<->j, j<->k => i<->k
+\end_layout
+
+\begin_layout Standard
+Proof i->j => 
+\begin_inset Formula $\exists$
+\end_inset
+
+ an n
+\begin_inset Formula $_{0}$
+\end_inset
+
+>0 such that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+p_{ij}^{(n)} >0 and j->k => 
+\begin_inset Formula $\exists$
+\end_inset
+
+ an n1 such that p_{jk}^{(n)} > 0 
+\end_layout
+
+\begin_layout Standard
+Let n=no+n1
+\end_layout
+
+\begin_layout Standard
+Then 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+p_{ik}^{(n)} = p_{ik}^{(n0+n1)} = 
+\begin_inset Formula $\sum_{i}$
+\end_inset
+
+p_{il}^{(n0)* p_{lk}^{(n1)}} 
+\begin_inset Formula $\geq$
+\end_inset
+
+p_{ij}^{(n0)}* p_{jk}^{(n1)} > 0 
+\end_layout
+
+\begin_layout Standard
+i->k done!
+\end_layout
+
+\begin_layout Standard
+The corollary is immediate same i<->j iff j<->i
+\end_layout
+
+\begin_layout Standard
+Definition: Given a state j of a Markov chain, its communicating class l
+\begin_inset Formula $_{oj}$
+\end_inset
+
+is defined to be the set of all state that communicate with j, in the sense
+ that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+p_{jk}^{(n)} > 0 for some 
+\begin_inset Formula $n_{0}^{n1}>0$
+\end_inset
+
+for some 
+\begin_inset Formula $n_{1}>0.$
+\end_inset
+
+It may happen that 
+\begin_inset Formula $l_{oj}$
+\end_inset
+
+is empty [i.e.
+ j communicates with no state, not even with itself].
+ In this case we say that {j} is a non-return state.
+ 
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $l_{oj}$
+\end_inset
+
+ is non-empty, then, j 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ 
+\begin_inset Formula $l_{oj}$
+\end_inset
+
+, to see this note that 
+\begin_inset Formula $l_{oj}$
+\end_inset
+
+ non empty implies that there must exist a.k such that j->k (and k->j)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\exists$
+\end_inset
+
+ 
+\begin_inset Formula $n_{0}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+p_{jk}^{(n0)} > 0 and 
+\begin_inset Formula $n_{1}$
+\end_inset
+
+s.t.
+ p_{kj}^{(n1)} > 0 .
+ Let n=
+\begin_inset Formula $n_{0}+n_{1}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $P_{jj}^{(n)}$
+\end_inset
+
+
+\begin_inset Formula $\geq$
+\end_inset
+
+
+\begin_inset Formula $P_{jk}^{(n0)}P_{kj}^{n1}$
+\end_inset
+
+>0.
+ j comunicates with itself, and this j 
+\begin_inset Formula $\varepsilon$
+\end_inset
+
+
+\begin_inset Formula $l_{ej}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A state which communicates with itself is called return state.
+ A non-empty class, le, of state in a Markov chain is to be a communicating
+ class if for some state j, lej = le.
+ Thas is le is the class of all states that communicate with one-another
 \end_layout
 
 \end_body
