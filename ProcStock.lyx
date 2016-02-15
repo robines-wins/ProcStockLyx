@@ -3347,7 +3347,7 @@ Let
 \end_layout
 
 \begin_layout Section
-A bunch of theorems.
+Communcating, and classification of states
 \end_layout
 
 \begin_layout Subsection
@@ -4217,5 +4217,435 @@ Examples: In the following examples we classify the states of the corresponding
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+A 
+\emph on
+closed communication
+\emph default
+ class 
+\begin_inset Formula $C$
+\end_inset
+
+ of states is essentially a Markov chains extracted and studied independently
+\end_layout
+
+\begin_layout Standard
+If you write the transition matrix so that the states in 
+\begin_inset Formula $C$
+\end_inset
+
+ are written, then 
+\begin_inset Formula $P$
+\end_inset
+
+ can be written in the form 
+\begin_inset Formula $P=\begin{bmatrix}P_{C} & 0\\
+* & *
+\end{bmatrix}$
+\end_inset
+
+ where 
+\begin_inset Formula $*$
+\end_inset
+
+ are possibly non-zero matrix and 
+\begin_inset Formula $P_{c}$
+\end_inset
+
+ is the sub-matrix whose entries are the transition probabilities between
+ the states of 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $P^{(n)}=P^{n}=\begin{bmatrix}P_{C}^{n} & 0\\
+* & *
+\end{bmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since a closed communication class 
+\begin_inset Formula $C$
+\end_inset
+
+ can be extracted from a Markov chain (by deleting all rows and colons correspon
+ding to states outside of 
+\begin_inset Formula $C$
+\end_inset
+
+) and treated by itself as a Markov chains it follows that for the study
+ asymptotic properties of a Markov chain, it is sufficient to restrict one
+ self to chains in which there is exactly one closed communicating classare
+ all the other communicating class are non closed
+\end_layout
+
+\begin_layout Subsection
+Futher Cassification of states.
+\end_layout
+
+\begin_layout Standard
+In order to obtain certain asymptotic properties of a Markov chain, we shall
+ make futher classification of states
+\end_layout
+
+\begin_layout Paragraph
+Definition:
+\end_layout
+
+\begin_layout Standard
+For any 
+\end_layout
+
+\begin_layout Standard
+****************************
+\end_layout
+
+\begin_layout Standard
+Recall: Let 
+\begin_inset Formula $\left\{ X_{n},n=0,1,\ldots\right\} $
+\end_inset
+
+ be a 2-states Markov chain (with state 0 and 1) find the 1
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+th
+\end_layout
+
+\end_inset
+
+passage probs 
+\begin_inset Formula $f_{jk}^{(n)}.$
+\end_inset
+
+ Ex: 
+\begin_inset Formula $f_{00}^{(n)}=P_{01}P_{11}^{n-2}P_{10}\,n\geq2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Proof:
+\end_layout
+
+\begin_layout Standard
+it's a mistake ti say that the product (and power 
+\begin_inset Formula $n-2$
+\end_inset
+
+) arise because of independence of various event.
+ They are certainly independent.
+ However we can condition backward and use the markov property.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+f_{00}^{(n)} & = & P\left[X_{1}=1,X_{2}=1,\ldots,X_{n-1}=1,X_{n}=0|X_{n}=0\right]\\
+ & = & P\left[X_{n}=0|X_{0}=0,X_{1}=1,\ldots,X_{n-1}=1\right]P\left[X_{n-1}=1|X_{0}=0,\ldots;,X=1\right]\\
+ &  & \cdots P\left[X_{1}=1|X_{0}=0\right]\\
+ & = & P\left[X_{n}=0|X_{n-1}=1\right]P\left[X_{n-1}=1|X_{n-2}=1\right]\cdots P\left[X_{1}=1|X_{0}=0\right]\\
+ &  & \mbox{[We used Markov property]}\\
+ & = & p_{01}p_{11}^{n-2}p_{10}\\
+ &  & \mbox{[We used Homogeneity}]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The other 
+\begin_inset Formula $f_{jk}^{(n)}$
+\end_inset
+
+'s fllow similarly
+\end_layout
+
+\begin_layout Subsubsection*
+Theorem:
+\end_layout
+
+\begin_layout Standard
+For any states 
+\begin_inset Formula $j$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ 
+\begin_inset Formula $f_{jk}=\sum_{n=1}^{\infty}f_{ik}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Proof:
+\end_layout
+
+\begin_layout Standard
+Ever entering 
+\begin_inset Formula $k$
+\end_inset
+
+ from 
+\begin_inset Formula $j$
+\end_inset
+
+ is the disjoin union of entering 
+\begin_inset Formula $k$
+\end_inset
+
+ from 
+\begin_inset Formula $j$
+\end_inset
+
+ in exactly 
+\begin_inset Formula $n$
+\end_inset
+
+ steps 
+\begin_inset Formula $\forall n\geq1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Theorem:
+\end_layout
+
+\begin_layout Standard
+For any states 
+\begin_inset Formula $j$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ and 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+ 
+\begin_inset Formula $P_{jk}^{(n)}=\sum_{m=1}^{n}f_{jk}^{(m)}P_{kk}^{m-n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Proof: 
+\end_layout
+
+\begin_layout Standard
+If you are in state 
+\begin_inset Formula $k$
+\end_inset
+
+ (starting in 
+\begin_inset Formula $j$
+\end_inset
+
+) 
+\emph on
+at
+\emph default
+ the n
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+th
+\end_layout
+
+\end_inset
+
+step then you must have entered 
+\begin_inset Formula $k$
+\end_inset
+
+ for the 1
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+th
+\end_layout
+
+\end_inset
+
+at some 
+\begin_inset Formula $m$
+\end_inset
+
+ and then in the remaining 
+\begin_inset Formula $n-m$
+\end_inset
+
+ step, be in state 
+\begin_inset Formula $k$
+\end_inset
+
+ (starting from 
+\begin_inset Formula $k$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+we're talking of a disjoin union of these events.
+ again we use the Markov property and homogeneity to get the product
+\end_layout
+
+\begin_layout Subsubsection
+Theorem: 
+\end_layout
+
+\begin_layout Standard
+For any state 
+\begin_inset Formula $j$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+g_{kk} & = & \lim_{n\rightarrow\infty}\left(f_{kk}\right)^{n}\label{eq:A}\\
+g_{jk} & = & f_{jk}g_{kk}\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+proof:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g_{kk}=\lim_{n\rightarrow\infty}P\left[\mbox{every returning to \ensuremath{k}from 1th \ensuremath{k}}\cap\mbox{ever returning from the second }k\cap\ldots\cap\mbox{ever returning from the nth}k\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now condition backward.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Theorem
+\end_layout
+
+\begin_layout Standard
+For any state 
+\begin_inset Formula $k$
+\end_inset
+
+ either 
+\begin_inset Formula $g_{kk}=0$
+\end_inset
+
+ or 
+\begin_inset Formula $g_{kk}=1$
+\end_inset
+
+, further 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g_{kk}=0\Leftrightarrow f_{kk}<1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g_{kk}=1\Leftrightarrow f_{kk}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Proof follows directly from 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:A"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After all this background we come to en important theorem: Theorem [A zero-one|a
+w]
+\end_layout
+
+\begin_layout Section
+Application to Branching process
+\end_layout
+
+\begin_layout Standard
+We show that in a simple (
+\noun on
+galton-watson
+\noun default
+) Branching process, the successive generation size either tend to infinity
+ with probability 
+\begin_inset Formula $1$
+\end_inset
+
+ or die out with probability 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $g_{kk}$
+\end_inset
+
+ be the prob that the chain returns infinitely often to the state 
+\begin_inset Formula $k$
+\end_inset
+
+ we shall show that 
+\begin_inset Formula $g_{kk}=0\,\forall k=0,1,\ldots$
+\end_inset
+
+ that is no matter what finite set of state you choose, you will visit these
+ states only a finite number of times.
+\end_layout
+
+\begin_layout Standard
+To proves this all we need to do is show that 
+\begin_inset Formula $f_{kk}<1$
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
