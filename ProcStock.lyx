@@ -4297,15 +4297,150 @@ Definition:
 \end_layout
 
 \begin_layout Standard
-For any 
+For any state 
+\begin_inset Formula $j,k$
+\end_inset
+
+ let 
+\begin_inset Formula $f_{jk}$
+\end_inset
+
+ denote the probability starting from 
+\begin_inset Formula $j$
+\end_inset
+
+ the process will get into state 
+\begin_inset Formula $k$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-****************************
+Let 
+\begin_inset Formula $g_{kk}$
+\end_inset
+
+ denote the probability that the chain will retrun infinitly often to state
+ 
+\begin_inset Formula $k$
+\end_inset
+
+ given that it start in 
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+note:
 \end_layout
 
 \begin_layout Standard
-Recall: Let 
+these definitions can be made mathematically rigorous by introducing the
+ r.v 
+\begin_inset Formula $N_{k}(n)$
+\end_inset
+
+, the number of time that the state 
+\begin_inset Formula $k$
+\end_inset
+
+ is visited in 
+\begin_inset Formula $n$
+\end_inset
+
+ step.
+ Our descriptive definition will suffice
+\end_layout
+
+\begin_layout Paragraph
+Definition:
+\end_layout
+
+\begin_layout Standard
+We denote 
+\begin_inset Formula $f_{jk}^{(n)}$
+\end_inset
+
+ the conditionnal probability of entering 
+\begin_inset Formula $k$
+\end_inset
+
+ from 
+\begin_inset Formula $j$
+\end_inset
+
+ from the first time in exactly 
+\begin_inset Formula $n$
+\end_inset
+
+ steps 
+\end_layout
+
+\begin_layout Standard
+the time it takes to enter 
+\begin_inset Formula $k$
+\end_inset
+
+ from 
+\begin_inset Formula $j$
+\end_inset
+
+ for the first time is called the first passage time.
+\end_layout
+
+\begin_layout Paragraph
+Note:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f_{jk}^{(n)}can$
+\end_inset
+
+be made precise by formaly saying that if we are to reach 
+\begin_inset Formula $k$
+\end_inset
+
+ for the first time from 
+\begin_inset Formula $j$
+\end_inset
+
+ in 
+\begin_inset Formula $n$
+\end_inset
+
+ steps then the chains must not have visited 
+\begin_inset Formula $k$
+\end_inset
+
+ in the first 
+\begin_inset Formula $n-1$
+\end_inset
+
+steps and then on n
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+th
+\end_layout
+
+\end_inset
+
+stap have jumped to state 
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Example:
+\end_layout
+
+\begin_layout Standard
+Let 
 \begin_inset Formula $\left\{ X_{n},n=0,1,\ldots\right\} $
 \end_inset
 

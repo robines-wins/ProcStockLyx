@@ -4292,6 +4292,105 @@ In order to obtain certain asymptotic properties of a Markov chain, we shall
  make futher classification of states
 \end_layout
 
+\begin_layout Paragraph
+Definition:
+\end_layout
+
+\begin_layout Standard
+For any state 
+\begin_inset Formula $j,k$
+\end_inset
+
+ let 
+\begin_inset Formula $f_{jk}$
+\end_inset
+
+ denote the probability starting from 
+\begin_inset Formula $j$
+\end_inset
+
+ the process will get into state 
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $g_{kk}$
+\end_inset
+
+ denote the probability that the chain will retrun infinitly often to state
+ 
+\begin_inset Formula $k$
+\end_inset
+
+ given that it start in 
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+note:
+\end_layout
+
+\begin_layout Standard
+these definitions can be made mathematically rigorous by introducing the
+ r.v 
+\begin_inset Formula $N_{k}(n)$
+\end_inset
+
+, the number of time that the state 
+\begin_inset Formula $k$
+\end_inset
+
+ is visited in 
+\begin_inset Formula $n$
+\end_inset
+
+ step.
+ Our descriptive definition will suffice
+\end_layout
+
+\begin_layout Paragraph
+Definition:
+\end_layout
+
+\begin_layout Standard
+We denote 
+\begin_inset Formula $f_{jk}^{(n)}$
+\end_inset
+
+ the conditionnal probability of entering 
+\begin_inset Formula $k$
+\end_inset
+
+ from 
+\begin_inset Formula $j$
+\end_inset
+
+ from the first time in exactly 
+\begin_inset Formula $n$
+\end_inset
+
+ steps 
+\end_layout
+
+\begin_layout Standard
+the time it takes to enter 
+\begin_inset Formula $k$
+\end_inset
+
+ from 
+\begin_inset Formula $j$
+\end_inset
+
+ for the first time is called the first passage time
+\end_layout
+
 \begin_layout Standard
 ****************************
 \end_layout
