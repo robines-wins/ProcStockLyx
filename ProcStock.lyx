@@ -146,7 +146,7 @@ Then the conditional probability of
 \begin_inset Formula $\frac{P_{X,Y}(x,y)}{P_{X}(x)}$
 \end_inset
 
- for
+ for 
 \begin_inset Formula $P_{X}(x)\neq0$
 \end_inset
 
@@ -326,7 +326,7 @@ Let X,Y be random variables with some join discrete distribution or continuous
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-(I) If discrete
+(I) If discrete 
 \begin_inset Formula $P_{Y}(y)=\sum P_{Y|X=x}(y|x)*P_{X}(x)=\sum P(X=x,Y=y)$
 \end_inset
 
@@ -2904,11 +2904,11 @@ Precision:
 
 \begin_layout Standard
 The aim here is to find an expression for 
-\begin_inset Formula $p_{ij}^{(n)}$
+\begin_inset Formula $P_{ij}^{(n)}$
 \end_inset
 
 , or at least a mean of obtaining 
-\begin_inset Formula $p_{ij}^{(n)}$
+\begin_inset Formula $P_{ij}^{(n)}$
 \end_inset
 
 .
@@ -2971,7 +2971,7 @@ P\left[X_{m+n}=j|X_{0}=i\right] & = & \sum_{k}P\left[X_{m+n},X_{m}=k|X_{0}=I\rig
  & = & \sum_{k}\frac{P\left[X_{m+n}=j,\,X_{m}=k,\,X_{0}=i\right]}{P\left[X_{0}=i\right]}\\
  & = & \sum_{k}\frac{P\left[X_{m+n}=j|X_{m}=k,\,X_{0}=i\right]P\left[X_{m}=k|X_{0}=i\right]P\left[X_{0}=i\right]}{P\left[X_{0}=i\right]}\\
  & = & \sum_{k}\underbrace{P\left[X_{m+n}=j|X_{m}=k\right]}_{\mbox{Markov prop}}P\left[X_{m}=k|X_{0}=i\right]\\
- & = & \sum_{k}\underbrace{p_{ik}^{(m)}p_{kj}^{(n)}}_{\mbox{Homogenity }}=p_{ij}^{(m+n)}
+ & = & \sum_{k}\underbrace{P_{ik}^{(m)}p_{kj}^{(n)}}_{\mbox{Homogenity }}=P_{ij}^{(m+n)}
 \end{eqnarray*}
 
 \end_inset
@@ -2981,7 +2981,7 @@ P\left[X_{m+n}=j|X_{0}=i\right] & = & \sum_{k}P\left[X_{m+n},X_{m}=k|X_{0}=I\rig
 
 \begin_layout Standard
 Which shows that 
-\begin_inset Formula $p_{ij}^{(m+n)}$
+\begin_inset Formula $P_{ij}^{(m+n)}$
 \end_inset
 
  is just the i-j
@@ -2998,7 +2998,7 @@ elements of the product of the matrices
 \end_inset
 
  and 
-\begin_inset Formula $p^{(n)}$
+\begin_inset Formula $P^{(n)}$
 \end_inset
 
 , i.e: 
@@ -3229,7 +3229,7 @@ These
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-P\left[X_{n+1}=j\,|\,X_{0}=0,X_{1}i_{1},\ldots,X_{n}=i\right] & = & P\left[\sum_{l=0}^{n+1}y_{l}=j\,|\,X_{0}=0,\sum_{l=0}^{1}y_{l}=i_{i},\ldots,\sum_{l=0}^{n}y_{l}=i\right]\\
+P\left[X_{n+1}=j\,|\,X_{0}=0,X_{1}=i_{1},\ldots,X_{n}=i\right] & = & P\left[\sum_{l=0}^{n+1}y_{l}=j\,|\,X_{0}=0,\sum_{l=0}^{1}y_{l}=i_{i},\ldots,\sum_{l=0}^{n}y_{l}=i\right]\\
  & = & P\left[\sum_{l=0}^{n}y_{l}+y_{n+1}=j\,|\,X_{0}=0,\ldots,\sum_{l=0}^{n}y_{l}=i\right]\\
  & = & P\left[\left(i+y_{n+1}\right)=j\,|\,\ldots\right]\\
  & = & P\left[y_{n+1}=j-i\,|\,X_{0}=0,\ldots,\sum_{l=0}^{n}y_{l}=i\right]\\
