@@ -4388,15 +4388,59 @@ the time it takes to enter
 \begin_inset Formula $j$
 \end_inset
 
- for the first time is called the first passage time
+ for the first time is called the first passage time.
+\end_layout
+
+\begin_layout Paragraph
+Note:
 \end_layout
 
 \begin_layout Standard
-****************************
+\begin_inset Formula $f_{jk}^{(n)}can$
+\end_inset
+
+be made precise by formaly saying that if we are to reach 
+\begin_inset Formula $k$
+\end_inset
+
+ for the first time from 
+\begin_inset Formula $j$
+\end_inset
+
+ in 
+\begin_inset Formula $n$
+\end_inset
+
+ steps then the chains must not have visited 
+\begin_inset Formula $k$
+\end_inset
+
+ in the first 
+\begin_inset Formula $n-1$
+\end_inset
+
+steps and then on n
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+th
+\end_layout
+
+\end_inset
+
+stap have jumped to state 
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Example:
 \end_layout
 
 \begin_layout Standard
-Recall: Let 
+Let 
 \begin_inset Formula $\left\{ X_{n},n=0,1,\ldots\right\} $
 \end_inset
 

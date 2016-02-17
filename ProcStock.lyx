@@ -1143,10 +1143,6 @@ It then follows from 5 that if
 
 \end_layout
 
-\begin_layout Standard
-CHECK MY COURSES FOR ASSIGNEMENT:
-\end_layout
-
 \begin_layout Chapter
 Stochastic processes themselves
 \end_layout
@@ -1233,13 +1229,13 @@ For each fixed
 \end_inset
 
 ) a trajectory or sample path of stochastic process.
- We may depic the situation as follows.
+ We may depict the situation as follows.
  
 \end_layout
 
 \begin_layout Enumerate
 How is a stochastic process specified? Recall that if X is a r.v.
- it is complety determined or specified once you have specified c.d.f 
+ it is completely determined or specified once you have specified c.d.f 
 \begin_inset Formula $F_{X}$
 \end_inset
 
@@ -1300,7 +1296,7 @@ What is the probability that this function will fall in some set in this
 
 \begin_layout Standard
 Extensen theorem is that the probabilities of all the event in this function
- space is uniquely determined by the probabilities speciafied by the finite
+ space is uniquely determined by the probabilities specified by the finite
  themselves c.d.f.S.
 \end_layout
 
@@ -1386,7 +1382,7 @@ where
 \begin_inset Formula $X_{i}$
 \end_inset
 
-'s will be dependant.
+'s will be dependent.
 \end_layout
 
 \begin_layout Enumerate
@@ -1401,7 +1397,7 @@ where
 \begin_inset Formula $t$
 \end_inset
 
- from the time they start divinding
+ from the time they start dividing
 \end_layout
 
 \begin_layout Enumerate
@@ -1484,7 +1480,7 @@ If the set of possible value of
 \begin_inset Formula $X_{t}$
 \end_inset
 
- contable (discrete) we refer to a 
+ countable (discrete) we refer to a 
 \emph on
 discrete state space
 \begin_inset Newline newline
@@ -1668,7 +1664,7 @@ Even though we can view
 \end_inset
 
  as a Markov chain, we shall answers these questions without reference to
- them by using conditionnal expectation and probability generating function.
+ them by using conditional expectation and probability generating function.
  
 \end_layout
 
@@ -1685,7 +1681,7 @@ Let
 \begin_inset Formula $p_{0}(n)$
 \end_inset
 
- denode the probability that there are no individuals in the k
+ denote the probability that there are no individuals in the k
 \begin_inset script superscript
 
 \begin_layout Plain Layout
@@ -1784,7 +1780,7 @@ Lemma:
 \end_layout
 
 \begin_layout Standard
-The ideae in proving both 
+The idea in proving both 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:11"
@@ -2477,7 +2473,7 @@ one extension to the Glaton branching-process is the so called Branching
 \begin_inset Quotes eld
 \end_inset
 
-divison probability
+division probability
 \begin_inset Quotes erd
 \end_inset
 
@@ -2491,7 +2487,7 @@ divison probability
 \end_layout
 
 \begin_layout Enumerate
-Another generalization is to Multitype Branching Process.
+Another generalization is to Multi-type Branching Process.
  Whereby a population is composed of different subtype each with a different
  
 \begin_inset Formula $\left\{ p_{j}\right\} $
@@ -2618,7 +2614,7 @@ increase (decrease) geometrically if
 \begin_inset Formula $\mu>1$
 \end_inset
 
-: large fluctuation gice a chance of falling into the breach of extinction.
+: large fluctuation give a chance of falling into the breach of extinction.
 \end_layout
 
 \begin_layout Chapter
@@ -2628,7 +2624,7 @@ Markov Chains
 \begin_layout Standard
 Almost always there is an underlying dependence structure to the stochastic
  processes that we discuss.
- A special type of dependence structure is assumed when we discuss markov
+ A special type of dependence structure is assumed when we discuss Markov
  chain, this structures assumes the so calls 
 \emph on
 Markov property
@@ -2790,17 +2786,17 @@ depends only on
 
 \begin_layout Standard
 Reason(to be further clarified later) is that with the assumption of homogeneity
- (stationarity) the join finite dimensional distributions, are invariate
+ (stationarity) the join finite dimensional distributions, are invariant
  under shifts in time.
 \end_layout
 
 \begin_layout Subparagraph
-Exemple of non-stationary Markov chain:
+Example of non-stationary Markov chain:
 \end_layout
 
 \begin_layout Standard
-A branching process with the number of childen from each from each parent
- in a generation, having a distribution that deoends on the generation number
+A branching process with the number of children from each from each parent
+ in a generation, having a distribution that depends on the generation number
  in fertility changes with n.
  
 \end_layout
@@ -2826,7 +2822,7 @@ We wish to model a sequence of dependent r.v.s.
  Markov property then we'l see that the specification of the finite dimensional
  distribution is make much simpler.
  Of course, one has to be satisfied that the Markov property holds.
- There are statistical tests that can be used to test the Markov asssumption.
+ There are statistical tests that can be used to test the Markov assumption.
  
 \end_layout
 
@@ -2907,7 +2903,7 @@ Precision:
 \end_layout
 
 \begin_layout Standard
-The aim here is to find an expresion for 
+The aim here is to find an expression for 
 \begin_inset Formula $p_{ij}^{(n)}$
 \end_inset
 
@@ -3029,7 +3025,7 @@ In particular take
 \begin_inset Formula $P^{(3)}=P.P^{(2)}=P.P^{2}$
 \end_inset
 
- , ect\SpecialChar \ldots{}
+ , etc\SpecialChar \ldots{}
  This can be generalize by induction to 
 \begin_inset Formula $P^{(n)}=P^{n}$
 \end_inset
@@ -3042,7 +3038,7 @@ In principle if the chain finite (it has finite many step) we can find
 \begin_inset Formula $P_{ij}^{(n)}$
 \end_inset
 
- by doing succesive matrix multiplication.
+ by doing successive matrix multiplication.
 \end_layout
 
 \begin_layout Standard
@@ -3067,12 +3063,12 @@ Some example.
 \end_layout
 
 \begin_layout Subsubsection
-Exemple 1
+Example 1
 \end_layout
 
 \begin_layout Standard
-Consider a communication system wich transmit the digits 0 or 1.
- Each digit transmitted must pass through serval stagr at each of which
+Consider a communication system which transmit the digits 0 or 1.
+ Each digit transmitted must pass through serval stage at each of which
  there's a prob 
 \begin_inset Formula $p$
 \end_inset
@@ -3089,7 +3085,7 @@ Consider a communication system wich transmit the digits 0 or 1.
 \begin_inset Formula $\left\{ X_{n},n=0,1,\ldots\right\} $
 \end_inset
 
- is a 2-state markov chain with 
+ is a 2-state Markov chain with 
 \begin_inset Formula $P=\left[\begin{array}{cc}
 p & 1-p\\
 1-p & p
@@ -3100,11 +3096,11 @@ p & 1-p\\
 \end_layout
 
 \begin_layout Subsubsection
-Exemple 2 The simple random Walk
+Example 2 The simple random Walk
 \end_layout
 
 \begin_layout Standard
-This is a basic well-studied non-trivial example of a markov chain that
+This is a basic well-studied non-trivial example of a Markov chain that
  is constructed from basic properties easy to imagine.
 \end_layout
 
@@ -3113,7 +3109,7 @@ Suppose that a particle can jump between the integers (
 \begin_inset Formula $\mathbb{Z}$
 \end_inset
 
-) on the x-axis acording to the following rules
+) on the x-axis according to the following rules
 \end_layout
 
 \begin_layout Enumerate
@@ -3171,7 +3167,7 @@ Claim:
 \begin_inset Formula $\left\{ X_{n},\,n=0,1,2,\ldots\right\} $
 \end_inset
 
- form a markov chain.
+ form a Markov chain.
 \end_layout
 
 \begin_layout Standard
@@ -3197,7 +3193,7 @@ Next to show that
 \begin_inset Formula $\left\{ X_{n},\,n=0,1,2,\ldots\right\} $
 \end_inset
 
- is a markov chain, write 
+ is a Markov chain, write 
 \begin_inset Formula $X_{n}$
 \end_inset
 
@@ -3259,12 +3255,12 @@ th
 
 \end_inset
 
- by assumtion (3).
+ by assumption (3).
  But 
 \begin_inset Formula $P\left[y_{n+1}=j-i\right]=P\left[\sum_{l=0}^{n+1}y_{l}=j\,|\,\sum_{l=0}^{n}y_{l}=i\right]$
 \end_inset
 
- which establishes the markov property.
+ which establishes the Markov property.
 \end_layout
 
 \begin_layout Standard
@@ -3280,7 +3276,7 @@ p & j=i+1\\
 \end_layout
 
 \begin_layout Subsubsection
-Exemple 3
+Example 3
 \end_layout
 
 \begin_layout Standard
@@ -3293,7 +3289,7 @@ Consider a gambler who at each play wins $1 with prob
 \end_inset
 
 .
- Supose that the gambler stop playing whe she goes broke or atteins $
+ Suppose that the gambler stop playing when she goes broke or attains $
 \begin_inset Formula $N$
 \end_inset
 
@@ -3314,7 +3310,7 @@ Let
 \begin_inset Formula $X_{n},\left\{ n=0,1,\ldots\right\} $
 \end_inset
 
- is a Markov chain with what one known as absorbing stads at 
+ is a Markov chain with what one known as absorbing state at 
 \begin_inset Formula $0$
 \end_inset
 
@@ -3347,7 +3343,7 @@ Let
 \end_layout
 
 \begin_layout Section
-Communcating, and classification of states
+Communicating states and classification of states
 \end_layout
 
 \begin_layout Subsection
@@ -3397,7 +3393,7 @@ Proof:
 \end_layout
 
 \begin_layout Standard
-We must know that we can wite the joint distribution of any set 
+We must know that we can write the joint distribution of any set 
 \begin_inset Formula $X_{n1},X_{n2}....$
 \end_inset
 
@@ -3510,7 +3506,7 @@ be
 \end_layout
 
 \begin_layout Standard
-It is easy to see that the markov propety is satisfied (check this formality).
+It is easy to see that the Markov property is satisfied (check this formality).
 \end_layout
 
 \begin_layout Standard
@@ -3539,7 +3535,7 @@ The classification of states
 \end_layout
 
 \begin_layout Standard
-Eventually we'll be studing the limiting behavior of 
+Eventually we'll be studying the limiting behavior of 
 \begin_inset Formula $p_{ij}^{(n)}$
 \end_inset
 
@@ -3548,7 +3544,7 @@ as
 \end_inset
 
 .
- In order to do so require the classificatinon of the states of a Markov
+ In order to do so require the classification of the states of a Markov
  chain and the classification of the chain themselves
 \end_layout
 
@@ -3686,11 +3682,11 @@ If
 \begin_inset Formula $i\rightarrow k$
 \end_inset
 
- and conversly
+ and conversely
 \end_layout
 
 \begin_layout Subparagraph
-Corrolary: 
+Corollary: 
 \begin_inset Formula $i\leftrightarrow j\wedge j\leftrightarrow k\Rightarrow i\leftrightarrow k$
 \end_inset
 
@@ -4279,17 +4275,17 @@ ding to states outside of
 
 ) and treated by itself as a Markov chains it follows that for the study
  asymptotic properties of a Markov chain, it is sufficient to restrict one
- self to chains in which there is exactly one closed communicating classare
- all the other communicating class are non closed
+ self to chains in which there is exactly one closed communicating class
+ and all the other communicating class are non closed
 \end_layout
 
 \begin_layout Subsection
-Futher Cassification of states.
+Further Classification of states.
 \end_layout
 
 \begin_layout Standard
 In order to obtain certain asymptotic properties of a Markov chain, we shall
- make futher classification of states
+ make further classification of states
 \end_layout
 
 \begin_layout Paragraph
@@ -4321,7 +4317,7 @@ Let
 \begin_inset Formula $g_{kk}$
 \end_inset
 
- denote the probability that the chain will retrun infinitly often to state
+ denote the probability that the chain will return infinitely often to state
  
 \begin_inset Formula $k$
 \end_inset
@@ -4364,7 +4360,7 @@ We denote
 \begin_inset Formula $f_{jk}^{(n)}$
 \end_inset
 
- the conditionnal probability of entering 
+ the conditional probability of entering 
 \begin_inset Formula $k$
 \end_inset
 
@@ -4399,7 +4395,7 @@ Note:
 \begin_inset Formula $f_{jk}^{(n)}can$
 \end_inset
 
-be made precise by formaly saying that if we are to reach 
+be made precise by formally saying that if we are to reach 
 \begin_inset Formula $k$
 \end_inset
 
@@ -4419,7 +4415,7 @@ be made precise by formaly saying that if we are to reach
 \begin_inset Formula $n-1$
 \end_inset
 
-steps and then on n
+steps and then on the n
 \begin_inset script superscript
 
 \begin_layout Plain Layout
@@ -4428,7 +4424,7 @@ th
 
 \end_inset
 
-stap have jumped to state 
+step have jumped to state 
 \begin_inset Formula $k$
 \end_inset
 
@@ -4448,7 +4444,7 @@ Let
 \begin_inset script superscript
 
 \begin_layout Plain Layout
-th
+st
 \end_layout
 
 \end_inset
@@ -4475,7 +4471,7 @@ it's a mistake ti say that the product (and power
 
 ) arise because of independence of various event.
  They are certainly independent.
- However we can condition backward and use the markov property.
+ However we can condition backward and use the Markov property.
 \end_layout
 
 \begin_layout Standard
@@ -4500,7 +4496,7 @@ The other
 \begin_inset Formula $f_{jk}^{(n)}$
 \end_inset
 
-'s fllow similarly
+'s follow similarly
 \end_layout
 
 \begin_layout Subsubsection*
@@ -4613,7 +4609,7 @@ step then you must have entered
 \begin_inset script superscript
 
 \begin_layout Plain Layout
-th
+st
 \end_layout
 
 \end_inset
@@ -4642,7 +4638,7 @@ we're talking of a disjoin union of these events.
  again we use the Markov property and homogeneity to get the product
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsubsection*
 Theorem: 
 \end_layout
 
