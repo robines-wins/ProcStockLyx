@@ -3428,7 +3428,7 @@ We convey the idea through a special case: Thus consider
 Thus 
 \begin_inset Formula 
 \begin{eqnarray*}
-P[X_{2}=k,X_{3}=l] & = & P[X_{3}=l|X_{2}=k]*P[X_{2}=k] \\
+P[X_{2}=k,X_{3}=l] & = & P[X_{3}=l|X_{2}=k]*P[X_{2}=k]\\
  & = & P\ensuremath{_{kl}*\sum_{i,j}P[X_{2}=k\cap X_{0}=i,}\ensuremath{X_{1}=j]}\\
  & = & P_{kl}*\sum P[X_{2}=k|X_{1}=j]*P[X_{i}=j|X_{0}=i]*P[X_{0}=i]\\
  & = & P_{kl}\sum_{i,j}P_{ij}P_{jk}P[X_{0}=i]
@@ -4773,6 +4773,355 @@ Let
 \begin_layout Standard
 To proves this all we need to do is show that 
 \begin_inset Formula $f_{kk}<1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+--------------------------------------------------------------------------------
+------------------------------
+\end_layout
+
+\begin_layout Standard
+--------------------------------------------------------------------------------
+------------------------------
+\end_layout
+
+\begin_layout Section
+Theorem 100
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+f_{kk}<1 & \Leftrightarrow & \sum_{n=1}^{\infty}P_{kk}^{(n)}<\infty\nonumber \\
+f_{kk}=1 & \Leftrightarrow & \sum_{n=1}^{\infty}P_{kk}^{(n)}=+\infty\label{eq:th100}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+proof:
+\end_layout
+
+\begin_layout Standard
+let's set 
+\begin_inset Formula $P_{jk}(z)=\sum_{n=0}^{\infty}z^{n}P_{jk}^{(n)}$
+\end_inset
+
+ and 
+\begin_inset Formula $F_{jk}(z)=\sum_{n=0}^{\infty}z^{n}f_{jk}^{(n)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Claim: 
+\begin_inset Formula 
+\begin{equation}
+P_{kk}(z)=\frac{1}{1+F_{kk}(z)}\;,\,F_{kk}(z)=1-\frac{1}{P_{kk}(z)}\label{eq:71}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Idea of how 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:71"
+
+\end_inset
+
+ is used to prove theorem 100 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:th100"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For the moment accept the following argument which is actually false.
+\end_layout
+
+\begin_layout Standard
+using 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:71"
+
+\end_inset
+
+, we have 
+\begin_inset Formula $F_{kk}(1)=1-\frac{1}{P_{kk}(1)}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+We note that 
+\begin_inset Formula $F_{jk}(1)=f_{kk}=\sum_{n=0}^{\infty}f_{jk}^{(n)}$
+\end_inset
+
+ and 
+\begin_inset Formula $P_{jk}(1)=\sum_{n=0}^{\infty}P_{jk}^{(n)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Thus 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:71"
+
+\end_inset
+
+ says 
+\begin_inset Formula $f_{kk}=1-\frac{1}{\sum_{n=0}^{\infty}P_{kk}^{(n)}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+We see immediatly that 
+\begin_inset Formula $f_{kk}<1\Leftrightarrow\sum_{n=1}^{\infty}P_{kk}^{(n)}<\infty$
+\end_inset
+
+ and 
+\begin_inset Formula $f_{kk}=1\Leftrightarrow\sum_{n=1}^{\infty}P_{kk}^{(n)}=+\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now this argument is flowed since neither 
+\begin_inset Formula $P_{kk}(z)$
+\end_inset
+
+ nor 
+\begin_inset Formula $F_{kk}(z)$
+\end_inset
+
+ is defined for 
+\begin_inset Formula $z=1$
+\end_inset
+
+.
+ To get around this difficulty we need a result in analysis that allows
+ us to consider 
+\begin_inset Formula $\lim_{z\uparrow1}P_{kk}(1)$
+\end_inset
+
+ and 
+\begin_inset Formula $\lim_{z\uparrow1}F_{kk}(1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There is an inportant limit theorem that will be used shortly:
+\end_layout
+
+\begin_layout Standard
+For any state 
+\begin_inset Formula $k$
+\end_inset
+
+, define 
+\begin_inset Formula $m_{kk}=\sum_{n=1}^{\infty}nf_{kk}^{(n)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Theorem: 
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $k$
+\end_inset
+
+ be any state such that 
+\begin_inset Formula $f_{kk}=1$
+\end_inset
+
+ and 
+\begin_inset Formula $m_{kk}<1$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula 
+\begin{eqnarray}
+\lim_{n\rightarrow\infty}\frac{1}{n}\sum_{m=1}^{n}P_{kk}^{(m)} & = & \frac{1}{m_{kk}}\label{eq:80}\\
+\lim_{n\rightarrow\infty}\frac{1}{n}\sum_{m=1}^{n}P_{jk}^{(m)} & = & f_{jk}\frac{1}{m_{kk}}\label{eq:81}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Proof:
+\end_layout
+
+\begin_layout Standard
+A rigorous proof use generating function once again and a quite deep theorem
+ in analysis.
+\end_layout
+
+\begin_layout Standard
+However we can give a plausible argument as to why 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:80"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:81"
+
+\end_inset
+
+ might be true.
+\end_layout
+
+\begin_layout Paragraph
+Recall the (weak) law of large numbers:
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $X_{1},X_{2}$
+\end_inset
+
+ be i.i.d r.v.s with 
+\begin_inset Formula $E(X)=\mu<\infty$
+\end_inset
+
+ then 
+\begin_inset Formula $\frac{1}{n}\sum_{i=1}^{n}X_{i}\rightarrow\mu$
+\end_inset
+
+ as 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+The strong law of large numbers:
+\end_layout
+
+\begin_layout Standard
+Under the same assumption 
+\begin_inset Formula $\frac{1}{n}\sum_{i=1}^{n}X_{i}(w)\rightarrow\mu$
+\end_inset
+
+ as 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+ with probability 
+\begin_inset Formula $1$
+\end_inset
+
+ (almost surely)
+\end_layout
+
+\begin_layout Paragraph
+Plausible argument
+\end_layout
+
+\begin_layout Standard
+Let the chain run until we made 
+\begin_inset Formula $n$
+\end_inset
+
+ return to 
+\begin_inset Formula $k$
+\end_inset
+
+ (grom 
+\begin_inset Formula $k$
+\end_inset
+
+) this will require a random number of steps in the chain.
+ Call this rundom number 
+\begin_inset Formula $N_{kk}(n)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $T_{i}(k)$
+\end_inset
+
+, for 
+\begin_inset Formula $i=1,2,\ldots$
+\end_inset
+
+ be the observed return time to state 
+\begin_inset Formula $k$
+\end_inset
+
+ .
+ The 
+\begin_inset Formula $T_{i}(k)$
+\end_inset
+
+'s are easily seen to be i.i.d r.v.s Then the observed proportion of time that
+ the chain is in state 
+\begin_inset Formula $k$
+\end_inset
+
+ is given by 
+\begin_inset Formula $\frac{n}{\underset{N_{kk}(n)}{\underbrace{T_{1}(k)+\cdots+T_{n}(k)}}}$
+\end_inset
+
+ we write this as 
+\begin_inset Formula $\frac{1}{\frac{1}{n}\sum_{i=1}^{n}T_{i}(k)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+ and by the Strong law of large number 
+\begin_inset Formula $\frac{1}{n}\sum_{i=1}^{n}T_{i}(k)\overset{\mbox{w.p 1}}{\rightarrow}m_{kk}$
+\end_inset
+
+ as by definition 
+\begin_inset Formula $\left[E\left[T_{i}(k)\right]=m_{kk}\right]$
 \end_inset
 
 
