@@ -4779,6 +4779,7 @@ To proves this all we need to do is show that
 \end_layout
 
 \begin_layout Standard
+<<<<<<< HEAD
 
 \family roman
 \series medium
@@ -5073,11 +5074,262 @@ Theorem : For any two states j and is a MC and |z|<1
 
 (z)=1=
 \begin_inset Formula $F_{kk}(z)P_{kk}(z)$
+=======
+--------------------------------------------------------------------------------
+------------------------------
+\end_layout
+
+\begin_layout Standard
+--------------------------------------------------------------------------------
+------------------------------
+\end_layout
+
+\begin_layout Section
+Theorem 100
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+f_{kk}<1 & \Leftrightarrow & \sum_{n=1}^{\infty}P_{kk}^{(n)}<\infty\nonumber \\
+f_{kk}=1 & \Leftrightarrow & \sum_{n=1}^{\infty}P_{kk}^{(n)}=+\infty\label{eq:th100}
+\end{eqnarray}
+
 \end_inset
 
 
 \end_layout
 
+\begin_layout Subsubsection*
+proof:
+\end_layout
+
+\begin_layout Standard
+let's set 
+\begin_inset Formula $P_{jk}(z)=\sum_{n=0}^{\infty}z^{n}P_{jk}^{(n)}$
+\end_inset
+
+ and 
+\begin_inset Formula $F_{jk}(z)=\sum_{n=0}^{\infty}z^{n}f_{jk}^{(n)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Claim: 
+\begin_inset Formula 
+\begin{equation}
+P_{kk}(z)=\frac{1}{1+F_{kk}(z)}\;,\,F_{kk}(z)=1-\frac{1}{P_{kk}(z)}\label{eq:71}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Idea of how 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:71"
+
+\end_inset
+
+ is used to prove theorem 100 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:th100"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+For the moment accept the following argument which is actually false.
+\end_layout
+
+\begin_layout Standard
+using 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:71"
+
+\end_inset
+
+, we have 
+\begin_inset Formula $F_{kk}(1)=1-\frac{1}{P_{kk}(1)}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+We note that 
+\begin_inset Formula $F_{jk}(1)=f_{kk}=\sum_{n=0}^{\infty}f_{jk}^{(n)}$
+\end_inset
+
+ and 
+\begin_inset Formula $P_{jk}(1)=\sum_{n=0}^{\infty}P_{jk}^{(n)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Thus 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:71"
+
+\end_inset
+
+ says 
+\begin_inset Formula $f_{kk}=1-\frac{1}{\sum_{n=0}^{\infty}P_{kk}^{(n)}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+We see immediatly that 
+\begin_inset Formula $f_{kk}<1\Leftrightarrow\sum_{n=1}^{\infty}P_{kk}^{(n)}<\infty$
+\end_inset
+
+ and 
+\begin_inset Formula $f_{kk}=1\Leftrightarrow\sum_{n=1}^{\infty}P_{kk}^{(n)}=+\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now this argument is flowed since neither 
+\begin_inset Formula $P_{kk}(z)$
+\end_inset
+
+ nor 
+\begin_inset Formula $F_{kk}(z)$
+\end_inset
+
+ is defined for 
+\begin_inset Formula $z=1$
+\end_inset
+
+.
+ To get around this difficulty we need a result in analysis that allows
+ us to consider 
+\begin_inset Formula $\lim_{z\uparrow1}P_{kk}(1)$
+\end_inset
+
+ and 
+\begin_inset Formula $\lim_{z\uparrow1}F_{kk}(1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There is an inportant limit theorem that will be used shortly:
+\end_layout
+
+\begin_layout Standard
+For any state 
+\begin_inset Formula $k$
+\end_inset
+
+, define 
+\begin_inset Formula $m_{kk}=\sum_{n=1}^{\infty}nf_{kk}^{(n)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Theorem: 
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $k$
+\end_inset
+
+ be any state such that 
+\begin_inset Formula $f_{kk}=1$
+\end_inset
+
+ and 
+\begin_inset Formula $m_{kk}<1$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula 
+\begin{eqnarray}
+\lim_{n\rightarrow\infty}\frac{1}{n}\sum_{m=1}^{n}P_{kk}^{(m)} & = & \frac{1}{m_{kk}}\label{eq:80}\\
+\lim_{n\rightarrow\infty}\frac{1}{n}\sum_{m=1}^{n}P_{jk}^{(m)} & = & f_{jk}\frac{1}{m_{kk}}\label{eq:81}
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Proof:
+\end_layout
+
+\begin_layout Standard
+A rigorous proof use generating function once again and a quite deep theorem
+ in analysis.
+\end_layout
+
+\begin_layout Standard
+However we can give a plausible argument as to why 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:80"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:81"
+
+\end_inset
+
+ might be true.
+\end_layout
+
+\begin_layout Paragraph
+Recall the (weak) law of large numbers:
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $X_{1},X_{2}$
+\end_inset
+
+ be i.i.d r.v.s with 
+\begin_inset Formula $E(X)=\mu<\infty$
+\end_inset
+
+ then 
+\begin_inset Formula $\frac{1}{n}\sum_{i=1}^{n}X_{i}\rightarrow\mu$
+\end_inset
+
+ as 
+\begin_inset Formula $n\rightarrow\infty$
+>>>>>>> origin/master
+\end_inset
+
+
+\end_layout
+
+<<<<<<< HEAD
 \begin_layout Standard
 (3) 
 \family roman
@@ -5108,6 +5360,26 @@ Theorem : For any two states j and is a MC and |z|<1
 \end_inset
 
 
+=======
+\begin_layout Paragraph
+The strong law of large numbers:
+\end_layout
+
+\begin_layout Standard
+Under the same assumption 
+\begin_inset Formula $\frac{1}{n}\sum_{i=1}^{n}X_{i}\rightarrow\mu$
+\end_inset
+
+ as 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+ with probability 
+\begin_inset Formula $1$
+\end_inset
+
+ (almost surely)
+>>>>>>> origin/master
 \end_layout
 
 \end_body
