@@ -5038,7 +5038,7 @@ The strong law of large numbers:
 
 \begin_layout Standard
 Under the same assumption 
-\begin_inset Formula $\frac{1}{n}\sum_{i=1}^{n}X_{i}\rightarrow\mu$
+\begin_inset Formula $\frac{1}{n}\sum_{i=1}^{n}X_{i}(w)\rightarrow\mu$
 \end_inset
 
  as 
@@ -5050,6 +5050,81 @@ Under the same assumption
 \end_inset
 
  (almost surely)
+\end_layout
+
+\begin_layout Paragraph
+Plausible argument
+\end_layout
+
+\begin_layout Standard
+Let the chain run until we made 
+\begin_inset Formula $n$
+\end_inset
+
+ return to 
+\begin_inset Formula $k$
+\end_inset
+
+ (grom 
+\begin_inset Formula $k$
+\end_inset
+
+) this will require a random number of steps in the chain.
+ Call this rundom number 
+\begin_inset Formula $N_{kk}(n)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $T_{i}(k)$
+\end_inset
+
+, for 
+\begin_inset Formula $i=1,2,\ldots$
+\end_inset
+
+ be the observed return time to state 
+\begin_inset Formula $k$
+\end_inset
+
+ .
+ The 
+\begin_inset Formula $T_{i}(k)$
+\end_inset
+
+'s are easily seen to be i.i.d r.v.s Then the observed proportion of time that
+ the chain is in state 
+\begin_inset Formula $k$
+\end_inset
+
+ is given by 
+\begin_inset Formula $\frac{n}{\underset{N_{kk}(n)}{\underbrace{T_{1}(k)+\cdots+T_{n}(k)}}}$
+\end_inset
+
+ we write this as 
+\begin_inset Formula $\frac{1}{\frac{1}{n}\sum_{i=1}^{n}T_{i}(k)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+ and by the Strong law of large number 
+\begin_inset Formula $\frac{1}{n}\sum_{i=1}^{n}T_{i}(k)\overset{\mbox{w.p 1}}{\rightarrow}m_{kk}$
+\end_inset
+
+ as by definition 
+\begin_inset Formula $\left[E\left[T_{i}(k)\right]=m_{kk}\right]$
+\end_inset
+
+
 \end_layout
 
 \end_body
