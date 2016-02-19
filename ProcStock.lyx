@@ -5019,7 +5019,11 @@ Proof |
 \uwave off
 \noun off
 \color none
-p_{jk}^{(n)} 
+
+\begin_inset Formula $p_{jk}^{(n)}$
+\end_inset
+
+ 
 \begin_inset Formula $\leq1$
 \end_inset
 
@@ -5063,7 +5067,11 @@ Theorem : For any two states j and is a MC and |z|<1
 \uwave off
 \noun off
 \color none
-P_{kk}(z)=1=
+
+\begin_inset Formula $P_{kk}$
+\end_inset
+
+(z)=1=
 \begin_inset Formula $F_{kk}(z)P_{kk}(z)$
 \end_inset
 
@@ -5083,11 +5091,19 @@ P_{kk}(z)=1=
 \uwave off
 \noun off
 \color none
-P_{kk}(z)= 1/1-
+
+\begin_inset Formula $P_{kk}$
+\end_inset
+
+(z)= 1/1-
 \begin_inset Formula $F_{kk}(z)$
 \end_inset
 
-, F_{kk}(z)=1- 1/
+, 
+\begin_inset Formula $F_{kk}$
+\end_inset
+
+(z)=1- 1/
 \begin_inset Formula $P_{kk}(z)$
 \end_inset
 

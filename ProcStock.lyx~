@@ -4971,6 +4971,142 @@ where
 \end_layout
 
 \begin_layout Standard
+let 
+\begin_inset Formula $F_{jk}(z)$
+\end_inset
+
+=
+\begin_inset Formula $\sum_{n=1}^{\infty}z^{n}f_{jk}^{(n)}$
+\end_inset
+
+ 
+\begin_inset Formula $P_{jk}(z)$
+\end_inset
+
+ cd 
+\begin_inset Formula $F_{jk}(z)$
+\end_inset
+
+ are defined for |z|<1 There are called generating function
+\end_layout
+
+\begin_layout Standard
+Proof |
+\begin_inset Formula $P_{jk(z)}|$
+\end_inset
+
+
+\begin_inset Formula $\leq\sum_{n=0}^{\infty}|z|^{n}p_{jk}^{(n)}$
+\end_inset
+
+
+\begin_inset Formula $\leq$
+\end_inset
+
+
+\begin_inset Formula $\sum_{n=0}^{\infty}|z|^{(n)}$
+\end_inset
+
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+p
+\begin_inset Formula $_{jk}$
+\end_inset
+
+^{(n)} 
+\begin_inset Formula $\leq1$
+\end_inset
+
+ which converges if |z|
+\begin_inset Formula $<1$
+\end_inset
+
+(gemometric series)
+\end_layout
+
+\begin_layout Standard
+Similirly for 
+\begin_inset Formula $F_{jk}(z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Theorem : For any two states j and is a MC and |z|<1
+\end_layout
+
+\begin_layout Standard
+(1) 
+\begin_inset Formula $P_{kk}(z)=Fjk(z)P_{kk}(z)$
+\end_inset
+
+ if j different k
+\end_layout
+
+\begin_layout Standard
+(2) 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $P_{kk}$
+\end_inset
+
+(z)=1=
+\begin_inset Formula $F_{kk}(z)P_{kk}(z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(3) 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $P_{kk}$
+\end_inset
+
+(z)= 1/1-
+\begin_inset Formula $F_{kk}(z)$
+\end_inset
+
+, 
+\begin_inset Formula $F_{kk}$
+\end_inset
+
+(z)=1- 1/
+\begin_inset Formula $P_{kk}(z)$
+\end_inset
+
 
 \end_layout
 
