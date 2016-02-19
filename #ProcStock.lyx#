@@ -146,7 +146,7 @@ Then the conditional probability of
 \begin_inset Formula $\frac{P_{X,Y}(x,y)}{P_{X}(x)}$
 \end_inset
 
- for
+ for 
 \begin_inset Formula $P_{X}(x)\neq0$
 \end_inset
 
@@ -326,7 +326,7 @@ Let X,Y be random variables with some join discrete distribution or continuous
 
 \begin_layout Labeling
 \labelwidthstring 00.00.0000
-(I) If discrete
+(I) If discrete 
 \begin_inset Formula $P_{Y}(y)=\sum P_{Y|X=x}(y|x)*P_{X}(x)=\sum P(X=x,Y=y)$
 \end_inset
 
@@ -1143,10 +1143,6 @@ It then follows from 5 that if
 
 \end_layout
 
-\begin_layout Standard
-CHECK MY COURSES FOR ASSIGNEMENT:
-\end_layout
-
 \begin_layout Chapter
 Stochastic processes themselves
 \end_layout
@@ -1233,13 +1229,13 @@ For each fixed
 \end_inset
 
 ) a trajectory or sample path of stochastic process.
- We may depic the situation as follows.
+ We may depict the situation as follows.
  
 \end_layout
 
 \begin_layout Enumerate
 How is a stochastic process specified? Recall that if X is a r.v.
- it is complety determined or specified once you have specified c.d.f 
+ it is completely determined or specified once you have specified c.d.f 
 \begin_inset Formula $F_{X}$
 \end_inset
 
@@ -1300,7 +1296,7 @@ What is the probability that this function will fall in some set in this
 
 \begin_layout Standard
 Extensen theorem is that the probabilities of all the event in this function
- space is uniquely determined by the probabilities speciafied by the finite
+ space is uniquely determined by the probabilities specified by the finite
  themselves c.d.f.S.
 \end_layout
 
@@ -1386,7 +1382,7 @@ where
 \begin_inset Formula $X_{i}$
 \end_inset
 
-'s will be dependant.
+'s will be dependent.
 \end_layout
 
 \begin_layout Enumerate
@@ -1401,7 +1397,7 @@ where
 \begin_inset Formula $t$
 \end_inset
 
- from the time they start divinding
+ from the time they start dividing
 \end_layout
 
 \begin_layout Enumerate
@@ -1484,7 +1480,7 @@ If the set of possible value of
 \begin_inset Formula $X_{t}$
 \end_inset
 
- contable (discrete) we refer to a 
+ countable (discrete) we refer to a 
 \emph on
 discrete state space
 \begin_inset Newline newline
@@ -1668,7 +1664,7 @@ Even though we can view
 \end_inset
 
  as a Markov chain, we shall answers these questions without reference to
- them by using conditionnal expectation and probability generating function.
+ them by using conditional expectation and probability generating function.
  
 \end_layout
 
@@ -1685,7 +1681,7 @@ Let
 \begin_inset Formula $p_{0}(n)$
 \end_inset
 
- denode the probability that there are no individuals in the k
+ denote the probability that there are no individuals in the k
 \begin_inset script superscript
 
 \begin_layout Plain Layout
@@ -1784,7 +1780,7 @@ Lemma:
 \end_layout
 
 \begin_layout Standard
-The ideae in proving both 
+The idea in proving both 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:11"
@@ -2477,7 +2473,7 @@ one extension to the Glaton branching-process is the so called Branching
 \begin_inset Quotes eld
 \end_inset
 
-divison probability
+division probability
 \begin_inset Quotes erd
 \end_inset
 
@@ -2491,7 +2487,7 @@ divison probability
 \end_layout
 
 \begin_layout Enumerate
-Another generalization is to Multitype Branching Process.
+Another generalization is to Multi-type Branching Process.
  Whereby a population is composed of different subtype each with a different
  
 \begin_inset Formula $\left\{ p_{j}\right\} $
@@ -2618,7 +2614,7 @@ increase (decrease) geometrically if
 \begin_inset Formula $\mu>1$
 \end_inset
 
-: large fluctuation gice a chance of falling into the breach of extinction.
+: large fluctuation give a chance of falling into the breach of extinction.
 \end_layout
 
 \begin_layout Chapter
@@ -2628,7 +2624,7 @@ Markov Chains
 \begin_layout Standard
 Almost always there is an underlying dependence structure to the stochastic
  processes that we discuss.
- A special type of dependence structure is assumed when we discuss markov
+ A special type of dependence structure is assumed when we discuss Markov
  chain, this structures assumes the so calls 
 \emph on
 Markov property
@@ -2790,17 +2786,17 @@ depends only on
 
 \begin_layout Standard
 Reason(to be further clarified later) is that with the assumption of homogeneity
- (stationarity) the join finite dimensional distributions, are invariate
+ (stationarity) the join finite dimensional distributions, are invariant
  under shifts in time.
 \end_layout
 
 \begin_layout Subparagraph
-Exemple of non-stationary Markov chain:
+Example of non-stationary Markov chain:
 \end_layout
 
 \begin_layout Standard
-A branching process with the number of childen from each from each parent
- in a generation, having a distribution that deoends on the generation number
+A branching process with the number of children from each from each parent
+ in a generation, having a distribution that depends on the generation number
  in fertility changes with n.
  
 \end_layout
@@ -2826,7 +2822,7 @@ We wish to model a sequence of dependent r.v.s.
  Markov property then we'l see that the specification of the finite dimensional
  distribution is make much simpler.
  Of course, one has to be satisfied that the Markov property holds.
- There are statistical tests that can be used to test the Markov asssumption.
+ There are statistical tests that can be used to test the Markov assumption.
  
 \end_layout
 
@@ -2907,12 +2903,12 @@ Precision:
 \end_layout
 
 \begin_layout Standard
-The aim here is to find an expresion for 
-\begin_inset Formula $p_{ij}^{(n)}$
+The aim here is to find an expression for 
+\begin_inset Formula $P_{ij}^{(n)}$
 \end_inset
 
 , or at least a mean of obtaining 
-\begin_inset Formula $p_{ij}^{(n)}$
+\begin_inset Formula $P_{ij}^{(n)}$
 \end_inset
 
 .
@@ -2975,7 +2971,7 @@ P\left[X_{m+n}=j|X_{0}=i\right] & = & \sum_{k}P\left[X_{m+n},X_{m}=k|X_{0}=I\rig
  & = & \sum_{k}\frac{P\left[X_{m+n}=j,\,X_{m}=k,\,X_{0}=i\right]}{P\left[X_{0}=i\right]}\\
  & = & \sum_{k}\frac{P\left[X_{m+n}=j|X_{m}=k,\,X_{0}=i\right]P\left[X_{m}=k|X_{0}=i\right]P\left[X_{0}=i\right]}{P\left[X_{0}=i\right]}\\
  & = & \sum_{k}\underbrace{P\left[X_{m+n}=j|X_{m}=k\right]}_{\mbox{Markov prop}}P\left[X_{m}=k|X_{0}=i\right]\\
- & = & \sum_{k}\underbrace{p_{ik}^{(m)}p_{kj}^{(n)}}_{\mbox{Homogenity }}=p_{ij}^{(m+n)}
+ & = & \sum_{k}\underbrace{P_{ik}^{(m)}p_{kj}^{(n)}}_{\mbox{Homogenity }}=P_{ij}^{(m+n)}
 \end{eqnarray*}
 
 \end_inset
@@ -2985,7 +2981,7 @@ P\left[X_{m+n}=j|X_{0}=i\right] & = & \sum_{k}P\left[X_{m+n},X_{m}=k|X_{0}=I\rig
 
 \begin_layout Standard
 Which shows that 
-\begin_inset Formula $p_{ij}^{(m+n)}$
+\begin_inset Formula $P_{ij}^{(m+n)}$
 \end_inset
 
  is just the i-j
@@ -3002,7 +2998,7 @@ elements of the product of the matrices
 \end_inset
 
  and 
-\begin_inset Formula $p^{(n)}$
+\begin_inset Formula $P^{(n)}$
 \end_inset
 
 , i.e: 
@@ -3029,7 +3025,7 @@ In particular take
 \begin_inset Formula $P^{(3)}=P.P^{(2)}=P.P^{2}$
 \end_inset
 
- , ect\SpecialChar \ldots{}
+ , etc\SpecialChar \ldots{}
  This can be generalize by induction to 
 \begin_inset Formula $P^{(n)}=P^{n}$
 \end_inset
@@ -3042,7 +3038,7 @@ In principle if the chain finite (it has finite many step) we can find
 \begin_inset Formula $P_{ij}^{(n)}$
 \end_inset
 
- by doing succesive matrix multiplication.
+ by doing successive matrix multiplication.
 \end_layout
 
 \begin_layout Standard
@@ -3067,12 +3063,12 @@ Some example.
 \end_layout
 
 \begin_layout Subsubsection
-Exemple 1
+Example 1
 \end_layout
 
 \begin_layout Standard
-Consider a communication system wich transmit the digits 0 or 1.
- Each digit transmitted must pass through serval stagr at each of which
+Consider a communication system which transmit the digits 0 or 1.
+ Each digit transmitted must pass through serval stage at each of which
  there's a prob 
 \begin_inset Formula $p$
 \end_inset
@@ -3089,7 +3085,7 @@ Consider a communication system wich transmit the digits 0 or 1.
 \begin_inset Formula $\left\{ X_{n},n=0,1,\ldots\right\} $
 \end_inset
 
- is a 2-state markov chain with 
+ is a 2-state Markov chain with 
 \begin_inset Formula $P=\left[\begin{array}{cc}
 p & 1-p\\
 1-p & p
@@ -3100,11 +3096,11 @@ p & 1-p\\
 \end_layout
 
 \begin_layout Subsubsection
-Exemple 2 The simple random Walk
+Example 2 The simple random Walk
 \end_layout
 
 \begin_layout Standard
-This is a basic well-studied non-trivial example of a markov chain that
+This is a basic well-studied non-trivial example of a Markov chain that
  is constructed from basic properties easy to imagine.
 \end_layout
 
@@ -3113,7 +3109,7 @@ Suppose that a particle can jump between the integers (
 \begin_inset Formula $\mathbb{Z}$
 \end_inset
 
-) on the x-axis acording to the following rules
+) on the x-axis according to the following rules
 \end_layout
 
 \begin_layout Enumerate
@@ -3171,7 +3167,7 @@ Claim:
 \begin_inset Formula $\left\{ X_{n},\,n=0,1,2,\ldots\right\} $
 \end_inset
 
- form a markov chain.
+ form a Markov chain.
 \end_layout
 
 \begin_layout Standard
@@ -3197,7 +3193,7 @@ Next to show that
 \begin_inset Formula $\left\{ X_{n},\,n=0,1,2,\ldots\right\} $
 \end_inset
 
- is a markov chain, write 
+ is a Markov chain, write 
 \begin_inset Formula $X_{n}$
 \end_inset
 
@@ -3233,7 +3229,7 @@ These
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-P\left[X_{n+1}=j\,|\,X_{0}=0,X_{1}i_{1},\ldots,X_{n}=i\right] & = & P\left[\sum_{l=0}^{n+1}y_{l}=j\,|\,X_{0}=0,\sum_{l=0}^{1}y_{l}=i_{i},\ldots,\sum_{l=0}^{n}y_{l}=i\right]\\
+P\left[X_{n+1}=j\,|\,X_{0}=0,X_{1}=i_{1},\ldots,X_{n}=i\right] & = & P\left[\sum_{l=0}^{n+1}y_{l}=j\,|\,X_{0}=0,\sum_{l=0}^{1}y_{l}=i_{i},\ldots,\sum_{l=0}^{n}y_{l}=i\right]\\
  & = & P\left[\sum_{l=0}^{n}y_{l}+y_{n+1}=j\,|\,X_{0}=0,\ldots,\sum_{l=0}^{n}y_{l}=i\right]\\
  & = & P\left[\left(i+y_{n+1}\right)=j\,|\,\ldots\right]\\
  & = & P\left[y_{n+1}=j-i\,|\,X_{0}=0,\ldots,\sum_{l=0}^{n}y_{l}=i\right]\\
@@ -3259,12 +3255,12 @@ th
 
 \end_inset
 
- by assumtion (3).
+ by assumption (3).
  But 
 \begin_inset Formula $P\left[y_{n+1}=j-i\right]=P\left[\sum_{l=0}^{n+1}y_{l}=j\,|\,\sum_{l=0}^{n}y_{l}=i\right]$
 \end_inset
 
- which establishes the markov property.
+ which establishes the Markov property.
 \end_layout
 
 \begin_layout Standard
@@ -3280,7 +3276,7 @@ p & j=i+1\\
 \end_layout
 
 \begin_layout Subsubsection
-Exemple 3
+Example 3
 \end_layout
 
 \begin_layout Standard
@@ -3293,7 +3289,7 @@ Consider a gambler who at each play wins $1 with prob
 \end_inset
 
 .
- Supose that the gambler stop playing whe she goes broke or atteins $
+ Suppose that the gambler stop playing when she goes broke or attains $
 \begin_inset Formula $N$
 \end_inset
 
@@ -3314,8 +3310,8 @@ Let
 \begin_inset Formula $X_{n},\left\{ n=0,1,\ldots\right\} $
 \end_inset
 
- is a Markov chain with what one known as absorbing stads at 
-\begin_inset Formula $O$
+ is a Markov chain with what one known as absorbing state at 
+\begin_inset Formula $0$
 \end_inset
 
  and 
@@ -3334,49 +3330,78 @@ Let
 \begin_inset Formula $1$
 \end_inset
 
-<<<<<<< Updated upstream========1 for all i.
- You hve to go some-where from state i.
- P is called a stochastic matrix - non negative entries sum to one.
- Of course the matrix could be finite corresponding to m states.
- The following theorem says that the knowing P[
-\begin_inset Formula $X_{0}=i]$
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ You have to go some-where from state 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Communicating states and classification of states
+\end_layout
+
+\begin_layout Subsection
+Finite dimensional distributions
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P$
+\end_inset
+
+ is called a stochastic matrix - non negative entries sum to one.
+ Of course the matrix could be finite corresponding to 
+\begin_inset Formula $m$
+\end_inset
+
+ states.
+ The following theorem says that the knowing 
+\begin_inset Formula $P[X_{0}=i]$
 \end_inset
 
  for 
 \begin_inset Formula $i=1,2,...$
 \end_inset
 
-[the so called initial distribution] and the transition matrix P is sufficient
- to completely specify the markov chain.>>>>>>> Stashed changes 
+[the so called initial distribution] and the transition matrix 
+\begin_inset Formula $P$
+\end_inset
+
+ is sufficient to completely specify the markov chain.
 \end_layout
 
 \begin_layout Standard
-Theorem: Let {
-\begin_inset Formula $X_{n},$
+Let 
+\begin_inset Formula $\left\{ X_{n},n=0,1..\right\} $
 \end_inset
 
-n=0,1..} be a Markov chain.
- Then, its finite dimensional distributions are uniquely determined by {P[
-\begin_inset Formula $X_{0}=i],$
+ be a Markov chain.
+ Then, its finite dimensional distributions are uniquely determined by 
+\begin_inset Formula $\left\{ P[X_{0}=i],i=1,2,..,P\right\} $
 \end_inset
 
-i=1,2,.., P}
+
+\end_layout
+
+\begin_layout Subsubsection*
+Proof:
 \end_layout
 
 \begin_layout Standard
-Proof: We must know that we can wite the joint distribution of any set 
-\begin_inset Formula $X_{n1},$
+We must know that we can write the joint distribution of any set 
+\begin_inset Formula $X_{n1},X_{n2}....$
 \end_inset
 
-
-\begin_inset Formula $X_{n2}....$
+ in term of 
+\begin_inset Formula $P[X_{0}=i]$
 \end_inset
 
-in term of P[
-\begin_inset Formula $X_{0}=i]$
-\end_inset
-
-and a 
+ and a 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3392,54 +3417,59 @@ bunch
 \end_layout
 
 \begin_layout Standard
-We convey the idea through a special case: Thus consider P[
-\begin_inset Formula $X_{2}=k,$
-\end_inset
-
-
-\begin_inset Formula $X_{3}=l$
-\end_inset
-
-]
-\end_layout
-
-\begin_layout Standard
-Thus P[
-\begin_inset Formula $X_{3}=l$
-\end_inset
-
-|
-\begin_inset Formula $X_{2}=k]*P[X_{2}=k\text{]=P\ensuremath{_{kl}*\sum_{i,j}P[X_{2}=k|X_{0}=i,}\ensuremath{X_{1}=j]}= }$
-\end_inset
-
-
-\begin_inset Formula $P_{kl}*\sum P[X_{2=k}|X_{1}=j]*P[X_{i}=j|X_{0}=i]*P[X_{0}=i]$
+We convey the idea through a special case: Thus consider 
+\begin_inset Formula $P[X_{2}=k,X_{3}=l]$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-=
-\begin_inset Formula $P_{kl}\sum_{i,j}P_{ij}P_{jk}P[X_{0}=i]$
+Thus 
+\begin_inset Formula 
+\begin{eqnarray*}
+P[X_{2}=k,X_{3}=l] & = & P[X_{3}=l|X_{2}=k]*P[X_{2}=k]\\
+ & = & P\ensuremath{_{kl}*\sum_{i,j}P[X_{2}=k\cap X_{0}=i,}\ensuremath{X_{1}=j]}\\
+ & = & P_{kl}*\sum P[X_{2}=k|X_{1}=j]*P[X_{i}=j|X_{0}=i]*P[X_{0}=i]\\
+ & = & P_{kl}\sum_{i,j}P_{ij}P_{jk}P[X_{0}=i]
+\end{eqnarray*}
+
 \end_inset
 
- which is a function only of the i-step transition probs and P[X
-\begin_inset Formula $_{0}=i]$
+which is a function only of the i-step transition probs and 
+\begin_inset Formula $P[X_{0}=i]$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-The idea is simply that to find the probabilities of going from state i
- to state j in n steps you sum the probabilities of all paths that take
- you from i to j in n steps.
- Next the prob of each path is the prob of an intersection of the form P[
-\begin_inset Formula $A_{1}\cap A_{2}...A_{n}]=P[A_{n}|$
+The idea is simply that to find the probabilities of going from state 
+\begin_inset Formula $i$
 \end_inset
 
+ to state 
+\begin_inset Formula $j$
+\end_inset
 
+ in 
+\begin_inset Formula $n$
+\end_inset
+
+ steps you sum the probabilities of all paths that take you from 
+\begin_inset Formula $i$
+\end_inset
+
+ to 
+\begin_inset Formula $j$
+\end_inset
+
+ in 
+\begin_inset Formula $n$
+\end_inset
+
+ steps.
+ Next the prob of each path is the prob of an intersection of the form 
 \family roman
 \series medium
 \shape up
@@ -3451,35 +3481,32 @@ The idea is simply that to find the probabilities of going from state i
 \uwave off
 \noun off
 \color none
-A_{1}
-\backslash
-cap A_{2}...A_{n-1}]*P[A_{1}
-\backslash
-cap A_{2}...A_{n-1}] = P[A
-\begin_inset Formula $_{n}|A_{n-1}]*P[A_{n-1}|A_{n-2}]...*P[A_{1}]$
+
+\begin_inset Formula 
+\begin{eqnarray*}
+P\left[A_{1}\cap A_{2}...A_{n}\right] & = & P\left[A_{n}|A_{1}\cap A_{2}\ldots A_{n-1}\right]*P\left[A_{1}\cap A_{2}\ldots A_{n-1}\right]\\
+ & = & P\left[A_{n}|A_{n-1}\right]*P\left[A_{n-1}|A_{n-2}\right]*\ldots*P\left[A_{1}\right]
+\end{eqnarray*}
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-Let P
-\begin_inset Formula $_{ij}^{n+m}$
+Let
+\begin_inset Formula $P_{ij}^{n+m}$
 \end_inset
 
-be P[
-\begin_inset Formula $X_{m+n}=j$
-\end_inset
-
-|
-\begin_inset Formula $X_{0}=i]$
+be 
+\begin_inset Formula $P[X_{m+n}=j|X_{0}=i]$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-It is easy to see that the markov propety is satisfied (check this formality).
+It is easy to see that the Markov property is satisfied (check this formality).
 \end_layout
 
 \begin_layout Standard
@@ -3503,35 +3530,50 @@ In this case we have :
 2 0- 1-p - 0- p 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
 The classification of states
 \end_layout
 
 \begin_layout Standard
-Eventually we'll be studing the limiting behavior of 
+Eventually we'll be studying the limiting behavior of 
 \begin_inset Formula $p_{ij}^{(n)}$
 \end_inset
 
-as n->
-\begin_inset Formula $\infty$
+as 
+\begin_inset Formula $n\rightarrow\infty$
 \end_inset
 
 .
- In order to do so require the classificatinon of the states of a Markov
+ In order to do so require the classification of the states of a Markov
  chain and the classification of the chain themselves
 \end_layout
 
+\begin_layout Subsubsection*
+Definition: 
+\end_layout
+
 \begin_layout Standard
-Definition: Let {
-\begin_inset Formula $X_{n},$
+Let 
+\begin_inset Formula $\left\{ X_{n},n=0,1,2,..\right\} $
 \end_inset
 
-n=0,1,2,..} be a Markov chain with transmission matrix P{
-\begin_inset Formula $P_{ij}\}.$
+ be a Markov chain with transmission matrix 
+\begin_inset Formula $P=\{P_{ij}\}.$
 \end_inset
 
-Then we say that the state j is accessible from the state i, if and only
- if there exist an n>0 s.t.
+Then we say that the state 
+\begin_inset Formula $j$
+\end_inset
+
+ is accessible from the state 
+\begin_inset Formula $i$
+\end_inset
+
+, if and only if there exist an 
+\begin_inset Formula $n>0$
+\end_inset
+
+ s.t.
  
 \family roman
 \series medium
@@ -3544,7 +3586,11 @@ Then we say that the state j is accessible from the state i, if and only
 \uwave off
 \noun off
 \color none
-p_{ij}^{(n)} > 0.
+
+\begin_inset Formula $p_{ij}^{(n)}>0$
+\end_inset
+
+.
  [i.e.
  there is a positive prob of reaching state j from state i in a finite number
  of steps]
@@ -3563,13 +3609,20 @@ Note that
 \uwave off
 \noun off
 \color none
-p_{ij}^{(n)} is not the probability of reaching j from i for the first time
- in n steps.
+
+\begin_inset Formula $p_{ij}^{(n)}$
+\end_inset
+
+is not the probability of reaching j from i for the first time in n steps.
  
 \end_layout
 
 \begin_layout Standard
-We write i->j to mean 
+We write 
+\begin_inset Formula $i\rightarrow j$
+\end_inset
+
+ to mean 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3580,36 +3633,72 @@ j is accessible from i
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Paragraph
 Definition: 
 \end_layout
 
 \begin_layout Standard
-If i->j and j->i then we say that i and j communication, and write i<->j
+If 
+\begin_inset Formula $i\rightarrow j$
+\end_inset
+
+ and 
+\begin_inset Formula $j\rightarrow i$
+\end_inset
+
+ then we say that 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+ 
+\emph on
+communicate
+\emph default
+, and write 
+\begin_inset Formula $i\leftrightarrow j$
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
+\begin_layout Paragraph
 Theorem:
 \end_layout
 
 \begin_layout Standard
-If i<->j and j<->k, then i->k and conversly
+If 
+\begin_inset Formula $i\leftrightarrow j$
+\end_inset
+
+ and 
+\begin_inset Formula $j\leftrightarrow k$
+\end_inset
+
+, then 
+\begin_inset Formula $i\rightarrow k$
+\end_inset
+
+ and conversely
+\end_layout
+
+\begin_layout Subparagraph
+Corollary: 
+\begin_inset Formula $i\leftrightarrow j\wedge j\leftrightarrow k\Rightarrow i\leftrightarrow k$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Corrolary i<->j, j<->k => i<->k
-\end_layout
-
-\begin_layout Standard
-Proof i->j => 
-\begin_inset Formula $\exists$
+Proof: 
+\begin_inset Formula $i\rightarrow j\Rightarrow\exists n_{0}>0$
 \end_inset
 
- an n
-\begin_inset Formula $_{0}$
-\end_inset
-
->0 such that 
+ such that 
 \family roman
 \series medium
 \shape up
@@ -3621,15 +3710,51 @@ Proof i->j =>
 \uwave off
 \noun off
 \color none
-p_{ij}^{(n)} >0 and j->k => 
-\begin_inset Formula $\exists$
+
+\begin_inset Formula $p_{ij}^{(n)}>0$
 \end_inset
 
- an n1 such that p_{jk}^{(n)} > 0 
+ and 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Formula $j\rightarrow k\Rightarrow\exists n_{1}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ such that 
+\begin_inset Formula $p_{jk}^{(n)}>0$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Let n=no+n1
+Let 
+\begin_inset Formula $n=n_{0}+n_{1}$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3645,32 +3770,42 @@ Then
 \uwave off
 \noun off
 \color none
-p_{ik}^{(n)} = p_{ik}^{(n0+n1)} = 
-\begin_inset Formula $\sum_{i}$
+
+\begin_inset Formula $p_{ik}^{(n)}=p_{ik}^{(n_{0}+n_{1})}=\sum_{l}p_{il}^{(n_{0})}*p_{lk}^{(n_{1})}\geq p_{ij}^{(n_{0})}*p_{jk}^{(n_{1})}>0$
 \end_inset
 
-p_{il}^{(n0)* p_{lk}^{(n1)}} 
-\begin_inset Formula $\geq$
-\end_inset
 
-p_{ij}^{(n0)}* p_{jk}^{(n1)} > 0 
 \end_layout
 
 \begin_layout Standard
-i->k done!
-\end_layout
-
-\begin_layout Standard
-The corollary is immediate same i<->j iff j<->i
-\end_layout
-
-\begin_layout Standard
-Definition: Given a state j of a Markov chain, its communicating class l
-\begin_inset Formula $_{oj}$
+\begin_inset Formula $i\rightarrow k$
 \end_inset
 
-is defined to be the set of all state that communicate with j, in the sense
- that 
+ done!
+\end_layout
+
+\begin_layout Standard
+The corollary is immediate same 
+\begin_inset Formula $i\leftrightarrow j\Leftrightarrow j\leftrightarrow j$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Definition of states
+\end_layout
+
+\begin_layout Standard
+Given a state j of a Markov chain, its communicating class 
+\begin_inset Formula $C{}_{j}$
+\end_inset
+
+ is defined to be the set of all state that communicate with 
+\begin_inset Formula $j$
+\end_inset
+
+, in the sense that 
 \family roman
 \series medium
 \shape up
@@ -3682,52 +3817,61 @@ is defined to be the set of all state that communicate with j, in the sense
 \uwave off
 \noun off
 \color none
-p_{jk}^{(n)} > 0 for some 
-\begin_inset Formula $n_{0}^{n1}>0$
+
+\begin_inset Formula $p_{jk}^{(n)}>0$
 \end_inset
 
-for some 
+ for some 
+\begin_inset Formula $n_{0}>0$
+\end_inset
+
+ 
+\begin_inset Formula $P_{kj}^{(n)}>0$
+\end_inset
+
+ for some 
 \begin_inset Formula $n_{1}>0.$
 \end_inset
 
-It may happen that 
-\begin_inset Formula $l_{oj}$
+ It may happen that 
+\begin_inset Formula $C_{j}$
 \end_inset
 
-is empty [i.e.
+ is empty [i.e.
  j communicates with no state, not even with itself].
- In this case we say that {j} is a non-return state.
+ In this case we say that 
+\begin_inset Formula $\left\{ j\right\} $
+\end_inset
+
+ is a non-return state.
  
 \end_layout
 
 \begin_layout Standard
 If 
-\begin_inset Formula $l_{oj}$
+\begin_inset Formula $C_{j}$
 \end_inset
 
- is non-empty, then, j 
-\begin_inset Formula $\epsilon$
-\end_inset
-
- 
-\begin_inset Formula $l_{oj}$
+ is non-empty, then, 
+\begin_inset Formula $j\in C_{oj}$
 \end_inset
 
 , to see this note that 
-\begin_inset Formula $l_{oj}$
+\begin_inset Formula $C_{j}$
 \end_inset
 
- non empty implies that there must exist a.k such that j->k (and k->j)
+ non empty implies that there must exist a.k such that 
+\begin_inset Formula $j\rightarrow k$
+\end_inset
+
+ (and 
+\begin_inset Formula $k\rightarrow j$
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\exists$
-\end_inset
-
- 
-\begin_inset Formula $n_{0}$
-\end_inset
-
 
 \family roman
 \series medium
@@ -3740,49 +3884,66 @@ If
 \uwave off
 \noun off
 \color none
-p_{jk}^{(n0)} > 0 and 
-\begin_inset Formula $n_{1}$
+\begin_inset Formula $\exists n_{0}\,:\,p_{jk}^{(n0)}>0$
 \end_inset
 
-s.t.
- p_{kj}^{(n1)} > 0 .
- Let n=
-\begin_inset Formula $n_{0}+n_{1}$
+ and 
+\begin_inset Formula $\exists n_{1}\,:\,p_{kj}^{(n1)}>0$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $n=n_{0}+n_{1}$
 \end_inset
 
 .
  Then 
-\begin_inset Formula $P_{jj}^{(n)}$
+\begin_inset Formula $P_{jj}^{(n)}\geq P_{jk}^{(n0)}P_{kj}^{(n1)}>0$
 \end_inset
 
-
-\begin_inset Formula $\geq$
+.
+ 
+\begin_inset Formula $j$
 \end_inset
 
-
-\begin_inset Formula $P_{jk}^{(n0)}P_{kj}^{n1}$
-\end_inset
-
->0.
- j comunicates with itself, and this j 
-\begin_inset Formula $\varepsilon$
-\end_inset
-
-
-\begin_inset Formula $Cj$
+ communicates with itself, and this 
+\begin_inset Formula $j\in C_{j}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-A state which communicates with itself is called return state.
- A non-empty class, Ce, of state in a Markov chain is to be a communicating
- class if for some state j, Cj = Ce.
- Thas is le is the class of all states that communicate with one-another
+A state which communicates with itself is called 
+\emph on
+return state
+\emph default
+.
+ A non-empty class, 
+\begin_inset Formula $C$
+\end_inset
+
+ of state in a Markov chain is to be a 
+\emph on
+communicating class
+\emph default
+ if for some state 
+\begin_inset Formula $j$
+\end_inset
+
+ s.t 
+\begin_inset Formula $C_{k}=C$
+\end_inset
+
+ .
+ That is 
+\begin_inset Formula $C$
+\end_inset
+
+ is the class of all states that communicate with one-another
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsubsection*
 Theorem: 
 \end_layout
 
@@ -3800,41 +3961,824 @@ are communicating classes, then either
 \end_inset
 
 or 
-\begin_inset Formula $C_{1}\cap C_{2}$
+\begin_inset Formula $C_{1}\cap C_{2}=Ø$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Proof: 
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $C_{1}\cap C_{2}\neqØ$
+\end_inset
+
+ such that 
+\begin_inset Formula $C_{1}\neqØ$
+\end_inset
+
+ and 
+\begin_inset Formula $C_{2}\neqØ$
+\end_inset
+
+ so 
+\begin_inset Formula $\exists i\in C_{2}\,\exists j\in C_{1}\cap C_{2}$
+\end_inset
+
+ but 
+\begin_inset Formula $C_{1}\cap C_{2}\subset C_{1}$
+\end_inset
+
+so 
+\begin_inset Formula $i\leftrightarrow j$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-Proof, Let 
-\begin_inset Formula $C_{1}\cap C_{2}$
-\end_inset
+\begin_inset Formula 
+\begin{eqnarray*}
+\exists i\in C_{1}\\
+\exists j\in C_{1}\cap C_{2}\\
+\exists k\in C_{2}\\
+\mbox{but}\\
+C_{1}\cap C_{2}\subset C_{1}\\
+C_{1}\cap C_{2}\subset C_{2}\\
+\therefore i\rightarrow j\\
+\therefore j\rightarrow k\\
+\therefore i\rightarrow k & \mbox{transitivity of "accessibility"}\\
+\therefore C_{1}\subset C_{2}\wedge C_{2}\subset C_{1}\\
+\therefore C_{1}=C_{2}
+\end{eqnarray*}
 
-different 
-\begin_inset Formula $\textrm{Ø such that \ensuremath{C_{1}}different Ø and \ensuremath{C_{2}=Ø.}}$
-\end_inset
-
-
-\begin_inset Formula $\exists$
-\end_inset
-
- i 
-\begin_inset Formula $\varepsilon$
-\end_inset
-
-
-\begin_inset Formula $C_{1}\cap$
 \end_inset
 
 
-\begin_inset Formula $C_{2}$
+\end_layout
+
+\begin_layout Subsection
+Decomposition of a Markov chain into disjoint classes
+\end_layout
+
+\begin_layout Subsubsection*
+Theorem: 
+\end_layout
+
+\begin_layout Standard
+The set 
+\begin_inset Formula $S$
 \end_inset
 
-but 
-\begin_inset Formula $C_{1}$
+ of states of a Markov chain can be written as the union of a finite or
+ countably infinite family 
+\begin_inset Formula $\left\{ C_{r}\right\} $
 \end_inset
 
+of disjoint sets of states.
+ 
+\begin_inset Formula $S=C_{1}\cup C_{2}...\cup C_{r}$
+\end_inset
+
+ with 
+\begin_inset Formula $C_{i}\cap C_{2}=Ø$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Each class 
+\begin_inset Formula $C_{r}$
+\end_inset
+
+ is either a communicating class or contains exactly one non return state
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Proof 
+\end_layout
+
+\begin_layout Standard
+Choose a state 
+\begin_inset Formula $j_{1}$
+\end_inset
+
+ and let 
+\begin_inset Formula $C_{1}=C_{j_{1}}$
+\end_inset
+
+, the class of all the states that communicate with 
+\begin_inset Formula $j_{1}$
+\end_inset
+
+according as 
+\begin_inset Formula $j_{1}$
+\end_inset
+
+is a return or non-return state, if 
+\begin_inset Formula $j_{1}$
+\end_inset
+
+is a non-return state, then set 
+\begin_inset Formula $C_{1}=\left\{ j_{1}\right\} $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Then choose 
+\begin_inset Formula $j_{2}$
+\end_inset
+
+ not in 
+\begin_inset Formula $C_{1},$
+\end_inset
+
+and let 
+\begin_inset Formula $C_{2}=C_{j_{2}}$
+\end_inset
+
+or 
+\begin_inset Formula $\left\{ j_{2}\right\} $
+\end_inset
+
+ depending on whether or not {
+\begin_inset Formula $j_{2}\}$
+\end_inset
+
+ is a non return state.
+ From the previous theorem, 
+\begin_inset Formula $C_{1}\cap C_{2}=Ø$
+\end_inset
+
+ Continue the construction in this way to get 
+\begin_inset Formula $C_{1},C_{2},\ldots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A non empty class, 
+\begin_inset Formula $C$
+\end_inset
+
+, of state is such that to be closed if no state outside 
+\begin_inset Formula $C$
+\end_inset
+
+ is accessible from any state of 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+i.e.
+ 
+\begin_inset Formula $C$
+\end_inset
+
+ is closed iff for every for every 
+\begin_inset Formula $\forall n>0\,\forall j\in C\,\forall k\notin C\;P_{jk}^{(n)}=0$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+Examples: In the following examples we classify the states of the corresponding
+ Markov chains with the given transition matrices.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{bmatrix}1 & 0 & 0 & 0\\
+\frac{1}{2} & \frac{1}{2} & 0 & 0\\
+\frac{1}{3} & \frac{1}{3} & 0 & \frac{1}{3}\\
+\frac{1}{4} & \frac{1}{4} & \frac{1}{4} & \frac{1}{4}
+\end{bmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+{1} closed communicating
+\end_layout
+
+\begin_layout Itemize
+{2} communication non closed
+\end_layout
+
+\begin_layout Itemize
+{3-4} communication non closed
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\begin{bmatrix}1 & 0 & 0 & 0\\
+1 & 0 & 0 & 0\\
+\frac{1}{2} & \frac{1}{2} & 0 & 0\\
+\frac{1}{3} & \frac{1}{3} & \frac{1}{3} & 0
+\end{bmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+{4} non return 
+\end_layout
+
+\begin_layout Itemize
+{1} closed communicating
+\end_layout
+
+\begin_layout Itemize
+{2} non return (non closed)
+\end_layout
+
+\begin_layout Itemize
+{3} non return
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+A 
+\emph on
+closed communication
+\emph default
+ class 
+\begin_inset Formula $C$
+\end_inset
+
+ of states is essentially a Markov chains extracted and studied independently
+\end_layout
+
+\begin_layout Standard
+If you write the transition matrix so that the states in 
+\begin_inset Formula $C$
+\end_inset
+
+ are written, then 
+\begin_inset Formula $P$
+\end_inset
+
+ can be written in the form 
+\begin_inset Formula $P=\begin{bmatrix}P_{C} & 0\\
+* & *
+\end{bmatrix}$
+\end_inset
+
+ where 
+\begin_inset Formula $*$
+\end_inset
+
+ are possibly non-zero matrix and 
+\begin_inset Formula $P_{c}$
+\end_inset
+
+ is the sub-matrix whose entries are the transition probabilities between
+ the states of 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $P^{(n)}=P^{n}=\begin{bmatrix}P_{C}^{n} & 0\\
+* & *
+\end{bmatrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since a closed communication class 
+\begin_inset Formula $C$
+\end_inset
+
+ can be extracted from a Markov chain (by deleting all rows and colons correspon
+ding to states outside of 
+\begin_inset Formula $C$
+\end_inset
+
+) and treated by itself as a Markov chains it follows that for the study
+ asymptotic properties of a Markov chain, it is sufficient to restrict one
+ self to chains in which there is exactly one closed communicating class
+ and all the other communicating class are non closed
+\end_layout
+
+\begin_layout Subsection
+Further Classification of states.
+\end_layout
+
+\begin_layout Standard
+In order to obtain certain asymptotic properties of a Markov chain, we shall
+ make further classification of states
+\end_layout
+
+\begin_layout Paragraph
+Definition:
+\end_layout
+
+\begin_layout Standard
+For any state 
+\begin_inset Formula $j,k$
+\end_inset
+
+ let 
+\begin_inset Formula $f_{jk}$
+\end_inset
+
+ denote the probability starting from 
+\begin_inset Formula $j$
+\end_inset
+
+ the process will get into state 
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $g_{kk}$
+\end_inset
+
+ denote the probability that the chain will return infinitely often to state
+ 
+\begin_inset Formula $k$
+\end_inset
+
+ given that it start in 
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+note:
+\end_layout
+
+\begin_layout Standard
+these definitions can be made mathematically rigorous by introducing the
+ r.v 
+\begin_inset Formula $N_{k}(n)$
+\end_inset
+
+, the number of time that the state 
+\begin_inset Formula $k$
+\end_inset
+
+ is visited in 
+\begin_inset Formula $n$
+\end_inset
+
+ step.
+ Our descriptive definition will suffice
+\end_layout
+
+\begin_layout Paragraph
+Definition:
+\end_layout
+
+\begin_layout Standard
+We denote 
+\begin_inset Formula $f_{jk}^{(n)}$
+\end_inset
+
+ the conditional probability of entering 
+\begin_inset Formula $k$
+\end_inset
+
+ from 
+\begin_inset Formula $j$
+\end_inset
+
+ from the first time in exactly 
+\begin_inset Formula $n$
+\end_inset
+
+ steps 
+\end_layout
+
+\begin_layout Standard
+the time it takes to enter 
+\begin_inset Formula $k$
+\end_inset
+
+ from 
+\begin_inset Formula $j$
+\end_inset
+
+ for the first time is called the first passage time.
+\end_layout
+
+\begin_layout Paragraph
+Note:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $f_{jk}^{(n)}can$
+\end_inset
+
+be made precise by formally saying that if we are to reach 
+\begin_inset Formula $k$
+\end_inset
+
+ for the first time from 
+\begin_inset Formula $j$
+\end_inset
+
+ in 
+\begin_inset Formula $n$
+\end_inset
+
+ steps then the chains must not have visited 
+\begin_inset Formula $k$
+\end_inset
+
+ in the first 
+\begin_inset Formula $n-1$
+\end_inset
+
+steps and then on the n
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+th
+\end_layout
+
+\end_inset
+
+step have jumped to state 
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Example:
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\left\{ X_{n},n=0,1,\ldots\right\} $
+\end_inset
+
+ be a 2-states Markov chain (with state 0 and 1) find the 1
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+st
+\end_layout
+
+\end_inset
+
+passage probs 
+\begin_inset Formula $f_{jk}^{(n)}.$
+\end_inset
+
+ Ex: 
+\begin_inset Formula $f_{00}^{(n)}=P_{01}P_{11}^{n-2}P_{10}\,n\geq2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Proof:
+\end_layout
+
+\begin_layout Standard
+it's a mistake ti say that the product (and power 
+\begin_inset Formula $n-2$
+\end_inset
+
+) arise because of independence of various event.
+ They are certainly independent.
+ However we can condition backward and use the Markov property.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+f_{00}^{(n)} & = & P\left[X_{1}=1,X_{2}=1,\ldots,X_{n-1}=1,X_{n}=0|X_{n}=0\right]\\
+ & = & P\left[X_{n}=0|X_{0}=0,X_{1}=1,\ldots,X_{n-1}=1\right]P\left[X_{n-1}=1|X_{0}=0,\ldots;,X=1\right]\\
+ &  & \cdots P\left[X_{1}=1|X_{0}=0\right]\\
+ & = & P\left[X_{n}=0|X_{n-1}=1\right]P\left[X_{n-1}=1|X_{n-2}=1\right]\cdots P\left[X_{1}=1|X_{0}=0\right]\\
+ &  & \mbox{[We used Markov property]}\\
+ & = & p_{01}p_{11}^{n-2}p_{10}\\
+ &  & \mbox{[We used Homogeneity}]
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The other 
+\begin_inset Formula $f_{jk}^{(n)}$
+\end_inset
+
+'s follow similarly
+\end_layout
+
+\begin_layout Subsubsection*
+Theorem:
+\end_layout
+
+\begin_layout Standard
+For any states 
+\begin_inset Formula $j$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ 
+\begin_inset Formula $f_{jk}=\sum_{n=1}^{\infty}f_{ik}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Proof:
+\end_layout
+
+\begin_layout Standard
+Ever entering 
+\begin_inset Formula $k$
+\end_inset
+
+ from 
+\begin_inset Formula $j$
+\end_inset
+
+ is the disjoin union of entering 
+\begin_inset Formula $k$
+\end_inset
+
+ from 
+\begin_inset Formula $j$
+\end_inset
+
+ in exactly 
+\begin_inset Formula $n$
+\end_inset
+
+ steps 
+\begin_inset Formula $\forall n\geq1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection*
+Theorem:
+\end_layout
+
+\begin_layout Standard
+For any states 
+\begin_inset Formula $j$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+ and 
+\begin_inset Formula $n\geq1$
+\end_inset
+
+ 
+\begin_inset Formula $P_{jk}^{(n)}=\sum_{m=1}^{n}f_{jk}^{(m)}P_{kk}^{m-n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Proof: 
+\end_layout
+
+\begin_layout Standard
+If you are in state 
+\begin_inset Formula $k$
+\end_inset
+
+ (starting in 
+\begin_inset Formula $j$
+\end_inset
+
+) 
+\emph on
+at
+\emph default
+ the n
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+th
+\end_layout
+
+\end_inset
+
+step then you must have entered 
+\begin_inset Formula $k$
+\end_inset
+
+ for the 1
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+st
+\end_layout
+
+\end_inset
+
+at some 
+\begin_inset Formula $m$
+\end_inset
+
+ and then in the remaining 
+\begin_inset Formula $n-m$
+\end_inset
+
+ step, be in state 
+\begin_inset Formula $k$
+\end_inset
+
+ (starting from 
+\begin_inset Formula $k$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+we're talking of a disjoin union of these events.
+ again we use the Markov property and homogeneity to get the product
+\end_layout
+
+\begin_layout Subsubsection*
+Theorem: 
+\end_layout
+
+\begin_layout Standard
+For any state 
+\begin_inset Formula $j$
+\end_inset
+
+ and 
+\begin_inset Formula $k$
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray}
+g_{kk} & = & \lim_{n\rightarrow\infty}\left(f_{kk}\right)^{n}\label{eq:A}\\
+g_{jk} & = & f_{jk}g_{kk}\nonumber 
+\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+proof:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g_{kk}=\lim_{n\rightarrow\infty}P\left[\mbox{every returning to \ensuremath{k}from 1th \ensuremath{k}}\cap\mbox{ever returning from the second }k\cap\ldots\cap\mbox{ever returning from the nth}k\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now condition backward.
+ 
+\end_layout
+
+\begin_layout Subsubsection*
+Theorem
+\end_layout
+
+\begin_layout Standard
+For any state 
+\begin_inset Formula $k$
+\end_inset
+
+ either 
+\begin_inset Formula $g_{kk}=0$
+\end_inset
+
+ or 
+\begin_inset Formula $g_{kk}=1$
+\end_inset
+
+, further 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g_{kk}=0\Leftrightarrow f_{kk}<1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g_{kk}=1\Leftrightarrow f_{kk}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Proof follows directly from 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:A"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+After all this background we come to en important theorem: Theorem [A zero-one|a
+w]
+\end_layout
+
+\begin_layout Section
+Application to Branching process
+\end_layout
+
+\begin_layout Standard
+We show that in a simple (
+\noun on
+galton-watson
+\noun default
+) Branching process, the successive generation size either tend to infinity
+ with probability 
+\begin_inset Formula $1$
+\end_inset
+
+ or die out with probability 
+\begin_inset Formula $1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $g_{kk}$
+\end_inset
+
+ be the prob that the chain returns infinitely often to the state 
+\begin_inset Formula $k$
+\end_inset
+
+ we shall show that 
+\begin_inset Formula $g_{kk}=0\,\forall k=0,1,\ldots$
+\end_inset
+
+ that is no matter what finite set of state you choose, you will visit these
+ states only a finite number of times.
+\end_layout
+
+\begin_layout Standard
+To proves this all we need to do is show that 
+\begin_inset Formula $f_{kk}<1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 
 \family roman
 \series medium
@@ -3847,227 +4791,307 @@ but
 \uwave off
 \noun off
 \color none
-
-\backslash
-cap 
-\begin_inset Formula $C_{2}$
+g_{kk} = 
+\begin_inset Formula $lim_{\infty}(f_{kk})^{n}$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g_{jk}=f_{jk}*g_{kk}$
+\end_inset
+
+ to prove 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+g_{kk}=0 for k=1,2, all we need to do is to show that 
+\begin_inset Formula $f_{kk}<1,$
+\end_inset
+
+ k=1,2..
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $f_{kk}$
+\end_inset
+
+= prob of ever return to k from k
+\end_layout
+
+\begin_layout Standard
+The event denote A {ever return to K from K} 
 \begin_inset Formula $\subset$
 \end_inset
 
-
-\begin_inset Formula $C_{1}$
-\end_inset
-
-i<->j
+(denote B) { not goint to 0 in the next generationfrom a generation of size
+ k}
 \end_layout
 
 \begin_layout Standard
-Similarly j-> [
-\begin_inset Formula $C_{1}\cap C_{2}\subset C_{2}]$
+P(A)
+\begin_inset Formula $\leq$
+\end_inset
+
+P(B) = A - (
+\begin_inset Formula $P_{0})^{k}$
+\end_inset
+
+ where po = prob a parent wil have children
+\end_layout
+
+\begin_layout Standard
+(
+\begin_inset Formula $P_{0})^{k}$
+\end_inset
+
+ = prob that all parent will have 1 children (independant of the number
+ of children per parent)
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $P_{0}$
+\end_inset
+
+>0, then 
+\begin_inset Formula $f_{kk}\leq$
+\end_inset
+
+1 - (
+\begin_inset Formula $p_{0})^{k}<1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g_{kk}=0$
+\end_inset
+
+ If 
+\begin_inset Formula $p_{0}>0,$
+\end_inset
+
+ there is zero probability of making infinitely many returns to any positive
+ state.
+ (generation size).
+ That is, either the gen sizes tend to infinity (may not monotonically)
+ or a gen.
+ w/ no individuals (
+\begin_inset Formula $X_{n}=0)$
+\end_inset
+
+is reached, in whcih case, of course, the state 0 will be visited thereafter.
+ What abotu the case 
+\begin_inset Formula $P_{0}=0?$
+\end_inset
+
+ The above argument gives 
+\begin_inset Formula $f_{kk}\leq1-0=1$
+\end_inset
+
+which is not informative.
+ However, this is the trivial case since each parent has at least 1 child
+ and the generation size must then increase to infinity.
+\end_layout
+
+\begin_layout Standard
+The following theorem help us decide wheter 
+\begin_inset Formula $f_{kk}<1$
+\end_inset
+
+ of 
+\begin_inset Formula $f_{kk}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Theorem : For any state in a Markov chain, 
+\begin_inset Formula $f_{kk}<1$
+\end_inset
+
+ <=> 
+\begin_inset Formula $\sum_{n=1}p_{kk}^{(n)}<\infty$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+and 
+\begin_inset Formula $f_{kk}=1$
+\end_inset
+
+ <=> 
+\begin_inset Formula $\sum_{n=1}^{\infty}$
+\end_inset
+
+
+\begin_inset Formula $p_{kk}^{(n)}$
+\end_inset
+
+= +
+\begin_inset Formula $\infty$
+\end_inset
+
+ (will not be proven : uses much analysis)
+\end_layout
+
+\begin_layout Standard
+proof sketch
+\end_layout
+
+\begin_layout Standard
+Lemma: Let 
+\begin_inset Formula $p_{jk}(z)=\sum_{n=0}^{\infty}z^{n}p_{jk}^{(n)}=d_{jk}+\sum_{n=1}^{\infty}$
+\end_inset
+
+z
+\begin_inset Formula $^{n}p_{jk}^{(n)}$
+\end_inset
+
+where 
+\begin_inset Formula $d_{jk}=$
+\end_inset
+
+1 if j=K and 0 otherwise
+\end_layout
+
+\begin_layout Standard
+let 
+\begin_inset Formula $F_{jk}(z)$
+\end_inset
+
+=
+\begin_inset Formula $\sum_{n=1}^{\infty}z^{n}f_{jk}^{(n)}$
 \end_inset
 
  
+\begin_inset Formula $P_{jk}(z)$
+\end_inset
+
+ cd 
+\begin_inset Formula $F_{jk}(z)$
+\end_inset
+
+ are defined for |z|<1 There are called generating function
 \end_layout
 
 \begin_layout Standard
-i->k transitivity of accessibility 
-\begin_inset Formula $C_{1}\subset$
+Proof |
+\begin_inset Formula $P_{jk(z)}|$
 \end_inset
 
 
-\begin_inset Formula $C_{2}$
-\end_inset
-
-and conversely 
-\begin_inset Formula $C_{2}$
+\begin_inset Formula $\leq\sum_{n=0}^{\infty}|z|^{n}p_{jk}^{(n)}$
 \end_inset
 
 
-\begin_inset Formula $\subset$
+\begin_inset Formula $\leq$
 \end_inset
 
 
-\begin_inset Formula $C_{1}$
+\begin_inset Formula $\sum_{n=0}^{\infty}|z|^{(n)}$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-Theorem: Decomposition of a Markov chain into disjoint classes.
- The set S of states of a Markov chain can be written as the union of a
- finite or countably infinite family {
-\begin_inset Formula $C_{r}\}$
-\end_inset
-
-of disjoint sets of states.
- S=
-\begin_inset Formula $C_{1}\cup C_{2}...\cup C_{r}$
-\end_inset
-
- with 
-\begin_inset Formula $C_{i}\cap C_{2}=p$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Each class 
-\begin_inset Formula $C_{r}$
-\end_inset
-
-is either a communicating class or contrains exactly one non return state
  
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+p_{jk}^{(n)} 
+\begin_inset Formula $\leq1$
+\end_inset
+
+ which converges if |z|
+\begin_inset Formula $<1$
+\end_inset
+
+(gemometric series)
 \end_layout
 
 \begin_layout Standard
-Proof: choose a state 
-\begin_inset Formula $J_{p}$
-\end_inset
-
-and let 
-\begin_inset Formula $C_{1}=C_{j1}$
-\end_inset
-
-, the class of all the states that communicate with 
-\begin_inset Formula $J_{1}$
-\end_inset
-
-according as 
-\begin_inset Formula $J_{1}$
-\end_inset
-
-is a return or non-return state, if 
-\begin_inset Formula $J_{1}$
-\end_inset
-
-is a non-return state, then set 
-\begin_inset Formula $C_{1}=$
-\end_inset
-
-{
-\begin_inset Formula $j_{1}$
-\end_inset
-
-} CHANGER LES J MAJUSCULES EN MIN
-\end_layout
-
-\begin_layout Standard
-Then choose 
-\begin_inset Formula $J_{2}$
-\end_inset
-
-not in 
-\begin_inset Formula $C_{1},$
-\end_inset
-
-and let 
-\begin_inset Formula $C_{2}=C_{j2}$
-\end_inset
-
-or {
-\begin_inset Formula $j_{2}\}$
-\end_inset
-
- depending on whether or not {
-\begin_inset Formula $j_{2}\}$
-\end_inset
-
- is a non return state.
- From the previous theorem, 
-\begin_inset Formula $C_{1\cap}C_{2}=\textrm{Ø}$
-\end_inset
-
- Continue the construction in this way to get 
-\begin_inset Formula $C_{1},$
-\end_inset
-
-
-\begin_inset Formula $C_{2}$
+Similirly for 
+\begin_inset Formula $F_{jk}(z)$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-A non empty class, C, of state is such that to be closed if no state outside
- C is accessible from any state of C.
- 
+Theorem : For any two states j and is a MC and |z|<1
 \end_layout
 
 \begin_layout Standard
-i.e.
- C is closed iff for every for every j
-\begin_inset Formula $\varepsilon$
+(1) 
+\begin_inset Formula $P_{kk}(z)=Fjk(z)P_{kk}(z)$
 \end_inset
 
-C, and every k (n'appartenant pas) C, 
-\begin_inset Formula $p_{^{(n)}jk}=0$
+ if j different k
+\end_layout
+
+\begin_layout Standard
+(2) 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+P_{kk}(z)=1=
+\begin_inset Formula $F_{kk}(z)P_{kk}(z)$
 \end_inset
 
-for every n=1,2..
- .
+
 \end_layout
 
 \begin_layout Standard
-Examples: In the following examples we classify the states of the corresponding
- Markov chains with the given transition matrices.
-\end_layout
+(3) 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+P_{kk}(z)= 1/1-
+\begin_inset Formula $F_{kk}(z)$
+\end_inset
 
-\begin_layout Standard
-1)
-\end_layout
+, F_{kk}(z)=1- 1/
+\begin_inset Formula $P$
+\end_inset
 
-\begin_layout Standard
-P1 = [ 1 0 0 0 
-\end_layout
 
-\begin_layout Standard
-1/2 1/2 0 0 
-\end_layout
-
-\begin_layout Standard
-1/3 1/3 0 1/3
-\end_layout
-
-\begin_layout Standard
-1/4 1/4 1/4 1/4]
-\end_layout
-
-\begin_layout Standard
-{1} - closed communicating
-\end_layout
-
-\begin_layout Standard
-{2} communication non closed
-\end_layout
-
-\begin_layout Standard
-{3-4} communication non closed
-\end_layout
-
-\begin_layout Standard
-P2= [ 1 0 0 0 
-\end_layout
-
-\begin_layout Standard
-1 0 0 0 
-\end_layout
-
-\begin_layout Standard
-1/2 1/2 0 0 
-\end_layout
-
-\begin_layout Standard
-1/3 1/3 1/3 0 ]
-\end_layout
-
-\begin_layout Standard
-{1} non return 
 \end_layout
 
 \end_body
