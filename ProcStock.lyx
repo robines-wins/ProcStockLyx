@@ -4796,7 +4796,7 @@ To proves this all we need to do is show that
 \uwave off
 \noun off
 \color none
-\begin_inset Formula $g_{kk}=lim_{\infty}(f_{kk})^{n}$
+\begin_inset Formula $g_{kk}=lim_{n\rightarrow\infty}(f_{kk})^{n}$
 \end_inset
 
 
@@ -4810,7 +4810,7 @@ To proves this all we need to do is show that
 \end_layout
 
 \begin_layout Standard
-to prove 
+To prove 
 \family roman
 \series medium
 \shape up
@@ -4827,10 +4827,10 @@ to prove
 \end_inset
 
  for k=1,2, all we need to do is to show that 
-\begin_inset Formula $f_{kk}<1,$
+\begin_inset Formula $f_{kk}<1,\,k=1,2,\ldots$
 \end_inset
 
- k=1,2..
+
 \end_layout
 
 \begin_layout Standard
@@ -4846,25 +4846,23 @@ The event denote A {ever return to K from K}
 \begin_inset Formula $\subset$
 \end_inset
 
-(denote B) { not goint to 0 in the next generationfrom a generation of size
- k}
+(denote B) { not goint to 0 in the next generation from a generation of
+ size k}
 \end_layout
 
 \begin_layout Standard
-P(A)
-\begin_inset Formula $\leq$
+\begin_inset Formula $P(A)\leq P(B)=A-(P_{0})^{k}$
 \end_inset
 
-P(B) = A - (
-\begin_inset Formula $P_{0})^{k}$
+where 
+\begin_inset Formula $P_{0}$
 \end_inset
 
- where po = prob a parent wil have children
+ = prob a parent wil have children
 \end_layout
 
 \begin_layout Standard
-(
-\begin_inset Formula $P_{0})^{k}$
+\begin_inset Formula $(P_{0})^{k}$
 \end_inset
 
  = prob that all parent will have 1 children (independant of the number
@@ -4873,15 +4871,11 @@ P(B) = A - (
 
 \begin_layout Standard
 If 
-\begin_inset Formula $P_{0}$
+\begin_inset Formula $P_{0}>0$
 \end_inset
 
->0, then 
-\begin_inset Formula $f_{kk}\leq$
-\end_inset
-
-1 - (
-\begin_inset Formula $p_{0})^{k}<1$
+, then 
+\begin_inset Formula $f_{kk}\leq1-(p_{0})^{k}<1$
 \end_inset
 
 
@@ -4930,204 +4924,7 @@ The following theorem help us decide wheter
 
 \end_layout
 
-\begin_layout Standard
-Theorem : For any state in a Markov chain, 
-\begin_inset Formula $f_{kk}<1$
-\end_inset
-
- <=> 
-\begin_inset Formula $\sum_{n=1}p_{kk}^{(n)}<\infty$
-\end_inset
-
-, 
-\end_layout
-
-\begin_layout Standard
-and 
-\begin_inset Formula $f_{kk}=1$
-\end_inset
-
- <=> 
-\begin_inset Formula $\sum_{n=1}^{\infty}$
-\end_inset
-
-
-\begin_inset Formula $p_{kk}^{(n)}$
-\end_inset
-
-= +
-\begin_inset Formula $\infty$
-\end_inset
-
- (will not be proven : uses much analysis)
-\end_layout
-
-\begin_layout Standard
-proof sketch
-\end_layout
-
-\begin_layout Standard
-Lemma: Let 
-\begin_inset Formula $p_{jk}(z)=\sum_{n=0}^{\infty}z^{n}p_{jk}^{(n)}=d_{jk}+\sum_{n=1}^{\infty}$
-\end_inset
-
-z
-\begin_inset Formula $^{n}p_{jk}^{(n)}$
-\end_inset
-
-where 
-\begin_inset Formula $d_{jk}=$
-\end_inset
-
-1 if j=K and 0 otherwise
-\end_layout
-
-\begin_layout Standard
-let 
-\begin_inset Formula $F_{jk}(z)$
-\end_inset
-
-=
-\begin_inset Formula $\sum_{n=1}^{\infty}z^{n}f_{jk}^{(n)}$
-\end_inset
-
- 
-\begin_inset Formula $P_{jk}(z)$
-\end_inset
-
- cd 
-\begin_inset Formula $F_{jk}(z)$
-\end_inset
-
- are defined for |z|<1 There are called generating function
-\end_layout
-
-\begin_layout Standard
-Proof |
-\begin_inset Formula $P_{jk(z)}|$
-\end_inset
-
-
-\begin_inset Formula $\leq\sum_{n=0}^{\infty}|z|^{n}p_{jk}^{(n)}$
-\end_inset
-
-
-\begin_inset Formula $\leq$
-\end_inset
-
-
-\begin_inset Formula $\sum_{n=0}^{\infty}|z|^{(n)}$
-\end_inset
-
- 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset Formula $p_{jk}^{(n)}$
-\end_inset
-
- 
-\begin_inset Formula $\leq1$
-\end_inset
-
- which converges if |z|
-\begin_inset Formula $<1$
-\end_inset
-
-(gemometric series)
-\end_layout
-
-\begin_layout Standard
-Similirly for 
-\begin_inset Formula $F_{jk}(z)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Theorem : For any two states j and is a MC and |z|<1
-\end_layout
-
-\begin_layout Standard
-(1) 
-\begin_inset Formula $P_{kk}(z)=Fjk(z)P_{kk}(z)$
-\end_inset
-
- if j different k
-\end_layout
-
-\begin_layout Standard
-(2) 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset Formula $P_{kk}$
-\end_inset
-
-(z)=1=
-\begin_inset Formula $F_{kk}(z)P_{kk}(z)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-(3) 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset Formula $P_{kk}$
-\end_inset
-
-(z)= 1/1-
-\begin_inset Formula $F_{kk}(z)$
-\end_inset
-
-, 
-\begin_inset Formula $F_{kk}$
-\end_inset
-
-(z)=1- 1/
-\begin_inset Formula $P_{kk}(z)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
---------------------------------------------------------------------------------
-------------------------------
-\end_layout
-
-\begin_layout Section
+\begin_layout Subsection
 Theorem 100
 \end_layout
 

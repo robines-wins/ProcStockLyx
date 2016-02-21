@@ -4784,11 +4784,143 @@ To proves this all we need to do is show that
 \end_layout
 
 \begin_layout Standard
---------------------------------------------------------------------------------
-------------------------------
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $g_{kk}=lim_{n\rightarrow\infty}(f_{kk})^{n}$
+\end_inset
+
+
 \end_layout
 
-\begin_layout Section
+\begin_layout Standard
+\begin_inset Formula $g_{jk}=f_{jk}*g_{kk}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+To prove 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $g_{kk}=0$
+\end_inset
+
+ for k=1,2, all we need to do is to show that 
+\begin_inset Formula $f_{kk}<1,\,k=1,2,\ldots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $f_{kk}$
+\end_inset
+
+= prob of ever return to k from k
+\end_layout
+
+\begin_layout Standard
+The event denote A {ever return to K from K} 
+\begin_inset Formula $\subset$
+\end_inset
+
+(denote B) { not goint to 0 in the next generation from a generation of
+ size k}
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(A)\leq P(B)=A-(P_{0})^{k}$
+\end_inset
+
+where po = prob a parent wil have children
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(P_{0})^{k}$
+\end_inset
+
+ = prob that all parent will have 1 children (independant of the number
+ of children per parent)
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $P_{0}>0$
+\end_inset
+
+, then 
+\begin_inset Formula $f_{kk}\leq1-(p_{0})^{k}<1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g_{kk}=0$
+\end_inset
+
+ If 
+\begin_inset Formula $p_{0}>0,$
+\end_inset
+
+ there is zero probability of making infinitely many returns to any positive
+ state.
+ (generation size).
+ That is, either the gen sizes tend to infinity (may not monotonically)
+ or a gen.
+ w/ no individuals (
+\begin_inset Formula $X_{n}=0)$
+\end_inset
+
+is reached, in whcih case, of course, the state 0 will be visited thereafter.
+ What abotu the case 
+\begin_inset Formula $P_{0}=0?$
+\end_inset
+
+ The above argument gives 
+\begin_inset Formula $f_{kk}\leq1-0=1$
+\end_inset
+
+which is not informative.
+ However, this is the trivial case since each parent has at least 1 child
+ and the generation size must then increase to infinity.
+\end_layout
+
+\begin_layout Standard
+The following theorem help us decide wheter 
+\begin_inset Formula $f_{kk}<1$
+\end_inset
+
+ of 
+\begin_inset Formula $f_{kk}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Theorem 100
 \end_layout
 
