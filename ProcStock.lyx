@@ -3536,7 +3536,7 @@ The classification of states
 
 \begin_layout Standard
 Eventually we'll be studying the limiting behavior of 
-\begin_inset Formula $p_{ij}^{(n)}$
+\begin_inset Formula $P_{ij}^{(n)}$
 \end_inset
 
 as 
@@ -3587,7 +3587,7 @@ Then we say that the state
 \noun off
 \color none
 
-\begin_inset Formula $p_{ij}^{(n)}>0$
+\begin_inset Formula $P_{ij}^{(n)}>0$
 \end_inset
 
 .
@@ -3610,7 +3610,7 @@ Note that
 \noun off
 \color none
 
-\begin_inset Formula $p_{ij}^{(n)}$
+\begin_inset Formula $P_{ij}^{(n)}$
 \end_inset
 
 is not the probability of reaching j from i for the first time in n steps.
@@ -3711,7 +3711,7 @@ Proof:
 \noun off
 \color none
 
-\begin_inset Formula $p_{ij}^{(n)}>0$
+\begin_inset Formula $P_{ij}^{(n)}>0$
 \end_inset
 
  and 
@@ -3743,7 +3743,7 @@ Proof:
 \noun off
 \color none
  such that 
-\begin_inset Formula $p_{jk}^{(n)}>0$
+\begin_inset Formula $P_{jk}^{(n)}>0$
 \end_inset
 
 
@@ -3771,7 +3771,7 @@ Then
 \noun off
 \color none
 
-\begin_inset Formula $p_{ik}^{(n)}=p_{ik}^{(n_{0}+n_{1})}=\sum_{l}p_{il}^{(n_{0})}*p_{lk}^{(n_{1})}\geq p_{ij}^{(n_{0})}*p_{jk}^{(n_{1})}>0$
+\begin_inset Formula $P_{ik}^{(n)}=P_{ik}^{(n_{0}+n_{1})}=\sum_{l}P_{il}^{(n_{0})}*P_{lk}^{(n_{1})}\geq P_{ij}^{(n_{0})}*P_{jk}^{(n_{1})}>0$
 \end_inset
 
 
@@ -3818,7 +3818,7 @@ Given a state j of a Markov chain, its communicating class
 \noun off
 \color none
 
-\begin_inset Formula $p_{jk}^{(n)}>0$
+\begin_inset Formula $P_{jk}^{(n)}>0$
 \end_inset
 
  for some 
@@ -3884,11 +3884,11 @@ If
 \uwave off
 \noun off
 \color none
-\begin_inset Formula $\exists n_{0}\,:\,p_{jk}^{(n0)}>0$
+\begin_inset Formula $\exists n_{0}\,:\,P_{jk}^{(n0)}>0$
 \end_inset
 
  and 
-\begin_inset Formula $\exists n_{1}\,:\,p_{kj}^{(n1)}>0$
+\begin_inset Formula $\exists n_{1}\,:\,P_{kj}^{(n1)}>0$
 \end_inset
 
 .
@@ -4076,15 +4076,15 @@ Choose a state
 \begin_inset Formula $j_{1}$
 \end_inset
 
-according as 
+ according as 
 \begin_inset Formula $j_{1}$
 \end_inset
 
-is a return or non-return state, if 
+ is a return or non-return state, if 
 \begin_inset Formula $j_{1}$
 \end_inset
 
-is a non-return state, then set 
+ is a non-return state, then set 
 \begin_inset Formula $C_{1}=\left\{ j_{1}\right\} $
 \end_inset
 
@@ -4392,10 +4392,10 @@ Note:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $f_{jk}^{(n)}can$
+\begin_inset Formula $f_{jk}^{(n)}$
 \end_inset
 
-be made precise by formally saying that if we are to reach 
+ can be made precise by formally saying that if we are to reach 
 \begin_inset Formula $k$
 \end_inset
 
@@ -4415,7 +4415,7 @@ be made precise by formally saying that if we are to reach
 \begin_inset Formula $n-1$
 \end_inset
 
-steps and then on the n
+ steps and then on the n
 \begin_inset script superscript
 
 \begin_layout Plain Layout
@@ -4424,7 +4424,7 @@ th
 
 \end_inset
 
-step have jumped to state 
+ step have jumped to state 
 \begin_inset Formula $k$
 \end_inset
 
@@ -4465,7 +4465,7 @@ Proof:
 \end_layout
 
 \begin_layout Standard
-it's a mistake ti say that the product (and power 
+it's a mistake to say that the product (and power 
 \begin_inset Formula $n-2$
 \end_inset
 
@@ -4482,7 +4482,7 @@ f_{00}^{(n)} & = & P\left[X_{1}=1,X_{2}=1,\ldots,X_{n-1}=1,X_{n}=0|X_{n}=0\right
  &  & \cdots P\left[X_{1}=1|X_{0}=0\right]\\
  & = & P\left[X_{n}=0|X_{n-1}=1\right]P\left[X_{n-1}=1|X_{n-2}=1\right]\cdots P\left[X_{1}=1|X_{0}=0\right]\\
  &  & \mbox{[We used Markov property]}\\
- & = & p_{01}p_{11}^{n-2}p_{10}\\
+ & = & P_{01}P_{11}^{n-2}P_{10}\\
  &  & \mbox{[We used Homogeneity}]
 \end{eqnarray*}
 
@@ -4779,11 +4779,6 @@ To proves this all we need to do is show that
 \end_layout
 
 \begin_layout Standard
---------------------------------------------------------------------------------
-------------------------------
-\end_layout
-
-\begin_layout Standard
 
 \family roman
 \series medium
@@ -4851,7 +4846,7 @@ The event denote A {ever return to K from K}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $P(A)\leq P(B)=A-(P_{0})^{k}$
+\begin_inset Formula $P(A)\leq P(B)=1-(P_{0})^{k}$
 \end_inset
 
 where 
@@ -4892,28 +4887,27 @@ If
  there is zero probability of making infinitely many returns to any positive
  state.
  (generation size).
- That is, either the gen sizes tend to infinity (may not monotonically)
- or a gen.
- w/ no individuals (
+ That is, either the generation sizes tend to infinity (may not monotonically)
+ or a generation w/ no individuals (
 \begin_inset Formula $X_{n}=0)$
 \end_inset
 
-is reached, in whcih case, of course, the state 0 will be visited thereafter.
- What abotu the case 
-\begin_inset Formula $P_{0}=0?$
+ is reached, in which case, of course, the state 0 will be visited thereafter.
+ What about the case 
+\begin_inset Formula $P_{0}=0$
 \end_inset
 
- The above argument gives 
+? The above argument gives 
 \begin_inset Formula $f_{kk}\leq1-0=1$
 \end_inset
 
-which is not informative.
+ which is not informative.
  However, this is the trivial case since each parent has at least 1 child
  and the generation size must then increase to infinity.
 \end_layout
 
 \begin_layout Standard
-The following theorem help us decide wheter 
+The following theorem help us decide whether 
 \begin_inset Formula $f_{kk}<1$
 \end_inset
 
@@ -4924,7 +4918,7 @@ The following theorem help us decide wheter
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Theorem 100
 \end_layout
 
@@ -5085,6 +5079,10 @@ For any state
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Rigorous proof
 \end_layout
 
 \begin_layout Paragraph
