@@ -5099,7 +5099,16 @@ Let
 \end_inset
 
  and 
-\begin_inset Formula $m_{kk}<1$
+\begin_inset Formula $m_{kk}<\infty$
+\end_inset
+
+.
+ We call 
+\begin_inset Formula $m_{kk}$
+\end_inset
+
+ the expected (or mean) recurence (return) time to state 
+\begin_inset Formula $k$
 \end_inset
 
 .
@@ -5199,12 +5208,12 @@ Let the chain run until we made
 \begin_inset Formula $k$
 \end_inset
 
- (grom 
+ (from 
 \begin_inset Formula $k$
 \end_inset
 
 ) this will require a random number of steps in the chain.
- Call this rundom number 
+ Call this random number 
 \begin_inset Formula $N_{kk}(n)$
 \end_inset
 
@@ -5256,6 +5265,270 @@ Let
 
  as by definition 
 \begin_inset Formula $\left[E\left[T_{i}(k)\right]=m_{kk}\right]$
+\end_inset
+
+ and so 
+\end_layout
+
+\begin_layout Standard
+How does this relate to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:80"
+
+\end_inset
+
+ ?
+\end_layout
+
+\begin_layout Standard
+We can evaluate the limiting proportion of time spent in state 
+\begin_inset Formula $k$
+\end_inset
+
+ with a different scheme.
+ Now allow the chain to run for 
+\begin_inset Formula $n$
+\end_inset
+
+ transition
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+I_{m}(k) & = & 0\mbox{ if the chains is in state \ensuremath{k} at the \ensuremath{m^{th}} step}\\
+ & = & 0\mbox{ otherwise}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then 
+\begin_inset Formula $\frac{1}{n}\sum_{m=1}^{n}I_{m}(k)$
+\end_inset
+
+ is the observed proportion of time that we are in state 
+\begin_inset Formula $k$
+\end_inset
+
+ (out of 
+\begin_inset Formula $n$
+\end_inset
+
+ steps)
+\end_layout
+
+\begin_layout Standard
+We have 
+\begin_inset Formula $P\left[I_{m}(k)|X_{0}=k\right]=P_{kk}^{(m)}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+therefore 
+\begin_inset Formula $\frac{1}{n}\sum_{m=1}^{n}P_{kk}^{(m)}$
+\end_inset
+
+is the expected proportion of times in state 
+\begin_inset Formula $k$
+\end_inset
+
+ (from 
+\begin_inset Formula $k$
+\end_inset
+
+) in steps of the chain
+\end_layout
+
+\begin_layout Paragraph
+Let's put this together
+\end_layout
+
+\begin_layout Standard
+We had 
+\begin_inset Formula $\frac{n}{\sum_{i=1}^{n}T_{i}(k)}\overset{\mbox{w.p 1}}{\rightarrow}\frac{1}{m_{kk}}$
+\end_inset
+
+ and so by the dominate convergence theorem 
+\begin_inset Formula $E\left[\frac{n}{\sum_{i=1}^{n}T_{i}(k)}\right]\rightarrow E\left[\frac{1}{m_{kk}}\right]=\frac{1}{m_{kk}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+i.e by the 1
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+st
+\end_layout
+
+\end_inset
+
+ samplign scheme the expected proportion of time in step 
+\begin_inset Formula $k\rightarrow\frac{1}{m_{kk}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{1}{n}\sum_{m=1}^{n}P_{kk}^{(m)}\rightarrow\frac{1}{m_{kk}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Recurrent and Transient states and classes
+\end_layout
+
+\begin_layout Paragraph
+Definition:
+\end_layout
+
+\begin_layout Standard
+A state 
+\begin_inset Formula $k$
+\end_inset
+
+ is said 
+\emph on
+recurrent
+\emph default
+ if 
+\begin_inset Formula $f_{kk}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Definition:
+\end_layout
+
+\begin_layout Standard
+A state 
+\begin_inset Formula $k$
+\end_inset
+
+ is said to be 
+\emph on
+transient
+\emph default
+ if 
+\begin_inset Formula $f_{kk}<1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Transient mean that 
+\begin_inset Formula $k$
+\end_inset
+
+ will be visited only a finitely many time.
+\end_layout
+
+\begin_layout Standard
+A class of state is said to be recurrent (transient) if all state in it
+ are recurrent (transient) 
+\end_layout
+
+\begin_layout Paragraph
+Theorem: 
+\end_layout
+
+\begin_layout Standard
+if 
+\begin_inset Formula $C$
+\end_inset
+
+ is a communicating class of states in a Markov chain, then if any state
+ of 
+\begin_inset Formula $C$
+\end_inset
+
+ is recurrent (transient) then all states in 
+\begin_inset Formula $C$
+\end_inset
+
+ are recurrent (transient)
+\end_layout
+
+\begin_layout Subsubsection*
+Example
+\end_layout
+
+\begin_layout Standard
+As an example consider the simple random walk on the integer.
+ 
+\end_layout
+
+\begin_layout Standard
+We shall show that the set of all state is recurent iff 
+\begin_inset Formula $p=\frac{1}{2}$
+\end_inset
+
+ (an transient if not) 
+\end_layout
+
+\begin_layout Paragraph
+Proof: 
+\end_layout
+
+\begin_layout Standard
+first note that by the previous theorem is sufficient to show that the state
+ 
+\begin_inset Formula $0$
+\end_inset
+
+ is recurrent iff 
+\begin_inset Formula $p=\frac{1}{2}$
+\end_inset
+
+ .
+ Reason: clearly in the chain all states communicates.
+\end_layout
+
+\begin_layout Standard
+We prove this claim by using Theorem 100 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:th100"
+
+\end_inset
+
+ to show that 
+\begin_inset Formula $\sum_{n=0}^{\infty}P_{kk}^{(n)}$
+\end_inset
+
+ iff 
+\begin_inset Formula $p=\frac{1}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We thus need an expression for 
+\begin_inset Formula $P_{kk}^{(n)}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We first note that 
+\begin_inset Formula $P_{kk}^{(2n-1)}=0\,n=1,2,\ldots$
 \end_inset
 
 
