@@ -98,7 +98,8 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Chapter
-conditional probabilities, expectation
+conditional probabilities, expectation.
+ And probability generating function
 \end_layout
 
 \begin_layout Section
@@ -1681,7 +1682,7 @@ Let
 \begin_inset Formula $p_{0}(n)$
 \end_inset
 
- denote the probability that there are no individuals in the k
+ denote the probability that there are no individuals in the n
 \begin_inset script superscript
 
 \begin_layout Plain Layout
@@ -1690,7 +1691,7 @@ th
 
 \end_inset
 
-.
+ generation.
  We want to find 
 \begin_inset Formula 
 \begin{eqnarray}
@@ -1890,7 +1891,7 @@ We now need
 \end_inset
 
 , than we would be dealing with 
-\begin_inset Formula $\Phi_{\sum_{i=1}^{X_{n-1}}Y_{i}}(z)$
+\begin_inset Formula $\Phi_{\sum_{i=1}^{k}Y_{i}}(z)$
 \end_inset
 
  the p.g.f of a fixed sum of i.i.d r.v.s.
@@ -1898,7 +1899,7 @@ We now need
 \begin_inset Formula $Y_{i}$
 \end_inset
 
-'s re independent and identically distributed by assumption.
+'s are independent and identically distributed by assumption.
 \end_layout
 
 \begin_layout Standard
@@ -2535,7 +2536,7 @@ reference "eq:12"
 
 \begin_layout Standard
 Then we have 
-\begin_inset Formula $\mu_{n}=\Phi'_{X_{n}}(z)=\Phi'(z)\Phi_{X_{n-1}}'(z)$
+\begin_inset Formula $\mu_{n}=\Phi'_{X_{n}}(z)=\Phi'(1)\Phi_{X_{n-1}}'(1)$
 \end_inset
 
  (chain rule)
@@ -2676,7 +2677,7 @@ Definition:
 \begin_inset Formula $P\left[X_{n+1}=j|X_{0}=i_{0},X_{1}=i_{1},...,X_{n}=i\right]=P\left[X_{n+1}=j|X_{n}=i\right]=P_{ij}$
 \end_inset
 
-for all 
+ for all 
 \begin_inset Formula $n\geq0$
 \end_inset
 
@@ -2721,7 +2722,7 @@ Notice that
 \begin_layout Standard
 i.e.
  we should really write 
-\begin_inset Formula $P^{n}{}_{ij}$
+\begin_inset Formula $P_{ij}^{n}$
 \end_inset
 
 .
@@ -3786,7 +3787,7 @@ Then
 
 \begin_layout Standard
 The corollary is immediate same 
-\begin_inset Formula $i\leftrightarrow j\Leftrightarrow j\leftrightarrow j$
+\begin_inset Formula $i\leftrightarrow j\Rightarrow j\leftrightarrow j$
 \end_inset
 
 
@@ -4513,7 +4514,7 @@ For any states
 \end_inset
 
  
-\begin_inset Formula $f_{jk}=\sum_{n=1}^{\infty}f_{ik}$
+\begin_inset Formula $f_{jk}=\sum_{n=1}^{\infty}f_{ik}^{(n)}$
 \end_inset
 
 
