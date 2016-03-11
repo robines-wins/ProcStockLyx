@@ -5885,7 +5885,7 @@ The set S, of return states of a Markov chain, can be written as the union
 
 \begin_layout Standard
 S = 
-\begin_inset Formula $C_{1\cup}C_{2}...where$
+\begin_inset Formula $C_{1}\cup C_{2}...where$
 \end_inset
 
  class 
@@ -5975,6 +5975,292 @@ Returning to the randoim walk it turns out that even in
 \end_inset
 
 i.e the simple random walk is null recurrent
+\end_layout
+
+\begin_layout Standard
+---------------------------------
+\end_layout
+
+\begin_layout Standard
+MISS MERCREDI
+\end_layout
+
+\begin_layout Standard
+---------------------------------
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\lim_{n\rightarrow\infty}P_{jk}^{(n)}=\Pi_{K},\,k=1,2,\ldots\label{eq:49}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where 
+\begin_inset Formula $\left\{ \Pi_{k},k=1,2,\ldots\right\} $
+\end_inset
+
+ is a prob distribution who 
+\emph on
+not
+\emph default
+ depend on 
+\begin_inset Formula $j$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Paragraph
+Notes:
+\end_layout
+
+\begin_layout Standard
+The limit of the r.h.s of 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:49"
+
+\end_inset
+
+ doen't depend on 
+\begin_inset Formula $j$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+The term 
+\begin_inset Quotes eld
+\end_inset
+
+long-run distribution
+\begin_inset Quotes erd
+\end_inset
+
+ derive from the claim that the limit 
+\begin_inset Formula $P\left[X_{n}=k\right]$
+\end_inset
+
+, th eprob that you will be in the state 
+\begin_inset Formula $k$
+\end_inset
+
+ at the 
+\begin_inset Formula $n^{th}$
+\end_inset
+
+ step does not depend on the initial distribution
+\end_layout
+
+\begin_layout Paragraph
+Proof:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\lim_{n\rightarrow\infty}P\left[X_{n}=k\right] & = & \lim_{n\rightarrow\infty}\sum_{j=1}^{\infty}P\left[X_{n}=k|X_{0}=j\right]P\left[X_{0}=j\right]\\
+ & = & \sum_{j=1}^{\infty}\lim_{n\rightarrow\infty}P\left[X_{n}=k|X_{0}=j\right]P\left[X_{0}=j\right]\\
+ & = & \sum_{j=1}^{\infty}\Pi_{k}P\left[X_{0}=j\right]\\
+ & = & \Pi_{k}P\left[X_{0}=j\right]\\
+ & = & \Pi_{k}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wich is independ of 
+\begin_inset Formula $\left\{ P\left[X_{0}=j\right]\forall j\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+But it's very difficult to find the long run distribution directly as this
+ would implies finding a expresion for every 
+\begin_inset Formula $P_{jk}^{(n)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+But we have;
+\begin_inset Formula $p_{jk}^{(n)}=\left\{ P^{n}\right\} _{jk}$
+\end_inset
+
+ so we have a backdoor way to find 
+\begin_inset Formula $\lim_{n\rightarrow\infty}P_{jk}^{(n)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There's indeed a backdoor way to find this limit (if it exist) this acces
+ is gained trough the concept of 
+\emph on
+stationary distribution
+\end_layout
+
+\begin_layout Standard
+it turns out that if the statinoary distribution exist it can be found by
+ solving a system of linéar equation.
+ here's a grate thi
+\emph on
+ng: if
+\emph default
+ the long run distribution exist then its equal too the stationary distribution
+\end_layout
+
+\begin_layout Paragraph
+Definition:
+\end_layout
+
+\begin_layout Standard
+A Markov chain with state space 
+\begin_inset Formula $C$
+\end_inset
+
+ is said to posses an stationnary distribution if there exist a probability
+ distribution 
+\begin_inset Formula $\left\{ \Pi_{k},k=1,2,\ldots\right\} $
+\end_inset
+
+ having the property that for every 
+\begin_inset Formula $k\in C$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+\Pi_{k}=\sum_{j\in C}\Pi_{j}P_{jk}\label{eq:50}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Note
+\end_layout
+
+\begin_layout Standard
+The name stationnary distribution derive from the fact that 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:50"
+
+\end_inset
+
+ implie sthat for every integer 
+\begin_inset Formula $n$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{equation}
+\Pi_{k}=\sum_{j\in C}\Pi_{k}P_{jk}^{(n)}\label{eq:51}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Proof:
+\end_layout
+
+\begin_layout Standard
+The easiest way to see 
+\begin_inset Formula $\eqref{eq:51}$
+\end_inset
+
+ is to use the matrix notation Lething 
+\begin_inset Formula $\tilde{\Pi}=\left(\Pi_{1},\Pi_{2},\ldots\right)$
+\end_inset
+
+ then 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:50"
+
+\end_inset
+
+ says 
+\begin_inset Formula $\tilde{\Pi}=\tilde{\Pi}P$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+To get 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:51"
+
+\end_inset
+
+ we have 
+\begin_inset Formula $\tilde{\Pi}P^{2}=\left(\tilde{\Pi}P\right)P=\tilde{\Pi}P=\tilde{\Pi}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And so in general 
+\begin_inset Formula $\tilde{\Pi}P^{n}=\left(\tilde{\Pi}P^{n-1}\right)P=\cdots=\tilde{\Pi}P=\tilde{\Pi}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(The formal proof is by induction)
+\end_layout
+
+\begin_layout Standard
+As a consequence, if the initial distribution 
+\begin_inset Formula $\left\{ P\left[X_{0}=j\right],j\in C\right\} $
+\end_inset
+
+ is the stationnary distribution 
+\begin_inset Formula $\left\{ \Pi_{k},k=1,2,\ldots\right\} $
+\end_inset
+
+ Then 
+\begin_inset Formula $P\left[X_{n}=k\right]=\left(\tilde{\Pi}\right)_{k}=\Pi_{k},\,\forall n=1,2,\ldots\forall k\in C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So the marginal distribution 
+\begin_inset Formula $\left\{ P\left[X_{n}=k\right]\forall n=1,2,\ldots\forall k\in C\right\} $
+\end_inset
+
+ doesn't depend of 
+\begin_inset Formula $n$
+\end_inset
+
+
 \end_layout
 
 \end_body
