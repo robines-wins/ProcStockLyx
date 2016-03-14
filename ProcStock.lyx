@@ -5388,7 +5388,7 @@ st
 \end_layout
 
 \begin_layout Section
-Recurrent and Transient states and classes
+Recurrent and Transient states or classes
 \end_layout
 
 \begin_layout Paragraph
@@ -5977,6 +5977,10 @@ Returning to the randoim walk it turns out that even in
 i.e the simple random walk is null recurrent
 \end_layout
 
+\begin_layout Section
+Long-Run distribution
+\end_layout
+
 \begin_layout Standard
 ---------------------------------
 \end_layout
@@ -6261,6 +6265,241 @@ So the marginal distribution
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsubsection*
+Claim
+\end_layout
+
+\begin_layout Standard
+If you have an homogenous Markov Chain with a stationnary initial distribution
+ htne the chain is strictly stationnary i.e all distribution are inveriant
+ with shift in time
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset Formula $P\left[X_{n_{1}}=j_{1},X_{n_{2}}=j_{2},\ldots,X_{n_{k}}=j_{k}\right]=P\left[X_{n_{k}}=j_{k}|X_{n_{k-1}}=j_{k-1}\right]\cdots P\left[X_{n_{1}}=j_{1}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $=P\left[X_{n_{k}=h}=j_{k}|X_{n_{k-1}=h}=j_{k-1}\right]\cdots P\left[X_{n_{1}+h}=j_{1}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We've conditino backward and used Markov properties, Then we've used Homogenity
+ for the conditional probs
+\end_layout
+
+\begin_layout Standard
+write 
+\begin_inset Formula $P\left[X_{n_{1}}=j_{1}\right]=P\left[X_{n_{1}+h}=j_{1}\right]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus we have 
+\emph on
+strict stationarity
+\end_layout
+
+\begin_layout Standard
+The question is: Under what conditions will there exist a staionnary distributio
+n ? The following theorem is a start.
+\end_layout
+
+\begin_layout Subsubsection*
+Theorem
+\end_layout
+
+\begin_layout Standard
+To every irreductible Markov chain with state space 
+\begin_inset Formula $C$
+\end_inset
+
+, there is a sequence 
+\begin_inset Formula $\left\{ \Pi_{k},\,k\in C\right\} $
+\end_inset
+
+ such that for every 
+\begin_inset Formula $j,k\in C$
+\end_inset
+
+ 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\frac{1}{n}\sum_{m=1}^{n}P_{jk}^{(m)}=\Pi_{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Proof 
+\end_layout
+
+\begin_layout Standard
+We have from theorem 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:71"
+
+\end_inset
+
+ that 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\frac{1}{n}\sum_{m=1}^{n}P_{jk}^{(m)}=f_{jk}\frac{1}{m_{kk}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+There are 2 possibilies: either the chain is transcient or it recurent
+\end_layout
+
+\begin_layout Standard
+if it transcient, then as we have observe 
+\begin_inset Formula $P_{jk}^{(n)}\rightarrow0$
+\end_inset
+
+ as 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+ and therfore 
+\begin_inset Formula $\frac{1}{n}\sum_{m=1}^{n}P_{jk}^{(m)}\rightarrow0$
+\end_inset
+
+ as 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+ too which is independent of 
+\begin_inset Formula $k$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+secondly if the chain is recurent 
+\begin_inset Formula $f_{kk}=1$
+\end_inset
+
+ and we show that for any 
+\begin_inset Formula $j$
+\end_inset
+
+, 
+\begin_inset Formula $f_{jk}=1$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{1}{n}\sum_{m=1}^{n}P_{jk}^{(m)}\rightarrow f_{jk}\frac{1}{m_{kk}}=\frac{1}{m_{kk}}$
+\end_inset
+
+ indep of 
+\begin_inset Formula $j$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Now although the 
+\begin_inset Formula $\Pi_{k}$
+\end_inset
+
+'s are 
+\begin_inset Formula $\geq0$
+\end_inset
+
+ in either case but we don't neccessary have that 
+\begin_inset Formula $\left\{ \Pi_{k},\,k\in C\right\} $
+\end_inset
+
+ give a probability distribution 
+\end_layout
+
+\begin_layout Subsubsection*
+Claim
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $C$
+\end_inset
+
+ is a finite markov chain then 
+\begin_inset Formula $\left\{ \Pi_{k},\,k\in C\right\} $
+\end_inset
+
+ gives a prob distribution
+\end_layout
+
+\begin_layout Paragraph
+Proof:
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $C$
+\end_inset
+
+ is finite and irreductible, all state must be recurent [actually must be
+ positve reccurent: see asignment 4] i.e 
+\begin_inset Formula $m_{kk}<\infty,\,k\in C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let there be 
+\begin_inset Formula $M$
+\end_inset
+
+ states in 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ need to choose if 
+\begin_inset Formula $\sum_{k=1}^{m}\Pi_{k}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+\sum_{k=1}^{m}\Pi_{k} & = & \sum_{k=1}^{m}\lim_{n\rightarrow\infty}\frac{1}{n}\sum_{m=1}^{n}P_{jk}^{(m)}\\
+ & = & \lim_{n\rightarrow\infty}\frac{1}{n}\sum_{k=1}^{m}\sum_{m=1}^{n}P_{jk}^{(m)}\\
+ & = & \lim_{n\rightarrow\infty}\frac{1}{n}\sum_{m=1}^{n}\sum_{k=1}^{m}P_{jk}^{(m)}\\
+ & = & \lim_{n\rightarrow\infty}\frac{1}{n}\sum_{m=1}^{n}1\\
+ & = & 1
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so 
+\begin_inset Formula $\left\{ \Pi_{k},\,k\in C\right\} $
+\end_inset
+
+is prob dist
 \end_layout
 
 \end_body
