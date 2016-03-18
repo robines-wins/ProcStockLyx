@@ -97,6 +97,14 @@ LatexCommand tableofcontents
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\limn}{\lim_{n\rightarrow\infty}}
+\end_inset
+
+
+\end_layout
+
 \begin_layout Chapter
 conditional probabilities, expectation.
  And probability generating function
@@ -4733,7 +4741,7 @@ After all this background we come to en important theorem: Theorem [A zero-one|a
 w]
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 Application to Branching process
 \end_layout
 
@@ -6500,6 +6508,256 @@ so
 \end_inset
 
 is prob dist
+\end_layout
+
+\begin_layout Standard
+--------------------------------
+\end_layout
+
+\begin_layout Standard
+MISS MERCREDI 16-03
+\end_layout
+
+\begin_layout Standard
+--------------------------------
+\end_layout
+
+\begin_layout Standard
+Showing if long run distribution exist then the chain has unique stat distributi
+on (i.e 
+\begin_inset Formula $\lim_{n\rightarrow\infty}P_{jk}^{(n)}$
+\end_inset
+
+ exist as a distribution => stationary distrib)
+\end_layout
+
+\begin_layout Standard
+we showed 
+\begin_inset Formula $\exists$
+\end_inset
+
+ a state 
+\begin_inset Formula $k_{0}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\frac{1}{m_{k_{0}k_{0}}}>0$
+\end_inset
+
+ i.e at least one state 
+\begin_inset Formula $k_{0}$
+\end_inset
+
+ such that 
+\begin_inset Formula $k_{0}$
+\end_inset
+
+ is positive recurent.
+\end_layout
+
+\begin_layout Standard
+Since the chain is irreductible it is positive recurrent (i.e all state must
+ be pos.
+ recurent) therefore by theorem [stat Dist] there exist a unique stat distributi
+on.
+\end_layout
+
+\begin_layout Standard
+From note 1.
+ we see that in this case the long run distribution 
+\begin_inset Formula $\left\{ u_{k}\,:\,k\in C\right\} $
+\end_inset
+
+ is the stationary distribution Which we denote by 
+\begin_inset Formula $\left\{ \Pi_{k}\,:\,k\in C\right\} $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Paragraph
+4.
+\end_layout
+
+\begin_layout Standard
+Here is a rought reason why if 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\frac{1}{n}\sum_{m=1}^{n}P_{jk}^{(m)}=\Pi_{k}$
+\end_inset
+
+ with 
+\begin_inset Formula $\Pi_{k}>0\:\forall k\in C$
+\end_inset
+
+ is the stationary distribution: 
+\begin_inset Formula 
+\[
+\lim_{n\rightarrow\infty}\frac{1}{n}\sum_{m=1}^{n}P_{ij}^{(m)}=\Pi_{j}\Rightarrow\lim_{n\rightarrow\infty}\frac{1}{n}\sum_{j\in C}\sum_{m=1}^{n}P_{ij}^{(m)}P_{jk}=\sum_{j\in C}\Pi_{j}P_{jk}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now: 
+\begin_inset Formula 
+\begin{eqnarray*}
+\limn\frac{1}{n}\sum_{j\in C}\Pi_{j}P_{ij}^{(n)}P_{jk} & = & \limn\frac{1}{n}\sum_{m=1}^{n}\sum_{j\in C}P_{ij}^{(m)}P_{jk}\\
+ & = & \limn\frac{1}{n}\sum_{m=1}^{n}P_{ik}^{(m+1)}\\
+\mbox{claim} & = & \limn\limn\frac{1}{n}\sum_{m=1}^{n}P_{ik}^{(m)}\\
+ & = & \Pi_{k}\mbox{ (by assumtion)}
+\end{eqnarray*}
+
+\end_inset
+
+ (we've changing the order of sumation then use Chapman-Kolmogorov equation)
+\end_layout
+
+\begin_layout Standard
+therefore if the clim in true, then 
+\begin_inset Formula $\Pi_{k}=\sum_{j\in C}\Pi_{k}P_{jk}$
+\end_inset
+
+ i.e stationarity, appart from 
+\begin_inset Formula $\sum_{k\in C}\Pi_{k}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+Proof of the claim:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{1}{n}\sum_{m=1}^{n}P_{ik}^{(m+1)}=\frac{1}{n}\sum_{m=1}^{n}P_{ik}^{(m)}-\frac{1}{n}P_{ik}^{(1)}+\frac{1}{n}P_{ik}^{(n+1)}$
+\end_inset
+
+ let's name those 3 terms 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ and 
+\begin_inset Formula $C$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+therfore 
+\begin_inset Formula $\limn\frac{1}{n}\sum_{m=1}^{n}P_{ik}^{(m+1)}=\limn A-\limn B+\limn C$
+\end_inset
+
+, but 
+\begin_inset Formula $\limn B=\limn C=0$
+\end_inset
+
+ (because 
+\begin_inset Formula $P_{ik}^{(n+1)}\leq1$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+To show that the 
+\begin_inset Formula $\Pi_{k}$
+\end_inset
+
+'s gives a distribution we need to show that 
+\begin_inset Formula $\sum_{k\in C}\Pi_{k}=1$
+\end_inset
+
+ this is not easy in general.
+\end_layout
+
+\begin_layout Standard
+For a finite markov chain the argument which entailed an interchenge beetween
+ the limit and the sum 
+\begin_inset Formula $\sum$
+\end_inset
+
+ is easy (the sum is finite).
+ We will not consider the general case.
+ which is nevertheless true.
+\end_layout
+
+\begin_layout Subsection
+the 2
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+nd
+\end_layout
+
+\end_inset
+
+long-run distribution main theorem.
+\end_layout
+
+\begin_layout Standard
+We come now the 2
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+nd
+\end_layout
+
+\end_inset
+
+main theorem concerning the long-run distribution.
+ But before we need new terminology
+\end_layout
+
+\begin_layout Paragraph
+Definition:
+\end_layout
+
+\begin_layout Standard
+the 
+\emph on
+period
+\emph default
+ 
+\begin_inset Formula $d(k)$
+\end_inset
+
+ of a return state 
+\begin_inset Formula $k$
+\end_inset
+
+, of a Markov chain, is defined as the gratest commom divisor of the set
+ of integers 
+\begin_inset Formula $n$
+\end_inset
+
+ where 
+\begin_inset Formula $P_{kk}^{(n)}>0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+a state 
+\begin_inset Formula $k$
+\end_inset
+
+ is said 
+\emph on
+aperiodic
+\emph default
+ if if 
+\begin_inset Formula $d(k)=1$
+\end_inset
+
+
 \end_layout
 
 \end_body
