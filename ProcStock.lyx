@@ -7672,5 +7672,119 @@ aperiodic
 
 \end_layout
 
+\begin_layout Standard
+If all states communicate and one has period 
+\begin_inset Formula $1$
+\end_inset
+
+ (is aperiodic) then all state are apperiodic
+\end_layout
+
+\begin_layout Standard
+you can establish that an irreductible chain chain is apperiodic as long
+ as 
+\begin_inset Formula $P_{kk}^{(n)}>0$
+\end_inset
+
+ for all 
+\begin_inset Formula $k$
+\end_inset
+
+ and some integer 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ i.e as long as all entry of 
+\begin_inset Formula $P^{n}$
+\end_inset
+
+ are 
+\begin_inset Formula $>0$
+\end_inset
+
+ for some 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ this will ensure that 
+\begin_inset Formula $\gcd\left(n\,:\,P_{kk}^{(n)}>0\right)$
+\end_inset
+
+is 
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Theorem (Long-run distribution)
+\end_layout
+
+\begin_layout Standard
+An irreductible aperiodic positive recurent Markov chain possesses an unique
+ long-run distribution.
+ 
+\end_layout
+
+\begin_layout Standard
+A neccesary and sufficcent condition for an irreductible apperidic Markov
+ chain to posses a long-run distribution is that there exist a sequence
+ 
+\begin_inset Formula $\left\{ u_{k},\,k\in C\right\} $
+\end_inset
+
+ with 
+\begin_inset Formula $\sum_{k\in C}\left|u_{k}\right|<\infty$
+\end_inset
+
+ such that 
+\begin_inset Formula $u_{k}$
+\end_inset
+
+ staisfy the system of equation 
+\begin_inset Formula $u_{k}=\sum_{j\in C}u_{j}P_{jk}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+The long-run distribution 
+\begin_inset Formula $\left\{ \Pi_{k},\,k\in C\right\} $
+\end_inset
+
+of an aperiodic positive recurent Markov chain is the unique solution of
+ the systel of equation , 
+\begin_inset Formula $\Pi_{k}=\sum_{j\in C}\Pi_{j}P_{jk},\,\sum_{k\in C}\Pi_{k}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+to resume
+\end_layout
+
+\begin_layout Itemize
+irreductible + positive recurent => stationerity
+\end_layout
+
+\begin_layout Itemize
+irreductible + positive recurent + aperiodic => long-run distribution
+\end_layout
+
+\begin_layout Paragraph
+Note:
+\end_layout
+
+\begin_layout Standard
+A chain that is irreductible, aperiodic and positive recurrent is said 
+\emph on
+ergotic
+\end_layout
+
 \end_body
 \end_document
