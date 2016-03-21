@@ -44,7 +44,8 @@ MJ Lagarde}
 \tableofcontents{}
 
 
-\chapter{conditional probabilities, expectation}
+\chapter{conditional probabilities, expectation. And probability generating
+function}
 
 
 \section{conditional probabilities and expectation, definitions}
@@ -54,7 +55,7 @@ probability function $P(x,y)=P(X=x,Y=y)$ for $(x,y)\subset A$ (called
 the support of the distribution) and $P(X=x,Y=y)=0\mbox{ for }(x,y)\notin A$.
 
 Then the conditional probability of $Y$ given $X=x$, $P_{y/X=x}(y|x)$
-is defined to be $\frac{P_{X,Y}(x,y)}{P_{X}(x)}$ for$P_{X}(x)\neq0$.
+is defined to be $\frac{P_{X,Y}(x,y)}{P_{X}(x)}$ for $P_{X}(x)\neq0$.
 Here $P_{X}(x)$ is called the marginal. $P_{X}(x)=\sum_{\forall y}P_{X,Y}(x,y)$. 
 
 
@@ -100,7 +101,7 @@ follows $E(Y|X=x)=\intop_{-\infty}^{\infty}y*f_{Y|X=x}(y|x)\,dx$
 Let X,Y be random variables with some join discrete distribution or
 continuous distribution.
 \begin{lyxlist}{00.00.0000}
-\item [{(I)}] If discrete$P_{Y}(y)=\sum P_{Y|X=x}(y|x)*P_{X}(x)=\sum P(X=x,Y=y)$ 
+\item [{(I)}] If discrete $P_{Y}(y)=\sum P_{Y|X=x}(y|x)*P_{X}(x)=\sum P(X=x,Y=y)$ 
 \item [{(II)}] If continuous :$F_{y}(y)=\int f_{Y|X}(y|x)*f_{X}(x)\,dx$
 \item [{(I')}] $F_{Y}(y)=P(Y\leq y)=\sum P_{y/X=x}(y\leq y|x)*P_{X}(x)=\sum F_{y/X=x}(y|x)*f_{X}(x)\,dx$
 where $\sum F_{y/X=x}(y|x)=p_{Y/X=x}(zx)z\,:\,z\leq y$
@@ -266,8 +267,6 @@ for k=1.. with $\Phi_{X}^{0}(0)=p_{X}(0)=\Phi_{X}(0)$
 r.v.s, then $\Phi_{\sum_{i=1}^{n}}(z)=E[z^{\sum_{1}^{n}Xi}]=E[\prod_{1}^{n}z^{Xi}]=\prod_{i=1}^{n}E[z^{Xi}]$=$\prod_{i=1}^{n}\Phi_{xi}[z]$
 further if the Xiw are identically distributed then $\Phi_{\sum_{i=1}^{n}}(z):[\Phi_{x}(z)]^{n}$
 \end{enumerate}
-CHECK MY COURSES FOR ASSIGNEMENT:
-
 
 \chapter{Stochastic processes themselves}
 
@@ -287,10 +286,10 @@ of $X{}_{t}$ . That is for each t, $X{}_{t}$ had a probability distribution
 that is specified by $F_{X{}_{t}}(.)$its cdf. 
 \item For each fixed $\omega,$ $X{}_{t}$ is a function of $t\in T.$(the
 idkr set). We call this function of t (for fixed $\omega\epsilon S$)
-a trajectory or sample path of stochastic process. We may depic the
+a trajectory or sample path of stochastic process. We may depict the
 situation as follows. 
 \item How is a stochastic process specified? Recall that if X is a r.v.
-it is complety determined or specified once you have specified c.d.f
+it is completely determined or specified once you have specified c.d.f
 $F_{X}$. In the case of stochastic process it turns out that it is
 uniquely specified once you have specified $F_{Xt1},$$F_{Xt2},$...,
 $F_{Xtn}$ for all the collections of the r.v.s $X_{t1},$$X_{t2},..,X_{tn}$for
@@ -307,7 +306,7 @@ function. Question that we may ask one ``What is the probability
 that this function will fall in some set in this function space?
 
 Extensen theorem is that the probabilities of all the event in this
-function space is uniquely determined by the probabilities speciafied
+function space is uniquely determined by the probabilities specified
 by the finite themselves c.d.f.S.
 
 Examples stochastic process:
@@ -336,10 +335,10 @@ because of the assumption of independence
 \item $\left\{ x_{t},\,t\in D\right\} $where $X_{t}$ si the price of e
 certain stock during day $D$. before the stock market opens. the
 price over the day are uncertain. the trajectory of $X_{t}$ will
-typically fluctuate and the $X_{i}$'s will be dependant.
+typically fluctuate and the $X_{i}$'s will be dependent.
 \item $\left\{ X_{t},\,i\in\left\{ 1,2,\ldots\right\} \right\} $ where
 $X_{t}$ denote the number of bacteria on e petri dish at minute $t$
-from the time they start divinding
+from the time they start dividing
 \item $\left\{ X_{t},\,i\in\left\{ 1,2,\ldots\right\} \right\} $ where
 $X_{t}$ is the height of a dam above level $L$ at time $t$ 
 \item if $\left\{ X_{1},X_{2},\ldots\right\} $is a sequence of i.i.d r.v.s,
@@ -354,7 +353,7 @@ Note: while $X_{i}$s are independent, the $S_{n}$ are highly dependent
 process\\
 If continuous ($T$ uncountable) we refer to a \emph{continuous parameter}
 stochastic process
-\item If the set of possible value of $X_{t}$ contable (discrete) we refer
+\item If the set of possible value of $X_{t}$ countable (discrete) we refer
 to a \emph{discrete state space}\\
 If uncountable we refer to a \emph{continuous state space}
 \end{enumerate}
@@ -403,7 +402,7 @@ an interesting, perhaps unexpected, result.
 
 Even though we can view $\left\{ X_{n},n=0,1,2,\ldots\right\} $ as
 a Markov chain, we shall answers these questions without reference
-to them by using conditionnal expectation and probability generating
+to them by using conditional expectation and probability generating
 function. 
 
 The details are important !!
@@ -411,8 +410,8 @@ The details are important !!
 
 \section{Answers:}
 
-Let $p_{0}(n)$ denode the probability that there are no individuals
-in the k\textsuperscript{th}. We want to find 
+Let $p_{0}(n)$ denote the probability that there are no individuals
+in the n\textsuperscript{th} generation. We want to find 
 \begin{eqnarray}
 P\left[\bigcup_{k=1}^{\infty}\left\{ X_{k}=0\right\} \right] & = & P\left[\lim_{n\rightarrow\infty}\bigcup_{k=1}^{n}\left\{ X_{k}=0\right\} \right]\nonumber \\
  & = & \lim_{n\rightarrow\infty}P\left[\bigcup_{k=1}^{n}\left\{ X_{k}=0\right\} \right]\label{eq:lim}
@@ -443,7 +442,7 @@ any single of individuals in\emph{ any} generation
 \end{eqnarray}
 
 
-The ideae in proving both (\ref{eq:11}) and (\ref{eq:12}) is that
+The idea in proving both (\ref{eq:11}) and (\ref{eq:12}) is that
 in each case we can write $X_{n}$ as a random sum of random variable.
 with this observation we shall condition the upper limit of summation.
 
@@ -465,9 +464,9 @@ the assumption of branching processes.
 
 We now need $\Phi_{X_{n}}(z)=\Phi_{\sum_{i=1}^{X_{n-1}}Y_{i}}(z)$.
 Looks bad, but observe that if we condition on $X_{n-1}=k$, than
-we would be dealing with $\Phi_{\sum_{i=1}^{X_{n-1}}Y_{i}}(z)$ the
-p.g.f of a fixed sum of i.i.d r.v.s. The $Y_{i}$'s re independent
-and identically distributed by assumption.
+we would be dealing with $\Phi_{\sum_{i=1}^{k}Y_{i}}(z)$ the p.g.f
+of a fixed sum of i.i.d r.v.s. The $Y_{i}$'s are independent and
+identically distributed by assumption.
 
 Thus use $\Phi_{X_{n}}(z)=E\left[z^{X_{n}}\right]=E_{X_{n-1}}\left[E\left[z^{\sum_{i=1}^{X_{n-1}}Y_{i}}|X_{n-1}\right]\right]$
 
@@ -604,10 +603,10 @@ will be small and the probability that the nuclear reaction will be
 maintained $1-\eta^{a}$ will be large
 
 \item one extension to the Glaton branching-process is the so called Branching
-process with Random Environment. the ``divison probability'' $p_{j}$
+process with Random Environment. the ``division probability'' $p_{j}$
 change over time. For example, the environment might changing (is
 it !) leading to different reproduction rates
-\item Another generalization is to Multitype Branching Process. Whereby
+\item Another generalization is to Multi-type Branching Process. Whereby
 a population is composed of different subtype each with a different
 $\left\{ p_{j}\right\} $
 \end{enumerate}
@@ -618,7 +617,7 @@ $\left\{ p_{j}\right\} $
 Let $\mu_{n}=E\left(X_{n}\right)$. Then $\mu_{n}=\Phi'_{X_{n}}(1)$.
 But we know that $\Phi_{X_{n}}(z)=\Phi_{X_{n-1}}\left(\Phi(z)\right)$(\ref{eq:12})
 
-Then we have $\mu_{n}=\Phi'_{X_{n}}(z)=\Phi'(z)\Phi_{X_{n-1}}'(z)$
+Then we have $\mu_{n}=\Phi'_{X_{n}}(z)=\Phi'(1)\Phi_{X_{n-1}}'(1)$
 (chain rule)
 
 Which mean that $\Phi'_{X_{n}}(z)=\mu_{n}=\mu\Phi'_{X_{n-1}}(1)=\mu\mu_{n-1}$
@@ -637,14 +636,14 @@ more (see 2) bur argument is more difficult. We find:
 \end{eqnarray*}
 Thus $\sigma_{n}^{2}$increase (decrease) geometrically if $\mu\neq1$,
 possibly explaining why $\eta>0$ even if $\mu>1$: large fluctuation
-gice a chance of falling into the breach of extinction.
+give a chance of falling into the breach of extinction.
 
 
 \chapter{Markov Chains}
 
 Almost always there is an underlying dependence structure to the stochastic
 processes that we discuss. A special type of dependence structure
-is assumed when we discuss markov chain, this structures assumes the
+is assumed when we discuss Markov chain, this structures assumes the
 so calls \emph{Markov property} 
 
 To begin, we shall assume that our process$\left\{ X_{n},\,n=0,1,\ldots\right\} $
@@ -661,8 +660,8 @@ $E_{1,}$$E_{2}..$ but for notation simplicity, by, $1,2,\ldots$
 $\left\{ X_{n},\,n=0,1,\ldots\right\} $ is called a (discrete state
 space) Markov chain if
 
-$P\left[X_{n+1}=j|X_{0}=i_{0},X_{1}=i_{1},...,X_{n}=i\right]=P\left[X_{n+1}=j|X_{n}=i\right]=P_{ij}$for
-all $n\geq0$, and all states $i_{0},i_{1},\ldots,i_{n}$
+$P\left[X_{n+1}=j|X_{0}=i_{0},X_{1}=i_{1},...,X_{n}=i\right]=P\left[X_{n+1}=j|X_{n}=i\right]=P_{ij}$
+for all $n\geq0$, and all states $i_{0},i_{1},\ldots,i_{n}$
 
 
 \paragraph{Notes:}
@@ -673,7 +672,7 @@ $j$ in one state.
 
 Notice that $P_{ij}$ is assumed not to depend on n. 
 
-i.e. we should really write $P^{n}{}_{ij}$. Chain for which $P_{ij}$
+i.e. we should really write $P_{ij}^{n}$. Chain for which $P_{ij}$
 does not depend on $n$ are called \emph{homogeneous}. {[}If depend
 on n, non-homogeneous{]}. We restrict ourselves to homogenous chains. 
 
@@ -691,13 +690,13 @@ of a stationary Markov Chain.
 
 Reason(to be further clarified later) is that with the assumption
 of homogeneity (stationarity) the join finite dimensional distributions,
-are invariate under shifts in time.
+are invariant under shifts in time.
 
 
-\subparagraph{Exemple of non-stationary Markov chain:}
+\subparagraph{Example of non-stationary Markov chain:}
 
-A branching process with the number of childen from each from each
-parent in a generation, having a distribution that deoends on the
+A branching process with the number of children from each from each
+parent in a generation, having a distribution that depends on the
 generation number in fertility changes with n. 
 
 5) a process that satisfies the Markov property above is called 1st
@@ -713,7 +712,7 @@ However, if we can assume the special dependence structure induced
 by the Markov property then we'l see that the specification of the
 finite dimensional distribution is make much simpler. Of course, one
 has to be satisfied that the Markov property holds. There are statistical
-tests that can be used to test the Markov asssumption. 
+tests that can be used to test the Markov assumption. 
 
 Terminology:
 
@@ -733,8 +732,8 @@ matrix could be finite corresponding to $m$ states.
 Precision: $P_{ij}^{(n)}=P\left[X_{n}=j|X_{0}=i\right]$ = Probs of
 going from $i$ to $j$ in $n$ steps
 
-The aim here is to find an expresion for $p_{ij}^{(n)}$, or at least
-a mean of obtaining $p_{ij}^{(n)}$. In principle, the way is through
+The aim here is to find an expression for $P_{ij}^{(n)}$, or at least
+a mean of obtaining $P_{ij}^{(n)}$. In principle, the way is through
 what we call the \noun{Chapman-Kolmogorov} equations
 
 
@@ -764,22 +763,22 @@ P\left[X_{m+n}=j|X_{0}=i\right] & = & \sum_{k}P\left[X_{m+n},X_{m}=k|X_{0}=I\rig
  & = & \sum_{k}\frac{P\left[X_{m+n}=j,\,X_{m}=k,\,X_{0}=i\right]}{P\left[X_{0}=i\right]}\\
  & = & \sum_{k}\frac{P\left[X_{m+n}=j|X_{m}=k,\,X_{0}=i\right]P\left[X_{m}=k|X_{0}=i\right]P\left[X_{0}=i\right]}{P\left[X_{0}=i\right]}\\
  & = & \sum_{k}\underbrace{P\left[X_{m+n}=j|X_{m}=k\right]}_{\mbox{Markov prop}}P\left[X_{m}=k|X_{0}=i\right]\\
- & = & \sum_{k}\underbrace{p_{ik}^{(m)}p_{kj}^{(n)}}_{\mbox{Homogenity }}=p_{ij}^{(m+n)}
+ & = & \sum_{k}\underbrace{P_{ik}^{(m)}p_{kj}^{(n)}}_{\mbox{Homogenity }}=P_{ij}^{(m+n)}
 \end{eqnarray*}
 
 
-Which shows that $p_{ij}^{(m+n)}$ is just the i-j\textsuperscript{th}elements
-of the product of the matrices $P^{(m)}$ and $p^{(n)}$, i.e: $P^{(m+n)}=P^{(m)}P^{(n)}$
+Which shows that $P_{ij}^{(m+n)}$ is just the i-j\textsuperscript{th}elements
+of the product of the matrices $P^{(m)}$ and $P^{(n)}$, i.e: $P^{(m+n)}=P^{(m)}P^{(n)}$
 
 
 \paragraph{Corollary proof:}
 
 In particular take $m=1,\,n=1,\,\left[n+m=2\right]$ then $P^{(2)}=P.P=P^{2}$
-and then $P^{(3)}=P.P^{(2)}=P.P^{2}$ , ect\ldots{} This can be generalize
+and then $P^{(3)}=P.P^{(2)}=P.P^{2}$ , etc\ldots{} This can be generalize
 by induction to $P^{(n)}=P^{n}$
 
 In principle if the chain finite (it has finite many step) we can
-find $P_{ij}^{(n)}$ by doing succesive matrix multiplication.
+find $P_{ij}^{(n)}$ by doing successive matrix multiplication.
 
 If the number of step is infinite then this does not work and we will
 se that w often end up having to approximate $P_{ij}^{(n)}$ for large
@@ -789,25 +788,25 @@ $n$ by $\lim_{n\rightarrow\infty}P_{ij}^{(n)}$ (Still to come)
 \subsection{Some example.}
 
 
-\subsubsection{Exemple 1}
+\subsubsection{Example 1}
 
-Consider a communication system wich transmit the digits 0 or 1. Each
-digit transmitted must pass through serval stagr at each of which
+Consider a communication system which transmit the digits 0 or 1.
+Each digit transmitted must pass through serval stage at each of which
 there's a prob $p$ that the digit will be unchanged when it leaves
 the stage, let $X_{n}$ the digits the $n^{th}$ stage then $\left\{ X_{n},n=0,1,\ldots\right\} $
-is a 2-state markov chain with $P=\left[\begin{array}{cc}
+is a 2-state Markov chain with $P=\left[\begin{array}{cc}
 p & 1-p\\
 1-p & p
 \end{array}\right]$
 
 
-\subsubsection{Exemple 2 The simple random Walk}
+\subsubsection{Example 2 The simple random Walk}
 
-This is a basic well-studied non-trivial example of a markov chain
+This is a basic well-studied non-trivial example of a Markov chain
 that is constructed from basic properties easy to imagine.
 
 Suppose that a particle can jump between the integers ($\mathbb{Z}$)
-on the x-axis acording to the following rules
+on the x-axis according to the following rules
 \begin{enumerate}
 \item It can move either form it current position (integer) by moving either
 1 step to the left, or 1 step to the right
@@ -823,7 +822,7 @@ walk}
 
 \paragraph{Claim:}
 
-$\left\{ X_{n},\,n=0,1,2,\ldots\right\} $ form a markov chain.
+$\left\{ X_{n},\,n=0,1,2,\ldots\right\} $ form a Markov chain.
 
 We begin by writing down the transition matrix 
 \[
@@ -838,7 +837,7 @@ P=\left[\begin{array}{ccccccc}
 (This matrix is centered on 0).
 
 Next to show that $\left\{ X_{n},\,n=0,1,2,\ldots\right\} $ is a
-markov chain, write $X_{n}$ as $X_{n}=\sum_{l=0}^{n}y_{l}$ where
+Markov chain, write $X_{n}$ as $X_{n}=\sum_{l=0}^{n}y_{l}$ where
 $y_{l}$ are r.v.s such that $P\left[y_{l}=+1\right]=p,\,P\left[y_{l}=-1\right]=1-p$. 
 
 These $y_{l}$ are the step sizes, $X_{n}$ is a result of summing
@@ -846,7 +845,7 @@ the steps to the right plus to the left. Now let's check the Markov
 properties
 
 \begin{eqnarray*}
-P\left[X_{n+1}=j\,|\,X_{0}=0,X_{1}i_{1},\ldots,X_{n}=i\right] & = & P\left[\sum_{l=0}^{n+1}y_{l}=j\,|\,X_{0}=0,\sum_{l=0}^{1}y_{l}=i_{i},\ldots,\sum_{l=0}^{n}y_{l}=i\right]\\
+P\left[X_{n+1}=j\,|\,X_{0}=0,X_{1}=i_{1},\ldots,X_{n}=i\right] & = & P\left[\sum_{l=0}^{n+1}y_{l}=j\,|\,X_{0}=0,\sum_{l=0}^{1}y_{l}=i_{i},\ldots,\sum_{l=0}^{n}y_{l}=i\right]\\
  & = & P\left[\sum_{l=0}^{n}y_{l}+y_{n+1}=j\,|\,X_{0}=0,\ldots,\sum_{l=0}^{n}y_{l}=i\right]\\
  & = & P\left[\left(i+y_{n+1}\right)=j\,|\,\ldots\right]\\
  & = & P\left[y_{n+1}=j-i\,|\,X_{0}=0,\ldots,\sum_{l=0}^{n}y_{l}=i\right]\\
@@ -855,8 +854,8 @@ P\left[X_{n+1}=j\,|\,X_{0}=0,X_{1}i_{1},\ldots,X_{n}=i\right] & = & P\left[\sum_
 
 
 Because in fact because $y_{n+1}$ is independent of all the sums
-to the n\textsuperscript{th} by assumtion (3). But $P\left[y_{n+1}=j-i\right]=P\left[\sum_{l=0}^{n+1}y_{l}=j\,|\,\sum_{l=0}^{n}y_{l}=i\right]$
-which establishes the markov property.
+to the n\textsuperscript{th} by assumption (3). But $P\left[y_{n+1}=j-i\right]=P\left[\sum_{l=0}^{n+1}y_{l}=j\,|\,\sum_{l=0}^{n}y_{l}=i\right]$
+which establishes the Markov property.
 
 Further, $P\left[y_{n+1}=j-i\right]=\begin{cases}
 p & j=i+1\\
@@ -865,20 +864,20 @@ p & j=i+1\\
 \end{cases}$
 
 
-\subsubsection{Exemple 3}
+\subsubsection{Example 3}
 
 Consider a gambler who at each play wins \$1 with prob $p$ and loses
-\$1 with prob $1-p$. Supose that the gambler stop playing whe she
-goes broke or atteins \$$N$.
+\$1 with prob $1-p$. Suppose that the gambler stop playing when she
+goes broke or attains \$$N$.
 
 Let $X_{n}$ be the gambler fortune after $n$ games. We claim that
 $X_{n},\left\{ n=0,1,\ldots\right\} $ is a Markov chain with what
-one known as absorbing stads at $0$ and $N$: once you are at $0$
+one known as absorbing state at $0$ and $N$: once you are at $0$
 or $N$ you remain there with prop $1$ for all $i$. You have to
 go some-where from state $i$.
 
 
-\section{Communcating, and classification of states}
+\section{Communicating states and classification of states}
 
 
 \subsection{Finite dimensional distributions}
@@ -895,7 +894,7 @@ finite dimensional distributions are uniquely determined by $\left\{ P[X_{0}=i],
 
 \subsubsection*{Proof:}
 
-We must know that we can wite the joint distribution of any set $X_{n1},X_{n2}....$
+We must know that we can write the joint distribution of any set $X_{n1},X_{n2}....$
 in term of $P[X_{0}=i]$ and a ``bunch'' of i-step transition probabilities
 $P_{ij}$
 
@@ -922,7 +921,7 @@ P\left[A_{1}\cap A_{2}...A_{n}\right] & = & P\left[A_{n}|A_{1}\cap A_{2}\ldots A
 
 Let$P_{ij}^{n+m}$be $P[X_{m+n}=j|X_{0}=i]$
 
-It is easy to see that the markov propety is satisfied (check this
+It is easy to see that the Markov property is satisfied (check this
 formality).
 
 In this case we have : 
@@ -938,8 +937,8 @@ In this case we have :
 
 \subsection{The classification of states}
 
-Eventually we'll be studing the limiting behavior of $p_{ij}^{(n)}$as
-$n\rightarrow\infty$. In order to do so require the classificatinon
+Eventually we'll be studying the limiting behavior of $P_{ij}^{(n)}$as
+$n\rightarrow\infty$. In order to do so require the classification
 of the states of a Markov chain and the classification of the chain
 themselves
 
@@ -948,11 +947,11 @@ themselves
 
 Let $\left\{ X_{n},n=0,1,2,..\right\} $ be a Markov chain with transmission
 matrix $P=\{P_{ij}\}.$Then we say that the state $j$ is accessible
-from the state $i$, if and only if there exist an $n>0$ s.t. $p_{ij}^{(n)}>0$.
+from the state $i$, if and only if there exist an $n>0$ s.t. $P_{ij}^{(n)}>0$.
 {[}i.e. there is a positive prob of reaching state j from state i
 in a finite number of steps{]}
 
-Note that $p_{ij}^{(n)}$is not the probability of reaching j from
+Note that $P_{ij}^{(n)}$is not the probability of reaching j from
 i for the first time in n steps. 
 
 We write $i\rightarrow j$ to mean ``j is accessible from i''
@@ -967,28 +966,28 @@ $j$ \emph{communicate}, and write $i\leftrightarrow j$
 \paragraph{Theorem:}
 
 If $i\leftrightarrow j$ and $j\leftrightarrow k$, then $i\rightarrow k$
-and conversly
+and conversely
 
 
-\subparagraph{Corrolary: $i\leftrightarrow j\wedge j\leftrightarrow k\Rightarrow i\leftrightarrow k$}
+\subparagraph{Corollary: $i\leftrightarrow j\wedge j\leftrightarrow k\Rightarrow i\leftrightarrow k$}
 
-Proof: $i\rightarrow j\Rightarrow\exists n_{0}>0$ such that $p_{ij}^{(n)}>0$
-and $j\rightarrow k\Rightarrow\exists n_{1}$ such that $p_{jk}^{(n)}>0$
+Proof: $i\rightarrow j\Rightarrow\exists n_{0}>0$ such that $P_{ij}^{(n)}>0$
+and $j\rightarrow k\Rightarrow\exists n_{1}$ such that $P_{jk}^{(n)}>0$
 
 Let $n=n_{0}+n_{1}$
 
-Then $p_{ik}^{(n)}=p_{ik}^{(n_{0}+n_{1})}=\sum_{l}p_{il}^{(n_{0})}*p_{lk}^{(n_{1})}\geq p_{ij}^{(n_{0})}*p_{jk}^{(n_{1})}>0$
+Then $P_{ik}^{(n)}=P_{ik}^{(n_{0}+n_{1})}=\sum_{l}P_{il}^{(n_{0})}*P_{lk}^{(n_{1})}\geq P_{ij}^{(n_{0})}*P_{jk}^{(n_{1})}>0$
 
 $i\rightarrow k$ done!
 
-The corollary is immediate same $i\leftrightarrow j\Leftrightarrow j\leftrightarrow j$
+The corollary is immediate same $i\leftrightarrow j\Rightarrow j\leftrightarrow j$
 
 
 \subsubsection{Definition of states}
 
 Given a state j of a Markov chain, its communicating class $C{}_{j}$
 is defined to be the set of all state that communicate with $j$,
-in the sense that $p_{jk}^{(n)}>0$ for some $n_{0}>0$ $P_{kj}^{(n)}>0$
+in the sense that $P_{jk}^{(n)}>0$ for some $n_{0}>0$ $P_{kj}^{(n)}>0$
 for some $n_{1}>0.$ It may happen that $C_{j}$ is empty {[}i.e.
 j communicates with no state, not even with itself{]}. In this case
 we say that $\left\{ j\right\} $ is a non-return state. 
@@ -997,7 +996,7 @@ If $C_{j}$ is non-empty, then, $j\in C_{oj}$, to see this note that
 $C_{j}$ non empty implies that there must exist a.k such that $j\rightarrow k$
 (and $k\rightarrow j$)
 
-$\exists n_{0}\,:\,p_{jk}^{(n0)}>0$ and $\exists n_{1}\,:\,p_{kj}^{(n1)}>0$.
+$\exists n_{0}\,:\,P_{jk}^{(n0)}>0$ and $\exists n_{1}\,:\,P_{kj}^{(n1)}>0$.
 Let $n=n_{0}+n_{1}$. Then $P_{jj}^{(n)}\geq P_{jk}^{(n0)}P_{kj}^{(n1)}>0$.
 $j$ communicates with itself, and this $j\in C_{j}$
 
@@ -1051,8 +1050,8 @@ one non return state
 \subsubsection*{Proof }
 
 Choose a state $j_{1}$ and let $C_{1}=C_{j_{1}}$, the class of all
-the states that communicate with $j_{1}$according as $j_{1}$is a
-return or non-return state, if $j_{1}$is a non-return state, then
+the states that communicate with $j_{1}$ according as $j_{1}$ is
+a return or non-return state, if $j_{1}$ is a non-return state, then
 set $C_{1}=\left\{ j_{1}\right\} $ 
 
 Then choose $j_{2}$ not in $C_{1},$and let $C_{2}=C_{j_{2}}$or
@@ -1109,13 +1108,14 @@ chain (by deleting all rows and colons corresponding to states outside
 of $C$) and treated by itself as a Markov chains it follows that
 for the study asymptotic properties of a Markov chain, it is sufficient
 to restrict one self to chains in which there is exactly one closed
-communicating classare all the other communicating class are non closed
+communicating class and all the other communicating class are non
+closed
 
 
-\subsection{Futher Cassification of states.}
+\subsection{Further Classification of states.}
 
 In order to obtain certain asymptotic properties of a Markov chain,
-we shall make futher classification of states
+we shall make further classification of states
 
 
 \paragraph{Definition:}
@@ -1123,7 +1123,7 @@ we shall make futher classification of states
 For any state $j,k$ let $f_{jk}$ denote the probability starting
 from $j$ the process will get into state $k$
 
-Let $g_{kk}$ denote the probability that the chain will retrun infinitly
+Let $g_{kk}$ denote the probability that the chain will return infinitely
 often to state $k$ given that it start in $k$
 
 
@@ -1136,7 +1136,7 @@ in $n$ step. Our descriptive definition will suffice
 
 \paragraph{Definition:}
 
-We denote $f_{jk}^{(n)}$ the conditionnal probability of entering
+We denote $f_{jk}^{(n)}$ the conditional probability of entering
 $k$ from $j$ from the first time in exactly $n$ steps 
 
 the time it takes to enter $k$ from $j$ for the first time is called
@@ -1145,24 +1145,24 @@ the first passage time.
 
 \paragraph{Note:}
 
-$f_{jk}^{(n)}can$be made precise by formaly saying that if we are
-to reach $k$ for the first time from $j$ in $n$ steps then the
-chains must not have visited $k$ in the first $n-1$steps and then
-on n\textsuperscript{th}stap have jumped to state $k$
+$f_{jk}^{(n)}$ can be made precise by formally saying that if we
+are to reach $k$ for the first time from $j$ in $n$ steps then
+the chains must not have visited $k$ in the first $n-1$ steps and
+then on the n\textsuperscript{th} step have jumped to state $k$
 
 
 \paragraph{Example:}
 
 Let $\left\{ X_{n},n=0,1,\ldots\right\} $ be a 2-states Markov chain
-(with state 0 and 1) find the 1\textsuperscript{th}passage probs
+(with state 0 and 1) find the 1\textsuperscript{st}passage probs
 $f_{jk}^{(n)}.$ Ex: $f_{00}^{(n)}=P_{01}P_{11}^{n-2}P_{10}\,n\geq2$
 
 
 \paragraph{Proof:}
 
-it's a mistake ti say that the product (and power $n-2$) arise because
+it's a mistake to say that the product (and power $n-2$) arise because
 of independence of various event. They are certainly independent.
-However we can condition backward and use the markov property.
+However we can condition backward and use the Markov property.
 
 \begin{eqnarray*}
 f_{00}^{(n)} & = & P\left[X_{1}=1,X_{2}=1,\ldots,X_{n-1}=1,X_{n}=0|X_{n}=0\right]\\
@@ -1170,17 +1170,17 @@ f_{00}^{(n)} & = & P\left[X_{1}=1,X_{2}=1,\ldots,X_{n-1}=1,X_{n}=0|X_{n}=0\right
  &  & \cdots P\left[X_{1}=1|X_{0}=0\right]\\
  & = & P\left[X_{n}=0|X_{n-1}=1\right]P\left[X_{n-1}=1|X_{n-2}=1\right]\cdots P\left[X_{1}=1|X_{0}=0\right]\\
  &  & \mbox{[We used Markov property]}\\
- & = & p_{01}p_{11}^{n-2}p_{10}\\
+ & = & P_{01}P_{11}^{n-2}P_{10}\\
  &  & \mbox{[We used Homogeneity}]
 \end{eqnarray*}
 
 
-The other $f_{jk}^{(n)}$'s fllow similarly
+The other $f_{jk}^{(n)}$'s follow similarly
 
 
 \subsubsection*{Theorem:}
 
-For any states $j$ and $k$ $f_{jk}=\sum_{n=1}^{\infty}f_{ik}$
+For any states $j$ and $k$ $f_{jk}=\sum_{n=1}^{\infty}f_{ik}^{(n)}$
 
 
 \paragraph{Proof:}
@@ -1197,7 +1197,7 @@ For any states $j$ and $k$ and $n\geq1$ $P_{jk}^{(n)}=\sum_{m=1}^{n}f_{jk}^{(m)}
 \paragraph{Proof: }
 
 If you are in state $k$ (starting in $j$) \emph{at} the n\textsuperscript{th}step
-then you must have entered $k$ for the 1\textsuperscript{th}at some
+then you must have entered $k$ for the 1\textsuperscript{st}at some
 $m$ and then in the remaining $n-m$ step, be in state $k$ (starting
 from $k$)
 
@@ -1205,7 +1205,7 @@ we're talking of a disjoin union of these events. again we use the
 Markov property and homogeneity to get the product
 
 
-\subsubsection{Theorem: }
+\subsubsection*{Theorem: }
 
 For any state $j$ and $k$: 
 
@@ -1249,4 +1249,489 @@ that is no matter what finite set of state you choose, you will visit
 these states only a finite number of times.
 
 To proves this all we need to do is show that $f_{kk}<1$
+
+<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<
+Updated upstream=======<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<
+HEAD<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<
+HEAD=======>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>
+origin/master>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>
+Stashed changes<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<
+Updated upstream$g_{kk}=lim_{n\rightarrow\infty}(f_{kk})^{n}$ ======= <<<<<<< HEADg_{kk} = 
+
+
+$g_{jk}=f_{jk}*g_{kk}$<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<
+Updated upstream 
+
+To prove =======<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<
+HEAD to prove >\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>
+Stashed changes$g_{kk}=0$ for k=1,2, all we need to do is to show
+that $f_{kk}<1,\,k=1,2,\ldots$
+
+Now, $f_{kk}$= prob of ever return to k from k
+
+The event denote A \{ever return to K from K\} $\subset$(denote B)
+\{ not goint to 0 in the next generation from a generation of size
+k\}
+
+$P(A)\leq P(B)=1-(P_{0})^{k}$where $P_{0}$ = prob a parent wil have
+children
+
+$(P_{0})^{k}$ = prob that all parent will have 1 children (independant
+of the number of children per parent)
+
+If $P_{0}>0$, then $f_{kk}\leq1-(p_{0})^{k}<1$
+
+$g_{kk}=0$ If $p_{0}>0,$ there is zero probability of making infinitely
+many returns to any positive state. (generation size). That is, either
+the generation sizes tend to infinity (may not monotonically) or a
+generation w/ no individuals ($X_{n}=0)$ is reached, in which case,
+of course, the state 0 will be visited thereafter. What about the
+case $P_{0}=0$? The above argument gives $f_{kk}\leq1-0=1$ which
+is not informative. However, this is the trivial case since each parent
+has at least 1 child and the generation size must then increase to
+infinity.
+
+The following theorem help us decide whether $f_{kk}<1$ of $f_{kk}=1$
+
+Theorem : For any state in a Markov chain, $f_{kk}<1$ <=> $\sum_{n=1}p_{kk}^{(n)}<\infty$, 
+
+and $f_{kk}=1$ <=> $\sum_{n=1}^{\infty}$$p_{kk}^{(n)}$= +$\infty$
+(will not be proven : uses much analysis)
+
+proof sketch
+
+Lemma: Let $p_{jk}(z)=\sum_{n=0}^{\infty}z^{n}p_{jk}^{(n)}=d_{jk}+\sum_{n=1}^{\infty}$z$^{n}p_{jk}^{(n)}$where
+$d_{jk}=$1 if j=K and 0 otherwise
+
+let $F_{jk}(z)$=$\sum_{n=1}^{\infty}z^{n}f_{jk}^{(n)}$ $P_{jk}(z)$
+cd $F_{jk}(z)$ are defined for |z|<1 There are called generating
+function
+
+Proof |$P_{jk(z)}|$$\leq\sum_{n=0}^{\infty}|z|^{n}p_{jk}^{(n)}$$\leq$$\sum_{n=0}^{\infty}|z|^{(n)}$
+======= 
+
+To prove >\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>
+origin/master<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<
+HEAD$p_{jk}^{(n)}$ $\leq1$ which converges if |z|$<1$(gemometric
+series)
+
+Similirly for $F_{jk}(z)$
+
+Theorem : For any two states j and is a MC and |z|<1
+
+(1) $P_{kk}(z)=Fjk(z)P_{kk}(z)$ if j different k
+
+(2) $P_{kk}$(z)=1=$F_{kk}(z)P_{kk}(z)$
+
+(3) $P_{kk}$(z)= 1/1-$F_{kk}(z)$, $F_{kk}$(z)=1- 1/$P_{kk}(z)$ ======= -------------------------------------------------------------------------------- ------------------------------ ======= 
+ for k=1,2, all we need to do is to show that $f_{kk}<1,\,k=1,2,\ldots$
+
+Now, $f_{kk}$= prob of ever return to k from k
+
+The event denote A \{ever return to K from K\} $\subset$(denote B)
+\{ not goint to 0 in the next generation from a generation of size
+k\}
+
+$P(A)\leq P(B)=1-(P_{0})^{k}$where $P_{0}$ = prob a parent wil have
+children
+
+$(P_{0})^{k}$ = prob that all parent will have 1 children (independant
+of the number of children per parent)>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>
+origin/master
+
+If $P_{0}>0$, then $f_{kk}\leq1-(p_{0})^{k}<1$
+
+$g_{kk}=0$ If $p_{0}>0,$ there is zero probability of making infinitely
+many returns to any positive state. (generation size). That is, either
+the generation sizes tend to infinity (may not monotonically) or a
+generation w/ no individuals ($X_{n}=0)$ is reached, in which case,
+of course, the state 0 will be visited thereafter. What about the
+case $P_{0}=0$? The above argument gives $f_{kk}\leq1-0=1$ which
+is not informative. However, this is the trivial case since each parent
+has at least 1 child and the generation size must then increase to
+infinity.
+
+The following theorem help us decide whether $f_{kk}<1$ of $f_{kk}=1$
+
+
+\section{Theorem 100}
+
+\begin{eqnarray}
+f_{kk}<1 & \Leftrightarrow & \sum_{n=1}^{\infty}P_{kk}^{(n)}<\infty\nonumber \\
+f_{kk}=1 & \Leftrightarrow & \sum_{n=1}^{\infty}P_{kk}^{(n)}=+\infty\label{eq:th100}
+\end{eqnarray}
+
+
+
+\subsubsection*{proof:}
+
+let's set $P_{jk}(z)=\sum_{n=0}^{\infty}z^{n}P_{jk}^{(n)}$ and $F_{jk}(z)=\sum_{n=0}^{\infty}z^{n}f_{jk}^{(n)}$
+
+Claim: 
+\begin{equation}
+P_{kk}(z)=\frac{1}{1-F_{kk}(z)}\;,\,F_{kk}(z)=1-\frac{1}{P_{kk}(z)}\label{eq:71}
+\end{equation}
+
+
+
+\paragraph{Idea of how \ref{eq:71} is used to prove theorem 100 (\ref{eq:th100}).}
+
+For the moment accept the following argument which is actually false.
+
+using \ref{eq:71}, we have $F_{kk}(1)=1-\frac{1}{P_{kk}(1)}$. 
+
+We note that $F_{jk}(1)=f_{kk}=\sum_{n=0}^{\infty}f_{jk}^{(n)}$ and
+$P_{jk}(1)=\sum_{n=0}^{\infty}P_{jk}^{(n)}$.
+
+Thus \ref{eq:71} says $f_{kk}=1-\frac{1}{\sum_{n=0}^{\infty}P_{kk}^{(n)}}$ 
+
+We see immediatly that $f_{kk}<1\Leftrightarrow\sum_{n=1}^{\infty}P_{kk}^{(n)}<\infty$
+and $f_{kk}=1\Leftrightarrow\sum_{n=1}^{\infty}P_{kk}^{(n)}=+\infty$
+
+Now this argument is flowed since neither $P_{kk}(z)$ nor $F_{kk}(z)$
+is defined for $z=1$. To get around this difficulty we need a result
+in analysis that allows us to consider $\lim_{z\uparrow1}P_{kk}(1)$
+and $\lim_{z\uparrow1}F_{kk}(1)$
+
+There is an inportant limit theorem that will be used shortly:
+
+For any state $k$, define $m_{kk}=\sum_{n=1}^{\infty}nf_{kk}^{(n)}$
+
+
+\subsection{Rigorous proof}
+
+
+\paragraph{Theorem: }
+
+Let $k$ be any state such that $f_{kk}=1$ and $m_{kk}<\infty$.
+We call $m_{kk}$ the expected (or mean) recurence (return) time to
+state $k$. Then 
+\begin{eqnarray}
+\lim_{n\rightarrow\infty}\frac{1}{n}\sum_{m=1}^{n}P_{kk}^{(m)} & = & \frac{1}{m_{kk}}\label{eq:80}\\
+\lim_{n\rightarrow\infty}\frac{1}{n}\sum_{m=1}^{n}P_{jk}^{(m)} & = & f_{jk}\frac{1}{m_{kk}}\label{eq:81}
+\end{eqnarray}
+
+
+
+\paragraph{Proof:}
+
+A rigorous proof use generating function once again and a quite deep
+theorem in analysis.
+
+However we can give a plausible argument as to why (\ref{eq:80})
+and (\ref{eq:81}) might be true.
+
+
+\paragraph{Recall the (weak) law of large numbers:}
+
+Let $X_{1},X_{2}$ be i.i.d r.v.s with $E(X)=\mu<\infty$ then $\frac{1}{n}\sum_{i=1}^{n}X_{i}\rightarrow\mu$
+as $n\rightarrow\infty$
+
+
+\paragraph{The strong law of large numbers:}
+
+Under the same assumption $\frac{1}{n}\sum_{i=1}^{n}X_{i}(w)\rightarrow\mu$
+as $n\rightarrow\infty$ with probability $1$ (almost surely)
+
+
+\paragraph{Plausible argument}
+
+Let the chain run until we made $n$ return to $k$ (from $k$) this
+will require a random number of steps in the chain. Call this random
+number $N_{kk}(n)$.
+
+Let $T_{i}(k)$, for $i=1,2,\ldots$ be the observed return time to
+state $k$ . The $T_{i}(k)$'s are easily seen to be i.i.d r.v.s Then
+the observed proportion of time that the chain is in state $k$ is
+given by $\frac{n}{\underset{N_{kk}(n)}{\underbrace{T_{1}(k)+\cdots+T_{n}(k)}}}$
+we write this as $\frac{1}{\frac{1}{n}\sum_{i=1}^{n}T_{i}(k)}$.
+
+Let $n\rightarrow\infty$ and by the Strong law of large number $\frac{1}{n}\sum_{i=1}^{n}T_{i}(k)\overset{\mbox{w.p 1}}{\rightarrow}m_{kk}$
+as by definition <\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<
+Updated upstream$\left[E\left[T_{i}(k)\right]=m_{kk}\right]$ and
+so 
+
+How does this relate to (\ref{eq:80}) ?
+
+We can evaluate the limiting proportion of time spent in state $k$
+with a different scheme. Now allow the chain to run for $n$ transition
+
+\begin{eqnarray*}
+I_{m}(k) & = & 0\mbox{ if the chains is in state \ensuremath{k} at the \ensuremath{m^{th}} step}\\
+ & = & 0\mbox{ otherwise}
+\end{eqnarray*}
+
+
+Then $\frac{1}{n}\sum_{m=1}^{n}I_{m}(k)$ is the observed proportion
+of time that we are in state $k$ (out of $n$ steps)
+
+We have $P\left[I_{m}(k)|X_{0}=k\right]=P_{kk}^{(m)}$ 
+
+therefore $\frac{1}{n}\sum_{m=1}^{n}P_{kk}^{(m)}$is the expected
+proportion of times in state $k$ (from $k$) in steps of the chain
+
+
+\paragraph{Let's put this together}
+
+We had $\frac{n}{\sum_{i=1}^{n}T_{i}(k)}\overset{\mbox{w.p 1}}{\rightarrow}\frac{1}{m_{kk}}$
+and so by the dominate convergence theorem $E\left[\frac{n}{\sum_{i=1}^{n}T_{i}(k)}\right]\rightarrow E\left[\frac{1}{m_{kk}}\right]=\frac{1}{m_{kk}}$
+
+i.e by the 1\textsuperscript{st} samplign scheme the expected proportion
+of time in step $k\rightarrow\frac{1}{m_{kk}}$ 
+
+$\frac{1}{n}\sum_{m=1}^{n}P_{kk}^{(m)}\rightarrow\frac{1}{m_{kk}}$
+
+
+\section{Recurrent and Transient states and classes}
+
+
+\paragraph{Definition:}
+
+A state $k$ is said \emph{recurrent} if $f_{kk}=1$=======$\left[E\left[T_{i}(k)\right]=m_{kk}\right]$ >>>>>>> origin/master
+ and so 
+
+How does this relate to (\ref{eq:80}) ?
+
+We can evaluate the limiting proportion of time spent in state $k$
+with a different scheme. Now allow the chain to run for $n$ transition
+
+\begin{eqnarray*}
+I_{m}(k) & = & 0\mbox{ if the chains is in state \ensuremath{k} at the \ensuremath{m^{th}} step}\\
+ & = & 0\mbox{ otherwise}
+\end{eqnarray*}
+
+
+Then $\frac{1}{n}\sum_{m=1}^{n}I_{m}(k)$ is the observed proportion
+of time that we are in state $k$ (out of $n$ steps)
+
+We have $P\left[I_{m}(k)|X_{0}=k\right]=P_{kk}^{(m)}$ 
+
+therefore $\frac{1}{n}\sum_{m=1}^{n}P_{kk}^{(m)}$is the expected
+proportion of times in state $k$ (from $k$) in steps of the chain
+
+
+\paragraph{Let's put this together}
+
+We had $\frac{n}{\sum_{i=1}^{n}T_{i}(k)}\overset{\mbox{w.p 1}}{\rightarrow}\frac{1}{m_{kk}}$
+and so by the dominate convergence theorem $E\left[\frac{n}{\sum_{i=1}^{n}T_{i}(k)}\right]\rightarrow E\left[\frac{1}{m_{kk}}\right]=\frac{1}{m_{kk}}$
+
+i.e by the 1\textsuperscript{st} samplign scheme the expected proportion
+of time in step $k\rightarrow\frac{1}{m_{kk}}$ 
+
+$\frac{1}{n}\sum_{m=1}^{n}P_{kk}^{(m)}\rightarrow\frac{1}{m_{kk}}$
+
+
+\section{Recurrent and Transient states and classes}
+
+
+\paragraph{Definition:}
+
+A state $k$ is said \emph{recurrent} if $f_{kk}=1$>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>
+Stashed changes.
+
+
+\paragraph{Definition:}
+
+A state $k$ is said to be \emph{transient} if $f_{kk}<1$
+
+Transient mean that $k$ will be visited only a finitely many time.
+
+A class of state is said to be recurrent (transient) if all state
+in it are recurrent (transient) 
+
+
+\paragraph{Theorem: }
+
+if $C$ is a communicating class of states in a Markov chain, then
+if any state of $C$ is recurrent (transient) then all states in $C$
+are recurrent (transient)
+
+
+\subsubsection*{Example}
+
+As an example consider the simple random walk on the integer. 
+
+We shall show that the set of all state is recurent iff $p=\frac{1}{2}$
+(an transient if not) 
+
+
+\paragraph{Proof: }
+
+first note that by the previous theorem is sufficient to show that
+the state $0$ is recurrent iff $p=\frac{1}{2}$ . Reason: clearly
+in the chain all states communicates.
+
+We prove this claim by using Theorem 100 (\ref{eq:th100}) to show
+that <\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<
+Updated upstream$\sum_{n=0}^{\infty}P_{00}^{(n)}$ ======= 
+ iff $p=\frac{1}{2}$
+
+We thus need an expression for <\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<
+Updated upstream$P_{00}^{(n)}$ ======= 
+.
+
+We first note that <\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<\textcompwordmark{}<
+Updated upstream$P_{00}^{(2n-1)}=0\,n=1,2,\ldots$
+
+Thus consider only the case $P_{00}^{(2n)}\,n=1,2,\ldots$, in this
+case $P_{00}^{(2n)}=\binom{2n}{n}p^{n}\left(1-p\right)^{2n-n}\,n=1,2,\ldots$
+because we need to do $n$ step to the left and then $n$ to the right 
+
+so to examine $\sum_{n=0}^{\infty}P_{00}^{(n)}$ we need to examine
+$\sum_{n=1}^{\infty}\binom{2n}{n}p^{n}\left(1-p\right)^{2n-n}=\sum_{n=1}^{\infty}\frac{2n!}{n!n!}p^{n}\left(1-p\right)^{2n-n}$
+
+this looks bad because of factorials. Thus we use \noun{sterlings}
+formula that gives an assymptotic expression fo $n!$ $n!\sim n^{n+\frac{1}{2}}e^{-n}\sqrt{2\pi}$
+as $n\rightarrow\infty$. this mean $\lim_{n\rightarrow\infty}\frac{n!}{n^{n+\frac{1}{2}}e^{-n}\sqrt{2\pi}}=1$
+hus if we use this formula over our sum we get $P_{00}^{(2n)}\sim\frac{\left[4p\left(1-p\right)\right]^{n}}{\sqrt{\pi n}}$
+finally examinating $\sum_{n=0}^{\infty}P_{00}^{(n)}$ reduce to examinating
+$\sum_{n=1}^{\infty}\frac{\left[4p\left(1-p\right)\right]^{n}}{\sqrt{\pi n}}$ 
+
+this the power series $\sum_{n=1}^{\infty}a_{n}x^{n}$ with $x=4p(1-p)$
+and $a_{n}=\frac{1}{\sqrt{\pi n}}$ converge if and only if $p\neq\frac{1}{2}$
+and diverge if $p=\frac{1}{2n}$ so by theorem 100 (\ref{eq:th100}),
+the state is recurent if and only if $p=\frac{1}{2}$ (and transient
+if $p\neq\frac{1}{2}$ )
+
+
+\paragraph{Notes:}
+\begin{enumerate}
+\item Intuitively if $p\neq\frac{1}{2}$ there's a drift in one way away
+from $0$ avoiding recurence
+\item since all state clearly communicate \emph{all} state are recurrent
+if and only if $p=\frac{1}{2}$ and transient $p\neq\frac{1}{2}$
+\item It can be shown that in 2 dimension the simple random walk is recurent
+iff $p=\frac{1}{4}$
+\item In 3 or more dimension the simple random walk is \emph{always} transicient,
+even if probability of moving in any direction is the same
+\end{enumerate}
+
+\subsubsection*{Theorem : }
+
+A recurrent communicating class is closed. A (transient ???) closed
+communicating class must possess infinitely manu states.
+
+
+\paragraph{Proof: }
+
+We show that $f_{kk}=1$ and k->j implies $f_{jk}=1$ i.e. $k\leftrightarrow j$
+{[}i.e. the only way that you can get to a state j is if that if that
+state is in $C.$This implies $C$ be closed.
+
+
+\paragraph{Proof: }
+
+Intuitively does this seem right. Well, we know that there is a path
+from k to j with positive prob. This cannot be a ``bad'' path, in
+the sense that with w.p. we can get back to k from j, since we would
+not be able to say w.p. 1 we can g from k to k. Thus we must have
+that $j\rightarrow k$ i.e. $k\leftrightarrow j$.
+
+
+\paragraph{Formalities: }
+
+For any state k and integer n , $g_{kk}=\sum_{allstates}p_{ki}^{(n)}g_{ik}$
+(obvious + you have to be somewhere after n steps (starting in k)
+and then make infinitely many returns to k from that ``somewhere'')
+
+$1-g_{kk}=\sum_{allstates}p_{ki}^{(n)}(1-g_{ik})$since $g_{kk}=1,$
+$1-g_{kk}=0$ and hence, $\sum_{states}p_{ki}^{(n)}\{1-g_{ik}\}$
+for every n
+
+Now return to thr state $j$ that we were considering since $k\rightarrow j$
+$\exists$ an N such that $p(N\text{)}_{kj}>0.$It follows that $(1-g_{jk})=0$
+i.e. $g_{jk}=1$. Now, $g_{jk}=$$f_{jk}g_{kk}$means that if k is
+reccurent and hence $g_{kk}=1$ we mush have $f_{jk}=1,$ which is
+what we wanyed to show. To prove that a transient closed communicating
+class must be infinite, we note that for any state j, $g_{jk}=0$
+if k is transient. 
+
+I.e. consequently, if $C$ is a closed and transient communicating
+class then C me possess infinitely many states.
+
+Reason: With prob 1 the chain remains only for a finite number of
+steps in any finite set of transiant states. Done! We can now strengthen
+our theorem on the partition of the states of a chain into disjoint
+communicating classes and non-return states.
+
+
+\subsubsection*{Theorem}
+
+The set S, of return states of a Markov chain, can be written as the
+union of disjoint communcating classes, 
+
+S = $C_{1\cup}C_{2}...where$ class $C,$ is either (i) closed and
+recurrent, (ii) closed and transient or (iii) non closed and transiant. 
+
+CLosed Non closed
+
+recurrent `/fine/ does not exist
+
+transiant/ does not exist in a finite chain / fine
+
+
+\subsubsection*{New Terminology}
+\begin{enumerate}
+\item if all state of a Markov chain communicate we say that this chain
+is \emph{irreductible}
+\item In a markov chain if $f_{nn}=1$ i.e the chain is recurrent, we say
+that the state $k$ is \emph{positive recurrent} if $m_{kk}<0$ (i.e
+the exepected time to return to $k$ from $k$ is finite)
+
+
+If $m_{kk}=+\infty$ the we say the state is null recurrent
+
+\item Returning to the randoim walk it turns out that even in $1$ dimension
+and $p=\frac{1}{2}$ , $m_{kk}=+\infty$\\
+i.e the simple random walk is null recurrent=======$P_{kk}^{(2n-1)}=0\,n=1,2,\ldots$
+\end{enumerate}
+Theorem : A recurrent communicating class is closed. A closed communicating
+class must possess infinitely manu states.
+
+Proof: We show that $f_{kk}=1$ and k->j implies $f_{jk}=1$ i.e.
+k<->j {[}i.e. the only way that you can get to a state j is if that
+if that state is in $C.$This implies $C$be closed.
+
+Proof: Intuitively does this seem right. Well, we know that there
+is a path from k to j with positive prob. This cannot be a ``bad''
+path, in the sense that with w.p. we can get back to k from j, since
+we would not be able to say w.p. 1 we can g from k to k. Thus we must
+have that j -> k i.e. k<->j.
+
+Formalities: For any state k and integer n , $g_{kk}=\sum_{allstates}p_{ki}^{(n)}g_{ik}$
+(obvious + you have to be somewhere after n steps (starting in k)
+and then make infinitely many returns to k from that ``somewhere'')
+
+1-$g_{kk}$ = $\sum_{allstates}p_{ki}^{(n)}(1-\mbox{g\_ik})$ since
+$g_{kk}=1,$ 1-$g_{kk}=0$ and hence, $\sum_{states}p_{ki}^{(n)}\{1-g_{ik}\}$
+for every n
+
+Now return to thr state j that we were considering since k->j, $\exists$
+an N such that $p(N\text{)}_{kj}>0.$It follows that (1-$g_{jk})=0$
+i.e. $g_{jk}=1$. Now, $g_{jk}=$$f_{jk}g_{kk}$means that if k is
+reccurent and hence $g_{kk}=1$ we mush have $f_{jk}=1,$ which is
+what we wanyed to show. To prove that a transient closed communicating
+class must be infinite, we note that for any state j, $g_{jk}=0$
+if k is transient. 
+
+I.e. consequently, if $C$is a closed and transient communicating
+class then C me possess infinitely many states.
+
+Reason: With prob 1 the chain remains only for a finite number of
+steps in any finite set of transiant states. Done! We can now strengthen
+our theorem on the partition of the states of a chain into disjoint
+communicating classes and non-return states.
+
+Theorem: The set S, of return states of a Markov chain, can be written
+as the union of disjoint communcating classes, 
+
+S = $C_{1\cup}C_{2}...where$ class $C,$ is either (i) closed and
+recurrent, (ii) closed and transient or (iii) non closed and transiant. 
+
+CLosed Non closed
+
+recurrent `/fine/ does not exist
+
+transiant/ does not exist in a finite chain / fine>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>\textcompwordmark{}>
+Stashed changes
 \end{document}

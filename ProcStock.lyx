@@ -4788,7 +4788,8 @@ To proves this all we need to do is show that
 \end_layout
 
 \begin_layout Standard
-
+<<<<<<< Updated upstream=======<<<<<<< HEAD<<<<<<< HEAD=======>>>>>>> origin/mas
+ter>>>>>>> Stashed changes
 \family roman
 \series medium
 \shape up
@@ -4800,7 +4801,9 @@ To proves this all we need to do is show that
 \uwave off
 \noun off
 \color none
-\begin_inset Formula $g_{kk}=lim_{n\rightarrow\infty}(f_{kk})^{n}$
+<<<<<<< Updated upstream
+\begin_inset Formula $g_{kk}=lim_{n\rightarrow\infty}(f_{kk})^{n}$ ======= <<<<<<< HEADg_{kk} = 
+
 \end_inset
 
 
@@ -4810,11 +4813,11 @@ To proves this all we need to do is show that
 \begin_inset Formula $g_{jk}=f_{jk}*g_{kk}$
 \end_inset
 
- 
+<<<<<<< Updated upstream 
 \end_layout
 
 \begin_layout Standard
-To prove 
+To prove =======<<<<<<< HEAD to prove >>>>>>> Stashed changes
 \family roman
 \series medium
 \shape up
@@ -4871,6 +4874,297 @@ where
 
  = prob that all parent will have 1 children (independant of the number
  of children per parent)
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $P_{0}>0$
+\end_inset
+
+, then 
+\begin_inset Formula $f_{kk}\leq1-(p_{0})^{k}<1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g_{kk}=0$
+\end_inset
+
+ If 
+\begin_inset Formula $p_{0}>0,$
+\end_inset
+
+ there is zero probability of making infinitely many returns to any positive
+ state.
+ (generation size).
+ That is, either the generation sizes tend to infinity (may not monotonically)
+ or a generation w/ no individuals (
+\begin_inset Formula $X_{n}=0)$
+\end_inset
+
+ is reached, in which case, of course, the state 0 will be visited thereafter.
+ What about the case 
+\begin_inset Formula $P_{0}=0$
+\end_inset
+
+? The above argument gives 
+\begin_inset Formula $f_{kk}\leq1-0=1$
+\end_inset
+
+ which is not informative.
+ However, this is the trivial case since each parent has at least 1 child
+ and the generation size must then increase to infinity.
+\end_layout
+
+\begin_layout Standard
+The following theorem help us decide whether 
+\begin_inset Formula $f_{kk}<1$
+\end_inset
+
+ of 
+\begin_inset Formula $f_{kk}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Theorem : For any state in a Markov chain, 
+\begin_inset Formula $f_{kk}<1$
+\end_inset
+
+ <=> 
+\begin_inset Formula $\sum_{n=1}p_{kk}^{(n)}<\infty$
+\end_inset
+
+, 
+\end_layout
+
+\begin_layout Standard
+and 
+\begin_inset Formula $f_{kk}=1$
+\end_inset
+
+ <=> 
+\begin_inset Formula $\sum_{n=1}^{\infty}$
+\end_inset
+
+
+\begin_inset Formula $p_{kk}^{(n)}$
+\end_inset
+
+= +
+\begin_inset Formula $\infty$
+\end_inset
+
+ (will not be proven : uses much analysis)
+\end_layout
+
+\begin_layout Standard
+proof sketch
+\end_layout
+
+\begin_layout Standard
+Lemma: Let 
+\begin_inset Formula $p_{jk}(z)=\sum_{n=0}^{\infty}z^{n}p_{jk}^{(n)}=d_{jk}+\sum_{n=1}^{\infty}$
+\end_inset
+
+z
+\begin_inset Formula $^{n}p_{jk}^{(n)}$
+\end_inset
+
+where 
+\begin_inset Formula $d_{jk}=$
+\end_inset
+
+1 if j=K and 0 otherwise
+\end_layout
+
+\begin_layout Standard
+let 
+\begin_inset Formula $F_{jk}(z)$
+\end_inset
+
+=
+\begin_inset Formula $\sum_{n=1}^{\infty}z^{n}f_{jk}^{(n)}$
+\end_inset
+
+ 
+\begin_inset Formula $P_{jk}(z)$
+\end_inset
+
+ cd 
+\begin_inset Formula $F_{jk}(z)$
+\end_inset
+
+ are defined for |z|<1 There are called generating function
+\end_layout
+
+\begin_layout Standard
+Proof |
+\begin_inset Formula $P_{jk(z)}|$
+\end_inset
+
+
+\begin_inset Formula $\leq\sum_{n=0}^{\infty}|z|^{n}p_{jk}^{(n)}$
+\end_inset
+
+
+\begin_inset Formula $\leq$
+\end_inset
+
+
+\begin_inset Formula $\sum_{n=0}^{\infty}|z|^{(n)}$
+\end_inset
+
+ ======= 
+\end_layout
+
+\begin_layout Standard
+To prove >>>>>>> origin/master
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+<<<<<<< HEAD
+\begin_inset Formula $p_{jk}^{(n)}$
+\end_inset
+
+ 
+\begin_inset Formula $\leq1$
+\end_inset
+
+ which converges if |z|
+\begin_inset Formula $<1$
+\end_inset
+
+(gemometric series)
+\end_layout
+
+\begin_layout Standard
+Similirly for 
+\begin_inset Formula $F_{jk}(z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Theorem : For any two states j and is a MC and |z|<1
+\end_layout
+
+\begin_layout Standard
+(1) 
+\begin_inset Formula $P_{kk}(z)=Fjk(z)P_{kk}(z)$
+\end_inset
+
+ if j different k
+\end_layout
+
+\begin_layout Standard
+(2) 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $P_{kk}$
+\end_inset
+
+(z)=1=
+\begin_inset Formula $F_{kk}(z)P_{kk}(z)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(3) 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $P_{kk}$
+\end_inset
+
+(z)= 1/1-
+\begin_inset Formula $F_{kk}(z)$
+\end_inset
+
+, 
+\begin_inset Formula $F_{kk}$
+\end_inset
+
+(z)=1- 1/
+\begin_inset Formula $P_{kk}(z)$ ======= -------------------------------------------------------------------------------- ------------------------------ ======= 
+
+\end_inset
+
+ for k=1,2, all we need to do is to show that 
+\begin_inset Formula $f_{kk}<1,\,k=1,2,\ldots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now, 
+\begin_inset Formula $f_{kk}$
+\end_inset
+
+= prob of ever return to k from k
+\end_layout
+
+\begin_layout Standard
+The event denote A {ever return to K from K} 
+\begin_inset Formula $\subset$
+\end_inset
+
+(denote B) { not goint to 0 in the next generation from a generation of
+ size k}
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P(A)\leq P(B)=1-(P_{0})^{k}$
+\end_inset
+
+where 
+\begin_inset Formula $P_{0}$
+\end_inset
+
+ = prob a parent wil have children
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(P_{0})^{k}$
+\end_inset
+
+ = prob that all parent will have 1 children (independant of the number
+ of children per parent)>>>>>>> origin/master
 \end_layout
 
 \begin_layout Standard
@@ -5272,8 +5566,153 @@ Let
 \begin_inset Formula $\frac{1}{n}\sum_{i=1}^{n}T_{i}(k)\overset{\mbox{w.p 1}}{\rightarrow}m_{kk}$
 \end_inset
 
- as by definition 
+ as by definition <<<<<<< Updated upstream
 \begin_inset Formula $\left[E\left[T_{i}(k)\right]=m_{kk}\right]$
+\end_inset
+
+ and so 
+\end_layout
+
+\begin_layout Standard
+How does this relate to 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:80"
+
+\end_inset
+
+ ?
+\end_layout
+
+\begin_layout Standard
+We can evaluate the limiting proportion of time spent in state 
+\begin_inset Formula $k$
+\end_inset
+
+ with a different scheme.
+ Now allow the chain to run for 
+\begin_inset Formula $n$
+\end_inset
+
+ transition
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+I_{m}(k) & = & 0\mbox{ if the chains is in state \ensuremath{k} at the \ensuremath{m^{th}} step}\\
+ & = & 0\mbox{ otherwise}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then 
+\begin_inset Formula $\frac{1}{n}\sum_{m=1}^{n}I_{m}(k)$
+\end_inset
+
+ is the observed proportion of time that we are in state 
+\begin_inset Formula $k$
+\end_inset
+
+ (out of 
+\begin_inset Formula $n$
+\end_inset
+
+ steps)
+\end_layout
+
+\begin_layout Standard
+We have 
+\begin_inset Formula $P\left[I_{m}(k)|X_{0}=k\right]=P_{kk}^{(m)}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+therefore 
+\begin_inset Formula $\frac{1}{n}\sum_{m=1}^{n}P_{kk}^{(m)}$
+\end_inset
+
+is the expected proportion of times in state 
+\begin_inset Formula $k$
+\end_inset
+
+ (from 
+\begin_inset Formula $k$
+\end_inset
+
+) in steps of the chain
+\end_layout
+
+\begin_layout Paragraph
+Let's put this together
+\end_layout
+
+\begin_layout Standard
+We had 
+\begin_inset Formula $\frac{n}{\sum_{i=1}^{n}T_{i}(k)}\overset{\mbox{w.p 1}}{\rightarrow}\frac{1}{m_{kk}}$
+\end_inset
+
+ and so by the dominate convergence theorem 
+\begin_inset Formula $E\left[\frac{n}{\sum_{i=1}^{n}T_{i}(k)}\right]\rightarrow E\left[\frac{1}{m_{kk}}\right]=\frac{1}{m_{kk}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+i.e by the 1
+\begin_inset script superscript
+
+\begin_layout Plain Layout
+st
+\end_layout
+
+\end_inset
+
+ samplign scheme the expected proportion of time in step 
+\begin_inset Formula $k\rightarrow\frac{1}{m_{kk}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\frac{1}{n}\sum_{m=1}^{n}P_{kk}^{(m)}\rightarrow\frac{1}{m_{kk}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Recurrent and Transient states and classes
+\end_layout
+
+\begin_layout Paragraph
+Definition:
+\end_layout
+
+\begin_layout Standard
+A state 
+\begin_inset Formula $k$
+\end_inset
+
+ is said 
+\emph on
+recurrent
+\emph default
+ if 
+\begin_inset Formula $f_{kk}=1$
+\end_inset
+
+=======
+\begin_inset Formula $\left[E\left[T_{i}(k)\right]=m_{kk}\right]$ >>>>>>> origin/master
+
 \end_inset
 
  and so 
@@ -5416,7 +5855,7 @@ recurrent
 \begin_inset Formula $f_{kk}=1$
 \end_inset
 
-.
+>>>>>>> Stashed changes.
 \end_layout
 
 \begin_layout Paragraph
@@ -5516,8 +5955,9 @@ reference "eq:th100"
 
 \end_inset
 
- to show that 
-\begin_inset Formula $\sum_{n=0}^{\infty}P_{00}^{(n)}$
+ to show that <<<<<<< Updated upstream
+\begin_inset Formula $\sum_{n=0}^{\infty}P_{00}^{(n)}$ ======= 
+
 \end_inset
 
  iff 
@@ -5528,15 +5968,16 @@ reference "eq:th100"
 \end_layout
 
 \begin_layout Standard
-We thus need an expression for 
-\begin_inset Formula $P_{00}^{(n)}$
+We thus need an expression for <<<<<<< Updated upstream
+\begin_inset Formula $P_{00}^{(n)}$ ======= 
+
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-We first note that 
+We first note that <<<<<<< Updated upstream
 \begin_inset Formula $P_{00}^{(2n-1)}=0\,n=1,2,\ldots$
 \end_inset
 
@@ -5982,7 +6423,191 @@ Returning to the randoim walk it turns out that even in
 \begin_inset Newline newline
 \end_inset
 
-i.e the simple random walk is null recurrent
+i.e the simple random walk is null recurrent=======
+\begin_inset Formula $P_{kk}^{(2n-1)}=0\,n=1,2,\ldots$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Theorem : A recurrent communicating class is closed.
+ A closed communicating class must possess infinitely manu states.
+\end_layout
+
+\begin_layout Standard
+Proof: We show that 
+\begin_inset Formula $f_{kk}=1$
+\end_inset
+
+ and k->j implies 
+\begin_inset Formula $f_{jk}=1$
+\end_inset
+
+ i.e.
+ k<->j [i.e.
+ the only way that you can get to a state j is if that if that state is
+ in 
+\begin_inset Formula $C.$
+\end_inset
+
+This implies 
+\begin_inset Formula $C$
+\end_inset
+
+be closed.
+\end_layout
+
+\begin_layout Standard
+Proof: Intuitively does this seem right.
+ Well, we know that there is a path from k to j with positive prob.
+ This cannot be a 
+\begin_inset Quotes eld
+\end_inset
+
+bad
+\begin_inset Quotes erd
+\end_inset
+
+ path, in the sense that with w.p.
+ we can get back to k from j, since we would not be able to say w.p.
+ 1 we can g from k to k.
+ Thus we must have that j -> k i.e.
+ k<->j.
+\end_layout
+
+\begin_layout Standard
+Formalities: For any state k and integer n , 
+\begin_inset Formula $g_{kk}=\sum_{allstates}p_{ki}^{(n)}g_{ik}$
+\end_inset
+
+ (obvious + you have to be somewhere after n steps (starting in k) and then
+ make infinitely many returns to k from that 
+\begin_inset Quotes eld
+\end_inset
+
+somewhere
+\begin_inset Quotes erd
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+1-
+\begin_inset Formula $g_{kk}$
+\end_inset
+
+ = 
+\begin_inset Formula $\sum_{allstates}p_{ki}^{(n)}(1-\mbox{g\_ik})$
+\end_inset
+
+ since 
+\begin_inset Formula $g_{kk}=1,$
+\end_inset
+
+ 1-
+\begin_inset Formula $g_{kk}=0$
+\end_inset
+
+ and hence, 
+\begin_inset Formula $\sum_{states}p_{ki}^{(n)}\{1-g_{ik}\}$
+\end_inset
+
+ for every n
+\end_layout
+
+\begin_layout Standard
+Now return to thr state j that we were considering since k->j, 
+\begin_inset Formula $\exists$
+\end_inset
+
+ an N such that 
+\begin_inset Formula $p(N\text{)}_{kj}>0.$
+\end_inset
+
+It follows that (1-
+\begin_inset Formula $g_{jk})=0$
+\end_inset
+
+ i.e.
+ 
+\begin_inset Formula $g_{jk}=1$
+\end_inset
+
+.
+ Now, 
+\begin_inset Formula $g_{jk}=$
+\end_inset
+
+
+\begin_inset Formula $f_{jk}g_{kk}$
+\end_inset
+
+means that if k is reccurent and hence 
+\begin_inset Formula $g_{kk}=1$
+\end_inset
+
+ we mush have 
+\begin_inset Formula $f_{jk}=1,$
+\end_inset
+
+ which is what we wanyed to show.
+ To prove that a transient closed communicating class must be infinite,
+ we note that for any state j, 
+\begin_inset Formula $g_{jk}=0$
+\end_inset
+
+ if k is transient.
+ 
+\end_layout
+
+\begin_layout Standard
+I.e.
+ consequently, if 
+\begin_inset Formula $C$
+\end_inset
+
+is a closed and transient communicating class then C me possess infinitely
+ many states.
+\end_layout
+
+\begin_layout Standard
+Reason: With prob 1 the chain remains only for a finite number of steps
+ in any finite set of transiant states.
+ Done! We can now strengthen our theorem on the partition of the states
+ of a chain into disjoint communicating classes and non-return states.
+\end_layout
+
+\begin_layout Standard
+Theorem: The set S, of return states of a Markov chain, can be written as
+ the union of disjoint communcating classes, 
+\end_layout
+
+\begin_layout Standard
+S = 
+\begin_inset Formula $C_{1\cup}C_{2}...where$
+\end_inset
+
+ class 
+\begin_inset Formula $C,$
+\end_inset
+
+ is either (i) closed and recurrent, (ii) closed and transient or (iii)
+ non closed and transiant.
+ 
+\end_layout
+
+\begin_layout Standard
+CLosed Non closed
+\end_layout
+
+\begin_layout Standard
+recurrent `/fine/ does not exist
+\end_layout
+
+\begin_layout Standard
+transiant/ does not exist in a finite chain / fine>>>>>>> Stashed changes
 \end_layout
 
 \begin_layout Section
@@ -6515,7 +7140,294 @@ is prob dist
 \end_layout
 
 \begin_layout Standard
-MISS MERCREDI 16-03
+\begin_inset Formula $lim_{n->\infty}$
+\end_inset
+
+
+\begin_inset Formula $\frac{1}{n}\sum_{n=1}^{n}p_{jk}^{(m)}=\pi_{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In a finite MC {
+\begin_inset Formula $\pi_{k}:k=1,2,..\}$
+\end_inset
+
+ pub dis.
+ 
+\begin_inset Formula $\sum_{k=1}\pi_{C}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To clarify things so far:
+\end_layout
+
+\begin_layout Standard
+-We are always talking about an irreducible MC
+\end_layout
+
+\begin_layout Standard
+- A dist is called a stationnary distribution: (1) it is a distribution
+ i.e.
+ The pds sum to 1
+\end_layout
+
+\begin_layout Standard
+(2) If they satisfy the set of cqs that define the stationnarity.
+ The notatio that we use for such a distribution is (
+\begin_inset Formula $\pi_{1},\pi_{2},..)=$
+\end_inset
+
+(
+\begin_inset Formula $\pi$
+\end_inset
+
+ (with a hat) say:
+\end_layout
+
+\begin_layout Standard
+If I give you an arbitrary MC there may not exist a stationary distribution
+ for that chain
+\end_layout
+
+\begin_layout Standard
+-So we ask 
+\begin_inset Quotes eld
+\end_inset
+
+When will a M.C.
+ with a given P, have a stationnary distribution
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+-This is important because maybe the conditions under which a LR-dist.
+ For the chain exists, are sufficient for the existence of a unique stationary
+ dist.
+ Then the hope is that the LR dist will coincide its stationary distribution.
+ 
+\end_layout
+
+\begin_layout Standard
+-If those two distribution coincide then this will enable us to find the
+ LR dist by solving a system of linear equation also opens the way to MCMC
+ methods.
+\end_layout
+
+\begin_layout Standard
+-Now it turns out that 
+\begin_inset Formula $lim_{n->\infty}$
+\end_inset
+
+
+\begin_inset Formula $\frac{1}{n}\sum_{n=1}^{n}p_{jk}^{(m)}$
+\end_inset
+
+ give us ( for all k
+\begin_inset Formula $\epsilon$
+\end_inset
+
+C) a stationary distribution under certain conditions (assumption about
+ the chain).
+\end_layout
+
+\begin_layout Standard
+-This is why we denote there limits, by 
+\begin_inset Formula $\pi_{c}$
+\end_inset
+
+, k 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ C, the same notation that we used to denote the stationary distribution,
+ the 
+\begin_inset Formula $\pi_{k's}$
+\end_inset
+
+ from before can serve as the stationnary distribution if it exists.
+\end_layout
+
+\begin_layout Standard
+Theorem : stationary distribution
+\end_layout
+
+\begin_layout Standard
+Let C be the state space of a irreductible Markov Chain.
+ TFAE:
+\end_layout
+
+\begin_layout Standard
+(1) The M.C.
+ has a stationary distribution
+\end_layout
+
+\begin_layout Standard
+(2) The chain is positive recurrent
+\end_layout
+
+\begin_layout Standard
+(3) There exists an absolutely convergent sequence.
+\end_layout
+
+\begin_layout Standard
+{
+\begin_inset Formula $\pi_{k}:$
+\end_inset
+
+ k
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ C}, not identically zero, satisfy the system of consequences
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $u_{k}=\sum_{j\epsilon C}u_{j}p_{jk}(**)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notes: 
+\end_layout
+
+\begin_layout Standard
+(1) We know that if the chain is irreducible, cd positive, reccurent, then
+ 
+\begin_inset Formula $m_{kk}<\infty$
+\end_inset
+
+, 
+\begin_inset Formula $\forall k\epsilon C$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $lim_{n->\infty}\frac{1}{n}$
+\end_inset
+
+
+\begin_inset Formula $\sum_{m=1}^{n}p_{jk}^{(m)}$
+\end_inset
+
+=
+\begin_inset Formula $\frac{1}{m_{kk}}>\text{0 if m\_kk}$
+\end_inset
+
+<
+\begin_inset Formula $\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+be shown that a stationary distribution by {
+\begin_inset Formula $\pi_{k}:$
+\end_inset
+
+ k
+\begin_inset Formula $\epsilon C$
+\end_inset
+
+} where 
+\begin_inset Formula $\pi_{k}=\frac{1}{m_{kk}}$
+\end_inset
+
+ a stationary distribution exists & which it will for an irreductible pos
+ recurrent chain it will be unique
+\end_layout
+
+\begin_layout Standard
+(3) If the chain has a LR distribution then it will have a stationnary distribut
+ion.
+\end_layout
+
+\begin_layout Standard
+Proof:
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $p_{jk}^{(n)}->u_{k}$
+\end_inset
+
+ 
+\begin_inset Formula $\forall k\epsilon C$
+\end_inset
+
+ independent of j with 
+\begin_inset Formula $\sum_{k=1}^{\infty}u_{k}=1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+with 
+\begin_inset Formula $\frac{1}{n}\sum_{m=1}^{n}p_{jk}^{(m)}->$
+\end_inset
+
+uk, with 
+\begin_inset Formula $\sum_{k\epsilon C}u_{k}=1,$
+\end_inset
+
+ at least one uk>0, say u0>0.
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\backslash
+frac{1}{n}
+\backslash
+sum_{m=1}^{n}p_{jk}^{(m)} -> 
+\begin_inset Formula $\frac{1}{M_{CoKo}}=u_{Ko}>0,$
+\end_inset
+
+we have that 
+\begin_inset Formula $m_{KoKo}<\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now we know that the chain cannot be transiant, this would imply that 
+\begin_inset Formula $p_{jk}^{(n)}$
+\end_inset
+
+->0
+\end_layout
+
+\begin_layout Standard
+This implies that the chain must be recurrent.
+ Since the chain is irreducible either all states are null recurrent or
+ all are positive recurrent.
+ 
 \end_layout
 
 \begin_layout Standard
