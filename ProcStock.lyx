@@ -4780,16 +4780,7 @@ Let
 \end_layout
 
 \begin_layout Standard
-To proves this all we need to do is show that 
-\begin_inset Formula $f_{kk}<1$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-<<<<<<< Updated upstream=======<<<<<<< HEAD<<<<<<< HEAD=======>>>>>>> origin/mas
-ter>>>>>>> Stashed changes
+To prove
 \family roman
 \series medium
 \shape up
@@ -4801,39 +4792,15 @@ ter>>>>>>> Stashed changes
 \uwave off
 \noun off
 \color none
-<<<<<<< Updated upstream
-\begin_inset Formula $g_{kk}=lim_{n\rightarrow\infty}(f_{kk})^{n}$ ======= <<<<<<< HEADg_{kk} = 
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula $g_{jk}=f_{jk}*g_{kk}$
-\end_inset
-
-<<<<<<< Updated upstream 
-\end_layout
-
-\begin_layout Standard
-To prove =======<<<<<<< HEAD to prove >>>>>>> Stashed changes
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
+ 
 \begin_inset Formula $g_{kk}=0$
 \end_inset
 
- for k=1,2, all we need to do is to show that 
+ for 
+\begin_inset Formula $k=1,2$
+\end_inset
+
+, all we need to do is to show that 
 \begin_inset Formula $f_{kk}<1,\,k=1,2,\ldots$
 \end_inset
 
@@ -4845,7 +4812,15 @@ Now,
 \begin_inset Formula $f_{kk}$
 \end_inset
 
-= prob of ever return to k from k
+ prob of ever return to 
+\begin_inset Formula $k$
+\end_inset
+
+ from 
+\begin_inset Formula $k$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
