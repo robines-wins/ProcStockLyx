@@ -56,7 +56,7 @@
 \color #008000
 \end_index
 \secnumdepth 2
-\tocdepth 3
+\tocdepth 2
 \paragraph_separation skip
 \defskip medskip
 \quotes_language english
@@ -100,6 +100,22 @@ LatexCommand tableofcontents
 \begin_layout Standard
 \begin_inset FormulaMacro
 \newcommand{\limn}{\lim_{n\rightarrow\infty}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vx}{\vec{x}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\vy}{\vec{y}}
 \end_inset
 
 
@@ -7815,7 +7831,7 @@ Recall: we want to integrale
 \end_layout
 
 \begin_layout Standard
-goal generate a markov chain such that: 
+goal generate a Markov chain such that: 
 \begin_inset Formula $\frac{1}{n}\sum_{j=1}^{n}\left(X_{i}^{*}\right)\approx\mbox{Integral}$
 \end_inset
 
@@ -7987,7 +8003,7 @@ and hence the values of the markov chain that we simulate will for large
 \begin_inset Formula $n$
 \end_inset
 
-, look as if thay have ben drawn 
+, look as if they have ben drawn 
 \begin_inset Formula $p(\vec{x)}$
 \end_inset
 
@@ -7995,7 +8011,7 @@ and hence the values of the markov chain that we simulate will for large
 \end_layout
 
 \begin_layout Standard
-Summary: for all 
+///////Summary: for all 
 \begin_inset Formula $n$
 \end_inset
 
@@ -8007,7 +8023,314 @@ Summary: for all
 \begin_inset Formula $X_{n}\sim p(\vec{x})$
 \end_inset
 
+////////
+\end_layout
 
+\begin_layout Standard
+Where are we heading:
+\end_layout
+
+\begin_layout Enumerate
+Describe the construction of the markov chain
+\end_layout
+
+\begin_layout Enumerate
+Give the algorithm that tells you how to simulate the trajectory of this
+ chain
+\end_layout
+
+\begin_layout Enumerate
+Describe some of the dificulties in implementation.
+\end_layout
+
+\begin_layout Enumerate
+Give the history and application of MCMC.
+ Beside that of evaluating the integral 
+\begin_inset Formula $\underset{R}{\int\cdots\int}f(\vec{x})p(\vec{x})\,dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+The construction of the (continuous state-space) Markov chain
+\end_layout
+
+\begin_layout Standard
+First if 
+\begin_inset Formula $p(\vec{x})$
+\end_inset
+
+ is p.d.f (of continuous random vector) the markov chain will have an uncountable
+ (i.e non-discrete) state-space Markov chain
+\end_layout
+
+\begin_layout Standard
+Continuous state space can be rigourously defined using p.d.f instead of probabili
+ty function.
+\end_layout
+
+\begin_layout Standard
+We shall write, perhaps sloppily 
+\begin_inset Formula $P\left(X_{n+1}=\vec{y}\,|\,X_{n}=\vec{x}\right)$
+\end_inset
+
+ when we really mean 
+\begin_inset Formula $f_{X_{n+1|X_{n=x}}}\left(y|x\right)\,dy$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To construct one markov chain with a given stationary distribution, 
+\begin_inset Formula $\Pi(\vec{x})=p(\vec{x})$
+\end_inset
+
+, we go through what is know as a (time) reversible Marov chain.
+ Thus chains, if irreducible will have a unique stationary distribution.
+\end_layout
+
+\begin_layout Paragraph
+Definition 
+\end_layout
+
+\begin_layout Standard
+a Markov chain chain 
+\begin_inset Formula $\left\{ X_{n},\,n=0,1,\ldots\right\} $
+\end_inset
+
+ is said to be reversible if there exist a p.d.f, 
+\begin_inset Formula $\Pi(\vec{x})$
+\end_inset
+
+, say such that 
+\begin_inset Formula 
+\begin{equation}
+\forall x\forall y\:\Pi\left(x\right)p\left(y|x\right)=\Pi\left(y\right)p\left(x|y\right)\label{eq:161}
+\end{equation}
+
+\end_inset
+
+With 
+\begin_inset Formula $p\left(y|x\right)=P\left(X_{n+1}=\vec{y}\,|\,X_{n}=\vec{x}\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Simply: Looking forward at the chain arriving at 
+\begin_inset Formula $x$
+\end_inset
+
+ and then going to 
+\begin_inset Formula $y$
+\end_inset
+
+ is the same as looking backward, arriving at 
+\begin_inset Formula $y$
+\end_inset
+
+ and then going to 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+such markov chains, if irreducible gives a stationary distribution which
+ is in fact 
+\begin_inset Formula $\Pi(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Proof
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:161"
+
+\end_inset
+
+ implies that 
+\begin_inset Formula $\int_{-\infty}^{\infty}\Pi\left(x\right)p\left(y|x\right)\,dx=\int_{-\infty}^{\infty}\Pi\left(y\right)p\left(x|y\right)\,dx$
+\end_inset
+
+.
+ but we have 
+\begin_inset Formula $\Pi(y)\int_{-\infty}^{\infty}p\left(x|y\right)\,dx=\Pi(y)$
+\end_inset
+
+ (since integral of a pdf gives 
+\begin_inset Formula $1$
+\end_inset
+
+ )
+\end_layout
+
+\begin_layout Standard
+That is, we have a continuous version of the 
+\begin_inset Quotes eld
+\end_inset
+
+discrete
+\begin_inset Quotes erd
+\end_inset
+
+ equation of stationnarity (
+\begin_inset Formula $\Pi_{k}=\sum_{j\in C}\Pi_{j}P{}_{jk}$
+\end_inset
+
+), therefore 
+\begin_inset Formula $\Pi(x)$
+\end_inset
+
+ will be the stationary distribution 
+\end_layout
+
+\begin_layout Standard
+All of this lead to replace 
+\begin_inset Formula $x$
+\end_inset
+
+ by 
+\begin_inset Formula $\vec{x}$
+\end_inset
+
+ i.e go to 
+\begin_inset Formula $k$
+\end_inset
+
+ dimension.
+\end_layout
+
+\begin_layout Standard
+Now in order to define our morkov chain we also need to define 
+\begin_inset Formula $p(\vy|\vec{x})\;\forall\vec{x}\forall\vec{y}$
+\end_inset
+
+.
+ We cannot choose 
+\begin_inset Formula $p(\vy|\vec{x})$
+\end_inset
+
+ arbitrarly (just so that we can simulate easily from 
+\begin_inset Formula $p\left(\vy|\vx\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Paragraph
+Reason: 
+\end_layout
+
+\begin_layout Standard
+We are stuck with 
+\begin_inset Formula $\Pi\left(\vx\right)=p\left(\vx\right)$
+\end_inset
+
+, by design with this 
+\begin_inset Formula $\Pi\left(\vx\right)=p\left(\vx\right)$
+\end_inset
+
+ we might not get 
+\begin_inset Formula $\forall x\forall y\:\Pi\left(x\right)p\left(y|x\right)=\Pi\left(y\right)p\left(x|y\right)$
+\end_inset
+
+ 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:161"
+
+\end_inset
+
+ unsless 
+\begin_inset Formula $p$
+\end_inset
+
+ is chossen correctly
+\end_layout
+
+\begin_layout Standard
+For exemple it could happen that from a certain 
+\begin_inset Formula $\vx,\vy$
+\end_inset
+
+ we have 
+\begin_inset Formula 
+\begin{equation}
+\forall x\forall y\:\Pi\left(x\right)p\left(y|x\right)>\Pi\left(y\right)p\left(x|y\right)\label{eq:162}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+to fix this 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:162"
+
+\end_inset
+
+ we proceed as follows:
+\end_layout
+
+\begin_layout Standard
+Imagine that we are simulating our Markov chain and have arrived at 
+\begin_inset Formula $\vec{x}$
+\end_inset
+
+, we know draw a 
+\begin_inset Formula $\vy$
+\end_inset
+
+ from 
+\begin_inset Formula $p\left(\vy|\vx\right)$
+\end_inset
+
+ Accepting thus 
+\begin_inset Formula $\vy$
+\end_inset
+
+ without futher scouting could lead to the 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:162"
+
+\end_inset
+
+ Thus, we introduce a 
+\begin_inset Quotes eld
+\end_inset
+
+test
+\begin_inset Quotes erd
+\end_inset
+
+ that a 
+\begin_inset Formula $\vy$
+\end_inset
+
+ choosen from 
+\begin_inset Formula $p\left(\vy|\vx\right)$
+\end_inset
+
+ must pass in order for as to move to this 
+\begin_inset Formula $\vy$
+\end_inset
+
+ as next step in our Markov chain 
 \end_layout
 
 \end_body
