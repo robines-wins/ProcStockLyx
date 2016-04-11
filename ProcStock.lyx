@@ -8164,7 +8164,7 @@ reference "eq:161"
 \end_inset
 
 .
- but we have 
+ but the r.h.s gives 
 \begin_inset Formula $\Pi(y)\int_{-\infty}^{\infty}p\left(x|y\right)\,dx=\Pi(y)$
 \end_inset
 
@@ -8252,15 +8252,15 @@ reference "eq:161"
 
 \end_inset
 
- unsless 
+ unless 
 \begin_inset Formula $p$
 \end_inset
 
- is chossen correctly
+ is chosen correctly
 \end_layout
 
 \begin_layout Standard
-For exemple it could happen that from a certain 
+For example it could happen that from a certain 
 \begin_inset Formula $\vx,\vy$
 \end_inset
 
@@ -8303,7 +8303,7 @@ Imagine that we are simulating our Markov chain and have arrived at
 \begin_inset Formula $\vy$
 \end_inset
 
- without futher scouting could lead to the 
+ without further scouting could lead to the 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:162"
@@ -8322,7 +8322,7 @@ test
 \begin_inset Formula $\vy$
 \end_inset
 
- choosen from 
+ chosen from 
 \begin_inset Formula $p\left(\vy|\vx\right)$
 \end_inset
 
@@ -8330,7 +8330,294 @@ test
 \begin_inset Formula $\vy$
 \end_inset
 
- as next step in our Markov chain 
+ as next step in our Markov chain.
+\end_layout
+
+\begin_layout Standard
+We have to design a reversible Markov chain with 2 design specification.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\Pi\left(\vx\right)=p\left(\vx\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $p\left(y|x\right)$
+\end_inset
+
+ must be easy to sample from
+\end_layout
+
+\begin_layout Standard
+Now with these two specifications we may not have 
+\begin_inset Formula $\forall\vx\forall\vy\;\Pi\left(\vx\right)p\left(\vy|\vx\right)>\Pi\left(\vy\right)p\left(\vx|\vy\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The idea is that we move form one state to another in a 2-step procedure
+\end_layout
+
+\begin_layout Enumerate
+We 
+\begin_inset Quotes eld
+\end_inset
+
+propose
+\begin_inset Quotes erd
+\end_inset
+
+ a 
+\begin_inset Formula $\vy$
+\end_inset
+
+ from the distribution 
+\begin_inset Formula $P\left(.|\vx\right)$
+\end_inset
+
+ assuminf the chain is currently in state 
+\begin_inset Formula $\vx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+We decide whether or not we move to the proposal 
+\begin_inset Formula $\vy$
+\end_inset
+
+or to move (in fact stay at) the current 
+\begin_inset Formula $\vx$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+In summary 
+\begin_inset Formula $P\left(\vy|\vx\right)$
+\end_inset
+
+ wille be replace by a modified distribution 
+\begin_inset Formula $P^{*}\left(\vy|\vx\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We define:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha\left(\vx|\vy\right)=\min\left(1,\frac{P(\vy)}{P(\vx)}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\alpha\left(\vy|\vx\right)=\min\left(1,\frac{P(\vx)}{P(\vy)}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Then let 
+\begin_inset Formula 
+\begin{eqnarray*}
+P^{*}\left(\vy|\vx\right) & = & \alpha\left(\vx|\vy\right)P\left(\vy|\vx\right)\\
+P^{*}\left(\vx|\vy\right) & = & \alpha\left(\vy|\vx\right)P\left(\vx|\vy\right)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Hope:
+\end_layout
+
+\begin_layout Standard
+using 
+\begin_inset Formula $P^{*}\left(\vy|\vx\right)$
+\end_inset
+
+ as the transition distribution will generate the equation of detailed balance
+ will be satisfied.
+ i.e we will have a reversible markov chain
+\end_layout
+
+\begin_layout Subsubsection
+Lets check:
+\end_layout
+
+\begin_layout Standard
+First suppose that 
+\begin_inset Formula $\frac{\Pi(\vy)}{\Pi(\vx)}\geq1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+consider 
+\begin_inset Formula $\Pi\left(\vx\right)P^{*}\left(\vy|\vx\right)=\Pi\left(\vx\right)\alpha\left(\vx|\vy\right)P\left(\vy|\vx\right)=\Pi\left(\vx\right)P\left(\vy|\vx\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The r.h.s 
+\begin_inset Formula $=\Pi(\vy)P^{*}\left(\vx|\vy\right)=\Pi(\vy)\alpha\left(\vy|\vx\right)P\left(\vx|\vy\right)=\Pi(\vy)\frac{P(\vx)=\Pi\left(\vx\right)}{P(\vy)=\Pi(\vy)}P\left(\vx|\vy\right)=\Pi\left(\vx\right)P\left(\vx|\vy\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+but 
+\begin_inset Formula $\Pi\left(\vx\right)P\left(\vy|\vx\right)\overset{\text{\ensuremath{?}}}{=}\Pi\left(\vx\right)P\left(\vx|\vy\right)$
+\end_inset
+
+.
+ To fix things up, choose 
+\begin_inset Formula $P\left(\vy|\vx\right)$
+\end_inset
+
+ to be symetric in the sense 
+\begin_inset Formula $P\left(\vy|\vx\right)=P\left(\vx|\vy\right)$
+\end_inset
+
+ for all 
+\begin_inset Formula $\vx,\vy$
+\end_inset
+
+.
+ There's such distributions
+\end_layout
+
+\begin_layout Standard
+We're done ! We now have a reversible Markov chain., with a custom made stationar
+y distribution 
+\begin_inset Formula $\Pi\left(\vx\right)$
+\end_inset
+
+ and a custom made 
+\begin_inset Formula $P^{*}\left(\vy|\vx\right)$
+\end_inset
+
+, custom made so that we can easily simulate realization af the Markov chain
+ and custom made to ensure that we have a reversible Markov chain.
+\end_layout
+
+\begin_layout Subsection
+Algorithm
+\end_layout
+
+\begin_layout Standard
+Here is the algorithm that describe how we generate values in one markov
+ chain
+\end_layout
+
+\begin_layout Standard
+the algorithl for the choice 
+\begin_inset Formula $\alpha\left(\vx|\vy\right)=\min\left(1,\frac{P(\vy)}{P(\vx)}\right)$
+\end_inset
+
+ is called 
+\emph on
+the metropolis algorithm
+\emph default
+ (which is the name of someone, it doesn't come from the city of superman,
+ which would have been super cool but it isn't)
+\end_layout
+
+\begin_layout Enumerate
+Choose a starting value 
+\begin_inset Formula $\vec{x_{0}}$
+\end_inset
+
+ (sort of arbitrary) from the range of 
+\begin_inset Formula $\Pi(\vx)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+From the distribution 
+\begin_inset Formula $P\left(.|\vec{x_{0}}\right)$
+\end_inset
+
+ generte (simulate) a 
+\begin_inset Formula $\vy$
+\end_inset
+
+ called a proposal 
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $\alpha(\vec{x_{0}},y)=\min\left(1,\frac{P(\vy)}{P(\vec{x_{0}})}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+if 
+\begin_inset Formula $\frac{P(\vy)}{P(\vec{x_{0}})}\geq1$
+\end_inset
+
+ (
+\begin_inset Formula $\Leftrightarrow\alpha(\vec{x_{0}},y)=1$
+\end_inset
+
+) we move to the proposal 
+\begin_inset Formula $\vec{y}$
+\end_inset
+
+.
+ if 
+\begin_inset Formula $\frac{P(\vy)}{P(\vec{x_{0}})}<1$
+\end_inset
+
+ move to the proposed 
+\begin_inset Formula $\vy$
+\end_inset
+
+ with probability 
+\begin_inset Formula $\frac{P(\vy)}{P(\vec{x_{0}})}$
+\end_inset
+
+ and otherwise stay to 
+\begin_inset Formula $\vec{x_{0}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+repeat this process each time sampling from the conditionnal distribution
+ 
+\begin_inset Formula $P\left(.|?\right)$
+\end_inset
+
+ depending on current state 
+\begin_inset Formula $?$
+\end_inset
+
+
 \end_layout
 
 \end_body
