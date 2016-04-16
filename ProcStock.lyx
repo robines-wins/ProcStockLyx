@@ -1161,7 +1161,7 @@ It then follows from 5 that if
 \begin_inset Formula $\prod_{i=1}^{n}\Phi_{xi}[z]$
 \end_inset
 
- further if the Xiw are identically distributed then 
+ further if the Xi's are identically distributed then 
 \begin_inset Formula $\Phi_{\sum_{i=1}^{n}}(z):[\Phi_{x}(z)]^{n}$
 \end_inset
 
@@ -1320,9 +1320,9 @@ What is the probability that this function will fall in some set in this
 \end_layout
 
 \begin_layout Standard
-Extensen theorem is that the probabilities of all the event in this function
- space is uniquely determined by the probabilities specified by the finite
- themselves c.d.f.S.
+Extension ot the theorem is that the probabilities of all the event in this
+ function space is uniquely determined by the probabilities specified by
+ the finite themselves c.d.f.S.
 \end_layout
 
 \begin_layout Standard
@@ -3397,7 +3397,7 @@ Finite dimensional distributions
 \begin_inset Formula $P$
 \end_inset
 
- is sufficient to completely specify the markov chain.
+ is sufficient to completely specify the Markov chain.
 \end_layout
 
 \begin_layout Standard
@@ -4844,7 +4844,7 @@ The event denote A {ever return to K from K}
 \begin_inset Formula $\subset$
 \end_inset
 
-(denote B) { not goint to 0 in the next generation from a generation of
+(denote B) { not going to 0 in the next generation from a generation of
  size k}
 \end_layout
 
@@ -4856,14 +4856,14 @@ where
 \begin_inset Formula $P_{0}$
 \end_inset
 
- = prob a parent wil have children
+ = prob a parent will have children
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula $(P_{0})^{k}$
 \end_inset
 
- = prob that all parent will have 1 children (independant of the number
+ = prob that all parent will have 1 children (independent of the number
  of children per parent)
 \end_layout
 
@@ -5038,11 +5038,11 @@ To prove >>>>>>> origin/master
 \begin_inset Formula $<1$
 \end_inset
 
-(gemometric series)
+(geometric series)
 \end_layout
 
 \begin_layout Standard
-Similirly for 
+Similarly for 
 \begin_inset Formula $F_{jk}(z)$
 \end_inset
 
@@ -5086,7 +5086,7 @@ Theorem : For any two states j and is a MC and |z|<1
 \end_layout
 
 \begin_layout Standard
-(3) 
+(3)
 \family roman
 \series medium
 \shape up
@@ -5098,23 +5098,11 @@ Theorem : For any two states j and is a MC and |z|<1
 \uwave off
 \noun off
 \color none
-
-\begin_inset Formula $P_{kk}$
+ 
+\begin_inset Formula $P_{kk}(z)=1/1-F_{kk}(z),F_{kk}(z)=1-1/\ensuremath{P_{kk}(z)}$
 \end_inset
 
-(z)= 1/1-
-\begin_inset Formula $F_{kk}(z)$
-\end_inset
-
-, 
-\begin_inset Formula $F_{kk}$
-\end_inset
-
-(z)=1- 1/
-\begin_inset Formula $P_{kk}(z)$ ======= -------------------------------------------------------------------------------- ------------------------------ ======= 
-
-\end_inset
-
+ 
  for k=1,2, all we need to do is to show that 
 \begin_inset Formula $f_{kk}<1,\,k=1,2,\ldots$
 \end_inset
@@ -5147,14 +5135,14 @@ where
 \begin_inset Formula $P_{0}$
 \end_inset
 
- = prob a parent wil have children
+ = prob a parent will have children
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula $(P_{0})^{k}$
 \end_inset
 
- = prob that all parent will have 1 children (independant of the number
+ = prob that all parent will have 1 children (independent of the number
  of children per parent)>>>>>>> origin/master
 \end_layout
 
@@ -5322,7 +5310,7 @@ reference "eq:71"
 \end_layout
 
 \begin_layout Standard
-We see immediatly that 
+We see immediately that 
 \begin_inset Formula $f_{kk}<1\Leftrightarrow\sum_{n=1}^{\infty}P_{kk}^{(n)}<\infty$
 \end_inset
 
@@ -5360,7 +5348,7 @@ Now this argument is flowed since neither
 \end_layout
 
 \begin_layout Standard
-There is an inportant limit theorem that will be used shortly:
+There is an important limit theorem that will be used shortly:
 \end_layout
 
 \begin_layout Standard
@@ -5401,7 +5389,7 @@ Let
 \begin_inset Formula $m_{kk}$
 \end_inset
 
- the expected (or mean) recurence (return) time to state 
+ the expected (or mean) recurrence (return) time to state 
 \begin_inset Formula $k$
 \end_inset
 
@@ -5666,7 +5654,7 @@ st
 
 \end_inset
 
- samplign scheme the expected proportion of time in step 
+ sampling scheme the expected proportion of time in step 
 \begin_inset Formula $k\rightarrow\frac{1}{m_{kk}}$
 \end_inset
 
@@ -5782,7 +5770,7 @@ st
 
 \end_inset
 
- samplign scheme the expected proportion of time in step 
+ sampling scheme the expected proportion of time in step 
 \begin_inset Formula $k\rightarrow\frac{1}{m_{kk}}$
 \end_inset
 
@@ -5884,7 +5872,7 @@ As an example consider the simple random walk on the integer.
 \end_layout
 
 \begin_layout Standard
-We shall show that the set of all state is recurent iff 
+We shall show that the set of all state is recurrent iff 
 \begin_inset Formula $p=\frac{1}{2}$
 \end_inset
 
@@ -6007,7 +5995,7 @@ this looks bad because of factorials.
 \noun on
 sterlings
 \noun default
- formula that gives an assymptotic expression fo 
+ formula that gives an asymptotic expression of 
 \begin_inset Formula $n!$
 \end_inset
 
@@ -6024,7 +6012,7 @@ sterlings
 \begin_inset Formula $\lim_{n\rightarrow\infty}\frac{n!}{n^{n+\frac{1}{2}}e^{-n}\sqrt{2\pi}}=1$
 \end_inset
 
- hus if we use this formula over our sum we get 
+ thus if we use this formula over our sum we get 
 \begin_inset Formula $P_{00}^{(2n)}\sim\frac{\left[4p\left(1-p\right)\right]^{n}}{\sqrt{\pi n}}$
 \end_inset
 
@@ -6067,7 +6055,7 @@ reference "eq:th100"
 
 \end_inset
 
-, the state is recurent if and only if 
+, the state is recurrent if and only if 
 \begin_inset Formula $p=\frac{1}{2}$
 \end_inset
 
@@ -6091,7 +6079,7 @@ Intuitively if
 \begin_inset Formula $0$
 \end_inset
 
- avoiding recurence
+ avoiding recurrence
 \end_layout
 
 \begin_layout Enumerate
@@ -6111,8 +6099,8 @@ all
 \end_layout
 
 \begin_layout Enumerate
-It can be shown that in 2 dimension the simple random walk is recurent iff
- 
+It can be shown that in 2 dimension the simple random walk is recurrent
+ iff 
 \begin_inset Formula $p=\frac{1}{4}$
 \end_inset
 
@@ -6124,7 +6112,7 @@ In 3 or more dimension the simple random walk is
 \emph on
 always
 \emph default
- transicient, even if probability of moving in any direction is the same
+ transient, even if probability of moving in any direction is the same
 \end_layout
 
 \begin_layout Subsubsection*
@@ -6133,7 +6121,7 @@ Theorem :
 
 \begin_layout Standard
 A recurrent communicating class is closed.
- A (transient ???) closed communicating class must possess infinitely manu
+ A (transient ???) closed communicating class must possess infinitely many
  states.
 \end_layout
 
@@ -6239,7 +6227,7 @@ since
 \end_layout
 
 \begin_layout Standard
-Now return to thr state 
+Now return to the state 
 \begin_inset Formula $j$
 \end_inset
 
@@ -6273,7 +6261,7 @@ It follows that
 \begin_inset Formula $f_{jk}g_{kk}$
 \end_inset
 
-means that if k is reccurent and hence 
+means that if k is recurrent and hence 
 \begin_inset Formula $g_{kk}=1$
 \end_inset
 
@@ -6281,7 +6269,7 @@ means that if k is reccurent and hence
 \begin_inset Formula $f_{jk}=1,$
 \end_inset
 
- which is what we wanyed to show.
+ which is what we wanted to show.
  To prove that a transient closed communicating class must be infinite,
  we note that for any state j, 
 \begin_inset Formula $g_{jk}=0$
@@ -6303,7 +6291,7 @@ I.e.
 
 \begin_layout Standard
 Reason: With prob 1 the chain remains only for a finite number of steps
- in any finite set of transiant states.
+ in any finite set of transient states.
  Done! We can now strengthen our theorem on the partition of the states
  of a chain into disjoint communicating classes and non-return states.
 \end_layout
@@ -6314,7 +6302,7 @@ Theorem
 
 \begin_layout Standard
 The set S, of return states of a Markov chain, can be written as the union
- of disjoint communcating classes, 
+ of disjoint communicating classes, 
 \end_layout
 
 \begin_layout Standard
@@ -6327,12 +6315,12 @@ S =
 \end_inset
 
  is either (i) closed and recurrent, (ii) closed and transient or (iii)
- non closed and transiant.
+ non closed and transient.
  
 \end_layout
 
 \begin_layout Standard
-CLosed Non closed
+Closed Non closed
 \end_layout
 
 \begin_layout Standard
@@ -6340,7 +6328,7 @@ recurrent `/fine/ does not exist
 \end_layout
 
 \begin_layout Standard
-transiant/ does not exist in a finite chain / fine
+transient/ does not exist in a finite chain / fine
 \end_layout
 
 \begin_layout Subsubsection*
@@ -6350,11 +6338,11 @@ New Terminology
 \begin_layout Enumerate
 if all state of a Markov chain communicate we say that this chain is 
 \emph on
-irreductible
+irreducible
 \end_layout
 
 \begin_layout Enumerate
-In a markov chain if 
+In a Markov chain if 
 \begin_inset Formula $f_{nn}=1$
 \end_inset
 
@@ -6370,7 +6358,7 @@ positive recurrent
 \begin_inset Formula $m_{kk}<0$
 \end_inset
 
- (i.e the exepected time to return to 
+ (i.e the expected time to return to 
 \begin_inset Formula $k$
 \end_inset
 
@@ -6392,7 +6380,7 @@ If
 
 \end_deeper
 \begin_layout Enumerate
-Returning to the randoim walk it turns out that even in 
+Returning to the random walk it turns out that even in 
 \begin_inset Formula $1$
 \end_inset
 
@@ -6408,7 +6396,7 @@ Returning to the randoim walk it turns out that even in
 \begin_inset Newline newline
 \end_inset
 
-i.e the simple random walk is null recurrent=======
+i.e the simple random walk is null recurrent
 \begin_inset Formula $P_{kk}^{(2n-1)}=0\,n=1,2,\ldots$
 \end_inset
 
@@ -6417,7 +6405,7 @@ i.e the simple random walk is null recurrent=======
 
 \begin_layout Standard
 Theorem : A recurrent communicating class is closed.
- A closed communicating class must possess infinitely manu states.
+ A closed communicating class must possess infinitely many states.
 \end_layout
 
 \begin_layout Standard
@@ -6503,7 +6491,7 @@ somewhere
 \end_layout
 
 \begin_layout Standard
-Now return to thr state j that we were considering since k->j, 
+Now return to the state j that we were considering since k->j, 
 \begin_inset Formula $\exists$
 \end_inset
 
@@ -6529,7 +6517,7 @@ It follows that (1-
 \begin_inset Formula $f_{jk}g_{kk}$
 \end_inset
 
-means that if k is reccurent and hence 
+means that if k is recurrent and hence 
 \begin_inset Formula $g_{kk}=1$
 \end_inset
 
@@ -6537,7 +6525,7 @@ means that if k is reccurent and hence
 \begin_inset Formula $f_{jk}=1,$
 \end_inset
 
- which is what we wanyed to show.
+ which is what we wanted to show.
  To prove that a transient closed communicating class must be infinite,
  we note that for any state j, 
 \begin_inset Formula $g_{jk}=0$
@@ -6559,67 +6547,80 @@ is a closed and transient communicating class then C me possess infinitely
 
 \begin_layout Standard
 Reason: With prob 1 the chain remains only for a finite number of steps
- in any finite set of transiant states.
+ in any finite set of transient states.
  Done! We can now strengthen our theorem on the partition of the states
  of a chain into disjoint communicating classes and non-return states.
 \end_layout
 
 \begin_layout Standard
 Theorem: The set S, of return states of a Markov chain, can be written as
- the union of disjoint communcating classes, 
+ the union of disjoint communicating classes, 
 \end_layout
 
 \begin_layout Standard
 S = 
-\begin_inset Formula $C_{1\cup}C_{2}...where$
+\begin_inset Formula $C_{1\cup}C_{2}...$
 \end_inset
 
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+where
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
  class 
 \begin_inset Formula $C,$
 \end_inset
 
  is either (i) closed and recurrent, (ii) closed and transient or (iii)
- non closed and transiant.
+ non closed and transient.
  
-\end_layout
-
-\begin_layout Standard
-CLosed Non closed
-\end_layout
-
-\begin_layout Standard
-recurrent `/fine/ does not exist
-\end_layout
-
-\begin_layout Standard
-transiant/ does not exist in a finite chain / fine
 \end_layout
 
 \begin_layout Section
 Long-Run distribution
 \end_layout
 
-\begin_layout Standard
----------------------------------
+\begin_layout Paragraph
+Definition:
 \end_layout
 
 \begin_layout Standard
-MISS MERCREDI
-\end_layout
-
-\begin_layout Standard
----------------------------------
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{equation}
-\lim_{n\rightarrow\infty}P_{jk}^{(n)}=\Pi_{K},\,k=1,2,\ldots\label{eq:49}
-\end{equation}
-
+A Markov chain with state space 
+\begin_inset Formula $C$
 \end_inset
 
+ is said to posses a 
+\emph on
+long-run distribution
+\emph default
+ if there exist à distribution 
+\begin_inset Formula $\left\{ \Pi_{k}\,k=1,2,\ldots\right\} $
+\end_inset
 
+having the property :
+\begin_inset Formula $\lim_{n\rightarrow\infty}P_{jk}^{(n)}=\Pi_{K}$
+\end_inset
+
+ (indep of where you start)
 \end_layout
 
 \begin_layout Standard
@@ -6643,14 +6644,7 @@ Notes:
 \end_layout
 
 \begin_layout Standard
-The limit of the r.h.s of 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "eq:49"
-
-\end_inset
-
- doen't depend on 
+The limit of the r.h.s of the previous equation doesn't depend on 
 \begin_inset Formula $j$
 \end_inset
 
@@ -6670,7 +6664,7 @@ long-run distribution
 \begin_inset Formula $P\left[X_{n}=k\right]$
 \end_inset
 
-, th eprob that you will be in the state 
+, the prob that you will be in the state 
 \begin_inset Formula $k$
 \end_inset
 
@@ -6701,7 +6695,7 @@ Proof:
 \end_layout
 
 \begin_layout Standard
-Wich is independ of 
+Which is independed of 
 \begin_inset Formula $\left\{ P\left[X_{0}=j\right]\forall j\right\} $
 \end_inset
 
@@ -6710,7 +6704,7 @@ Wich is independ of
 
 \begin_layout Standard
 But it's very difficult to find the long run distribution directly as this
- would implies finding a expresion for every 
+ would implies finding a expression for every 
 \begin_inset Formula $P_{jk}^{(n)}$
 \end_inset
 
@@ -6730,15 +6724,15 @@ But we have;
 \end_layout
 
 \begin_layout Standard
-There's indeed a backdoor way to find this limit (if it exist) this acces
+There's indeed a backdoor way to find this limit (if it exist) this access
  is gained trough the concept of 
 \emph on
 stationary distribution
 \end_layout
 
 \begin_layout Standard
-it turns out that if the statinoary distribution exist it can be found by
- solving a system of linéar equation.
+it turns out that if the stationary distribution exist it can be found by
+ solving a system of linear equation.
  here's a grate thi
 \emph on
 ng: if
@@ -6755,7 +6749,7 @@ A Markov chain with state space
 \begin_inset Formula $C$
 \end_inset
 
- is said to posses an stationnary distribution if there exist a probability
+ is said to posses an stationary distribution if there exist a probability
  distribution 
 \begin_inset Formula $\left\{ \Pi_{k},k=1,2,\ldots\right\} $
 \end_inset
@@ -6780,14 +6774,14 @@ Note
 \end_layout
 
 \begin_layout Standard
-The name stationnary distribution derive from the fact that 
+The name stationary distribution derive from the fact that 
 \begin_inset CommandInset ref
 LatexCommand eqref
 reference "eq:50"
 
 \end_inset
 
- implie sthat for every integer 
+ implies that for every integer 
 \begin_inset Formula $n$
 \end_inset
 
@@ -6811,7 +6805,7 @@ The easiest way to see
 \begin_inset Formula $\eqref{eq:51}$
 \end_inset
 
- is to use the matrix notation Lething 
+ is to use the matrix notation Letting 
 \begin_inset Formula $\tilde{\Pi}=\left(\Pi_{1},\Pi_{2},\ldots\right)$
 \end_inset
 
@@ -6862,7 +6856,7 @@ As a consequence, if the initial distribution
 \begin_inset Formula $\left\{ P\left[X_{0}=j\right],j\in C\right\} $
 \end_inset
 
- is the stationnary distribution 
+ is the stationary distribution 
 \begin_inset Formula $\left\{ \Pi_{k},k=1,2,\ldots\right\} $
 \end_inset
 
@@ -6890,8 +6884,8 @@ Claim
 \end_layout
 
 \begin_layout Standard
-If you have an homogenous Markov Chain with a stationnary initial distribution
- htne the chain is strictly stationnary i.e all distribution are inveriant
+If you have an homogenous Markov Chain with a stationary initial distribution
+ the the chain is strictly stationary i.e all distribution are invariant
  with shift in time
 \end_layout
 
@@ -6910,7 +6904,7 @@ If you have an homogenous Markov Chain with a stationnary initial distribution
 \end_layout
 
 \begin_layout Standard
-We've conditino backward and used Markov properties, Then we've used Homogenity
+We've condition backward and used Markov properties, Then we've used Homogeneity
  for the conditional probs
 \end_layout
 
@@ -6929,7 +6923,7 @@ strict stationarity
 \end_layout
 
 \begin_layout Standard
-The question is: Under what conditions will there exist a staionnary distributio
+The question is: Under what conditions will there exist a stationary distributio
 n ? The following theorem is a start.
 \end_layout
 
@@ -6938,7 +6932,7 @@ Theorem
 \end_layout
 
 \begin_layout Standard
-To every irreductible Markov chain with state space 
+To every irreducible Markov chain with state space 
 \begin_inset Formula $C$
 \end_inset
 
@@ -6977,11 +6971,11 @@ reference "eq:71"
 \end_layout
 
 \begin_layout Standard
-There are 2 possibilies: either the chain is transcient or it recurent
+There are 2 possibilities: either the chain is transient or it recurrent
 \end_layout
 
 \begin_layout Standard
-if it transcient, then as we have observe 
+if it transient, then as we have observe 
 \begin_inset Formula $P_{jk}^{(n)}\rightarrow0$
 \end_inset
 
@@ -6989,7 +6983,7 @@ if it transcient, then as we have observe
 \begin_inset Formula $n\rightarrow\infty$
 \end_inset
 
- and therfore 
+ and therefore 
 \begin_inset Formula $\frac{1}{n}\sum_{m=1}^{n}P_{jk}^{(m)}\rightarrow0$
 \end_inset
 
@@ -7005,7 +6999,7 @@ if it transcient, then as we have observe
 \end_layout
 
 \begin_layout Standard
-secondly if the chain is recurent 
+secondly if the chain is recurrent 
 \begin_inset Formula $f_{kk}=1$
 \end_inset
 
@@ -7040,7 +7034,7 @@ Now although the
 \begin_inset Formula $\geq0$
 \end_inset
 
- in either case but we don't neccessary have that 
+ in either case but we don't necessary have that 
 \begin_inset Formula $\left\{ \Pi_{k},\,k\in C\right\} $
 \end_inset
 
@@ -7056,7 +7050,7 @@ If
 \begin_inset Formula $C$
 \end_inset
 
- is a finite markov chain then 
+ is a finite Markov chain then 
 \begin_inset Formula $\left\{ \Pi_{k},\,k\in C\right\} $
 \end_inset
 
@@ -7072,8 +7066,8 @@ Since
 \begin_inset Formula $C$
 \end_inset
 
- is finite and irreductible, all state must be recurent [actually must be
- positve reccurent: see asignment 4] i.e 
+ is finite and irreducible, all state must be recurrent [actually must be
+ positive recurrent: see assignment 4] i.e 
 \begin_inset Formula $m_{kk}<\infty,\,k\in C$
 \end_inset
 
@@ -7121,10 +7115,6 @@ is prob dist
 \end_layout
 
 \begin_layout Standard
---------------------------------
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula $lim_{n->\infty}$
 \end_inset
 
@@ -7157,14 +7147,13 @@ To clarify things so far:
 \end_layout
 
 \begin_layout Standard
-- A dist is called a stationnary distribution: (1) it is a distribution
- i.e.
+- A dist is called a stationary distribution: (1) it is a distribution i.e.
  The pds sum to 1
 \end_layout
 
 \begin_layout Standard
-(2) If they satisfy the set of cqs that define the stationnarity.
- The notatio that we use for such a distribution is (
+(2) If they satisfy the set of cqs that define the stationary.
+ The notation that we use for such a distribution is (
 \begin_inset Formula $\pi_{1},\pi_{2},..)=$
 \end_inset
 
@@ -7186,7 +7175,7 @@ If I give you an arbitrary MC there may not exist a stationary distribution
 \end_inset
 
 When will a M.C.
- with a given P, have a stationnary distribution
+ with a given P, have a stationary distribution
 \begin_inset Quotes erd
 \end_inset
 
@@ -7238,7 +7227,7 @@ C) a stationary distribution under certain conditions (assumption about
 \begin_inset Formula $\pi_{k's}$
 \end_inset
 
- from before can serve as the stationnary distribution if it exists.
+ from before can serve as the stationary distribution if it exists.
 \end_layout
 
 \begin_layout Standard
@@ -7246,7 +7235,7 @@ Theorem : stationary distribution
 \end_layout
 
 \begin_layout Standard
-Let C be the state space of a irreductible Markov Chain.
+Let C be the state space of a irreducible Markov Chain.
  TFAE:
 \end_layout
 
@@ -7287,7 +7276,7 @@ Notes:
 \end_layout
 
 \begin_layout Standard
-(1) We know that if the chain is irreducible, cd positive, reccurent, then
+(1) We know that if the chain is irreducible, cd positive, recurrent, then
  
 \begin_inset Formula $m_{kk}<\infty$
 \end_inset
@@ -7331,13 +7320,13 @@ be shown that a stationary distribution by {
 \begin_inset Formula $\pi_{k}=\frac{1}{m_{kk}}$
 \end_inset
 
- a stationary distribution exists & which it will for an irreductible pos
+ a stationary distribution exists & which it will for an irreducible pos
  recurrent chain it will be unique
 \end_layout
 
 \begin_layout Standard
-(3) If the chain has a LR distribution then it will have a stationnary distribut
-ion.
+(3) If the chain has a LR distribution then it will have a stationary distributi
+on.
 \end_layout
 
 \begin_layout Standard
@@ -7385,11 +7374,10 @@ uk, with
 \uwave off
 \noun off
 \color none
+\begin_inset Formula $\frac{1}{n}\sum_{m=1}^{n}p_{jk}^{(m)}\Rightarrow$
+\end_inset
 
-\backslash
-frac{1}{n}
-\backslash
-sum_{m=1}^{n}p_{jk}^{(m)} -> 
+ 
 \begin_inset Formula $\frac{1}{M_{CoKo}}=u_{Ko}>0,$
 \end_inset
 
@@ -7401,7 +7389,7 @@ we have that
 \end_layout
 
 \begin_layout Standard
-Now we know that the chain cannot be transiant, this would imply that 
+Now we know that the chain cannot be transient, this would imply that 
 \begin_inset Formula $p_{jk}^{(n)}$
 \end_inset
 
@@ -7445,14 +7433,14 @@ we showed
 \begin_inset Formula $k_{0}$
 \end_inset
 
- is positive recurent.
+ is positive recurrent.
 \end_layout
 
 \begin_layout Standard
-Since the chain is irreductible it is positive recurrent (i.e all state must
+Since the chain is irreducible it is positive recurrent (i.e all state must
  be pos.
- recurent) therefore by theorem [stat Dist] there exist a unique stat distributi
-on.
+ recurrent) therefore by theorem [stat Dist] there exist a unique stat distribut
+ion.
 \end_layout
 
 \begin_layout Standard
@@ -7473,7 +7461,7 @@ From note 1.
 \end_layout
 
 \begin_layout Standard
-Here is a rought reason why if 
+Here is a rough reason why if 
 \begin_inset Formula $\lim_{n\rightarrow\infty}\frac{1}{n}\sum_{m=1}^{n}P_{jk}^{(m)}=\Pi_{k}$
 \end_inset
 
@@ -7504,7 +7492,7 @@ Now:
 
 \end_inset
 
- (we've changing the order of sumation then use Chapman-Kolmogorov equation)
+ (we've changing the order of summation then use Chapman-Kolmogorov equation)
 \end_layout
 
 \begin_layout Standard
@@ -7512,7 +7500,7 @@ therefore if the clim in true, then
 \begin_inset Formula $\Pi_{k}=\sum_{j\in C}\Pi_{k}P_{jk}$
 \end_inset
 
- i.e stationarity, appart from 
+ i.e stationarity, apart from 
 \begin_inset Formula $\sum_{k\in C}\Pi_{k}=1$
 \end_inset
 
@@ -7543,7 +7531,7 @@ Proof of the claim:
 \end_layout
 
 \begin_layout Standard
-therfore 
+therefore 
 \begin_inset Formula $\limn\frac{1}{n}\sum_{m=1}^{n}P_{ik}^{(m+1)}=\limn A-\limn B+\limn C$
 \end_inset
 
@@ -7571,7 +7559,7 @@ To show that the
 \end_layout
 
 \begin_layout Standard
-For a finite markov chain the argument which entailed an interchenge beetween
+For a finite Markov chain the argument which entailed an interchange between
  the limit and the sum 
 \begin_inset Formula $\sum$
 \end_inset
@@ -7625,7 +7613,7 @@ period
 \begin_inset Formula $k$
 \end_inset
 
-, of a Markov chain, is defined as the gratest commom divisor of the set
+, of a Markov chain, is defined as the greatest common divisor of the set
  of integers 
 \begin_inset Formula $n$
 \end_inset
@@ -7658,12 +7646,12 @@ If all states communicate and one has period
 \begin_inset Formula $1$
 \end_inset
 
- (is aperiodic) then all state are apperiodic
+ (is aperiodic) then all state are aperiodic
 \end_layout
 
 \begin_layout Standard
-you can establish that an irreductible chain chain is apperiodic as long
- as 
+you can establish that an irreducible chain chain is aperiodic as long as
+ 
 \begin_inset Formula $P_{kk}^{(n)}>0$
 \end_inset
 
@@ -7705,13 +7693,13 @@ Theorem (Long-run distribution)
 \end_layout
 
 \begin_layout Standard
-An irreductible aperiodic positive recurent Markov chain possesses an unique
+An irreducible aperiodic positive recurrent Markov chain possesses an unique
  long-run distribution.
  
 \end_layout
 
 \begin_layout Standard
-A neccesary and sufficcent condition for an irreductible apperidic Markov
+A necessary and sufficient condition for an irreducible aperiodic Markov
  chain to posses a long-run distribution is that there exist a sequence
  
 \begin_inset Formula $\left\{ u_{k},\,k\in C\right\} $
@@ -7725,7 +7713,7 @@ A neccesary and sufficcent condition for an irreductible apperidic Markov
 \begin_inset Formula $u_{k}$
 \end_inset
 
- staisfy the system of equation 
+ satisfy the system of equation 
 \begin_inset Formula $u_{k}=\sum_{j\in C}u_{j}P_{jk}$
 \end_inset
 
@@ -7737,8 +7725,8 @@ The long-run distribution
 \begin_inset Formula $\left\{ \Pi_{k},\,k\in C\right\} $
 \end_inset
 
-of an aperiodic positive recurent Markov chain is the unique solution of
- the systel of equation , 
+of an aperiodic positive recurrent Markov chain is the unique solution of
+ the system of equation , 
 \begin_inset Formula $\Pi_{k}=\sum_{j\in C}\Pi_{j}P_{jk},\,\sum_{k\in C}\Pi_{k}=1$
 \end_inset
 
@@ -7750,11 +7738,11 @@ to resume
 \end_layout
 
 \begin_layout Itemize
-irreductible + positive recurent => stationerity
+irreducible + positive recurrent => stationarity
 \end_layout
 
 \begin_layout Itemize
-irreductible + positive recurent + aperiodic => long-run distribution
+irreducible + positive recurrent + aperiodic => long-run distribution
 \end_layout
 
 \begin_layout Paragraph
@@ -7762,9 +7750,9 @@ Note:
 \end_layout
 
 \begin_layout Standard
-A chain that is irreductible, aperiodic and positive recurrent is said 
+A chain that is irreducible, aperiodic and positive recurrent is said 
 \emph on
-ergotic
+ergodic
 \end_layout
 
 \begin_layout Standard
@@ -7775,8 +7763,12 @@ SEE NOTE OF THE EXAMPLE ON MYCOURSES (also posted on OCD page)
 Markov chain monte-carlo methods
 \end_layout
 
+\begin_layout Section
+Presentation for the method
+\end_layout
+
 \begin_layout Standard
-A really imporant application of markov chains is in the so called Markov
+A really important application of Markov chains is in the so called Markov
  chain monte-carlo methods (MCMC) 
 \end_layout
 
@@ -7798,24 +7790,273 @@ Suppose to begin, we wish to evaluate the integral
 \end_layout
 
 \begin_layout Standard
-since this is a one dimensional integral we could use one of the standar
- numerical mathed
+since this is a one dimensional integral we could use one of the standard
+ numerical method if the primitive cannot be found.
 \end_layout
 
 \begin_layout Standard
-----------------
+Alternatively, we could use probability to evaluate the integral:
+\end_layout
+
+\begin_layout Enumerate
+Generate on the computer 
+\begin_inset Formula $n$
+\end_inset
+
+ i.i.d uniform 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ observation
+\end_layout
+
+\begin_layout Enumerate
+Evaluate 
+\begin_inset Formula $\frac{1}{n}\sum_{i=1}^{n}f(X_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Claim: 
 \end_layout
 
 \begin_layout Standard
-MISS 1/04 and 30/03
+For large 
+\begin_inset Formula $n$
+\end_inset
+
+ 
+\begin_inset Formula $\frac{1}{n}\sum_{i=1}^{n}f(X_{i})=\int_{0}^{1}f(x)\,dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Reason:
 \end_layout
 
 \begin_layout Standard
------------------
+The strong law of large number say that if 
+\begin_inset Formula $X_{1},X_{2},\ldots$
+\end_inset
+
+ is a sequence of i.i.d r.v.s with finite mean 
+\begin_inset Formula $\mu$
+\end_inset
+
+ then 
+\begin_inset Formula $\frac{1}{n}\sum_{i=1}^{n}f(X_{i})\rightarrow\mu$
+\end_inset
+
+ with probability 
+\begin_inset Formula $1$
+\end_inset
+
+ when 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-Recall: we want to integrale 
+Here since 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+'s are i.i.d so are the 
+\begin_inset Formula $f\left(X_{i}\right)$
+\end_inset
+
+'s i.i.d.
+ therefore we can apply the law of large number to the sequence of 
+\begin_inset Formula $f\left(X_{i}\right)$
+\end_inset
+
+'s (assuming that 
+\begin_inset Formula $E\left[f\left(X_{i}\right)\right]$
+\end_inset
+
+ exist) thus 
+\begin_inset Formula $\limn\frac{1}{n}\sum_{i=1}^{n}f(X_{i})=E\left[f\left(X_{i}\right)\right]=\int_{0}^{1}f(x)p(x)\,dx=\int_{0}^{1}f(x)*1\,dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This approach is called Monte-Carlo integration.
+\end_layout
+
+\begin_layout Standard
+now consider a general problem.
+ evaluate 
+\begin_inset Formula $\int_{-\infty}^{\infty}f(x)p(x)\,dx$
+\end_inset
+
+ for an arbitrary p.d.f 
+\begin_inset Formula $p(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Generate 
+\begin_inset Formula $X_{1},X_{2},\ldots,X_{n}$
+\end_inset
+
+ i.i.d from the given p.d.f 
+\begin_inset Formula $p(x)$
+\end_inset
+
+ 1-dimensional.
+ there are serval methods of doing this
+\begin_inset Newline newline
+\end_inset
+
+
+\emph on
+probability integral transformation !
+\end_layout
+
+\begin_layout Enumerate
+evaluate 
+\begin_inset Formula $\frac{1}{n}\sum_{i=1}^{n}f(X_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using the strong law of large number 
+\begin_inset Formula $\frac{1}{n}\sum_{i=1}^{n}f(X_{i})\stackrel[\infty]{n}{\rightarrow}E\left[f(x)\right]$
+\end_inset
+
+ with prob 
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+But now 
+\begin_inset Formula $E\left[f(x)\right]=\int_{-\infty}^{\infty}f(x)p(x)\,dx$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now let's generalize it even more !
+\end_layout
+
+\begin_layout Paragraph
+1.
+\end_layout
+
+\begin_layout Standard
+Evaluate the k-dimensional integer 
+\begin_inset Formula $\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\cdots\int_{-\infty}^{\infty}f\left(x_{1},x_{2},\ldots,x_{k}\right)p\left(x_{1},x_{2},\ldots,x_{k}\right)\,dx_{1},dx_{2},\ldots,dx_{k}=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\cdots\int_{-\infty}^{\infty}f(\vx)p\vx\,d\vx$
+\end_inset
+
+ with 
+\begin_inset Formula $k$
+\end_inset
+
+ so large that numerical integration isn't feasible 
+\end_layout
+
+\begin_layout Paragraph
+2.
+\end_layout
+
+\begin_layout Standard
+Evaluate this integral over a region 
+\begin_inset Formula $R$
+\end_inset
+
+, say, which is defined by a set of constrain on 
+\begin_inset Formula $x_{1},x_{2},\ldots,x_{k}$
+\end_inset
+
+.
+ i.e we want 
+\begin_inset Formula $\underset{R}{\int\cdots\int}f(x_{1},\ldots,x_{k})p(x_{1},\ldots,x_{k})\,dx_{1}\cdots dx_{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+3.
+\end_layout
+
+\begin_layout Standard
+We may only know 
+\begin_inset Formula $p(x)$
+\end_inset
+
+ up to a multiplicative constant.
+ i.e we know 
+\begin_inset Formula $p(\vec{x})=cg(\vec{x})$
+\end_inset
+
+ (with 
+\begin_inset Formula $\int\cdots\int p(\vx)\,d\vx=1$
+\end_inset
+
+ i.e We cannot carry out the integration because we don't know 
+\begin_inset Formula $c$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now generalization 2.
+ is not a hard problem 
+\emph on
+if
+\emph default
+ you can carry out the MC integration.
+\end_layout
+
+\begin_layout Paragraph
+Reason:
+\end_layout
+
+\begin_layout Standard
+Each time you draw 
+\begin_inset Formula $\lambda_{1},\ldots\lambda_{k}$
+\end_inset
+
+ from 
+\begin_inset Formula $p(\vx)$
+\end_inset
+
+ check if its coordinate satisfy the constrain.
+ if yes keep 
+\begin_inset Formula $\vx$
+\end_inset
+
+ and average the obtained 
+\begin_inset Formula $\vx$
+\end_inset
+
+'s
+\end_layout
+
+\begin_layout Section
+How to perform the MCMC
+\end_layout
+
+\begin_layout Standard
+Recall: we want to integrate 
 \begin_inset Formula $\underset{R}{\int\cdots\int}f(x_{1},\ldots,x_{k})p(x_{1},\ldots,x_{k})\,dx_{1}\cdots dx_{k}$
 \end_inset
 
@@ -7843,7 +8084,7 @@ The idea
 \end_layout
 
 \begin_layout Standard
-Of how the generate observation (realisation) grom a given distribution:
+Of how the generate observation (realization) from a given distribution:
 \end_layout
 
 \begin_layout Itemize
@@ -7859,12 +8100,12 @@ designer
 \begin_inset Formula $p(\vec{x})$
 \end_inset
 
- is the stationnary distribution of this markov chain
+ is the stationary distribution of this Markov chain
 \end_layout
 
 \begin_layout Itemize
 Suppose, for the moment that we can do this.
- i.e come up with a such markov chain with 
+ i.e come up with a such Markov chain with 
 \begin_inset Formula $\Pi(\vec{x})=p(\vec{x})$
 \end_inset
 
@@ -7876,11 +8117,11 @@ What we mean by
 \begin_inset Quotes eld
 \end_inset
 
-we have defined a markov chain
+we have defined a Markov chain
 \begin_inset Quotes erd
 \end_inset
 
- is htat we have defined the initial distribution
+ is that we have defined the initial distribution
 \begin_inset Quotes erd
 \end_inset
 
@@ -7888,31 +8129,31 @@ we have defined a markov chain
 \begin_inset Formula $\Pi(\vec{x})=p(\vec{x})$
 \end_inset
 
- in this case, and we have also definedthe one step transition probabilitiies
+ in this case, and we have also defined the one step transition probabilities
 \end_layout
 
 \begin_layout Standard
-Now start at some chosen intial state 
+Now start at some chosen initial state 
 \begin_inset Formula $\vec{X_{0}}$
 \end_inset
 
-and simulate succesive values 
+and simulate successive values 
 \begin_inset Formula $\vec{X_{n}}$
 \end_inset
 
-'s from this chain by sampling from the given transiation probabilites.
+'s from this chain by sampling from the given translation probabilities.
  for example to simulate a trajectory of the simple random walk, starting
- at 0, say, you might toss a coin succesivley and if head, you go right
+ at 0, say, you might toss a coin successively and if head, you go right
  and if it's tail, one the left.
 \end_layout
 
 \begin_layout Standard
-Of course, you should be able to sample relativly easily from the conditionnal
- distribution that define the markov chain
+Of course, you should be able to sample relatively easily from the conditional
+ distribution that define the Markov chain
 \end_layout
 
 \begin_layout Standard
-Now the markov chains has been defined so that 
+Now the Markov chains has been defined so that 
 \begin_inset Formula $P\left[\vec{X_{0}}=\vec{x}\right]=\Pi(\vec{x})=p(\vec{x})$
 \end_inset
 
@@ -7954,8 +8195,8 @@ and not from a
 \end_layout
 
 \begin_layout Standard
-Now of our chain has futher been design so that it is irreducible, aperiodic
- and pos recurent, then it has a long run distribution
+Now of our chain has further been design so that it is irreducible, aperiodic
+ and pos recurrent, then it has a long run distribution
 \end_layout
 
 \begin_layout Standard
@@ -7998,7 +8239,7 @@ this mean that the distribution of
 \end_layout
 
 \begin_layout Standard
-and hence the values of the markov chain that we simulate will for large
+and hence the values of the Markov chain that we simulate will for large
  
 \begin_inset Formula $n$
 \end_inset
@@ -8011,7 +8252,7 @@ and hence the values of the markov chain that we simulate will for large
 \end_layout
 
 \begin_layout Standard
-///////Summary: for all 
+Summary: for all 
 \begin_inset Formula $n$
 \end_inset
 
@@ -8023,7 +8264,7 @@ and hence the values of the markov chain that we simulate will for large
 \begin_inset Formula $X_{n}\sim p(\vec{x})$
 \end_inset
 
-////////
+
 \end_layout
 
 \begin_layout Standard
@@ -8031,7 +8272,7 @@ Where are we heading:
 \end_layout
 
 \begin_layout Enumerate
-Describe the construction of the markov chain
+Describe the construction of the Markov chain
 \end_layout
 
 \begin_layout Enumerate
@@ -8040,7 +8281,7 @@ Give the algorithm that tells you how to simulate the trajectory of this
 \end_layout
 
 \begin_layout Enumerate
-Describe some of the dificulties in implementation.
+Describe some of the difficulties in implementation.
 \end_layout
 
 \begin_layout Enumerate
@@ -8052,7 +8293,7 @@ Give the history and application of MCMC.
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 The construction of the (continuous state-space) Markov chain
 \end_layout
 
@@ -8061,13 +8302,13 @@ First if
 \begin_inset Formula $p(\vec{x})$
 \end_inset
 
- is p.d.f (of continuous random vector) the markov chain will have an uncountable
+ is p.d.f (of continuous random vector) the Markov chain will have an uncountable
  (i.e non-discrete) state-space Markov chain
 \end_layout
 
 \begin_layout Standard
-Continuous state space can be rigourously defined using p.d.f instead of probabili
-ty function.
+Continuous state space can be rigorously defined using p.d.f instead of probabilit
+y function.
 \end_layout
 
 \begin_layout Standard
@@ -8083,11 +8324,11 @@ We shall write, perhaps sloppily
 \end_layout
 
 \begin_layout Standard
-To construct one markov chain with a given stationary distribution, 
+To construct one Markov chain with a given stationary distribution, 
 \begin_inset Formula $\Pi(\vec{x})=p(\vec{x})$
 \end_inset
 
-, we go through what is know as a (time) reversible Marov chain.
+, we go through what is know as a (time) reversible Markov chain.
  Thus chains, if irreducible will have a unique stationary distribution.
 \end_layout
 
@@ -8140,7 +8381,7 @@ Simply: Looking forward at the chain arriving at
 \end_layout
 
 \begin_layout Standard
-such markov chains, if irreducible gives a stationary distribution which
+such Markov chains, if irreducible gives a stationary distribution which
  is in fact 
 \begin_inset Formula $\Pi(x)$
 \end_inset
@@ -8184,7 +8425,7 @@ discrete
 \begin_inset Quotes erd
 \end_inset
 
- equation of stationnarity (
+ equation of stationarity (
 \begin_inset Formula $\Pi_{k}=\sum_{j\in C}\Pi_{j}P{}_{jk}$
 \end_inset
 
@@ -8212,7 +8453,7 @@ All of this lead to replace
 \end_layout
 
 \begin_layout Standard
-Now in order to define our morkov chain we also need to define 
+Now in order to define our Markov chain we also need to define 
 \begin_inset Formula $p(\vy|\vec{x})\;\forall\vec{x}\forall\vec{y}$
 \end_inset
 
@@ -8221,7 +8462,7 @@ Now in order to define our morkov chain we also need to define
 \begin_inset Formula $p(\vy|\vec{x})$
 \end_inset
 
- arbitrarly (just so that we can simulate easily from 
+ arbitrarily (just so that we can simulate easily from 
 \begin_inset Formula $p\left(\vy|\vx\right)$
 \end_inset
 
@@ -8380,7 +8621,7 @@ propose
 \begin_inset Formula $P\left(.|\vx\right)$
 \end_inset
 
- assuminf the chain is currently in state 
+ assuming the chain is currently in state 
 \begin_inset Formula $\vx$
 \end_inset
 
@@ -8404,7 +8645,7 @@ In summary
 \begin_inset Formula $P\left(\vy|\vx\right)$
 \end_inset
 
- wille be replace by a modified distribution 
+ will be replace by a modified distribution 
 \begin_inset Formula $P^{*}\left(\vy|\vx\right)$
 \end_inset
 
@@ -8453,7 +8694,7 @@ using
 
  as the transition distribution will generate the equation of detailed balance
  will be satisfied.
- i.e we will have a reversible markov chain
+ i.e we will have a reversible Markov chain
 \end_layout
 
 \begin_layout Subsubsection
@@ -8494,7 +8735,7 @@ but
 \begin_inset Formula $P\left(\vy|\vx\right)$
 \end_inset
 
- to be symetric in the sense 
+ to be symmetric in the sense 
 \begin_inset Formula $P\left(\vy|\vx\right)=P\left(\vx|\vy\right)$
 \end_inset
 
@@ -8516,7 +8757,7 @@ y distribution
 \begin_inset Formula $P^{*}\left(\vy|\vx\right)$
 \end_inset
 
-, custom made so that we can easily simulate realization af the Markov chain
+, custom made so that we can easily simulate realization at the Markov chain
  and custom made to ensure that we have a reversible Markov chain.
 \end_layout
 
@@ -8525,12 +8766,12 @@ Algorithm
 \end_layout
 
 \begin_layout Standard
-Here is the algorithm that describe how we generate values in one markov
+Here is the algorithm that describe how we generate values in one Markov
  chain
 \end_layout
 
 \begin_layout Standard
-the algorithl for the choice 
+the algorithm for the choice 
 \begin_inset Formula $\alpha\left(\vx|\vy\right)=\min\left(1,\frac{P(\vy)}{P(\vx)}\right)$
 \end_inset
 
@@ -8559,7 +8800,7 @@ From the distribution
 \begin_inset Formula $P\left(.|\vec{x_{0}}\right)$
 \end_inset
 
- generte (simulate) a 
+ generate (simulate) a 
 \begin_inset Formula $\vy$
 \end_inset
 
@@ -8608,13 +8849,97 @@ if
 \end_layout
 
 \begin_layout Enumerate
-repeat this process each time sampling from the conditionnal distribution
+repeat this process each time sampling from the conditional distribution
  
 \begin_inset Formula $P\left(.|?\right)$
 \end_inset
 
  depending on current state 
 \begin_inset Formula $?$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+--------------- Notes for the last part of the course are are Mycourses---------
+----------
+\end_layout
+
+\begin_layout Section
+Burn-In period
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $P\left(X_{n}=\vx\,|\,X_{0}=\vec{x_{0}}\right)\approx\Pi(\vx)=p(\vx)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Dependence of the simulated 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+'s:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{n}\sum_{j=1}^{n}f\left(X_{j}\right)\approx\mu=\int_{-\infty}^{\infty}\cdots\int_{-\infty}^{\infty}p(\vx)\,dx
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+with 
+\begin_inset Formula $f\left(X_{j}\right)$
+\end_inset
+
+ dependent in the Markov chain
+\end_layout
+
+\begin_layout Standard
+obvious solution: take sample far from each other in the chain (take on
+ 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ every 
+\begin_inset Formula $k$
+\end_inset
+
+ steps of the chain) but take a lots of time (
+\begin_inset Formula $k$
+\end_inset
+
+ times more)
+\end_layout
+
+\begin_layout Paragraph
+Birkhoff's Ergotic Theorem:
+\end_layout
+
+\begin_layout Standard
+if 
+\begin_inset Formula $X_{1},X_{2},\ldots$
+\end_inset
+
+ from a strictly stationary sequence, then 
+\begin_inset Formula $\frac{1}{n}\sum_{j=1}^{n}X_{j}\rightarrow\mu=E(X)$
+\end_inset
+
+ with probability 
+\begin_inset Formula $1$
+\end_inset
+
+ as 
+\begin_inset Formula $n\rightarrow\infty$
 \end_inset
 
 
